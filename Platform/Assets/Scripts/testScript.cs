@@ -119,7 +119,7 @@ public class testScript : MonoBehaviour
 
             case State.rolling:
                 
-                float rollSpeedMultiplier = 0.3f;
+                /*float rollSpeedMultiplier = 0.3f;
                 rollSpeed -= rollSpeed * rollSpeedMultiplier * Time.deltaTime;
 
                 /*
@@ -143,6 +143,7 @@ public class testScript : MonoBehaviour
 
             case State.attacking:
                 anim.SetBool("run",false);
+                
                 if (!attack)
                 {
                     
@@ -217,7 +218,8 @@ public class testScript : MonoBehaviour
 
             case State.rolling:
 
-                body.velocity= rollSpeed *rollDir;
+                //body.velocity= rollSpeed *rollDir;
+                body.AddForce(new Vector2(9*rollDir.x,0));
 
 
                 break;
@@ -321,31 +323,38 @@ public class testScript : MonoBehaviour
 
         }
 
-        if (Input.GetKeyDown(KeyCode.Z) && Input.GetKey(KeyCode.LeftArrow) && grounded)
+        if (Input.GetKey(KeyCode.LeftArrow))
         {
-            anim.SetTrigger("roll");
-            roll = true;
-            rollDir = Vector2.left;
-            rollSpeed = speed;
-            state = State.rolling;
-           // TriggersInvulnerability();
+            if (Input.GetKeyDown(KeyCode.Z) && grounded)
+            {
+                anim.SetTrigger("roll");
+                roll = true;
+                rollDir = Vector2.left;
+                rollSpeed = speed;
+                state = State.rolling;
+                // TriggersInvulnerability();
 
 
+            }
         }
+      
 
-
-        if (Input.GetKeyDown(KeyCode.Z) && Input.GetKey(KeyCode.RightArrow) && grounded)
-        {
-            anim.SetTrigger("roll");
-            roll = true;
-
-            rollDir = Vector2.right;
-            state = State.rolling;
-            rollSpeed = speed;
-            //TriggersInvulnerability();
-
-        }
         
+        if (Input.GetKey(KeyCode.RightArrow))
+        {
+            if (Input.GetKeyDown(KeyCode.Z) && grounded)
+            {
+                anim.SetTrigger("roll");
+                roll = true;
+                rollDir = Vector2.right;
+                rollSpeed = speed;
+                state = State.rolling;
+                // TriggersInvulnerability();
+
+
+            }
+        }
+
         if (Input.GetKeyDown(KeyCode.C))
         {
             SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
@@ -434,6 +443,7 @@ public class testScript : MonoBehaviour
        roll = true;
    }
    
+
    public void FinishRoll()
    {
        Debug.Log("qui");
