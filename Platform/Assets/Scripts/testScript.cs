@@ -14,6 +14,8 @@ public class testScript : MonoBehaviour
     //layer contenente tutti gli oggetti che rappresentano il ground
     [SerializeField] private LayerMask groundLayer;
 
+    private Color transparent;
+
    
 
     //layer contenente tutti gli oggetti che rappresentano il wall
@@ -39,6 +41,7 @@ public class testScript : MonoBehaviour
 
     //consente di attuare le collisioni
     private BoxCollider2D boxCollider;
+    private SpriteRenderer _renderer;
 
 
     //blocco variabili per la gestione del salto anticipato
@@ -56,7 +59,7 @@ public class testScript : MonoBehaviour
     [SerializeField]
     private float invincibilityDurationSeconds;
 
-    private Vector2 rollDir;
+    private int moveDir;
     private float rollSpeed;
 
     public Transform attackPoint;
@@ -67,6 +70,8 @@ public class testScript : MonoBehaviour
     public int combo;
     
     public GameMaster gm;
+    public AudioClip[] sium;
+    public AudioSource sourceSium;
 
 
 
@@ -92,7 +97,8 @@ public class testScript : MonoBehaviour
 
     private void Start()
     {
-      
+        transparent = new Color(255,255,255,166);
+        _renderer = GetComponent<SpriteRenderer>();
         anim = GetComponent<Animator>();
         body = GetComponent<Rigidbody2D>();
         boxCollider = GetComponent<BoxCollider2D>();
@@ -100,6 +106,8 @@ public class testScript : MonoBehaviour
         gm = GameObject.FindGameObjectWithTag("GM").GetComponent<GameMaster>();
         transform.position = gm.lastCheckPointPos;
         isInvincible = false;
+        moveDir = 1;
+        sourceSium = GetComponent<AudioSource>();
 
 
     }
@@ -108,6 +116,7 @@ public class testScript : MonoBehaviour
     // metodo che gestisce gli input e le animazioni
     private void Update()
     {
+        Debug.Log("invincbilità"+isInvincible);
         switch (state)
         {
             case State.normal:
@@ -118,18 +127,7 @@ public class testScript : MonoBehaviour
                 break;
 
             case State.rolling:
-                
-                /*float rollSpeedMultiplier = 0.3f;
-                rollSpeed -= rollSpeed * rollSpeedMultiplier * Time.deltaTime;
-
-                /*
-                if (rollSpeed < 1f )
-                {
-
-                    state = State.normal;
-
-                }
-                */
+                TriggersInvulnerability();
 
                 if (!roll)
                 {
@@ -186,12 +184,13 @@ public class testScript : MonoBehaviour
 
                 if (xInput > 0 && facingRight != true)
                 {
-
+                    moveDir = 1;
                     Flip();
                 }
 
-                if (xInput < 0 && facingRight == true)
+                if (xInput < 0 && facingRight )
                 {
+                    moveDir = -1;
                     Flip();
                 }
 
@@ -217,9 +216,9 @@ public class testScript : MonoBehaviour
                 break;
 
             case State.rolling:
-
-                //body.velocity= rollSpeed *rollDir;
-                body.AddForce(new Vector2(9*rollDir.x,0));
+                
+                
+                body.AddForce(new Vector2(9*moveDir,0));
 
 
                 break;
@@ -241,8 +240,8 @@ public class testScript : MonoBehaviour
     {
         //ForceMode2D.Impulse is useful if Jump() is called using GetKeyDown
         body.velocity = new Vector2(body.velocity.x, jumpForce);
-
-        anim.SetBool("try", true);
+        anim.SetTrigger("jump");
+        
         hangTimeCounter = 0f;
         jumpBufferCounter = 0f;
 
@@ -282,7 +281,6 @@ public class testScript : MonoBehaviour
             //Set the animator velocity equal to 1 * the vertical direction in which the player is moving 
             if (body.velocity.y < 0)
             {
-                anim.SetBool("try", false);
                 anim.SetTrigger("fall");
             }
 
@@ -314,7 +312,7 @@ public class testScript : MonoBehaviour
             jump = true;
         }
 
-        if (Input.GetMouseButtonDown(0) && grounded && !attack)
+        if (Input.GetMouseButtonDown(0) && IsGrounded() && !attack)
         {
             anim.SetTrigger(""+combo);
             OnClick();
@@ -323,36 +321,13 @@ public class testScript : MonoBehaviour
 
         }
 
-        if (Input.GetKey(KeyCode.LeftArrow))
+        if (Input.GetKeyDown(KeyCode.Z) && grounded)
         {
-            if (Input.GetKeyDown(KeyCode.Z) && grounded)
-            {
-                anim.SetTrigger("roll");
-                roll = true;
-                rollDir = Vector2.left;
-                rollSpeed = speed;
-                state = State.rolling;
-                // TriggersInvulnerability();
-
-
-            }
-        }
-      
-
-        
-        if (Input.GetKey(KeyCode.RightArrow))
-        {
-            if (Input.GetKeyDown(KeyCode.Z) && grounded)
-            {
-                anim.SetTrigger("roll");
-                roll = true;
-                rollDir = Vector2.right;
-                rollSpeed = speed;
-                state = State.rolling;
-                // TriggersInvulnerability();
-
-
-            }
+            anim.SetTrigger("roll");
+            roll = true;
+            rollSpeed = speed;
+            state = State.rolling;
+            
         }
 
         if (Input.GetKeyDown(KeyCode.C))
@@ -405,6 +380,9 @@ public class testScript : MonoBehaviour
         attack = false ;
         if (combo < 3)
         {
+           
+            sourceSium.clip = sium[combo];
+            sourceSium.Play();
             combo++;
         }
     }
@@ -417,13 +395,14 @@ public class testScript : MonoBehaviour
     }
     
     
-   /* private IEnumerator BecomeTemporarilyInvincible()
+    private IEnumerator BecomeTemporarilyInvincible()
     {
         Debug.Log("Player turned invincible!");
+        _renderer.color = Color.red;
         isInvincible = true;
         
         yield return new WaitForSeconds(invincibilityDurationSeconds);
-
+        _renderer.color = new Color(255, 255, 255, 255);
         isInvincible = false;
         Debug.Log("Player is no longer invincible!");
     }
@@ -435,8 +414,7 @@ public class testScript : MonoBehaviour
             StartCoroutine(BecomeTemporarilyInvincible());
         }
     }
-
-*/
+    
    
    public void StartRoll()
    {
@@ -448,5 +426,14 @@ public class testScript : MonoBehaviour
    {
        Debug.Log("qui");
        roll = false;
+   }
+
+   private void OnTriggerEnter2D(Collider2D col)
+   {
+       if (!isInvincible && col.gameObject.name.Equals("Nemico"))
+       {
+           healthSystem.TakeDamage(10);
+       }
+      
    }
 }

@@ -61,8 +61,7 @@ public class HealthSystem : MonoBehaviour
         healthBar.SetHealthBar(maxHealth);
         healthPotions.SetPotionsFill(0);
         healthPotions.SetPotionsFill(1);
-        healthPotions.SetPotionsFill(2);
-        
+        flasks = 0;
     }
 
     public void Healing()
