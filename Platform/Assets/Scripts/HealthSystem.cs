@@ -85,4 +85,7 @@ public class HealthSystem : MonoBehaviour
 
 
     }
+    public void SetHealth(int health){
+        healthBar.SetHealthBar(health);
+    }
 }

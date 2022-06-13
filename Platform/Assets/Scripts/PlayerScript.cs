@@ -3,7 +3,7 @@ using System.Collections;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
-public class testScript : MonoBehaviour
+public class PlayerScript : MonoBehaviour
 {
     //velocita personaggio
     [SerializeField] public float speed;
@@ -56,6 +56,7 @@ public class testScript : MonoBehaviour
     private bool attack;
     private bool roll;
     private bool isInvincible;
+    private bool checkpoint;
     [SerializeField]
     private float invincibilityDurationSeconds;
 
@@ -65,9 +66,10 @@ public class testScript : MonoBehaviour
     public Transform attackPoint;
     [SerializeField] private float attackRange;
     public LayerMask enemyLayers;
-    public static testScript instance;
+    public static PlayerScript instance;
     public HealthSystem healthSystem;
-    public int combo;
+    public int level;
+    private int combo;
     
     public GameMaster gm;
     public AudioClip[] sium;
@@ -97,7 +99,7 @@ public class testScript : MonoBehaviour
 
     private void Start()
     {
-        transparent = new Color(255,255,255,166);
+        
         _renderer = GetComponent<SpriteRenderer>();
         anim = GetComponent<Animator>();
         body = GetComponent<Rigidbody2D>();
@@ -108,6 +110,8 @@ public class testScript : MonoBehaviour
         isInvincible = false;
         moveDir = 1;
         sourceSium = GetComponent<AudioSource>();
+        LoadPlayer();
+        Debug.Log("percorso:"+Application.persistentDataPath);
 
 
     }
@@ -116,7 +120,7 @@ public class testScript : MonoBehaviour
     // metodo che gestisce gli input e le animazioni
     private void Update()
     {
-        Debug.Log("invincbilità"+isInvincible);
+        
         switch (state)
         {
             case State.normal:
@@ -436,4 +440,24 @@ public class testScript : MonoBehaviour
        }
       
    }
+
+   public void SavePlayer()
+   {
+       SaveSystem.SavePlayer(this);
+   }
+
+   public void LoadPlayer()
+   {
+      PlayerData player= SaveSystem.LoadPlayer(this);
+      if (player != null)
+      {
+          Vector2 position = new Vector2(player.position[0], player.position[1]);
+          this.GetComponent<Transform>().position = position;
+
+          healthSystem.SetHealth(player.health);
+          this.level = player.level;
+
+      }
+   }
+   
 }

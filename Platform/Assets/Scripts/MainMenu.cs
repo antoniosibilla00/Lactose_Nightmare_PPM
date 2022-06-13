@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using System.IO;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEngine.EventSystems;
@@ -82,7 +83,6 @@ public class MainMenu : MonoBehaviour
   }
 
   public void StartGame(){
-
       SceneManager.LoadScene(1);
       Debug.Log("Gioco Avviato");
 
@@ -226,6 +226,17 @@ public class MainMenu : MonoBehaviour
          }
 
 
+    }
+
+    public void DestroySaves()
+    {
+        string path = Application.persistentDataPath +"/player.fun";
+        Debug.Log("ieiee"+File.Exists(path));
+        if (File.Exists(path))
+        { 
+            File.Delete(path);
+
+        }
     }
 
 
