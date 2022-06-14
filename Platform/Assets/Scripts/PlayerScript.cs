@@ -385,8 +385,8 @@ public class PlayerScript : MonoBehaviour
         if (combo < 3)
         {
            
-            sourceSium.clip = sium[combo];
-            sourceSium.Play();
+           /* sourceSium.clip = sium[combo];
+            sourceSium.Play();*/
             combo++;
         }
     }
