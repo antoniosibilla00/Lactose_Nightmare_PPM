@@ -52,6 +52,17 @@ public class HealthSystem : MonoBehaviour
 
     public void TakeDamage(int damage)
     {
+        
+        if (currentHealth -damage<0)
+        {
+            currentHealth = 0;
+        }
+        else
+        {
+            currentHealth -= damage;
+          
+        }
+
         healthBar.SetHealthBar(currentHealth-damage);
         currentHealth -= damage;
     }
@@ -61,6 +72,7 @@ public class HealthSystem : MonoBehaviour
         healthBar.SetHealthBar(maxHealth);
         healthPotions.SetPotionsFill(0);
         healthPotions.SetPotionsFill(1);
+        healthPotions.SetPotionsFill(2);
         flasks = 0;
     }
 

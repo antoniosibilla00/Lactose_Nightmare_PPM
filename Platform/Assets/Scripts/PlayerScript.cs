@@ -83,7 +83,8 @@ public class PlayerScript : MonoBehaviour
         normal,
         rolling,
         attacking,
-        death
+        death,
+        talking
     }
 
 
@@ -221,9 +222,7 @@ public class PlayerScript : MonoBehaviour
 
             case State.rolling:
                 
-                
                 body.AddForce(new Vector2(9*moveDir,0));
-
 
                 break;
             case State.attacking:
@@ -231,8 +230,7 @@ public class PlayerScript : MonoBehaviour
                 break;
             
             case State.death:
-               
-               
+
                 break;
 
 

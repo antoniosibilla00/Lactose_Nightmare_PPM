@@ -30,8 +30,9 @@ public class LevelLoader : MonoBehaviour
         if(instance == null){
 
             instance = this;
-
+            
             DontDestroyOnLoad(gameObject);
+
 
         }else{
 
@@ -41,10 +42,10 @@ public class LevelLoader : MonoBehaviour
 
     }
 
-    public async void LoadScene(string sceneName){
-
-        progressBar.value = 0;
+    public async void LoadScene(string sceneName)
+    {
         target = 0;
+        progressBar.value = 0;
         var scene = SceneManager.LoadSceneAsync(sceneName);
         scene.allowSceneActivation = false ;
 
@@ -52,11 +53,12 @@ public class LevelLoader : MonoBehaviour
           
         insightsText1.text =  insights[Random.Range(0, 4)]; 
         
-        Debug.Log("sium");
         do{
 
             await Task.Delay(2000);
             target = scene.progress;
+            Debug.Log("target"+target);
+            
 
         }while(scene.progress < 0.9f);
 
@@ -70,8 +72,10 @@ public class LevelLoader : MonoBehaviour
 
     void Update()
     {
+        Debug.Log(progressBar);
+    
         
-        progressBar.value = Mathf.MoveTowards(progressBar.value,target,3 * Time.deltaTime);
+        progressBar.value = Mathf.MoveTowards(progressBar.value,target,3*Time.deltaTime);
 
      
 

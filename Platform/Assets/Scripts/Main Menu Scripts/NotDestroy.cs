@@ -1,15 +1,15 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public interface Interactable
+public class NotDestroy : MonoBehaviour
 {
     // Start is called before the first frame update
-    public string interactionPrompt
-    {
-        get;
-    }
 
-    public void Interact(Interactor interactor);
-    
+    private void Awake()
+    {
+        DontDestroyOnLoad(transform.gameObject);
     }
+    
+}
