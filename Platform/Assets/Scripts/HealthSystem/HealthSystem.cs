@@ -13,6 +13,8 @@ public class HealthSystem : MonoBehaviour
     private int currentHealth;
     private int healing;
     private int flasks;
+
+    public bool isInvincible;
     // Start is called before the first frame update
     void Start()
     {
@@ -20,12 +22,14 @@ public class HealthSystem : MonoBehaviour
         currentHealth = maxHealth;
         healing = 20;
         flasks = 0;
+        isInvincible = false;
 
     }
 
     // Update is called once per frame
     void Update()
     {
+        Debug.Log("health "+currentHealth);
         if (flasks <3 && currentHealth<100)
         {
             if (Input.GetKeyDown(KeyCode.Q))
@@ -35,13 +39,7 @@ public class HealthSystem : MonoBehaviour
 
             }
         }
-      
         
-        if (Input.GetKeyDown(KeyCode.I))
-        {
-            TakeDamage(10);
-
-        }
 
     }
 
@@ -52,19 +50,22 @@ public class HealthSystem : MonoBehaviour
 
     public void TakeDamage(int damage)
     {
-        
-        if (currentHealth -damage<0)
+        if (!isInvincible)
         {
-            currentHealth = 0;
-        }
-        else
-        {
-            currentHealth -= damage;
+            if (currentHealth -damage<0 )
+            {
+                currentHealth = 0;
+            }
+            else
+            {
+                currentHealth -= damage;
           
-        }
+            }
 
-        healthBar.SetHealthBar(currentHealth-damage);
-        currentHealth -= damage;
+            healthBar.SetHealthBar(currentHealth-damage);
+            currentHealth -= damage;
+        }
+       
     }
 
     public void RestoreHealthAndPotions()

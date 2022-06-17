@@ -127,9 +127,9 @@ public class ChocolateFight : MonoBehaviour
             anim.SetTrigger("walk");
             switch (direction)
             {
-                case true : transform.position += new Vector3(0.01f, 0.0f, 0.0f);break;
+                case true : transform.position += new Vector3(0.001f, 0.0f, 0.0f);break;
             
-                case false: transform.position -= new Vector3(0.01f, 0.0f, 0.0f);break;
+                case false: transform.position -= new Vector3(0.001f, 0.0f, 0.0f);break;
                     
             }
             

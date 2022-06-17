@@ -54,8 +54,6 @@ public class Interactor : MonoBehaviour
         }
         else
         {
-            
-            dialoguePanel.SetActive(false);
             interactionPanel.SetActive(false);
             done = false;
         }

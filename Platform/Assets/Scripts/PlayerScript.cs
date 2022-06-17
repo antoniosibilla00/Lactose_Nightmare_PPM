@@ -14,9 +14,9 @@ public class PlayerScript : MonoBehaviour
     //layer contenente tutti gli oggetti che rappresentano il ground
     [SerializeField] private LayerMask groundLayer;
 
-    private Color transparent;
+    [SerializeField] private GameObject dialoguePanel;
 
-   
+
 
     //layer contenente tutti gli oggetti che rappresentano il wall
     // [SerializeField] private LayerMask wallLayer;
@@ -55,7 +55,6 @@ public class PlayerScript : MonoBehaviour
     private bool run;
     private bool attack;
     private bool roll;
-    private bool isInvincible;
     private bool checkpoint;
     [SerializeField]
     private float invincibilityDurationSeconds;
@@ -108,7 +107,6 @@ public class PlayerScript : MonoBehaviour
         state = State.normal;
         gm = GameObject.FindGameObjectWithTag("GM").GetComponent<GameMaster>();
         transform.position = gm.lastCheckPointPos;
-        isInvincible = false;
         moveDir = 1;
         sourceSium = GetComponent<AudioSource>();
         LoadPlayer();
@@ -121,12 +119,15 @@ public class PlayerScript : MonoBehaviour
     // metodo che gestisce gli input e le animazioni
     private void Update()
     {
+        if (isTalking() && state != State.talking)
+        {
+            state =  State.talking;
+        }
         
         switch (state)
         {
             case State.normal:
-
-
+                
                 HandleInput();
                 HandleAnimations();
                 break;
@@ -160,6 +161,14 @@ public class PlayerScript : MonoBehaviour
                 if (this.GetComponent<Animator>().GetCurrentAnimatorStateInfo(0).normalizedTime >= 1)
                 {
                     SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
+                }
+                break;
+            case  State.talking:
+           
+                anim.SetBool("run",false);
+                if (!dialoguePanel.activeSelf)
+                {
+                    state = State.normal;
                 }
                 break;
 
@@ -344,14 +353,22 @@ public class PlayerScript : MonoBehaviour
         }
     }
 
-    void OnClick()
+    private void OnClick()
     {
-
+        GolemAI enemyIstance;
         Collider2D[] hitEnemies = Physics2D.OverlapCircleAll(attackPoint.position, attackRange, enemyLayers);
         foreach (Collider2D enemy in hitEnemies)
         {
-            Debug.Log("ho hittato un" + enemy.name);
-        }
+            if (enemy.GetComponent<GolemAI>().golemHealth - 10<0)
+            {
+                enemy.GetComponent<GolemAI>().golemHealth = -1;
+            }
+            else
+            {
+                enemy.GetComponent<GolemAI>().golemHealth -=10;
+            }
+        }    
+
 
 
     }
@@ -401,17 +418,17 @@ public class PlayerScript : MonoBehaviour
     {
         Debug.Log("Player turned invincible!");
         _renderer.color = Color.red;
-        isInvincible = true;
+        healthSystem.isInvincible = true;
         
         yield return new WaitForSeconds(invincibilityDurationSeconds);
         _renderer.color = new Color(255, 255, 255, 255);
-        isInvincible = false;
+        healthSystem.isInvincible = false;
         Debug.Log("Player is no longer invincible!");
     }
     
     void TriggersInvulnerability()
     {
-        if (!isInvincible)
+        if (!healthSystem.isInvincible)
         {
             StartCoroutine(BecomeTemporarilyInvincible());
         }
@@ -430,14 +447,16 @@ public class PlayerScript : MonoBehaviour
        roll = false;
    }
 
+   
    private void OnTriggerEnter2D(Collider2D col)
    {
-       if (!isInvincible && col.gameObject.name.Equals("Nemico"))
+       if (col.gameObject.name.Equals("Nemico") )
        {
            healthSystem.TakeDamage(10);
        }
       
    }
+   
 
    public void SavePlayer()
    {
@@ -456,6 +475,12 @@ public class PlayerScript : MonoBehaviour
           this.level = player.level;
 
       }
+   }
+
+
+   bool isTalking()
+   {
+       return (dialoguePanel.activeSelf);
    }
    
 }

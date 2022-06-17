@@ -18,6 +18,14 @@ public class DialogueManager : MonoBehaviour
         
     }
 
+    private void Update()
+    {
+        if (Input.GetKeyDown(KeyCode.X))
+        {
+            DisplayNextSentence();
+        }
+    }
+
     public void StartDialogue(Dialogue dialogue)
     { 
         dialoguePanel.SetActive(true); 
