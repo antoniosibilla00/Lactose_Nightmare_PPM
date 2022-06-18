@@ -48,6 +48,7 @@ TextureImporter:
   streamingMipmaps: 0
   streamingMipmapsPriority: 0
   vTOnly: 0
+  ignoreMasterTextureLimit: 0
   grayScaleToAlpha: 0
   generateCubemap: 6
   cubemapConvolution: 0
@@ -383,6 +384,15 @@ TextureImporter:
     edges: []
     weights: []
     secondaryTextures: []
+    nameFileIdTable:
+      noBKG_BatFlight_strip_4: -7367240339041235404
+      noBKG_BatFlight_strip_2: 7549624339455303845
+      noBKG_BatFlight_strip_6: -6807433164048724291
+      noBKG_BatFlight_strip_5: 5735103037242051427
+      noBKG_BatFlight_strip_1: 22455484292203783
+      noBKG_BatFlight_strip_0: 3980419562168732608
+      noBKG_BatFlight_strip_3: 2129064536425567803
+      noBKG_BatFlight_strip_7: -2392563386631285233
   spritePackingTag: 
   pSDRemoveMatte: 0
   pSDShowRemoveMatteOption: 0

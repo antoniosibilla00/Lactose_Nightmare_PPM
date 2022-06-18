@@ -139,6 +139,7 @@ public class ChocolateFight : MonoBehaviour
         
     }
     
+    
     private void  pathFinding(bool todo)
     {
 

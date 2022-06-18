@@ -48,6 +48,7 @@ TextureImporter:
   streamingMipmaps: 0
   streamingMipmapsPriority: 0
   vTOnly: 0
+  ignoreMasterTextureLimit: 0
   grayScaleToAlpha: 0
   generateCubemap: 6
   cubemapConvolution: 0
@@ -304,6 +305,15 @@ TextureImporter:
     edges: []
     weights: []
     secondaryTextures: []
+    nameFileIdTable:
+      corsa_0: -8315147829809977716
+      corsa_5: -6321431563641269175
+      corsa_6: 2697428920773585555
+      corsa_4: -6439090803485541916
+      corsa_3: -7688780346038672383
+      corsa_2: -230956845047128131
+      corsa_1: 156651135221571733
+      corsa_7: -5609617109693347875
   spritePackingTag: 
   pSDRemoveMatte: 0
   pSDShowRemoveMatteOption: 0

@@ -42,6 +42,7 @@ TextureImporter:
   streamingMipmaps: 0
   streamingMipmapsPriority: 0
   vTOnly: 0
+  ignoreMasterTextureLimit: 0
   grayScaleToAlpha: 0
   generateCubemap: 6
   cubemapConvolution: 0
@@ -256,6 +257,13 @@ TextureImporter:
     edges: []
     weights: []
     secondaryTextures: []
+    nameFileIdTable:
+      TENTATOREFINALE (1)_4: 124148355106067633
+      TENTATOREFINALE (1)_0: 2828818887300329940
+      TENTATOREFINALE (1)_2: -7617050838594810813
+      TENTATOREFINALE (1)_5: -8360191726003092680
+      TENTATOREFINALE (1)_3: 6560387689812131451
+      TENTATOREFINALE (1)_1: 4593653104103145815
   spritePackingTag: 
   pSDRemoveMatte: 0
   pSDShowRemoveMatteOption: 0

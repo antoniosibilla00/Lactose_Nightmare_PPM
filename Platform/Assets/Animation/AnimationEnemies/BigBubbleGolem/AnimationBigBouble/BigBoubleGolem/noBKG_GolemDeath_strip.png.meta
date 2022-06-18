@@ -108,6 +108,7 @@ TextureImporter:
   streamingMipmaps: 0
   streamingMipmapsPriority: 0
   vTOnly: 0
+  ignoreMasterTextureLimit: 0
   grayScaleToAlpha: 0
   generateCubemap: 6
   cubemapConvolution: 0
@@ -784,6 +785,35 @@ TextureImporter:
     edges: []
     weights: []
     secondaryTextures: []
+    nameFileIdTable:
+      noBKG_GolemDeath_strip_23: -8859458402360483807
+      noBKG_GolemDeath_strip_27: 1825006355110054968
+      noBKG_GolemDeath_strip_7: 6981697642655637717
+      noBKG_GolemDeath_strip_20: 6425809796729592941
+      noBKG_GolemDeath_strip_0: -1039414880271670054
+      noBKG_GolemDeath_strip_15: -4268248357439331906
+      noBKG_GolemDeath_strip_18: -8664433703546996208
+      noBKG_GolemDeath_strip_14: 7562731058364098905
+      noBKG_GolemDeath_strip_26: -3839883289384080065
+      noBKG_GolemDeath_strip_9: 5532088087181034580
+      noBKG_GolemDeath_strip_13: 7176587824123197706
+      noBKG_GolemDeath_strip_16: 469757133919212911
+      noBKG_GolemDeath_strip_24: -7862441431799998989
+      noBKG_GolemDeath_strip_5: -2265426446566345410
+      noBKG_GolemDeath_strip_11: 87688222405565163
+      noBKG_GolemDeath_strip_3: -6887433150884834968
+      noBKG_GolemDeath_strip_12: -4863261701296870965
+      noBKG_GolemDeath_strip_6: 8424038207069946148
+      noBKG_GolemDeath_strip_2: 3387041748960029721
+      noBKG_GolemDeath_strip_4: 8228663803255184634
+      noBKG_GolemDeath_strip_17: -4088885235878116499
+      noBKG_GolemDeath_strip_8: -973309094031439607
+      noBKG_GolemDeath_strip_1: -7706840890536433489
+      noBKG_GolemDeath_strip_10: 6261083942131728847
+      noBKG_GolemDeath_strip_19: -8575380907517345740
+      noBKG_GolemDeath_strip_21: 1043244812880563650
+      noBKG_GolemDeath_strip_22: 4750415710943088055
+      noBKG_GolemDeath_strip_25: -5348062935190837047
   spritePackingTag: 
   pSDRemoveMatte: 0
   pSDShowRemoveMatteOption: 0

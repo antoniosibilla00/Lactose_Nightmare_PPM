@@ -47,8 +47,11 @@ public class GolemAI : MonoBehaviour
     private bool attack ;
     private bool takeHit;
     private bool dead;
+    private bool walk;
     private Vector2 force;
-    
+    private bool cooldown;
+    private float timer;
+    private float actualTimer;
     public enum State
     {
         normal,
@@ -66,6 +69,7 @@ public class GolemAI : MonoBehaviour
         instance = this;
         golemHealth = 100;
         dead = false;
+        timer = 2f; 
     }
 
     public void Start()
@@ -80,10 +84,13 @@ public class GolemAI : MonoBehaviour
     }
 
     private void Update()
-    { 
-        Debug.Log("golem"+golemHealth);
+    {
+        
         anim.SetBool("attack",attack);
-        Debug.Log("sium"+speed);
+        anim.SetBool("walk",walk);
+        anim.SetBool("cooldown",cooldown);
+        
+        
         switch (state)
         {
             case State.normal:
@@ -103,73 +110,55 @@ public class GolemAI : MonoBehaviour
                     Destroy(gameObject);
                 } 
                 break;
-            
-            case State.attacking:
-                anim.SetBool("walk",false);
-                if (!attack)
-                {
-                    Debug.Log("attackSium");
-                    state = State.normal;
-                }
-                break;
-
         }
-       
-       
-        
-        
+
     }
 
     private void FixedUpdate()
-    { 
-        Debug.Log("è morto"+dead);
-        Debug.Log("attack"+attack);
+    {
         switch (state)
         { 
             case State.normal:
-                if (!anim.GetCurrentAnimatorStateInfo(0).IsName("attackBigBouble"))
-                {
-                    takeHit = false;
-                    
-                    Collider2D enterInRange = Physics2D.OverlapCircle(range.position, rangeRadius, player);
-        
-                    if (enterInRange!=null)
-                    {
-                 
-                        attack = true;
-                       
-                    }
-                    else
-                    {
-                        anim.SetBool("walk",true);
-                    }
 
+                if (anim.GetCurrentAnimatorStateInfo(0).IsName("attack") == false )
+                {
+                    
+                    takeHit = false;
+                                        
+                    Collider2D enterInRange = Physics2D.OverlapCircle(range.position, rangeRadius, player);
+                    
+                    if (enterInRange!=null && cooldown == false)
+                    {
+                        actualTimer = timer;
+                        attack = true;
+                        state = State.attacking;
+
+                    }
+                    anim.SetBool("walk",true);
                     if (TargetInDistance() && followEnabled)
                     {
                         PathFollow();
                     }
- 
+
                 }
-             
+
+                break;
+            
+            case State.attacking:
+                actualTimer -= Time.deltaTime;
+                if (actualTimer <= 0 && attack == false)
+                {
+                    actualTimer = timer;
+                    cooldown = false;
+                    state = State.normal;
+                }
                 break;
             case State.death :
                 break;
-            case State.attacking :
-                force = Vector2.zero;
-                break;
-
         }
-        
-        
-      
-           
-
-
 
     }
     
-  
-  
 
     private void UpdatePath()
     {
@@ -270,7 +259,8 @@ public class GolemAI : MonoBehaviour
     void finishAnim()
     {
         attack = false;
-     
+        cooldown = true;
+
     }
 
     private void OnDrawGizmos()

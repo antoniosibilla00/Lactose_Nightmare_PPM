@@ -72,6 +72,7 @@ TextureImporter:
   streamingMipmaps: 0
   streamingMipmapsPriority: 0
   vTOnly: 0
+  ignoreMasterTextureLimit: 0
   grayScaleToAlpha: 0
   generateCubemap: 6
   cubemapConvolution: 0
@@ -496,6 +497,23 @@ TextureImporter:
     edges: []
     weights: []
     secondaryTextures: []
+    nameFileIdTable:
+      noBKG_GolemAttack_strip_10: -7878417427235233882
+      noBKG_GolemAttack_strip_5: 4883148573934976432
+      noBKG_GolemAttack_strip_11: 9144332995697923636
+      noBKG_GolemAttack_strip_3: -4362255911769404909
+      noBKG_GolemAttack_strip_7: 3942905877449855683
+      noBKG_GolemAttack_strip_8: 7919708488046495669
+      noBKG_GolemAttack_strip_15: 4159767330647785271
+      noBKG_GolemAttack_strip_14: -6527786535888038998
+      noBKG_GolemAttack_strip_13: 638962855716594058
+      noBKG_GolemAttack_strip_9: 6141443864034364148
+      noBKG_GolemAttack_strip_1: 4279646544716775008
+      noBKG_GolemAttack_strip_12: 597113520511363075
+      noBKG_GolemAttack_strip_4: -7437108976248768919
+      noBKG_GolemAttack_strip_0: 3001064305222826701
+      noBKG_GolemAttack_strip_2: 2816281313220920020
+      noBKG_GolemAttack_strip_6: 9028468732119020042
   spritePackingTag: 
   pSDRemoveMatte: 0
   pSDShowRemoveMatteOption: 0

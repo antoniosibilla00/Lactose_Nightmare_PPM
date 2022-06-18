@@ -351,6 +351,7 @@ TextureImporter:
   streamingMipmaps: 0
   streamingMipmapsPriority: 0
   vTOnly: 0
+  ignoreMasterTextureLimit: 0
   grayScaleToAlpha: 0
   generateCubemap: 6
   cubemapConvolution: 0
@@ -680,14 +681,10 @@ TextureImporter:
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape:
-      - - {x: -16.5, y: -5.5}
+      - - {x: -16.5, y: 16.5}
         - {x: -16.5, y: -16.5}
-        - {x: -16.5, y: -16.5}
-        - {x: -16.5, y: -5.5}
-        - {x: -16.5, y: -6.5}
-        - {x: -16.5, y: -16.5}
-        - {x: -2.5, y: -16.5}
-        - {x: -2.5, y: -5.5}
+        - {x: 16.5, y: -16.5}
+        - {x: 16.5, y: 16.5}
       tessellationDetail: 0
       bones: []
       spriteID: fb8e1c1b6b399e960800000000000000
@@ -710,16 +707,9 @@ TextureImporter:
       outline: []
       physicsShape:
       - - {x: -16.5, y: 16.5}
-        - {x: -16.5, y: 16.5}
-        - {x: -1.5, y: 16.5}
-        - {x: -16.5, y: 16.5}
-        - {x: -1.5, y: 16.5}
-        - {x: -2.2451782, y: 7.5579185}
-        - {x: -2.5, y: 4.5}
-        - {x: -16.5, y: 3.5}
-      - - {x: -2.5, y: 6.5}
-        - {x: -2.5, y: 7.5}
-        - {x: -2.5, y: 6.5}
+        - {x: -16.5, y: -16.5}
+        - {x: 16.5, y: -16.5}
+        - {x: 16.5, y: 16.5}
       tessellationDetail: 0
       bones: []
       spriteID: 1e499a4960b8ddfc0800000000000000
@@ -741,12 +731,10 @@ TextureImporter:
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape:
-      - - {x: 15.5, y: 15.5}
-        - {x: 0.5, y: 15.5}
-        - {x: 15.5, y: 15.5}
-        - {x: 0.5, y: 15.5}
-        - {x: 3.5, y: 6.5}
-        - {x: 15.5, y: 5.5}
+      - - {x: -16.5, y: 16.5}
+        - {x: -16.5, y: -16.5}
+        - {x: 16.5, y: -16.5}
+        - {x: 16.5, y: 16.5}
       tessellationDetail: 0
       bones: []
       spriteID: c43fa3da1fb8d7240800000000000000
@@ -768,14 +756,10 @@ TextureImporter:
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape:
-      - - {x: 16, y: -6}
+      - - {x: -16, y: 16}
+        - {x: -16, y: -16}
         - {x: 16, y: -16}
-        - {x: 16, y: -6}
-        - {x: 4, y: -6}
-        - {x: 4, y: -16}
-        - {x: 4, y: -16}
-        - {x: 16, y: -16}
-        - {x: 16, y: -16}
+        - {x: 16, y: 16}
       tessellationDetail: 0
       bones: []
       spriteID: 829b80319215614d0800000000000000
@@ -797,14 +781,10 @@ TextureImporter:
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape:
-      - - {x: -17, y: -7}
+      - - {x: -17, y: 17}
         - {x: -17, y: -17}
-        - {x: -3, y: -17}
-        - {x: -4, y: -6}
-      - - {x: 16, y: 16}
-        - {x: 3, y: 16}
-        - {x: 4, y: 5}
-        - {x: 16, y: 2}
+        - {x: 17, y: -17}
+        - {x: 17, y: 17}
       tessellationDetail: 0
       bones: []
       spriteID: 96374043c85216d20800000000000000
@@ -826,14 +806,10 @@ TextureImporter:
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape:
-      - - {x: -15.5, y: 4.5}
-        - {x: -15.5, y: 15.5}
-        - {x: -0.5, y: 15.5}
-        - {x: -2.5, y: 5.5}
-      - - {x: 4.5, y: -16.5}
+      - - {x: -16.5, y: 16.5}
+        - {x: -16.5, y: -16.5}
         - {x: 16.5, y: -16.5}
-        - {x: 16.5, y: -5.5}
-        - {x: 5.5, y: -6.5}
+        - {x: 16.5, y: 16.5}
       tessellationDetail: 0
       bones: []
       spriteID: a52001323c1a7a520800000000000000
@@ -964,9 +940,6 @@ TextureImporter:
       - - {x: -14.5, y: 20.5}
         - {x: -14.5, y: -11.5}
         - {x: 17.5, y: -11.5}
-        - {x: 17.5, y: -11.5}
-        - {x: -14.5, y: -11.5}
-        - {x: -14.5, y: 20.5}
         - {x: 17.5, y: 20.5}
         - {x: 17.5, y: 20.5}
       tessellationDetail: 0
@@ -990,12 +963,10 @@ TextureImporter:
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape:
-      - - {x: -17.5, y: 20}
-        - {x: 14.5, y: 20}
-        - {x: 14.5, y: -12}
-        - {x: -16.5, y: -12}
-        - {x: 14.5, y: -12}
-        - {x: 14.5, y: 20}
+      - - {x: -17.5, y: 22}
+        - {x: -17.5, y: -12}
+        - {x: 16.5, y: -12}
+        - {x: 17.5, y: 23}
       tessellationDetail: 0
       bones: []
       spriteID: ffd1fa17e21589330800000000000000
@@ -1618,10 +1589,10 @@ TextureImporter:
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape:
-      - - {x: -17.5, y: 16.5}
-        - {x: -17.5, y: -15.5}
-        - {x: 14.5, y: -15.5}
-        - {x: 14.5, y: 16.5}
+      - - {x: -18.5, y: 16.5}
+        - {x: -18.5, y: -16.5}
+        - {x: 18.5, y: -16.5}
+        - {x: 18.5, y: 16.5}
       tessellationDetail: 0
       bones: []
       spriteID: f184afdf2301aa8d0800000000000000
@@ -1665,6 +1636,54 @@ TextureImporter:
     edges: []
     weights: []
     secondaryTextures: []
+    nameFileIdTable:
+      blocchidelVillaggio_6: -3321448242258170018
+      blocchidelVillaggio_15: 1811274028924711973
+      blocchidelVillaggio_1: -54530981164982626
+      blocchidelVillaggio_40: -3888968581988935546
+      blocchidelVillaggio_16: 7008825755535622622
+      blocchidelVillaggio_37: -7053620162564591558
+      blocchidelVillaggio_31: 7517654422233449151
+      blocchidelVillaggio_30: -1940843720555951659
+      blocchidelVillaggio_21: 3314905078823538170
+      blocchidelVillaggio_35: 8684487988273037659
+      blocchidelVillaggio_19: -3061458115206240527
+      blocchidelVillaggio_7: 1854118904233169489
+      blocchidelVillaggio_34: -8928646563823553477
+      blocchidelVillaggio_44: 510107379880498623
+      blocchidelVillaggio_42: 2752169114855959815
+      blocchidelVillaggio_4: 3183186024033533984
+      blocchidelVillaggio_10: -3468463277625207583
+      blocchidelVillaggio_14: 2713315159992959578
+      blocchidelVillaggio_0: 3240729087367218669
+      blocchidelVillaggio_17: 8527891448634903413
+      blocchidelVillaggio_23: -6801638273899145680
+      blocchidelVillaggio_27: -338439064785022065
+      blocchidelVillaggio_41: 615193429023170541
+      blocchidelVillaggio_29: -1212723143087554472
+      blocchidelVillaggio_28: 6811461760267205925
+      blocchidelVillaggio_20: 3717810752311991807
+      blocchidelVillaggio_39: 8177531061791337100
+      blocchidelVillaggio_36: -7185122386816335895
+      blocchidelVillaggio_9: 7631793456431622335
+      blocchidelVillaggio_2: 1084435769240452645
+      blocchidelVillaggio_11: 4791139448701776716
+      blocchidelVillaggio_26: 9209528298159615063
+      blocchidelVillaggio_45: -2834435204280858593
+      blocchidelVillaggio_33: -9144170829852431333
+      blocchidelVillaggio_13: 3269936088546046825
+      blocchidelVillaggio_46: 4371470756205618347
+      blocchidelVillaggio_32: -4997529036383071405
+      blocchidelVillaggio_3: -7672512220290176268
+      blocchidelVillaggio_12: -3164252451326346968
+      blocchidelVillaggio_43: 1372057520383314542
+      blocchidelVillaggio_38: 8840967768891258562
+      blocchidelVillaggio_5: 6356973262828825014
+      blocchidelVillaggio_25: -6049638327721796244
+      blocchidelVillaggio_24: -7195906773910559863
+      blocchidelVillaggio_22: 430125113132338661
+      blocchidelVillaggio_8: -2288025226978440042
+      blocchidelVillaggio_18: 6301403040465727845
   spritePackingTag: 
   pSDRemoveMatte: 0
   pSDShowRemoveMatteOption: 0

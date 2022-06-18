@@ -78,6 +78,7 @@ TextureImporter:
   streamingMipmaps: 0
   streamingMipmapsPriority: 0
   vTOnly: 0
+  ignoreMasterTextureLimit: 0
   grayScaleToAlpha: 0
   generateCubemap: 6
   cubemapConvolution: 0
@@ -391,7 +392,7 @@ TextureImporter:
       tessellationDetail: 0
       bones: []
       spriteID: f2284aebd9d6ce9f0800000000000000
-      internalID: -437854539486035409
+      internalID: -8180616836148664649
       vertices: []
       indices: 
       edges: []
@@ -412,7 +413,7 @@ TextureImporter:
       tessellationDetail: 0
       bones: []
       spriteID: 9104dac1e151d23c0800000000000000
-      internalID: -4382823643287306215
+      internalID: -6711652994261090759
       vertices: []
       indices: 
       edges: []
@@ -433,7 +434,7 @@ TextureImporter:
       tessellationDetail: 0
       bones: []
       spriteID: e01819dca5aeeaa40800000000000000
-      internalID: 5381496280471142670
+      internalID: -4954465242506892278
       vertices: []
       indices: 
       edges: []
@@ -454,7 +455,7 @@ TextureImporter:
       tessellationDetail: 0
       bones: []
       spriteID: 61b0afae839873b80800000000000000
-      internalID: -8415106501165053162
+      internalID: -437854539486035409
       vertices: []
       indices: 
       edges: []
@@ -532,6 +533,25 @@ TextureImporter:
     edges: []
     weights: []
     secondaryTextures: []
+    nameFileIdTable:
+      noBKG_WitchThrow_strip_7: 989909332724987845
+      noBKG_WitchThrow_strip_5: -104567444571123860
+      noBKG_WitchThrow_strip_3: 8734878544501599735
+      noBKG_WitchThrow_strip_9: 6097310640227311736
+      noBKG_WitchThrow_strip_6: -2691095847162634766
+      noBKG_WitchThrow_strip_1: 167708039029152810
+      noBKG_WitchThrow_strip_0: -5927162376249419868
+      noBKG_WitchThrow_strip_13: -7403351895166794259
+      noBKG_WitchThrow_strip_15: -6711652994261090759
+      noBKG_WitchThrow_strip_16: -4954465242506892278
+      noBKG_WitchThrow_strip_4: 7918194127032457705
+      noBKG_WitchThrow_strip_2: 1816593467417855097
+      noBKG_WitchThrow_strip_11: 6722602789441351030
+      noBKG_WitchThrow_strip_8: -1176897220618797061
+      noBKG_WitchThrow_strip_10: 2767345788372555386
+      noBKG_WitchThrow_strip_17: -437854539486035409
+      noBKG_WitchThrow_strip_12: 2682700704823801101
+      noBKG_WitchThrow_strip_14: -8180616836148664649
   spritePackingTag: 
   pSDRemoveMatte: 0
   pSDShowRemoveMatteOption: 0

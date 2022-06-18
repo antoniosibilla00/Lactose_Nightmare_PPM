@@ -150,9 +150,14 @@ public class PlayerScript : MonoBehaviour
                 
                 if (!attack)
                 {
-                    
+
+                    state =  State.normal;
+                    break;
+                }
+                
+                if (!anim.GetCurrentAnimatorStateInfo(0).IsName("attack_3") == false && !anim.GetCurrentAnimatorStateInfo(0).IsName("attack_1") == false && !anim.GetCurrentAnimatorStateInfo(0).IsName("attack_2") == false)
+                {
                     state = State.normal;
-                    
                 }
 
                 break;
@@ -323,7 +328,7 @@ public class PlayerScript : MonoBehaviour
             jump = true;
         }
 
-        if (Input.GetMouseButtonDown(0) && IsGrounded() && !attack)
+        if (Input.GetKeyDown(KeyCode.X) && IsGrounded() && !attack)
         {
             anim.SetTrigger(""+combo);
             OnClick();

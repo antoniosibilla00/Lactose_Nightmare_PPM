@@ -138,6 +138,7 @@ TextureImporter:
   streamingMipmaps: 0
   streamingMipmapsPriority: 0
   vTOnly: 0
+  ignoreMasterTextureLimit: 0
   grayScaleToAlpha: 0
   generateCubemap: 6
   cubemapConvolution: 0
@@ -1024,6 +1025,45 @@ TextureImporter:
     edges: []
     weights: []
     secondaryTextures: []
+    nameFileIdTable:
+      spr_BackgroundPropsNoBkg_strip_29: 1542694109749749095
+      spr_BackgroundPropsNoBkg_strip_28: -5307809377645951990
+      spr_BackgroundPropsNoBkg_strip_32: -1723058088520125525
+      spr_BackgroundPropsNoBkg_strip_4: -3717775686484313984
+      spr_BackgroundPropsNoBkg_strip_0: 4853865819829165027
+      spr_BackgroundPropsNoBkg_strip_7: 8021603738028179666
+      spr_BackgroundPropsNoBkg_strip_16: 407359717811384900
+      spr_BackgroundPropsNoBkg_strip_1: 1471231164249936261
+      spr_BackgroundPropsNoBkg_strip_30: -6066666149858474002
+      spr_BackgroundPropsNoBkg_strip_37: 6743090880735980092
+      spr_BackgroundPropsNoBkg_strip_2: 8289371733209126946
+      spr_BackgroundPropsNoBkg_strip_10: 5386176135676764546
+      spr_BackgroundPropsNoBkg_strip_27: 1496107176085265916
+      spr_BackgroundPropsNoBkg_strip_23: 1850309729993095037
+      spr_BackgroundPropsNoBkg_strip_14: 1044563043435949187
+      spr_BackgroundPropsNoBkg_strip_3: 2916782110052974240
+      spr_BackgroundPropsNoBkg_strip_8: 2751529746501667647
+      spr_BackgroundPropsNoBkg_strip_20: 4014487040140622847
+      spr_BackgroundPropsNoBkg_strip_15: 3212527427352906722
+      spr_BackgroundPropsNoBkg_strip_9: -5685723314566383296
+      spr_BackgroundPropsNoBkg_strip_5: 6780429309260483426
+      spr_BackgroundPropsNoBkg_strip_6: 6328829379331835618
+      spr_BackgroundPropsNoBkg_strip_12: -7534967740582478915
+      spr_BackgroundPropsNoBkg_strip_17: 471251851554050469
+      spr_BackgroundPropsNoBkg_strip_26: 3862507316723480448
+      spr_BackgroundPropsNoBkg_strip_25: -6921125433360535405
+      spr_BackgroundPropsNoBkg_strip_31: 6005250849450568394
+      spr_BackgroundPropsNoBkg_strip_13: -4868225275449391609
+      spr_BackgroundPropsNoBkg_strip_34: 6573677800521571352
+      spr_BackgroundPropsNoBkg_strip_21: 4850135187224879113
+      spr_BackgroundPropsNoBkg_strip_11: -1084729353796600489
+      spr_BackgroundPropsNoBkg_strip_18: -6969101568397054194
+      spr_BackgroundPropsNoBkg_strip_36: 8334120398953865323
+      spr_BackgroundPropsNoBkg_strip_35: 140187741570182041
+      spr_BackgroundPropsNoBkg_strip_22: -6051340883609605483
+      spr_BackgroundPropsNoBkg_strip_19: 7058953232491414605
+      spr_BackgroundPropsNoBkg_strip_24: -4374290061730863033
+      spr_BackgroundPropsNoBkg_strip_33: -3548882103019118045
   spritePackingTag: 
   pSDRemoveMatte: 0
   pSDShowRemoveMatteOption: 0
