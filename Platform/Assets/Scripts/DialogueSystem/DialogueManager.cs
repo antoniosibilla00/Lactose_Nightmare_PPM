@@ -6,15 +6,29 @@ using UnityEngine.UI;
 
 public class DialogueManager : MonoBehaviour
 {
+    private bool answer;
     // Start is called before the first frame update
     private Queue<string>sentences;
     [SerializeField]private  Text nameText;
     [SerializeField] private Text dialogueText;
     [SerializeField] private GameObject dialoguePanel;
+    private string speaker;
+    [SerializeField] private Button foodChose1;
+    [SerializeField] private Button foodChose2;
+    [SerializeField] private Button Continue;
+    private int questionPosition;
+    
+
+    
     //[SerializeField] private GameObject DialogueBox;
     private void Start()
     {
         sentences = new Queue<string>();
+        
+        foodChose1.gameObject.SetActive(false);
+        foodChose2.gameObject.SetActive(false);
+        
+        
         
     }
 
@@ -24,14 +38,58 @@ public class DialogueManager : MonoBehaviour
         {
             DisplayNextSentence();
         }
+
+        Debug.Log("questionPosition");
+        
+        Debug.Log("sentences2.Count = "  + sentences.Count);
+        
+        
+        if (speaker.Equals("Tentatore") && sentences.Count == questionPosition )
+        {
+            foodChose1.gameObject.SetActive(true);
+            foodChose2.gameObject.SetActive(true);
+            Continue.gameObject.SetActive(false);
+
+            foodChose1.gameObject.GetComponentInChildren<Text>().text = "Pizza";
+            foodChose2.gameObject.GetComponentInChildren<Text>().text = "Pasta";
+        }else if (speaker.Equals("Tentatore") && sentences.Count == questionPosition-1)
+        {
+            if (answer)
+            {
+                
+                string sentence = "Bravo!";
+                foodChose1.gameObject.SetActive(false);
+                foodChose2.gameObject.SetActive(false);
+                Continue.gameObject.SetActive(true);
+                dialogueText.text = sentence;
+                
+            }
+            else
+            {
+                string sentence = "Sbagliato!";
+                foodChose1.gameObject.SetActive(false);
+                foodChose2.gameObject.SetActive(false);
+                Continue.gameObject.SetActive(true);
+                dialogueText.text = sentence;
+                
+            }
+            
+        }
+        
     }
 
     public void StartDialogue(Dialogue dialogue)
-    { 
+    {
+        if (dialogue.questionPosition != 0)
+        {
+            questionPosition = dialogue.questionPosition;
+        }
+        
         dialoguePanel.SetActive(true); 
         sentences.Clear();
 
         nameText.text = dialogue.name;
+        speaker = nameText.text;
 
         for (int i = 1; i < dialogue.sentences.Length; i++)
         {
@@ -39,6 +97,11 @@ public class DialogueManager : MonoBehaviour
         }
 
         dialogueText.text = dialogue.sentences[0];
+
+        Debug.Log("Speaker" + speaker);
+
+        Debug.Log("sentences1.Count = "  + sentences.Count);
+        
     }
     
     public void DisplayNextSentence()
@@ -49,10 +112,13 @@ public class DialogueManager : MonoBehaviour
             return;
         }
 
+        Debug.Log("sentences.Count = "  + sentences.Count);
+        
+
         string sentence = sentences.Dequeue();
 
         dialogueText.text = sentence;
-            
+
         Debug.Log(sentence);
     }
 
@@ -60,5 +126,26 @@ public class DialogueManager : MonoBehaviour
     {
         dialoguePanel.SetActive(false);
     }
+
+    public void  CorrectAnswer()
+    {
+
+        answer = true;
+        
+        DisplayNextSentence();
+
+    }
+
+    public void  WrongAnswer()
+    { 
+
+        answer = false;
+        DisplayNextSentence();
+
+
+    }
+
+    
+        
     
 }
