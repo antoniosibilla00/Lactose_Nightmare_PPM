@@ -54,7 +54,7 @@ public class HealthSystem : MonoBehaviour
         {
             if (currentHealth -damage<0 )
             {
-                currentHealth = 0;
+                currentHealth = -1;
             }
             else
             {
@@ -99,6 +99,6 @@ public class HealthSystem : MonoBehaviour
 
     }
     public void SetHealth(int health){
-        healthBar.SetHealthBar(health);
+        healthBar.SetHealthBar(maxHealth);
     }
 }
