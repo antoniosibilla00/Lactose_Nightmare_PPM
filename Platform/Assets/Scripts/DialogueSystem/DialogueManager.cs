@@ -1,18 +1,24 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
+using System.Threading;
 using UnityEngine;
 using UnityEngine.UI;
 
 public class DialogueManager : MonoBehaviour
 {
     private bool answer;
+    private bool checkDebuffOrBuff = false ;
+    private bool done = false ;
     // Start is called before the first frame update
     private Queue<string>sentences;
+    
     [SerializeField]private  Text nameText;
     [SerializeField] private Text dialogueText;
     [SerializeField] private GameObject dialoguePanel;
-    private string speaker;
+    private string speaker = "";
+    private float waitTime;
+    private float timer = 20.0f;
     [SerializeField] private Button foodChose1;
     [SerializeField] private Button foodChose2;
     [SerializeField] private Button Continue;
@@ -28,12 +34,26 @@ public class DialogueManager : MonoBehaviour
         foodChose1.gameObject.SetActive(false);
         foodChose2.gameObject.SetActive(false);
         
-        
-        
+
+
     }
 
     private void Update()
     {
+        if (checkDebuffOrBuff)
+        {
+            Debug.Log("waitTime1 = " + waitTime );
+            waitTime -= Time.deltaTime;
+
+            if (waitTime <= 0)
+            {
+                checkDebuffOrBuff = false;
+                FindObjectOfType<PlayerScript>().Restore();
+
+            }
+            
+        }
+        
         if (Input.GetKeyDown(KeyCode.X))
         {
             DisplayNextSentence();
@@ -42,44 +62,59 @@ public class DialogueManager : MonoBehaviour
         Debug.Log("questionPosition");
         
         Debug.Log("sentences2.Count = "  + sentences.Count);
-        
-        
-        if (speaker.Equals("Tentatore") && sentences.Count == questionPosition )
-        {
-            foodChose1.gameObject.SetActive(true);
-            foodChose2.gameObject.SetActive(true);
-            Continue.gameObject.SetActive(false);
 
-            foodChose1.gameObject.GetComponentInChildren<Text>().text = "Pizza";
-            foodChose2.gameObject.GetComponentInChildren<Text>().text = "Pasta";
-        }else if (speaker.Equals("Tentatore") && sentences.Count == questionPosition-1)
+        if (sentences != null && !done)
         {
-            if (answer)
+            if (speaker.Equals("Tentatore") && sentences.Count == questionPosition )
             {
+                foodChose1.gameObject.SetActive(true);
+                foodChose2.gameObject.SetActive(true);
+                Continue.gameObject.SetActive(false);
+
+                foodChose1.gameObject.GetComponentInChildren<Text>().text = "Pizza";
+                foodChose2.gameObject.GetComponentInChildren<Text>().text = "Pasta";
                 
-                string sentence = "Bravo!";
-                foodChose1.gameObject.SetActive(false);
-                foodChose2.gameObject.SetActive(false);
-                Continue.gameObject.SetActive(true);
-                dialogueText.text = sentence;
-                
-            }
-            else
+            }else if (speaker.Equals("Tentatore") && sentences.Count == questionPosition-1)
             {
-                string sentence = "Sbagliato!";
-                foodChose1.gameObject.SetActive(false);
-                foodChose2.gameObject.SetActive(false);
-                Continue.gameObject.SetActive(true);
-                dialogueText.text = sentence;
+                done = true;
+                if (answer )
+                {
+
+                    string sentence = "Bravo!";
+                    FindObjectOfType<PlayerScript>().Buff();
+                    foodChose1.gameObject.SetActive(false);
+                    foodChose2.gameObject.SetActive(false);
+                    Continue.gameObject.SetActive(true);
+                    checkDebuffOrBuff = true;
+                    dialogueText.text = sentence;
+                    waitTime = timer;
                 
-            }
+                }
+                else 
+                {
+                    string sentence = "Sbagliato!";
+                    FindObjectOfType<PlayerScript>().Debuff();
+                    foodChose1.gameObject.SetActive(false);
+                    foodChose2.gameObject.SetActive(false);
+                    Continue.gameObject.SetActive(true);
+                    checkDebuffOrBuff = true;
+                    dialogueText.text = sentence;
+                    waitTime = timer;
+                    
+                    
+
+
+                }
             
+            }
         }
+        
         
     }
 
     public void StartDialogue(Dialogue dialogue)
     {
+        
         if (dialogue.questionPosition != 0)
         {
             questionPosition = dialogue.questionPosition;

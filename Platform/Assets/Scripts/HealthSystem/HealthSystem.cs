@@ -29,7 +29,8 @@ public class HealthSystem : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        Debug.Log("health "+currentHealth);
+        Debug.Log("currentHealth = " + currentHealth);
+        Debug.Log(" health = "+ maxHealth);
         if (flasks <3 && currentHealth<100)
         {
             if (Input.GetKeyDown(KeyCode.Q))
@@ -81,7 +82,7 @@ public class HealthSystem : MonoBehaviour
     {
         Debug.Log("cura");
     
-        if (currentHealth + healing>100)
+        if (currentHealth + healing > 100)
         {
             currentHealth = 100;
         }
@@ -98,7 +99,32 @@ public class HealthSystem : MonoBehaviour
 
 
     }
-    public void SetHealth(int health){
-        healthBar.SetHealthBar(maxHealth);
+    public void SetHealth(int health)
+    {
+       
+        healthBar.ResizeHealthBar(health);
+        maxHealth = health;
+        
+        if (health != 100 )
+        {
+            currentHealth = health;
+            healthBar.SetHealthBar(health);
+            
+        }
+        else
+        {
+            if (currentHealth > 100)
+            {
+                healthBar.SetHealthBar(health);
+                currentHealth = health;
+            }
+            else
+            {
+                healthBar.SetHealthBar(currentHealth);
+            }
+            
+        }
     }
+    
+    
 }

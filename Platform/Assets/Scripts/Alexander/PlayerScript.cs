@@ -471,7 +471,7 @@ public class PlayerScript : MonoBehaviour
           Vector2 position = new Vector2(player.position[0], player.position[1]);
           this.GetComponent<Transform>().position = position;
 
-          healthSystem.SetHealth(player.health);
+          //healthSystem.SetHealth(player.health);
           this.level = player.level;
 
       }
@@ -481,6 +481,28 @@ public class PlayerScript : MonoBehaviour
    bool isTalking()
    {
        return (dialoguePanel.activeSelf);
+   }
+
+   public void Debuff()
+   {        
+       
+       healthSystem.SetHealth(50); 
+       
+   }
+   
+   public void Buff()
+   {        
+       
+       healthSystem.SetHealth(200); 
+       
+   }
+
+   
+   public void Restore()
+   {
+      
+           healthSystem.SetHealth(100); 
+      
    }
    
 }
