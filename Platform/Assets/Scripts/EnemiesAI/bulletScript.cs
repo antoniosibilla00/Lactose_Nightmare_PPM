@@ -2,6 +2,7 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UIElements;
 
 public class bulletScript : MonoBehaviour
 {
@@ -14,11 +15,12 @@ public class bulletScript : MonoBehaviour
     void Start()
     {
         bulletRB = GetComponent<Rigidbody2D>();
+        Physics2D.IgnoreLayerCollision(LayerMask.NameToLayer("Bullet"),LayerMask.NameToLayer("Background"));
         target = GameObject.FindGameObjectWithTag("Player");
-        Vector2 moveDir = (target.transform.position - transform.position).normalized * speed;
+        Vector2 moveDir = (target.transform.position - transform.position).normalized * speed *(this.GetComponent<Transform>().localScale.x);
 
         bulletRB.velocity = new Vector2(moveDir.x, moveDir.y);
-        Destroy(this.gameObject, 1);
+        Destroy(this.gameObject, 2);
 
     }
 
@@ -30,7 +32,7 @@ public class bulletScript : MonoBehaviour
             FindObjectOfType<HealthSystem>().TakeDamage(10);
             Destroy(gameObject);
         }
-        else
+        else if (col.CompareTag("ground"))
         {
             Destroy(gameObject);
         }

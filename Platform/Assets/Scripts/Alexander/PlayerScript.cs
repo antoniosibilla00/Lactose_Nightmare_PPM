@@ -34,7 +34,7 @@ public class PlayerScript : MonoBehaviour
     private float xInput;
 
     //gestisce gli input provenienti dall'asse y
-    private float yInput;
+
 
     //consente di attuare la gravità nell'oggetto
     private Rigidbody2D body;
@@ -55,7 +55,7 @@ public class PlayerScript : MonoBehaviour
     private bool run;
     private bool attack;
     private bool roll;
-    private bool checkpoint;
+    private bool move;
     [SerializeField]
     private float invincibilityDurationSeconds;
 
@@ -111,6 +111,7 @@ public class PlayerScript : MonoBehaviour
         sourceSium = GetComponent<AudioSource>();
         LoadPlayer();
         Debug.Log("percorso:"+Application.persistentDataPath);
+        move = true;
 
 
     }
@@ -119,6 +120,7 @@ public class PlayerScript : MonoBehaviour
     // metodo che gestisce gli input e le animazioni
     private void Update()
     {
+        Debug.Log("state"+state);
         if (isTalking() && state != State.talking)
         {
             state =  State.talking;
@@ -152,14 +154,9 @@ public class PlayerScript : MonoBehaviour
                 {
 
                     state =  State.normal;
-                    break;
+                    
                 }
                 
-                if (!anim.GetCurrentAnimatorStateInfo(0).IsName("attack_3") == false && !anim.GetCurrentAnimatorStateInfo(0).IsName("attack_1") == false && !anim.GetCurrentAnimatorStateInfo(0).IsName("attack_2") == false)
-                {
-                    state = State.normal;
-                }
-
                 break;
             
             case State.death:
@@ -190,14 +187,20 @@ public class PlayerScript : MonoBehaviour
         switch (state)
         {
             case State.normal:
+                xInput = Input.GetAxisRaw("Horizontal");
+                if (move)
+                {
+                   
+                    run =   run = xInput != 0;
+                    body.velocity = new Vector2(xInput * speed, body.velocity.y);
 
-                xInput = Input.GetAxis("Horizontal");
-                yInput = Input.GetAxis("Vertical");
-                run = xInput != 0;
-
-
-                body.velocity = new Vector2(xInput * speed, body.velocity.y);
-
+                }
+                else
+                {
+                  
+                    body.velocity = new Vector2(0, 0);
+                }
+                
 
 
 
@@ -330,8 +333,8 @@ public class PlayerScript : MonoBehaviour
 
         if (Input.GetKeyDown(KeyCode.X) && IsGrounded() && !attack)
         {
+            body.velocity =(Vector2.zero);
             anim.SetTrigger(""+combo);
-            Attack();
             attack = true;
             state = State.attacking;
 
@@ -358,14 +361,19 @@ public class PlayerScript : MonoBehaviour
         }
     }
 
-    private void Attack()
+    public void Attack()
     {
         GolemAI enemyIstance;
         Collider2D[] hitEnemies = Physics2D.OverlapCircleAll(attackPoint.position, attackRange, enemyLayers);
-        
+        body.AddForce(new Vector2(moveDir *100,0));
         foreach (Collider2D enemy in hitEnemies)
         {
-            enemy.GetComponent<EnemiesHealthSystem>().TakeDamage(10);
+            if (enemy.GetComponent<EnemiesHealthSystem>().GetCurrentHealth() > 0)
+            {
+                enemy.GetComponent<EnemiesHealthSystem>().TakeDamage(10);
+                enemy.GetComponent<Rigidbody2D>().AddForce(new Vector2(moveDir*15,0));
+            }
+           
         }  
         
 
@@ -397,6 +405,7 @@ public class PlayerScript : MonoBehaviour
     public void StartCombo()
     {
         attack = false ;
+        body.velocity = Vector2.zero;
         if (combo < 3)
         {
            
@@ -504,5 +513,15 @@ public class PlayerScript : MonoBehaviour
            healthSystem.SetHealth(100); 
       
    }
-   
+
+   public void CanMove()
+   {
+       move = true;
+   }
+
+   public void CanNotMove()
+   {
+       move = false;
+   }
+
 }

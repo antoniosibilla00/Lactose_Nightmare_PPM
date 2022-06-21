@@ -41,7 +41,6 @@ public class GolemAI : MonoBehaviour
     [SerializeField] private LayerMask player;
     [SerializeField] private Collider2D player2;
     [SerializeField] private Collider2D Golem;
-     public int golemHealth;
     [SerializeField] private Rigidbody2D playerBody;
     private Vector2 currentVelocity = new Vector2(2,0);
     private bool attack ;
@@ -52,6 +51,8 @@ public class GolemAI : MonoBehaviour
     private bool cooldown;
     private float timer;
     private float actualTimer;
+    private EnemiesHealthSystem healthSystem;
+    private CircleCollider2D punchHitBox;
     public enum State
     {
         normal,
@@ -61,13 +62,11 @@ public class GolemAI : MonoBehaviour
     }
     
     public State state;
-    public GolemAI instance;
+    
 
 
     public void Awake()
     {
-        instance = this;
-        golemHealth = 100;
         dead = false;
         timer = 2f; 
     }
@@ -78,7 +77,9 @@ public class GolemAI : MonoBehaviour
         rb = GetComponent<Rigidbody2D>();
         anim = GetComponent<Animator>(); 
         Physics2D.IgnoreCollision(player2,Golem);
+        healthSystem = GetComponent<EnemiesHealthSystem>();
         attack = false;
+        punchHitBox = GetComponentInChildren<CircleCollider2D>();
         
         InvokeRepeating("UpdatePath", 0f, pathUpdateSeconds);
     }
@@ -94,7 +95,7 @@ public class GolemAI : MonoBehaviour
         switch (state)
         {
             case State.normal:
-                if (golemHealth<0)
+                if (healthSystem.GetCurrentHealth()<=0)
                 {
                     anim.SetTrigger("dead");
                     state = State.death;
@@ -119,8 +120,10 @@ public class GolemAI : MonoBehaviour
         switch (state)
         { 
             case State.normal:
+                
+                punchHitBox.enabled = false;
 
-                if (anim.GetCurrentAnimatorStateInfo(0).IsName("attack") == false )
+                    if (anim.GetCurrentAnimatorStateInfo(0).IsName("attack") == false )
                 {
                     
                     takeHit = false;
@@ -131,6 +134,7 @@ public class GolemAI : MonoBehaviour
                     {
                         actualTimer = timer;
                         attack = true;
+                        
                         state = State.attacking;
 
                     }
@@ -256,6 +260,10 @@ public class GolemAI : MonoBehaviour
         }
     }
 
+    void startAnim()
+    {
+        punchHitBox.enabled = true;
+    }
     void finishAnim()
     {
         attack = false;
@@ -269,10 +277,10 @@ public class GolemAI : MonoBehaviour
         Gizmos.DrawWireSphere(range.position,rangeRadius);
     }
 
-
+    
     private void OnTriggerEnter2D(Collider2D col)
     {
-        if (col.CompareTag("Player") && attack && (takeHit == false))
+        if (col.CompareTag("Player") && attack && (takeHit == false)&& attack)
         {
             takeHit = true;
             col.GetComponent<HealthSystem>().TakeDamage(5);

@@ -113,7 +113,7 @@ public class ChocolateWitchAI : MonoBehaviour
             case State.death :
 
                 this.GetComponent<CapsuleCollider2D>().enabled= false;
-               
+
                 if (anim.GetComponent<Animator>().GetCurrentAnimatorStateInfo(0).normalizedTime >= 1)
                 {
                     Destroy(gameObject);
