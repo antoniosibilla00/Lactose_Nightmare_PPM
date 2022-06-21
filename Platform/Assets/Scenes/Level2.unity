@@ -12831,6 +12831,7 @@ GameObject:
   - component: {fileID: 1965593290}
   - component: {fileID: 1965593289}
   - component: {fileID: 1965593288}
+  - component: {fileID: 1965593296}
   m_Layer: 11
   m_Name: Alexander
   m_TagString: Player
@@ -12983,10 +12984,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e0ef262cde6c1e741974d1b3644aa649, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  healthBar: {fileID: 727713505}
-  healthPotions: {fileID: 1458838560}
-  maxHealth: 100
-  isInvincible: 0
 --- !u!95 &1965593291
 Animator:
   serializedVersion: 3
@@ -13052,7 +13049,7 @@ MonoBehaviour:
   enemyLayers:
     serializedVersion: 2
     m_Bits: 512
-  healthSystem: {fileID: 1965593290}
+  healthSystem: {fileID: 1965593296}
   level: 2
   gm: {fileID: 892532137}
   sium:
@@ -13138,6 +13135,22 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &1965593296
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1965593286}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b6420674753136d4ea3be891f9352fde, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  healthBar: {fileID: 727713505}
+  healthPotions: {fileID: 1458838560}
+  maxHealth: 100
+  isInvincible: 0
 --- !u!1 &2042731459
 GameObject:
   m_ObjectHideFlags: 0
@@ -13398,7 +13411,7 @@ PrefabInstance:
       objectReference: {fileID: 1965593292}
     - target: {fileID: 4330049325376929642, guid: a2c1df4748433214bb84fb9215f949e1, type: 3}
       propertyPath: m_SpriteTilingProperty.oldSize.x
-      value: 1.125
+      value: 0.7916667
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: a2c1df4748433214bb84fb9215f949e1, type: 3}
