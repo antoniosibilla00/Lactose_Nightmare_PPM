@@ -281,7 +281,10 @@ GameObject:
   - component: {fileID: 262187290}
   - component: {fileID: 262187294}
   - component: {fileID: 262187295}
-  m_Layer: 0
+  - component: {fileID: 262187296}
+  - component: {fileID: 262187297}
+  - component: {fileID: 262187298}
+  m_Layer: 9
   m_Name: BatBurger
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -322,7 +325,7 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
+  m_Offset: {x: -0.0002002716, y: -0.28801632}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
@@ -333,7 +336,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 0.0001, y: 0.0001}
+  m_Size: {x: 0.15515137, y: 0.10946274}
   m_EdgeRadius: 0
 --- !u!212 &262187292
 SpriteRenderer:
@@ -375,7 +378,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 3980419562168732608, guid: 52d63a2d24702e641bffd61065787f90, type: 3}
+  m_Sprite: {fileID: -2713078269060002825, guid: 76a31b57724286a4f88b34f88769b3e3, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -416,12 +419,9 @@ MonoBehaviour:
   lineOfSite: 2.5
   shootingRange: 0.4
   anim: {fileID: 262187295}
-  iWillFindU: 1
-  notStattFerm: 0
-  groundLayer:
-    serializedVersion: 2
-    m_Bits: 256
-  life: 10
+  playerCollider: {fileID: 1257087656}
+  life: 100
+  state: 0
 --- !u!95 &262187295
 Animator:
   serializedVersion: 3
@@ -441,6 +441,51 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!114 &262187296
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 262187289}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ee44e58c1791ad6429b61be07adb7f57, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  maxHealth: 100
+--- !u!70 &262187297
+CapsuleCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 262187289}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: -0.023790589, y: 0.17187974}
+  m_Size: {x: 0.5173896, y: 0.15883543}
+  m_Direction: 1
+--- !u!58 &262187298
+CircleCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 262187289}
+  m_Enabled: 0
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0.14280653}
+  serializedVersion: 2
+  m_Radius: 0.0539546
 --- !u!1 &280744959
 GameObject:
   m_ObjectHideFlags: 0
@@ -3619,6 +3664,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: ChocolateWitch
       objectReference: {fileID: 0}
+    - target: {fileID: 5167007383299509404, guid: d62361240bf0ce445ae7b013bc923346, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 5167007383299509405, guid: d62361240bf0ce445ae7b013bc923346, type: 3}
       propertyPath: m_RootOrder
       value: 10
@@ -3890,7 +3939,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 976602791}
-  m_LocalRotation: {x: -1.78032e-40, y: 8.9016e-41, z: 0, w: 1}
+  m_LocalRotation: {x: -2.08527e-40, y: 1.04264e-40, z: 0, w: 1}
   m_LocalPosition: {x: 17.42, y: 15.116551, z: -10}
   m_LocalScale: {x: 0.37139088, y: 0.40597954, z: 1}
   m_Children:
@@ -6572,14 +6621,14 @@ MonoBehaviour:
   m_ScreenX: 0.5
   m_ScreenY: 0.85
   m_CameraDistance: 10
-  m_DeadZoneWidth: 0.115
-  m_DeadZoneHeight: 0.339
+  m_DeadZoneWidth: 0.14
+  m_DeadZoneHeight: 0.54
   m_DeadZoneDepth: 0
   m_UnlimitedSoftZone: 0
-  m_SoftZoneWidth: 0.929
-  m_SoftZoneHeight: 0.451
-  m_BiasX: 0.009000008
-  m_BiasY: -0.49999988
+  m_SoftZoneWidth: 0.93
+  m_SoftZoneHeight: 0.77
+  m_BiasX: 0.009
+  m_BiasY: 0
   m_CenterOnActivate: 1
   m_GroupFramingMode: 2
   m_AdjustmentMode: 0

@@ -1,5 +1,7 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
+using UnityEditor;
 using UnityEngine;
 
 public class FlyingEnemy : MonoBehaviour
@@ -10,54 +12,74 @@ public class FlyingEnemy : MonoBehaviour
     public float shootingRange;
     private Transform player;
     public Animator anim;
-    public bool iWillFindU = true; 
-    public bool notStattFerm = false; 
     private Rigidbody2D body;
-    private BoxCollider2D collision;
-    public LayerMask groundLayer ;
+    private BoxCollider2D collisionBat;
+    private bool attacking = false;
 
+    private CircleCollider2D toHit;
+    public BoxCollider2D playerCollider;
+    private EnemiesHealthSystem healthSystem;
+    private bool todo;
+    public int life = 100;
+    public enum State     {normal,death }
+    public State state;
+
+    private HealthSystem takeDamage;
     
-    public float life = 10;
+   
 
 
     private void Start()
     {
-        
+        todo = true;
         player = GameObject.FindGameObjectWithTag("Player").transform;
-        body = GetComponent<Rigidbody2D>(); 
+        body = GetComponent<Rigidbody2D>();
+        toHit = GetComponentInChildren<CircleCollider2D>();
         anim= GetComponent<Animator>();
-        collision = gameObject.GetComponent<BoxCollider2D>();
+        collisionBat = gameObject.GetComponent<BoxCollider2D>();
+        
+        Physics2D.IgnoreCollision(playerCollider, collisionBat );
 
-        collision.enabled = false;
+        healthSystem = this.GetComponent<EnemiesHealthSystem>();
+        anim.SetBool("die", false );
+        
+        
 
     }
 
 
     private void Update()
     {
-
-        getDamage();
-
-        pathFinding(iWillFindU);
-        
-        Flip(iWillFindU);
-
-        Debug.Log(IsGrounded());
-        
-        if (IsGrounded() && notStattFerm)
+  
+        switch (state)
         {
-            body.bodyType = RigidbodyType2D.Kinematic;
-            collision.enabled = false;
+            case State.normal:
                 
+                pathFinding();
+                Flip();
+                if (healthSystem.GetCurrentHealth()<=0)
+                {
+                    anim.SetTrigger("die");
+                    state = State.death;
+                }
+
+                break;
+            case State.death :
+
+                this.GetComponent<CapsuleCollider2D>().enabled= false;
+
+            
+                break;
         }
-
-       
+        
+        
     }
+ 
+        
+    
 
-    private void Flip(bool todo){
-
-        if(todo){
-
+    private void Flip(){
+        
             if(transform.position.x > player.transform.position.x ){
 
                 transform.rotation = Quaternion.Euler(0,180,0);
@@ -65,35 +87,12 @@ public class FlyingEnemy : MonoBehaviour
             }else{
 
                 transform.rotation = Quaternion.Euler(0,0,0);
-
-
+                
             }
-        }
+            
     }
 
-    private void getDamage(){
-
-        if(Input.GetKeyDown(KeyCode.E) && life > 1){
-
-            life -= 1;
-            Debug.Log(life);
-
-        }else if (Input.GetKeyDown(KeyCode.E) && life == 1){
-            notStattFerm = true;
-            life -= 1;
-            body.bodyType = RigidbodyType2D.Dynamic;
-            collision.enabled = true;
-            anim.SetTrigger("die");
-           
-            iWillFindU=false;
-
-          
-            
-            
-        }
-
-    }
-
+ 
     private void OnDrawGizmosSelected()
     {
         
@@ -103,33 +102,44 @@ public class FlyingEnemy : MonoBehaviour
 
     }
 
-    private void pathFinding(bool todo)
+    private void pathFinding( )
     {
 
-        if(todo){
-        
             float distanceFromPlayer = Vector2.Distance(player.position, transform.position);
 
             if(distanceFromPlayer < lineOfSite && distanceFromPlayer > shootingRange){
 
-                    transform.position = Vector2.MoveTowards(this.transform.position, player.position, speed*Time.deltaTime);
+                transform.position = Vector2.MoveTowards(this.transform.position, player.position, speed*Time.deltaTime);
 
-            }else if (distanceFromPlayer <= shootingRange ){
-
+            }else if (distanceFromPlayer <= shootingRange )
+            {
                 anim.SetTrigger("attack");
-
+                
+                
+                
             }
-        }
-
-    }
-
-    public bool IsGrounded(){ 
-
-            RaycastHit2D raycast = Physics2D.BoxCast(collision.bounds.center, collision.bounds.size, 0, Vector2.down, 0.1f, groundLayer);         
-            return raycast.collider != null;     
         
     }
 
+  
 
+    public void ItsTimeToDestroy()
+    {
+        Destroy(gameObject);
+       
+    }
+
+    public void ImAttacking()
+    {
+
+        toHit.enabled = true ;
+        
+
+    }
+    public void ImNotAttacking()
+    {
+
+        toHit.enabled = false;
+    }
 }
 

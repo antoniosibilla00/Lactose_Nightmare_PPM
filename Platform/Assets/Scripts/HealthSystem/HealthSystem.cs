@@ -63,8 +63,8 @@ public class HealthSystem : MonoBehaviour
           
             }
 
-            healthBar.SetHealthBar(currentHealth-damage);
-            currentHealth -= damage;
+            healthBar.SetHealthBar(currentHealth);
+            
         }
        
     }

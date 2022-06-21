@@ -61,7 +61,7 @@ public class DialogueManager : MonoBehaviour
 
         Debug.Log("questionPosition");
         
-        Debug.Log("sentences2.Count = "  + sentences.Count);
+   
 
         if (sentences != null && !done)
         {
