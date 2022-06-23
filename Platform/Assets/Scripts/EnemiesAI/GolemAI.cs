@@ -8,6 +8,7 @@ using System.Collections.Generic;
 using System.Diagnostics.Tracing;
 using UnityEngine;
 using Pathfinding;
+using UnityEngine.Serialization;
 using UnityEngine.Tilemaps;
 using UnityEngine.Timeline;
 
@@ -39,14 +40,15 @@ public class GolemAI : MonoBehaviour
     [SerializeField] private Transform range;
     [SerializeField] private float rangeRadius;
     [SerializeField] private LayerMask player;
-    [SerializeField] private Collider2D player2;
-    [SerializeField] private Collider2D Golem;
+     [SerializeField] private Collider2D playerCollider;
+    private BoxCollider2D golemCollider;
     [SerializeField] private Rigidbody2D playerBody;
     private Vector2 currentVelocity = new Vector2(2,0);
     private bool attack ;
     private bool takeHit;
     private bool dead;
     private bool walk;
+    bool facingRight;
     private Vector2 force;
     private bool cooldown;
     private float timer;
@@ -73,20 +75,22 @@ public class GolemAI : MonoBehaviour
 
     public void Start()
     {
+        golemCollider = GetComponentInChildren<BoxCollider2D>();
+        punchHitBox = GetComponentInChildren<CircleCollider2D>();
         seeker = GetComponent<Seeker>();
         rb = GetComponent<Rigidbody2D>();
         anim = GetComponent<Animator>(); 
-        Physics2D.IgnoreCollision(player2,Golem);
-        healthSystem = GetComponent<EnemiesHealthSystem>();
+        Physics2D.IgnoreCollision(playerCollider,golemCollider);
+        healthSystem = GetComponentInChildren<EnemiesHealthSystem>();
         attack = false;
-        punchHitBox = GetComponentInChildren<CircleCollider2D>();
-        
+  
         InvokeRepeating("UpdatePath", 0f, pathUpdateSeconds);
     }
 
     private void Update()
     {
-        
+     
+     
         anim.SetBool("attack",attack);
         anim.SetBool("walk",walk);
         anim.SetBool("cooldown",cooldown);
@@ -104,7 +108,7 @@ public class GolemAI : MonoBehaviour
                 break;
             case State.death :
 
-                this.GetComponent<CapsuleCollider2D>().enabled= false;
+                this.GetComponentInChildren<CapsuleCollider2D>().enabled= false;
                
                 if (dead)
                 {
@@ -117,6 +121,7 @@ public class GolemAI : MonoBehaviour
 
     private void FixedUpdate()
     {
+       
         switch (state)
         { 
             case State.normal:
@@ -133,9 +138,21 @@ public class GolemAI : MonoBehaviour
                     if (enterInRange!=null && cooldown == false)
                     {
                         actualTimer = timer;
-                        attack = true;
+                        
                         
                         state = State.attacking;
+
+                        attack = true;
+                        if (target.position.x > transform.position.x)
+                        { 
+                            facingRight = false;
+                            transform.localScale = new Vector3(-1f * Mathf.Abs(transform.localScale.x), transform.localScale.y, transform.localScale.z);
+                        }else{
+                            facingRight = true;
+                            transform.localScale = new Vector3(Mathf.Abs(transform.localScale.x), transform.localScale.y, transform.localScale.z);
+
+                        }
+                     
 
                     }
                     anim.SetBool("walk",true);
@@ -192,7 +209,7 @@ public class GolemAI : MonoBehaviour
         }
 
         // See if colliding with anything
-        Vector3 startOffset = transform.position - new Vector3(0f, GetComponent<Collider2D>().bounds.extents.y + jumpCheckOffset);
+        Vector3 startOffset = transform.position - new Vector3(0f, GetComponentInChildren<BoxCollider2D>().bounds.extents.y + jumpCheckOffset);
         isGrounded = Physics2D.Raycast(startOffset, -Vector3.up, 0.05f);
         
         // Direction Calculation
@@ -233,11 +250,11 @@ public class GolemAI : MonoBehaviour
         // Direction Graphics Handling
         if (directionLookEnabled)
         {
-            if (rb.velocity.x > 0.05f)
+            if (rb.velocity.x > 0.05f && facingRight)
             {
                 transform.localScale = new Vector3(-1f * Mathf.Abs(transform.localScale.x), transform.localScale.y, transform.localScale.z);
             }
-            else if (rb.velocity.x < -0.05f)
+            else if (rb.velocity.x < -0.05f && !facingRight)
             {
                 transform.localScale = new Vector3(Mathf.Abs(transform.localScale.x), transform.localScale.y, transform.localScale.z);
             }
@@ -278,14 +295,7 @@ public class GolemAI : MonoBehaviour
     }
 
     
-    private void OnTriggerEnter2D(Collider2D col)
-    {
-        if (col.CompareTag("Player") && attack && (takeHit == false)&& attack)
-        {
-            takeHit = true;
-            col.GetComponent<HealthSystem>().TakeDamage(5);
-        }
-    }
+
 
     void isDead()
     {

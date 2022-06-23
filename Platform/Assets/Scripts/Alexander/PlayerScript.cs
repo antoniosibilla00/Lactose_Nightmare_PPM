@@ -120,6 +120,7 @@ public class PlayerScript : MonoBehaviour
     // metodo che gestisce gli input e le animazioni
     private void Update()
     {
+        Debug.Log("life:"+healthSystem.GetCurrentHealth());
         Debug.Log("state"+state);
         if (isTalking() && state != State.talking)
         {
@@ -368,10 +369,12 @@ public class PlayerScript : MonoBehaviour
         body.AddForce(new Vector2(moveDir *100,0));
         foreach (Collider2D enemy in hitEnemies)
         {
+            Debug.Log("vitaNemico"+enemy.GetComponent<EnemiesHealthSystem>().GetCurrentHealth() );
             if (enemy.GetComponent<EnemiesHealthSystem>().GetCurrentHealth() > 0)
             {
+                Debug.Log("collider:"+enemy.name);
                 enemy.GetComponent<EnemiesHealthSystem>().TakeDamage(10);
-                enemy.GetComponent<Rigidbody2D>().AddForce(new Vector2(moveDir*15,0));
+                enemy.GetComponentInParent<Rigidbody2D>().AddForce(new Vector2(moveDir*15,0));
             }
            
         }  
@@ -457,7 +460,8 @@ public class PlayerScript : MonoBehaviour
    }
 
    
-   private void OnTriggerEnter2D(Collider2D col)
+  
+   /*private void OnTriggerEnter2D(Collider2D col)
    {
        if (col.gameObject.name.Equals("Nemico") )
        {
@@ -465,6 +469,7 @@ public class PlayerScript : MonoBehaviour
        }
       
    }
+   */
    
 
    public void SavePlayer()

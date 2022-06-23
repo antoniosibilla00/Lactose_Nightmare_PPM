@@ -15,7 +15,7 @@ public class EnemiesHealthSystem : MonoBehaviour
     private bool done;
     private void Start()
     {
-        _renderer = GetComponent<SpriteRenderer>();
+        _renderer = GetComponentInParent<SpriteRenderer>();
         currentHealth = maxHealth;
     }
 

@@ -32,9 +32,9 @@ public class ChocolateWitchAI : MonoBehaviour
     [SerializeField] private Transform range;
     [SerializeField] private float rangeRadius;
     [FormerlySerializedAs("player")] [SerializeField] private LayerMask playerLayerMask;
-    [FormerlySerializedAs("player2")] [SerializeField] private Collider2D playerCollider;
-     [SerializeField] private Collider2D chocolateWitchCollider;
-     public EnemiesHealthSystem healthSystem;
+    [FormerlySerializedAs("player2")] [SerializeField] private Collider2D playerCollider; 
+    private Collider2D chocolateWitchCollider;
+    public EnemiesHealthSystem healthSystem;
     [SerializeField] private Rigidbody2D playerBody;
     private Vector2 currentVelocity = new Vector2(2,0);
     private bool attack ;
@@ -71,6 +71,8 @@ public class ChocolateWitchAI : MonoBehaviour
 
     public void Start()
     {
+        chocolateWitchCollider = GetComponentInChildren<BoxCollider2D>();
+        healthSystem = GetComponentInChildren<EnemiesHealthSystem>();
         seeker = GetComponent<Seeker>();
         rb = GetComponent<Rigidbody2D>();
         anim = GetComponent<Animator>(); 
@@ -112,7 +114,7 @@ public class ChocolateWitchAI : MonoBehaviour
                 break;
             case State.death :
 
-                this.GetComponent<CapsuleCollider2D>().enabled= false;
+                this.GetComponentInChildren<CapsuleCollider2D>().enabled= false;
 
                 if (anim.GetComponent<Animator>().GetCurrentAnimatorStateInfo(0).normalizedTime >= 1)
                 {
@@ -139,7 +141,7 @@ public class ChocolateWitchAI : MonoBehaviour
                     if (enterInRange!=null && cooldown == false)
                     {
                         actualTimer = timer;
-                        attack = true;
+                       
                         state = State.attacking;
                         anim.SetBool("walk",false);
                         
@@ -154,6 +156,8 @@ public class ChocolateWitchAI : MonoBehaviour
                             transform.localScale = new Vector3(Mathf.Abs(transform.localScale.x), transform.localScale.y, transform.localScale.z);
 
                         }
+                        
+                        attack = true;
 
                     }
 
@@ -216,7 +220,7 @@ public class ChocolateWitchAI : MonoBehaviour
         }
 
         // See if colliding with anything
-        Vector3 startOffset = transform.position - new Vector3(0f, GetComponent<Collider2D>().bounds.extents.y + jumpCheckOffset);
+        Vector3 startOffset = transform.position - new Vector3(0f, GetComponentInChildren<BoxCollider2D>().bounds.extents.y + jumpCheckOffset);
         isGrounded = Physics2D.Raycast(startOffset, -Vector3.up, 0.05f);
         
         // Direction Calculation
@@ -296,18 +300,6 @@ public class ChocolateWitchAI : MonoBehaviour
         Gizmos.color= Color.red;
         Gizmos.DrawWireSphere(range.position,rangeRadius);
     }
-
-
-    private void OnTriggerEnter2D(Collider2D col)
-    {
-        if (col.CompareTag("Player") && attack && (takeHit == false))
-        {
-            takeHit = true;
-            col.GetComponent<HealthSystem>().TakeDamage(5);
-        }
-    }
-
-   
 
     void CanShoot()
     {

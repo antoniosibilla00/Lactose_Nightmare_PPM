@@ -1,43 +1,31 @@
 fileFormatVersion: 2
-guid: 77d1db1237929ed48a3129b8e46f0ca4
+guid: c65258b759ab774429c572187264a7d8
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 5894745557883687055
-    second: spr_VillageOneWayTileSetNoBkg_strip_0
+      213: -5923137987264329784
+    second: noBKG_WolfRun_strip_0
   - first:
-      213: 8807469155592918614
-    second: spr_VillageOneWayTileSetNoBkg_strip_1
+      213: 1135546397503783587
+    second: noBKG_WolfRun_strip_1
   - first:
-      213: 3943035371337288430
-    second: spr_VillageOneWayTileSetNoBkg_strip_2
+      213: 9110085314150206214
+    second: noBKG_WolfRun_strip_2
   - first:
-      213: -6926992486549736899
-    second: spr_VillageOneWayTileSetNoBkg_strip_3
+      213: -1688345587656772533
+    second: noBKG_WolfRun_strip_3
   - first:
-      213: -6730377263712774039
-    second: spr_VillageOneWayTileSetNoBkg_strip_4
+      213: 5294963891844311042
+    second: noBKG_WolfRun_strip_4
   - first:
-      213: 5102356760964590029
-    second: spr_VillageOneWayTileSetNoBkg_strip_5
+      213: 3767171260466246927
+    second: noBKG_WolfRun_strip_5
   - first:
-      213: 3709253095837155487
-    second: spr_VillageOneWayTileSetNoBkg_strip_6
+      213: -7130525627194439984
+    second: noBKG_WolfRun_strip_6
   - first:
-      213: 4583684794724017551
-    second: spr_VillageOneWayTileSetNoBkg_strip_7
-  - first:
-      213: 983644936052436428
-    second: spr_VillageOneWayTileSetNoBkg_strip_8
-  - first:
-      213: -5135060051860610619
-    second: spr_VillageOneWayTileSetNoBkg_strip_9
-  - first:
-      213: 5361853889682413979
-    second: spr_VillageOneWayTileSetNoBkg_strip_10
-  - first:
-      213: 6933368788079228928
-    second: spr_VillageOneWayTileSetNoBkg_strip_11
+      213: 5716570975739460960
+    second: noBKG_WolfRun_strip_7
   externalObjects: {}
   serializedVersion: 11
   mipmaps:
@@ -139,85 +127,169 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: spr_VillageOneWayTileSetNoBkg_strip_0
+      name: noBKG_WolfRun_strip_0
       rect:
         serializedVersion: 2
-        x: 8
-        y: 16
-        width: 32
-        height: 32
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+        x: 15
+        y: 20
+        width: 34
+        height: 21
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: f8018fa6ad75ec150800000000000000
-      internalID: 5894745557883687055
+      spriteID: 8c7cc79f169cccda0800000000000000
+      internalID: -5923137987264329784
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: spr_VillageOneWayTileSetNoBkg_strip_1
+      name: noBKG_WolfRun_strip_1
       rect:
         serializedVersion: 2
-        x: 56
-        y: 16
-        width: 32
-        height: 32
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+        x: 80
+        y: 20
+        width: 35
+        height: 20
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 6565355788a6a3a70800000000000000
-      internalID: 8807469155592918614
+      spriteID: 3a20031ae6542cf00800000000000000
+      internalID: 1135546397503783587
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: spr_VillageOneWayTileSetNoBkg_strip_2
+      name: noBKG_WolfRun_strip_2
       rect:
         serializedVersion: 2
-        x: 104
-        y: 16
-        width: 32
-        height: 32
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+        x: 142
+        y: 23
+        width: 39
+        height: 14
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: eea0c5577c978b630800000000000000
-      internalID: 3943035371337288430
+      spriteID: 60b0d6f63568d6e70800000000000000
+      internalID: 9110085314150206214
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: spr_VillageOneWayTileSetNoBkg_strip_3
+      name: noBKG_WolfRun_strip_3
       rect:
         serializedVersion: 2
-        x: 152
-        y: 16
-        width: 32
-        height: 32
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+        x: 209
+        y: 20
+        width: 35
+        height: 19
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: d323765c8016edf90800000000000000
-      internalID: -6926992486549736899
+      spriteID: b44be9d12aac198e0800000000000000
+      internalID: -1688345587656772533
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: noBKG_WolfRun_strip_4
+      rect:
+        serializedVersion: 2
+        x: 273
+        y: 20
+        width: 35
+        height: 20
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 20866ef0b9d7b7940800000000000000
+      internalID: 5294963891844311042
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: noBKG_WolfRun_strip_5
+      rect:
+        serializedVersion: 2
+        x: 338
+        y: 20
+        width: 32
+        height: 20
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f05b6245d4ea74430800000000000000
+      internalID: 3767171260466246927
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: noBKG_WolfRun_strip_6
+      rect:
+        serializedVersion: 2
+        x: 403
+        y: 22
+        width: 31
+        height: 18
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0d68141a8b84b0d90800000000000000
+      internalID: -7130525627194439984
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: noBKG_WolfRun_strip_7
+      rect:
+        serializedVersion: 2
+        x: 466
+        y: 21
+        width: 33
+        height: 19
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 06d3246c307555f40800000000000000
+      internalID: 5716570975739460960
       vertices: []
       indices: 
       edges: []

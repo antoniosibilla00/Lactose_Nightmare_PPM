@@ -34,13 +34,12 @@ public class FlyingEnemy : MonoBehaviour
         todo = true;
         player = GameObject.FindGameObjectWithTag("Player").transform;
         body = GetComponent<Rigidbody2D>();
-        toHit = GetComponentInChildren<CircleCollider2D>();
         anim= GetComponent<Animator>();
-        collisionBat = gameObject.GetComponent<BoxCollider2D>();
-        
+        collisionBat = gameObject.GetComponentInChildren<BoxCollider2D>();
+        toHit = GetComponentInChildren<CircleCollider2D>();
         Physics2D.IgnoreCollision(playerCollider, collisionBat );
 
-        healthSystem = this.GetComponent<EnemiesHealthSystem>();
+        healthSystem = this.GetComponentInChildren<EnemiesHealthSystem>();
         anim.SetBool("die", false );
         
         
@@ -66,7 +65,7 @@ public class FlyingEnemy : MonoBehaviour
                 break;
             case State.death :
 
-                this.GetComponent<CapsuleCollider2D>().enabled= false;
+                this.GetComponentInChildren<CapsuleCollider2D>().enabled= false;
 
             
                 break;
