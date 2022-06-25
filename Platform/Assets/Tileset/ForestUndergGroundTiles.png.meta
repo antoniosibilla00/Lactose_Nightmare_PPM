@@ -143,6 +143,9 @@ TextureImporter:
   - first:
       213: -4517489705362578250
     second: spr_VillageTileSetNoBkg2_strip_46
+  - first:
+      213: 2262922128809639278
+    second: ForestUndergGroundTiles_0
   externalObjects: {}
   serializedVersion: 11
   mipmaps:
@@ -243,31 +246,6 @@ TextureImporter:
   spriteSheet:
     serializedVersion: 2
     sprites:
-    - serializedVersion: 2
-      name: spr_VillageTileSetNoBkg2_strip_0
-      rect:
-        serializedVersion: 2
-        x: 1099
-        y: 24
-        width: 24
-        height: 24
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape:
-      - - {x: -12, y: 12}
-        - {x: -12, y: -12}
-        - {x: 12, y: -12}
-        - {x: 12, y: 12}
-      tessellationDetail: 0
-      bones: []
-      spriteID: dbf9e4753e9685c30800000000000000
-      internalID: 4348341865369477053
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
     - serializedVersion: 2
       name: spr_VillageTileSetNoBkg2_strip_1
       rect:
@@ -1414,6 +1392,31 @@ TextureImporter:
       bones: []
       spriteID: 6b421633c07ae41c0800000000000000
       internalID: -4517489705362578250
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ForestUndergGroundTiles_0
+      rect:
+        serializedVersion: 2
+        x: 12
+        y: 12
+        width: 24
+        height: 24
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape:
+      - - {x: -12, y: 12}
+        - {x: -12, y: -12}
+        - {x: 12, y: -12}
+        - {x: 12, y: 12}
+      tessellationDetail: 0
+      bones: []
+      spriteID: e6db11acfa3876f10800000000000000
+      internalID: 2262922128809639278
       vertices: []
       indices: 
       edges: []

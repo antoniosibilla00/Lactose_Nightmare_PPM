@@ -21,7 +21,7 @@ TagManager:
   - Background
   - Player
   - Bullet
-  - 
+  - Obstacles
   - 
   - 
   - 
@@ -43,4 +43,22 @@ TagManager:
   m_SortingLayers:
   - name: Default
     uniqueID: 0
+    locked: 0
+  - name: Background
+    uniqueID: 2155363169
+    locked: 0
+  - name: BackgroundObjects
+    uniqueID: 4229726849
+    locked: 0
+  - name: Interactable
+    uniqueID: 2602308437
+    locked: 0
+  - name: Enemies
+    uniqueID: 1249659199
+    locked: 0
+  - name: Obstacles
+    uniqueID: 4065659995
+    locked: 0
+  - name: ForeGround
+    uniqueID: 3618272391
     locked: 0
