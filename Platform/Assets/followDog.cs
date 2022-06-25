@@ -12,10 +12,9 @@ public class followDog : MonoBehaviour
     {
         if (GameObject.Find("SalamiDog"))
         {
-            this.transform.position =(new Vector2(dogToFollow.position.x+-0.3f,transform.position.y));
+            this.transform.position =(new Vector2(dogToFollow.position.x ,transform.position.y));
         }
         else{
-            Debug.Log("siumSino");
             Destroy(gameObject);
         }
        
