@@ -32,7 +32,8 @@ public class GolemAI : MonoBehaviour
     public bool directionLookEnabled = true;
 
     private Path path;
-    private int currentWaypoint = 0;
+    private int currentWaypoint = 0; 
+    [SerializeField]private float followDistance;
     RaycastHit2D isGrounded;
     Seeker seeker;
     Rigidbody2D rb;
@@ -55,11 +56,13 @@ public class GolemAI : MonoBehaviour
     private float actualTimer;
     private EnemiesHealthSystem healthSystem;
     private CircleCollider2D punchHitBox;
+    
     public enum State
     {
         normal,
         attacking,
         death,
+        idle
        
     }
     
@@ -70,7 +73,7 @@ public class GolemAI : MonoBehaviour
     public void Awake()
     {
         dead = false;
-        timer = 2f; 
+        timer = 1.2f; 
     }
 
     public void Start()
@@ -97,8 +100,10 @@ public class GolemAI : MonoBehaviour
         
         
         switch (state)
-        {
+        { 
             case State.normal:
+                
+                
                 if (healthSystem.GetCurrentHealth()<=0)
                 {
                     anim.SetTrigger("dead");
@@ -114,6 +119,13 @@ public class GolemAI : MonoBehaviour
                 {
                     Destroy(gameObject);
                 } 
+                break;
+            
+            case State.idle:
+                Debug.Log("Idle");
+                walk = false;
+                cooldown = true;
+                
                 break;
         }
 
@@ -155,11 +167,20 @@ public class GolemAI : MonoBehaviour
                      
 
                     }
-                    anim.SetBool("walk",true);
-                    if (TargetInDistance() && followEnabled)
+                    else if(BecameInactive())
                     {
-                        PathFollow();
+                        state = State.idle;
+                        
                     }
+                    else
+                    {
+                        if (TargetInDistance() && followEnabled)
+                        {
+                            walk = true;
+                            PathFollow();
+                        }
+                    }
+                   
 
                 }
 
@@ -176,6 +197,16 @@ public class GolemAI : MonoBehaviour
                 break;
             case State.death :
                 break;
+            case State.idle:
+               
+                if (TargetInDistance())
+                {
+                    state = State.normal;
+                    cooldown = false;
+                }
+                break;
+            
+            
         }
 
     }
@@ -253,10 +284,12 @@ public class GolemAI : MonoBehaviour
             if (rb.velocity.x > 0.05f && facingRight)
             {
                 transform.localScale = new Vector3(-1f * Mathf.Abs(transform.localScale.x), transform.localScale.y, transform.localScale.z);
+                facingRight = false;
             }
             else if (rb.velocity.x < -0.05f && !facingRight)
             {
                 transform.localScale = new Vector3(Mathf.Abs(transform.localScale.x), transform.localScale.y, transform.localScale.z);
+                facingRight = true;
             }
         }
     }
@@ -265,6 +298,12 @@ public class GolemAI : MonoBehaviour
     {
         return Vector2.Distance(transform.position, target.transform.position) < activateDistance;
     }
+    
+    private bool BecameInactive()
+    {
+        return Vector2.Distance(transform.position, target.transform.position) > followDistance;
+    }
+    
 
     private void OnPathComplete(Path p)
     {
@@ -285,6 +324,7 @@ public class GolemAI : MonoBehaviour
     {
         attack = false;
         cooldown = true;
+        walk = false;
 
     }
 
