@@ -364,7 +364,6 @@ public class PlayerScript : MonoBehaviour
 
     public void Attack()
     {
-        GolemAI enemyIstance;
         Collider2D[] hitEnemies = Physics2D.OverlapCircleAll(attackPoint.position, attackRange, enemyLayers);
         body.AddForce(new Vector2(moveDir *100,0));
         foreach (Collider2D enemy in hitEnemies)

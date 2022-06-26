@@ -21,8 +21,7 @@ public class Interactor : MonoBehaviour
     {
         
         int numFound = Physics2D.OverlapCircleNonAlloc(interactionPoint.position,interactionPointRadius,_collider,interactableMask);
-      
-        Debug.Log(done);
+        
         if (numFound >0)
         {
             if (!done)

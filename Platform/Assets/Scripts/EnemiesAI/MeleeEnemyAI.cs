@@ -12,7 +12,8 @@ using UnityEngine.Serialization;
 using UnityEngine.Tilemaps;
 using UnityEngine.Timeline;
 
-public class GolemAI : MonoBehaviour
+public class MeleeEnemyAI
+    : MonoBehaviour
 {
     [Header("Pathfinding")]
     public Transform target;
@@ -32,7 +33,9 @@ public class GolemAI : MonoBehaviour
     public bool directionLookEnabled = true;
 
     private Path path;
-    private int currentWaypoint = 0; 
+    private int currentWaypoint;
+
+    #region AI variables
     [SerializeField]private float followDistance;
     RaycastHit2D isGrounded;
     Seeker seeker;
@@ -41,10 +44,13 @@ public class GolemAI : MonoBehaviour
     [SerializeField] private Transform range;
     [SerializeField] private float rangeRadius;
     [SerializeField] private LayerMask player;
-     [SerializeField] private Collider2D playerCollider;
+    [SerializeField] private Collider2D playerCollider;
     private BoxCollider2D golemCollider;
     [SerializeField] private Rigidbody2D playerBody;
-    private Vector2 currentVelocity = new Vector2(2,0);
+    [SerializeField]private float timer;
+    #endregion
+
+    #region Animator variables
     private bool attack ;
     private bool takeHit;
     private bool dead;
@@ -52,18 +58,18 @@ public class GolemAI : MonoBehaviour
     bool facingRight;
     private Vector2 force;
     private bool cooldown;
-    private float timer;
     private float actualTimer;
     private EnemiesHealthSystem healthSystem;
     private CircleCollider2D punchHitBox;
+    #endregion
+
     
     public enum State
-    {
+    { 
         normal,
         attacking,
         death,
         idle
-       
     }
     
     public State state;
@@ -73,7 +79,6 @@ public class GolemAI : MonoBehaviour
     public void Awake()
     {
         dead = false;
-        timer = 1.2f; 
     }
 
     public void Start()
@@ -93,12 +98,16 @@ public class GolemAI : MonoBehaviour
     private void Update()
     {
      
-     
+        Debug.Log("attack"+attack);
+        Debug.Log("walk"+walk);
+        Debug.Log("cooldown"+cooldown);
+        
+        anim.SetBool("cooldown",cooldown);
         anim.SetBool("attack",attack);
         anim.SetBool("walk",walk);
-        anim.SetBool("cooldown",cooldown);
+     
         
-        
+        #region Manage Enemy states (In terms of Animation)
         switch (state)
         { 
             case State.normal:
@@ -121,19 +130,23 @@ public class GolemAI : MonoBehaviour
                 } 
                 break;
             
+            
             case State.idle:
-                Debug.Log("Idle");
+              
                 walk = false;
-                cooldown = true;
-                
+               
                 break;
+                
         }
+        #endregion
 
     }
 
     private void FixedUpdate()
     {
        
+        #region Manage Enemy states (Physics)
+        
         switch (state)
         { 
             case State.normal:
@@ -167,11 +180,13 @@ public class GolemAI : MonoBehaviour
                      
 
                     }
+                    
                     else if(BecameInactive())
                     {
                         state = State.idle;
                         
                     }
+                    
                     else
                     {
                         if (TargetInDistance() && followEnabled)
@@ -180,8 +195,6 @@ public class GolemAI : MonoBehaviour
                             PathFollow();
                         }
                     }
-                   
-
                 }
 
                 break;
@@ -197,21 +210,21 @@ public class GolemAI : MonoBehaviour
                 break;
             case State.death :
                 break;
+            
             case State.idle:
                
                 if (TargetInDistance())
                 {
-                    state = State.normal;
                     cooldown = false;
+                    state = State.normal;
+
                 }
                 break;
-            
-            
         }
 
     }
+    #endregion
     
-
     private void UpdatePath()
     {
         if (!attack)
@@ -325,6 +338,7 @@ public class GolemAI : MonoBehaviour
         attack = false;
         cooldown = true;
         walk = false;
+        Debug.Log("finishAnim");
 
     }
 
@@ -333,10 +347,7 @@ public class GolemAI : MonoBehaviour
         Gizmos.color= Color.red;
         Gizmos.DrawWireSphere(range.position,rangeRadius);
     }
-
     
-
-
     void isDead()
     {
     

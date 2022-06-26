@@ -12,7 +12,6 @@ public class TriggerDamage : MonoBehaviour
     {
         if (col.CompareTag("Player") )
         {
-            Debug.Log("sonoDentro");
             col.GetComponent<HealthSystem>().TakeDamage(10);
         }
     }
