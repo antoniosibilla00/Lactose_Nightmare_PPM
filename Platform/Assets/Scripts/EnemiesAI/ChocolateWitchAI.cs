@@ -31,8 +31,10 @@ public class ChocolateWitchAI : MonoBehaviour
     private Animator anim;
     [SerializeField] private Transform range;
     [SerializeField] private float rangeRadius;
+    [SerializeField]private float followDistance;
     [FormerlySerializedAs("player")] [SerializeField] private LayerMask playerLayerMask;
-    [FormerlySerializedAs("player2")] [SerializeField] private Collider2D playerCollider; 
+    [FormerlySerializedAs("player2")] [SerializeField] private BoxCollider2D playerCollider; 
+    [SerializeField] private CapsuleCollider2D playerCollider2; 
     private Collider2D chocolateWitchCollider;
     public EnemiesHealthSystem healthSystem;
     [SerializeField] private Rigidbody2D playerBody;
@@ -56,6 +58,7 @@ public class ChocolateWitchAI : MonoBehaviour
         normal,
         attacking,
         death,
+        idle
        
     }
     
@@ -77,6 +80,8 @@ public class ChocolateWitchAI : MonoBehaviour
         rb = GetComponent<Rigidbody2D>();
         anim = GetComponent<Animator>(); 
         Physics2D.IgnoreCollision(playerCollider,chocolateWitchCollider);
+        Physics2D.IgnoreCollision(playerCollider2,chocolateWitchCollider);
+        
         attack = false;
         shoot = false;
         
@@ -85,17 +90,12 @@ public class ChocolateWitchAI : MonoBehaviour
 
     private void Update()
     {
-        Debug.Log("sono morto? :"+dead);
-        
-        Debug.Log("VitaNemico"+healthSystem.GetCurrentHealth());
-     
-        
         
         anim.SetBool("attack",attack);
         
         anim.SetBool("cooldown",cooldown);
+        anim.SetBool("walk",walk);
         
-        Debug.Log("shoot"+shoot);
         if (shoot && !GameObject.Find("Bullet(Clone)"))
         {
             Instantiate(bullet, bulletParent.transform.position, Quaternion.identity);
@@ -121,6 +121,14 @@ public class ChocolateWitchAI : MonoBehaviour
                     Destroy(gameObject);
                 } 
                 break;
+            
+            case State.idle:
+              
+                walk = false;
+               
+                break;
+                
+        
         }
 
     }
@@ -130,53 +138,54 @@ public class ChocolateWitchAI : MonoBehaviour
         switch (state)
         { 
             case State.normal:
-
-                if (anim.GetCurrentAnimatorStateInfo(0).IsName("attack") == false )
-                {
+                
                     
                     takeHit = false;
                                         
-                    Collider2D enterInRange = Physics2D.OverlapCircle(range.position, rangeRadius, playerLayerMask);
-                    
-                    if (enterInRange!=null && cooldown == false)
+                    if (anim.GetCurrentAnimatorStateInfo(0).IsName("attack") == false )
                     {
-                        actualTimer = timer;
-                       
-                        state = State.attacking;
-                        anim.SetBool("walk",false);
+                    
+                        takeHit = false;
+                                        
+                        Collider2D enterInRange = Physics2D.OverlapCircle(range.position, rangeRadius, playerLayerMask);
+                    
+                        if (enterInRange!=null && cooldown == false)
+                        {
+                            actualTimer = timer;
                         
-                      
                         
-                        if (target.position.x > transform.position.x)
-                        { 
-                            facingRight = false;
-                            transform.localScale = new Vector3(-1f * Mathf.Abs(transform.localScale.x), transform.localScale.y, transform.localScale.z);
-                        }else{
-                            facingRight = true;
-                            transform.localScale = new Vector3(Mathf.Abs(transform.localScale.x), transform.localScale.y, transform.localScale.z);
+                            state = State.attacking;
+                            attack = true;
+                            if (target.position.x > transform.position.x)
+                            { 
+                                facingRight = false;
+                                transform.localScale = new Vector3(-1f * Mathf.Abs(transform.localScale.x), transform.localScale.y, transform.localScale.z);
+                            }else{
+                                facingRight = true;
+                                transform.localScale = new Vector3(Mathf.Abs(transform.localScale.x), transform.localScale.y, transform.localScale.z);
+
+                            }
+                     
 
                         }
-                        
-                        attack = true;
-
-                    }
-
-                    if (anim.GetCurrentAnimatorStateInfo(0).IsName("attack") == false)
-                    {
-                        anim.SetBool("walk",true);
-                    }
                     
-                    if (TargetInDistance() && followEnabled)
-                    {
-                        PathFollow();
+                        else if(BecameInactive())
+                        {
+                            state = State.idle;
+                        
+                        }
+                    
+                        else if (TargetInDistance() && followEnabled)
+                        {
+                            walk = true;
+                            PathFollow();
+                        }
+                        
                     }
 
-                }
-
-                break;
+                    break;
             
             case State.attacking:
-                anim.SetBool("walk",false);
                 actualTimer -= Time.deltaTime;
                 if (actualTimer <= 0 && attack == false)
                 {
@@ -187,8 +196,20 @@ public class ChocolateWitchAI : MonoBehaviour
                 break;
             case State.death :
                 break;
-        }
+            
+            case State.idle:
+                   
+                if (TargetInDistance())
+                {
+                    cooldown = false;
+                    state = State.normal;
 
+                }
+                break;
+
+        }
+        
+            
     }
     
 
@@ -203,6 +224,11 @@ public class ChocolateWitchAI : MonoBehaviour
             }
         }
        
+    }
+    
+    private bool BecameInactive()
+    {
+        return Vector2.Distance(transform.position, target.transform.position) > followDistance;
     }
 
     private void PathFollow()
@@ -292,6 +318,7 @@ public class ChocolateWitchAI : MonoBehaviour
     {
         attack = false;
         cooldown = true;
+        walk = false;
 
     }
 

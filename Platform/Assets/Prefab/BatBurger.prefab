@@ -243,7 +243,8 @@ MonoBehaviour:
   lineOfSite: 2.5
   shootingRange: 0.4
   anim: {fileID: 7777215311458333983}
-  playerCollider: {fileID: 0}
+  playerCollider: {fileID: 6240371404290072620, guid: 2cf7458078d19b04da8afded4ee2094d, type: 3}
+  playerCollider2: {fileID: 6240371404290072616, guid: 2cf7458078d19b04da8afded4ee2094d, type: 3}
   life: 100
   state: 0
 --- !u!95 &7777215311458333983

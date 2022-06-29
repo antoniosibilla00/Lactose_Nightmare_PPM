@@ -44,7 +44,8 @@ public class MeleeEnemyAI
     [SerializeField] private Transform range;
     [SerializeField] private float rangeRadius;
     [SerializeField] private LayerMask player;
-    [SerializeField] private Collider2D playerCollider;
+    [SerializeField] private BoxCollider2D playerCollider;
+    [SerializeField] private CapsuleCollider2D playerCollider2;
     private BoxCollider2D golemCollider;
     [SerializeField] private Rigidbody2D playerBody;
     [SerializeField]private float timer;
@@ -89,6 +90,7 @@ public class MeleeEnemyAI
         rb = GetComponent<Rigidbody2D>();
         anim = GetComponent<Animator>(); 
         Physics2D.IgnoreCollision(playerCollider,golemCollider);
+        Physics2D.IgnoreCollision(playerCollider2,golemCollider);
         healthSystem = GetComponentInChildren<EnemiesHealthSystem>();
         attack = false;
   
@@ -126,6 +128,7 @@ public class MeleeEnemyAI
                
                 if (dead)
                 {
+                    Destroy(transform.parent.gameObject);
                     Destroy(gameObject);
                 } 
                 break;

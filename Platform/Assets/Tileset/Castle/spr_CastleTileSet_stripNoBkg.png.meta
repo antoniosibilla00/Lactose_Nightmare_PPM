@@ -1,0 +1,1248 @@
+fileFormatVersion: 2
+guid: 89df5763e466f4c4caa240f9e7b25e4b
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: 7180082893834707247
+    second: spr_CastleTileSet_stripNoBkg_0
+  - first:
+      213: -3660184986865294689
+    second: spr_CastleTileSet_stripNoBkg_1
+  - first:
+      213: -7592050460229394798
+    second: spr_CastleTileSet_stripNoBkg_2
+  - first:
+      213: -2613467175879522879
+    second: spr_CastleTileSet_stripNoBkg_3
+  - first:
+      213: 8413591192369307821
+    second: spr_CastleTileSet_stripNoBkg_4
+  - first:
+      213: 90426221176776157
+    second: spr_CastleTileSet_stripNoBkg_5
+  - first:
+      213: 2719713375877316617
+    second: spr_CastleTileSet_stripNoBkg_6
+  - first:
+      213: 5883459016764864188
+    second: spr_CastleTileSet_stripNoBkg_7
+  - first:
+      213: 5791100836294813026
+    second: spr_CastleTileSet_stripNoBkg_8
+  - first:
+      213: -3962282978572442880
+    second: spr_CastleTileSet_stripNoBkg_9
+  - first:
+      213: 3775828228202996634
+    second: spr_CastleTileSet_stripNoBkg_10
+  - first:
+      213: -7210874859325483977
+    second: spr_CastleTileSet_stripNoBkg_11
+  - first:
+      213: 1334066794165494034
+    second: spr_CastleTileSet_stripNoBkg_12
+  - first:
+      213: 2033933936303396486
+    second: spr_CastleTileSet_stripNoBkg_13
+  - first:
+      213: 8285671690481296461
+    second: spr_CastleTileSet_stripNoBkg_14
+  - first:
+      213: 4812553982883076828
+    second: spr_CastleTileSet_stripNoBkg_15
+  - first:
+      213: 7800095303495155433
+    second: spr_CastleTileSet_stripNoBkg_16
+  - first:
+      213: -7534394111641759561
+    second: spr_CastleTileSet_stripNoBkg_17
+  - first:
+      213: 5477875919257988936
+    second: spr_CastleTileSet_stripNoBkg_18
+  - first:
+      213: -2104384853465414962
+    second: spr_CastleTileSet_stripNoBkg_19
+  - first:
+      213: 1270675465658349767
+    second: spr_CastleTileSet_stripNoBkg_20
+  - first:
+      213: -7178416205531619671
+    second: spr_CastleTileSet_stripNoBkg_21
+  - first:
+      213: -1956880750698599150
+    second: spr_CastleTileSet_stripNoBkg_22
+  - first:
+      213: -5829726049980634056
+    second: spr_CastleTileSet_stripNoBkg_23
+  - first:
+      213: 2382456574371201831
+    second: spr_CastleTileSet_stripNoBkg_24
+  - first:
+      213: 2028972311851518278
+    second: spr_CastleTileSet_stripNoBkg_25
+  - first:
+      213: -7184046308702219123
+    second: spr_CastleTileSet_stripNoBkg_26
+  - first:
+      213: -5842902602758986385
+    second: spr_CastleTileSet_stripNoBkg_27
+  - first:
+      213: -3131063296097751624
+    second: spr_CastleTileSet_stripNoBkg_28
+  - first:
+      213: 9210104501026551956
+    second: spr_CastleTileSet_stripNoBkg_29
+  - first:
+      213: 2518993932503510275
+    second: spr_CastleTileSet_stripNoBkg_30
+  - first:
+      213: 1535986194154111613
+    second: spr_CastleTileSet_stripNoBkg_31
+  - first:
+      213: -5372185271980085325
+    second: spr_CastleTileSet_stripNoBkg_32
+  - first:
+      213: 6637364177558746242
+    second: spr_CastleTileSet_stripNoBkg_33
+  - first:
+      213: -2069744872390729142
+    second: spr_CastleTileSet_stripNoBkg_34
+  - first:
+      213: -4417011445424366432
+    second: spr_CastleTileSet_stripNoBkg_35
+  - first:
+      213: 3840345125203232791
+    second: spr_CastleTileSet_stripNoBkg_36
+  - first:
+      213: -6930013037121850225
+    second: spr_CastleTileSet_stripNoBkg_37
+  - first:
+      213: -3157907687689507139
+    second: spr_CastleTileSet_stripNoBkg_38
+  - first:
+      213: 8620977228684576457
+    second: spr_CastleTileSet_stripNoBkg_39
+  - first:
+      213: -4789670695627652361
+    second: spr_CastleTileSet_stripNoBkg_40
+  - first:
+      213: 6452572549059133368
+    second: spr_CastleTileSet_stripNoBkg_41
+  - first:
+      213: 3041325897411895645
+    second: spr_CastleTileSet_stripNoBkg_42
+  - first:
+      213: 4981872511798708122
+    second: spr_CastleTileSet_stripNoBkg_43
+  - first:
+      213: -8576564277837420532
+    second: spr_CastleTileSet_stripNoBkg_44
+  - first:
+      213: 3579288955562826087
+    second: spr_CastleTileSet_stripNoBkg_45
+  - first:
+      213: 6214804119339410724
+    second: spr_CastleTileSet_stripNoBkg_46
+  externalObjects: {}
+  serializedVersion: 11
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 0
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 64
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 8192
+    resizeAlgorithm: 0
+    textureFormat: 4
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 8192
+    resizeAlgorithm: 0
+    textureFormat: 4
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: WebGL
+    maxTextureSize: 8192
+    resizeAlgorithm: 0
+    textureFormat: 4
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: spr_CastleTileSet_stripNoBkg_0
+      rect:
+        serializedVersion: 2
+        x: 15
+        y: 16
+        width: 33
+        height: 33
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f2160e8a957c4a360800000000000000
+      internalID: 7180082893834707247
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: spr_CastleTileSet_stripNoBkg_1
+      rect:
+        serializedVersion: 2
+        x: 80
+        y: 16
+        width: 32
+        height: 33
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f922dad9529643dc0800000000000000
+      internalID: -3660184986865294689
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: spr_CastleTileSet_stripNoBkg_2
+      rect:
+        serializedVersion: 2
+        x: 144
+        y: 16
+        width: 33
+        height: 33
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 29e9f21b45e93a690800000000000000
+      internalID: -7592050460229394798
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: spr_CastleTileSet_stripNoBkg_3
+      rect:
+        serializedVersion: 2
+        x: 207
+        y: 16
+        width: 33
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1c5ce8543791bbbd0800000000000000
+      internalID: -2613467175879522879
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: spr_CastleTileSet_stripNoBkg_4
+      rect:
+        serializedVersion: 2
+        x: 272
+        y: 16
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: da02782cc9413c470800000000000000
+      internalID: 8413591192369307821
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: spr_CastleTileSet_stripNoBkg_5
+      rect:
+        serializedVersion: 2
+        x: 336
+        y: 16
+        width: 33
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: dd56f974b22414100800000000000000
+      internalID: 90426221176776157
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: spr_CastleTileSet_stripNoBkg_6
+      rect:
+        serializedVersion: 2
+        x: 399
+        y: 15
+        width: 33
+        height: 33
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 900cb0cd7ec5eb520800000000000000
+      internalID: 2719713375877316617
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: spr_CastleTileSet_stripNoBkg_7
+      rect:
+        serializedVersion: 2
+        x: 464
+        y: 15
+        width: 32
+        height: 33
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cb6b6d8cdce36a150800000000000000
+      internalID: 5883459016764864188
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: spr_CastleTileSet_stripNoBkg_8
+      rect:
+        serializedVersion: 2
+        x: 528
+        y: 15
+        width: 33
+        height: 33
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 265e1dd278f1e5050800000000000000
+      internalID: 5791100836294813026
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: spr_CastleTileSet_stripNoBkg_9
+      rect:
+        serializedVersion: 2
+        x: 592
+        y: 16
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 003ec92cf942309c0800000000000000
+      internalID: -3962282978572442880
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: spr_CastleTileSet_stripNoBkg_10
+      rect:
+        serializedVersion: 2
+        x: 656
+        y: 16
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a93aee2b4cf666430800000000000000
+      internalID: 3775828228202996634
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: spr_CastleTileSet_stripNoBkg_11
+      rect:
+        serializedVersion: 2
+        x: 720
+        y: 16
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7341c123583ddeb90800000000000000
+      internalID: -7210874859325483977
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: spr_CastleTileSet_stripNoBkg_12
+      rect:
+        serializedVersion: 2
+        x: 784
+        y: 16
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 211e0ec5eae838210800000000000000
+      internalID: 1334066794165494034
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: spr_CastleTileSet_stripNoBkg_13
+      rect:
+        serializedVersion: 2
+        x: 848
+        y: 16
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 686d9f9832cf93c10800000000000000
+      internalID: 2033933936303396486
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: spr_CastleTileSet_stripNoBkg_14
+      rect:
+        serializedVersion: 2
+        x: 912
+        y: 16
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d44e5acc08e9cf270800000000000000
+      internalID: 8285671690481296461
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: spr_CastleTileSet_stripNoBkg_15
+      rect:
+        serializedVersion: 2
+        x: 975
+        y: 16
+        width: 34
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cda13247950a9c240800000000000000
+      internalID: 4812553982883076828
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: spr_CastleTileSet_stripNoBkg_16
+      rect:
+        serializedVersion: 2
+        x: 1040
+        y: 15
+        width: 32
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9ee75031a518f3c60800000000000000
+      internalID: 7800095303495155433
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: spr_CastleTileSet_stripNoBkg_17
+      rect:
+        serializedVersion: 2
+        x: 1103
+        y: 16
+        width: 34
+        height: 33
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7b05cc17974707790800000000000000
+      internalID: -7534394111641759561
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: spr_CastleTileSet_stripNoBkg_18
+      rect:
+        serializedVersion: 2
+        x: 1167
+        y: 15
+        width: 34
+        height: 33
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 84fe9032023550c40800000000000000
+      internalID: 5477875919257988936
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: spr_CastleTileSet_stripNoBkg_19
+      rect:
+        serializedVersion: 2
+        x: 1231
+        y: 15
+        width: 33
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ec24b721029bbc2e0800000000000000
+      internalID: -2104384853465414962
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: spr_CastleTileSet_stripNoBkg_20
+      rect:
+        serializedVersion: 2
+        x: 1296
+        y: 15
+        width: 33
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7c8be5b8a9852a110800000000000000
+      internalID: 1270675465658349767
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: spr_CastleTileSet_stripNoBkg_21
+      rect:
+        serializedVersion: 2
+        x: 1360
+        y: 16
+        width: 32
+        height: 33
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9ae51637e74216c90800000000000000
+      internalID: -7178416205531619671
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: spr_CastleTileSet_stripNoBkg_22
+      rect:
+        serializedVersion: 2
+        x: 1424
+        y: 15
+        width: 32
+        height: 33
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 21d6fc24353c7d4e0800000000000000
+      internalID: -1956880750698599150
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: spr_CastleTileSet_stripNoBkg_23
+      rect:
+        serializedVersion: 2
+        x: 1488
+        y: 16
+        width: 33
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 83c20157b07a81fa0800000000000000
+      internalID: -5829726049980634056
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: spr_CastleTileSet_stripNoBkg_24
+      rect:
+        serializedVersion: 2
+        x: 1551
+        y: 16
+        width: 33
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7238030b1af201120800000000000000
+      internalID: 2382456574371201831
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: spr_CastleTileSet_stripNoBkg_25
+      rect:
+        serializedVersion: 2
+        x: 1616
+        y: 16
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6494303519b582c10800000000000000
+      internalID: 2028972311851518278
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: spr_CastleTileSet_stripNoBkg_26
+      rect:
+        serializedVersion: 2
+        x: 1680
+        y: 16
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d8419d7e1f32d4c90800000000000000
+      internalID: -7184046308702219123
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: spr_CastleTileSet_stripNoBkg_27
+      rect:
+        serializedVersion: 2
+        x: 1744
+        y: 16
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f6568513a07d9eea0800000000000000
+      internalID: -5842902602758986385
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: spr_CastleTileSet_stripNoBkg_28
+      rect:
+        serializedVersion: 2
+        x: 1808
+        y: 16
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8bd64d2758a3c84d0800000000000000
+      internalID: -3131063296097751624
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: spr_CastleTileSet_stripNoBkg_29
+      rect:
+        serializedVersion: 2
+        x: 1872
+        y: 16
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 498f9e71f3dd0df70800000000000000
+      internalID: 9210104501026551956
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: spr_CastleTileSet_stripNoBkg_30
+      rect:
+        serializedVersion: 2
+        x: 1936
+        y: 16
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 30d6c3aa2a345f220800000000000000
+      internalID: 2518993932503510275
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: spr_CastleTileSet_stripNoBkg_31
+      rect:
+        serializedVersion: 2
+        x: 2000
+        y: 16
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d72c57a3e4be05510800000000000000
+      internalID: 1535986194154111613
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: spr_CastleTileSet_stripNoBkg_32
+      rect:
+        serializedVersion: 2
+        x: 2064
+        y: 16
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3bfaa0c45f92275b0800000000000000
+      internalID: -5372185271980085325
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: spr_CastleTileSet_stripNoBkg_33
+      rect:
+        serializedVersion: 2
+        x: 2128
+        y: 16
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 284ba40ad87ac1c50800000000000000
+      internalID: 6637364177558746242
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: spr_CastleTileSet_stripNoBkg_34
+      rect:
+        serializedVersion: 2
+        x: 2192
+        y: 15
+        width: 32
+        height: 33
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a42e679210ac643e0800000000000000
+      internalID: -2069744872390729142
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: spr_CastleTileSet_stripNoBkg_35
+      rect:
+        serializedVersion: 2
+        x: 2255
+        y: 16
+        width: 33
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0ac55a22e7f93b2c0800000000000000
+      internalID: -4417011445424366432
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: spr_CastleTileSet_stripNoBkg_36
+      rect:
+        serializedVersion: 2
+        x: 2320
+        y: 16
+        width: 32
+        height: 33
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 71844aa5b85ab4530800000000000000
+      internalID: 3840345125203232791
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: spr_CastleTileSet_stripNoBkg_37
+      rect:
+        serializedVersion: 2
+        x: 2384
+        y: 16
+        width: 33
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f84b6890cd5a3df90800000000000000
+      internalID: -6930013037121850225
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: spr_CastleTileSet_stripNoBkg_38
+      rect:
+        serializedVersion: 2
+        x: 2448
+        y: 16
+        width: 33
+        height: 33
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: dbeaac970bbdc24d0800000000000000
+      internalID: -3157907687689507139
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: spr_CastleTileSet_stripNoBkg_39
+      rect:
+        serializedVersion: 2
+        x: 2512
+        y: 15
+        width: 33
+        height: 33
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9c6c9741d1dd3a770800000000000000
+      internalID: 8620977228684576457
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: spr_CastleTileSet_stripNoBkg_40
+      rect:
+        serializedVersion: 2
+        x: 2575
+        y: 15
+        width: 33
+        height: 33
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7f2040c01eba78db0800000000000000
+      internalID: -4789670695627652361
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: spr_CastleTileSet_stripNoBkg_41
+      rect:
+        serializedVersion: 2
+        x: 2639
+        y: 16
+        width: 33
+        height: 33
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8bf3b12db842c8950800000000000000
+      internalID: 6452572549059133368
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: spr_CastleTileSet_stripNoBkg_42
+      rect:
+        serializedVersion: 2
+        x: 2704
+        y: 15
+        width: 32
+        height: 33
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d51ae614ac5f43a20800000000000000
+      internalID: 3041325897411895645
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: spr_CastleTileSet_stripNoBkg_43
+      rect:
+        serializedVersion: 2
+        x: 2767
+        y: 16
+        width: 33
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a978b0687aa232540800000000000000
+      internalID: 4981872511798708122
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: spr_CastleTileSet_stripNoBkg_44
+      rect:
+        serializedVersion: 2
+        x: 2832
+        y: 16
+        width: 32
+        height: 33
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c08223ada3ce9f880800000000000000
+      internalID: -8576564277837420532
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: spr_CastleTileSet_stripNoBkg_45
+      rect:
+        serializedVersion: 2
+        x: 2896
+        y: 16
+        width: 33
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7691dc857503ca130800000000000000
+      internalID: 3579288955562826087
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: spr_CastleTileSet_stripNoBkg_46
+      rect:
+        serializedVersion: 2
+        x: 2959
+        y: 15
+        width: 34
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4252cd94b6b6f3650800000000000000
+      internalID: 6214804119339410724
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+  spritePackingTag: 
+  pSDRemoveMatte: 0
+  pSDShowRemoveMatteOption: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

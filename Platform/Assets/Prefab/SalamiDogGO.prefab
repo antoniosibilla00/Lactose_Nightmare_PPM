@@ -289,7 +289,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5958ff236be3bb646b4df065f2239861, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  target: {fileID: 0}
+  target: {fileID: 6240371404290072609, guid: 2cf7458078d19b04da8afded4ee2094d, type: 3}
   activateDistance: 2
   pathUpdateSeconds: 0.5
   speed: 2
@@ -306,8 +306,9 @@ MonoBehaviour:
   player:
     serializedVersion: 2
     m_Bits: 2048
-  playerCollider: {fileID: 0}
-  playerBody: {fileID: 0}
+  playerCollider: {fileID: 6240371404290072620, guid: 2cf7458078d19b04da8afded4ee2094d, type: 3}
+  playerCollider2: {fileID: 6240371404290072616, guid: 2cf7458078d19b04da8afded4ee2094d, type: 3}
+  playerBody: {fileID: 6240371404290072618, guid: 2cf7458078d19b04da8afded4ee2094d, type: 3}
   timer: 2
   state: 0
 --- !u!1 &751209131757899503

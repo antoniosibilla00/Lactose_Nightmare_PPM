@@ -1,0 +1,1008 @@
+fileFormatVersion: 2
+guid: 5a6cab6eb14ba45418d6ff8e9fbe332b
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: 6385561681449879599
+    second: TENTATOREFINALE_0
+  - first:
+      213: -4681321406667059158
+    second: TENTATOREFINALE_1
+  - first:
+      213: -1009968909294970686
+    second: TENTATOREFINALE_2
+  - first:
+      213: -2152493642492781807
+    second: TENTATOREFINALE_3
+  - first:
+      213: -6688082973255273964
+    second: TENTATOREFINALE_4
+  - first:
+      213: 6365009904056141249
+    second: TENTATOREFINALE_5
+  - first:
+      213: -5403388527747735738
+    second: TENTATOREFINALE_6
+  - first:
+      213: -1739980195074465147
+    second: TENTATOREFINALE_7
+  - first:
+      213: 740789676592968204
+    second: TENTATOREFINALE_8
+  - first:
+      213: 8159871307562683450
+    second: TENTATOREFINALE_9
+  - first:
+      213: -130118663086070438
+    second: TENTATOREFINALE_10
+  - first:
+      213: -2171900153691882237
+    second: TENTATOREFINALE_11
+  - first:
+      213: 4830515447804988634
+    second: TENTATOREFINALE_12
+  - first:
+      213: 2181328705090597987
+    second: TENTATOREFINALE_13
+  - first:
+      213: -8782670162564697898
+    second: TENTATOREFINALE_14
+  - first:
+      213: -608822214260174434
+    second: TENTATOREFINALE_15
+  - first:
+      213: 3480854646187273338
+    second: TENTATOREFINALE_16
+  - first:
+      213: -2389089308755781400
+    second: TENTATOREFINALE_17
+  - first:
+      213: -5303110937877744814
+    second: TENTATOREFINALE_18
+  - first:
+      213: 2741343560140608102
+    second: TENTATOREFINALE_19
+  - first:
+      213: -3370937071063363591
+    second: TENTATOREFINALE_20
+  - first:
+      213: -4048148689331322361
+    second: TENTATOREFINALE_21
+  - first:
+      213: -3795305765324257742
+    second: TENTATOREFINALE_22
+  - first:
+      213: -8456834596356414057
+    second: TENTATOREFINALE_23
+  - first:
+      213: -4502593616876712647
+    second: TENTATOREFINALE_24
+  - first:
+      213: 3072967451412155970
+    second: TENTATOREFINALE_25
+  - first:
+      213: 5586622950040165284
+    second: TENTATOREFINALE_26
+  - first:
+      213: 5496112138817027283
+    second: TENTATOREFINALE_27
+  - first:
+      213: -1247273640497892454
+    second: TENTATOREFINALE_28
+  - first:
+      213: 8602053823428951121
+    second: TENTATOREFINALE_29
+  - first:
+      213: -5516427870397213289
+    second: TENTATOREFINALE_30
+  - first:
+      213: 11253390932714320
+    second: TENTATOREFINALE_31
+  - first:
+      213: 4690328940975251828
+    second: TENTATOREFINALE_32
+  - first:
+      213: -7984273324555498545
+    second: TENTATOREFINALE_39
+  - first:
+      213: -3941484348076860056
+    second: TENTATOREFINALE_47
+  - first:
+      213: 5453209108791967245
+    second: TENTATOREFINALE_49
+  - first:
+      213: 5943786229426109193
+    second: TENTATOREFINALE_50
+  externalObjects: {}
+  serializedVersion: 11
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 0
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 64
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 16384
+    resizeAlgorithm: 0
+    textureFormat: 4
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 16384
+    resizeAlgorithm: 0
+    textureFormat: 4
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: WebGL
+    maxTextureSize: 16384
+    resizeAlgorithm: 0
+    textureFormat: 4
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: TENTATOREFINALE_0
+      rect:
+        serializedVersion: 2
+        x: 5
+        y: 228
+        width: 52
+        height: 48
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f288a2264821e9850800000000000000
+      internalID: 6385561681449879599
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TENTATOREFINALE_1
+      rect:
+        serializedVersion: 2
+        x: 68
+        y: 228
+        width: 52
+        height: 49
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a209d2cbbfa980fb0800000000000000
+      internalID: -4681321406667059158
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TENTATOREFINALE_2
+      rect:
+        serializedVersion: 2
+        x: 131
+        y: 228
+        width: 52
+        height: 50
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2c8d847c0aedbf1f0800000000000000
+      internalID: -1009968909294970686
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TENTATOREFINALE_3
+      rect:
+        serializedVersion: 2
+        x: 191
+        y: 228
+        width: 55
+        height: 51
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 11b5ee1cf6ec022e0800000000000000
+      internalID: -2152493642492781807
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TENTATOREFINALE_4
+      rect:
+        serializedVersion: 2
+        x: 257
+        y: 228
+        width: 52
+        height: 50
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 412f7c688f72f23a0800000000000000
+      internalID: -6688082973255273964
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TENTATOREFINALE_5
+      rect:
+        serializedVersion: 2
+        x: 320
+        y: 228
+        width: 52
+        height: 49
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1c50c13d8ce055850800000000000000
+      internalID: 6365009904056141249
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TENTATOREFINALE_6
+      rect:
+        serializedVersion: 2
+        x: 5
+        y: 171
+        width: 52
+        height: 48
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 64fdc2c23ce4305b0800000000000000
+      internalID: -5403388527747735738
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TENTATOREFINALE_7
+      rect:
+        serializedVersion: 2
+        x: 68
+        y: 171
+        width: 52
+        height: 48
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5822f5c3b395ad7e0800000000000000
+      internalID: -1739980195074465147
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TENTATOREFINALE_8
+      rect:
+        serializedVersion: 2
+        x: 131
+        y: 171
+        width: 50
+        height: 48
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c02b9963940d74a00800000000000000
+      internalID: 740789676592968204
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TENTATOREFINALE_9
+      rect:
+        serializedVersion: 2
+        x: 190
+        y: 171
+        width: 52
+        height: 48
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a3c0d2ca8bfad3170800000000000000
+      internalID: 8159871307562683450
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TENTATOREFINALE_10
+      rect:
+        serializedVersion: 2
+        x: 253
+        y: 171
+        width: 52
+        height: 48
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a552b1ce3c9b13ef0800000000000000
+      internalID: -130118663086070438
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TENTATOREFINALE_11
+      rect:
+        serializedVersion: 2
+        x: 316
+        y: 171
+        width: 52
+        height: 48
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 30d3493415cdbd1e0800000000000000
+      internalID: -2171900153691882237
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TENTATOREFINALE_12
+      rect:
+        serializedVersion: 2
+        x: 379
+        y: 171
+        width: 52
+        height: 48
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: adc0474e430790340800000000000000
+      internalID: 4830515447804988634
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TENTATOREFINALE_13
+      rect:
+        serializedVersion: 2
+        x: 1
+        y: 114
+        width: 52
+        height: 48
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 364b94d66e2a54e10800000000000000
+      internalID: 2181328705090597987
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TENTATOREFINALE_14
+      rect:
+        serializedVersion: 2
+        x: 68
+        y: 114
+        width: 48
+        height: 48
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6d0b8ec0500bd1680800000000000000
+      internalID: -8782670162564697898
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TENTATOREFINALE_15
+      rect:
+        serializedVersion: 2
+        x: 131
+        y: 114
+        width: 48
+        height: 48
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e91d7abfb670d87f0800000000000000
+      internalID: -608822214260174434
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TENTATOREFINALE_16
+      rect:
+        serializedVersion: 2
+        x: 194
+        y: 114
+        width: 48
+        height: 48
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a7ca2ccbbda7e4030800000000000000
+      internalID: 3480854646187273338
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TENTATOREFINALE_17
+      rect:
+        serializedVersion: 2
+        x: 257
+        y: 114
+        width: 48
+        height: 48
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8e89dee7eef38ded0800000000000000
+      internalID: -2389089308755781400
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TENTATOREFINALE_18
+      rect:
+        serializedVersion: 2
+        x: 320
+        y: 114
+        width: 48
+        height: 48
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 253fe47f2b09766b0800000000000000
+      internalID: -5303110937877744814
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TENTATOREFINALE_19
+      rect:
+        serializedVersion: 2
+        x: 1
+        y: 57
+        width: 52
+        height: 50
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6625c7591753b0620800000000000000
+      internalID: 2741343560140608102
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TENTATOREFINALE_20
+      rect:
+        serializedVersion: 2
+        x: 64
+        y: 57
+        width: 52
+        height: 48
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9ff821708960831d0800000000000000
+      internalID: -3370937071063363591
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TENTATOREFINALE_21
+      rect:
+        serializedVersion: 2
+        x: 127
+        y: 57
+        width: 52
+        height: 48
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 702817e073612d7c0800000000000000
+      internalID: -4048148689331322361
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TENTATOREFINALE_22
+      rect:
+        serializedVersion: 2
+        x: 190
+        y: 57
+        width: 52
+        height: 48
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2360bdbc38d545bc0800000000000000
+      internalID: -3795305765324257742
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TENTATOREFINALE_23
+      rect:
+        serializedVersion: 2
+        x: 257
+        y: 57
+        width: 50
+        height: 48
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 79521f7adb943aa80800000000000000
+      internalID: -8456834596356414057
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TENTATOREFINALE_24
+      rect:
+        serializedVersion: 2
+        x: 320
+        y: 57
+        width: 52
+        height: 48
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 93d4f1216f29381c0800000000000000
+      internalID: -4502593616876712647
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TENTATOREFINALE_25
+      rect:
+        serializedVersion: 2
+        x: 5
+        y: 0
+        width: 52
+        height: 48
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 24e42c3ad9f55aa20800000000000000
+      internalID: 3072967451412155970
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TENTATOREFINALE_26
+      rect:
+        serializedVersion: 2
+        x: 68
+        y: 0
+        width: 52
+        height: 48
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4ab503f49fba78d40800000000000000
+      internalID: 5586622950040165284
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TENTATOREFINALE_27
+      rect:
+        serializedVersion: 2
+        x: 128
+        y: 0
+        width: 53
+        height: 50
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3dcb6efdedc164c40800000000000000
+      internalID: 5496112138817027283
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TENTATOREFINALE_28
+      rect:
+        serializedVersion: 2
+        x: 191
+        y: 0
+        width: 55
+        height: 48
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a933a687b3bc0bee0800000000000000
+      internalID: -1247273640497892454
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TENTATOREFINALE_29
+      rect:
+        serializedVersion: 2
+        x: 257
+        y: 0
+        width: 51
+        height: 48
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 15cf5447062a06770800000000000000
+      internalID: 8602053823428951121
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TENTATOREFINALE_30
+      rect:
+        serializedVersion: 2
+        x: 320
+        y: 0
+        width: 52
+        height: 48
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 795d8e34416b173b0800000000000000
+      internalID: -5516427870397213289
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TENTATOREFINALE_31
+      rect:
+        serializedVersion: 2
+        x: 383
+        y: 0
+        width: 52
+        height: 52
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 053201146eaf72000800000000000000
+      internalID: 11253390932714320
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TENTATOREFINALE_32
+      rect:
+        serializedVersion: 2
+        x: 446
+        y: 0
+        width: 48
+        height: 48
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 47160964255671140800000000000000
+      internalID: 4690328940975251828
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TENTATOREFINALE_39
+      rect:
+        serializedVersion: 2
+        x: 511
+        y: 0
+        width: 43
+        height: 42
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fcb0e3cb6b9223190800000000000000
+      internalID: -7984273324555498545
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TENTATOREFINALE_47
+      rect:
+        serializedVersion: 2
+        x: 713
+        y: 0
+        width: 15
+        height: 17
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 86ddd194ed80d49c0800000000000000
+      internalID: -3941484348076860056
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TENTATOREFINALE_49
+      rect:
+        serializedVersion: 2
+        x: 579
+        y: 0
+        width: 34
+        height: 31
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d0e3877cac0bdab40800000000000000
+      internalID: 5453209108791967245
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TENTATOREFINALE_50
+      rect:
+        serializedVersion: 2
+        x: 647
+        y: 0
+        width: 20
+        height: 20
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 90b3dc985129c7250800000000000000
+      internalID: 5943786229426109193
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+  spritePackingTag: 
+  pSDRemoveMatte: 0
+  pSDShowRemoveMatteOption: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

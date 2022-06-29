@@ -18,6 +18,7 @@ public class FlyingEnemy : MonoBehaviour
 
     private CircleCollider2D toHit;
     public BoxCollider2D playerCollider;
+    public CapsuleCollider2D playerCollider2;
     private EnemiesHealthSystem healthSystem;
     private bool todo;
     public int life = 100;
@@ -37,7 +38,8 @@ public class FlyingEnemy : MonoBehaviour
         anim= GetComponent<Animator>();
         collisionBat = gameObject.GetComponentInChildren<BoxCollider2D>();
         toHit = GetComponentInChildren<CircleCollider2D>();
-        Physics2D.IgnoreCollision(playerCollider, collisionBat );
+        Physics2D.IgnoreCollision(playerCollider, collisionBat ,true);
+        Physics2D.IgnoreCollision(playerCollider2, collisionBat ,true);
 
         healthSystem = this.GetComponentInChildren<EnemiesHealthSystem>();
         anim.SetBool("die", false );

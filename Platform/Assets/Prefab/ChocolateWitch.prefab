@@ -327,7 +327,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a41dab5c4ba501b479eb860bfd908e30, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  target: {fileID: 0}
+  target: {fileID: 6240371404290072609, guid: 2cf7458078d19b04da8afded4ee2094d, type: 3}
   activateDistance: 50
   pathUpdateSeconds: 0.5
   speed: 2
@@ -340,12 +340,14 @@ MonoBehaviour:
   directionLookEnabled: 1
   range: {fileID: 2497361320962571149}
   rangeRadius: 2
+  followDistance: 0
   playerLayerMask:
     serializedVersion: 2
     m_Bits: 2048
-  playerCollider: {fileID: 0}
+  playerCollider: {fileID: 6240371404290072620, guid: 2cf7458078d19b04da8afded4ee2094d, type: 3}
+  playerCollider2: {fileID: 6240371404290072616, guid: 2cf7458078d19b04da8afded4ee2094d, type: 3}
   healthSystem: {fileID: 0}
-  playerBody: {fileID: 0}
+  playerBody: {fileID: 6240371404290072618, guid: 2cf7458078d19b04da8afded4ee2094d, type: 3}
   bullet: {fileID: 5332367227074811777, guid: 13357e5ee1c9f664798255e522a76f64, type: 3}
   bulletParent: {fileID: 2497361319905872909}
   state: 0

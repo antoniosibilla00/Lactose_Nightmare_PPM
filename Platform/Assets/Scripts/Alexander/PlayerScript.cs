@@ -99,11 +99,11 @@ public class PlayerScript : MonoBehaviour
 
     private void Start()
     {
-        
+        healthSystem = GetComponentInChildren<HealthSystem>();
         _renderer = GetComponent<SpriteRenderer>();
         anim = GetComponent<Animator>();
         body = GetComponent<Rigidbody2D>();
-        boxCollider = GetComponent<BoxCollider2D>();
+        boxCollider = GetComponentInChildren<BoxCollider2D>();
         state = State.normal;
         gm = GameObject.FindGameObjectWithTag("GM").GetComponent<GameMaster>();
         transform.position = gm.lastCheckPointPos;
