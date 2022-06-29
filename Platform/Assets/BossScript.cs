@@ -6,7 +6,7 @@ public class BossScript : MonoBehaviour
 {
 
     public GameObject localPos;
-    public double positionUpdate;
+    private float positionUpdate;
    
     // Start is called before the first frame update
     void Start()
@@ -30,7 +30,7 @@ public class BossScript : MonoBehaviour
         Debug.Log("sium22transform.position = " + transform.position);
         
         positionUpdate = localPos.transform.position.x;
-        transform.position += new Vector3(2.193f , 0, 0);
+        transform.position = new Vector3(positionUpdate ,transform.position.y, 0);
         
         Debug.Log("sium22transform.position1  = " + transform.position);
 
