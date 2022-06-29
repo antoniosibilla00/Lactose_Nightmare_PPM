@@ -19,13 +19,14 @@ public class Interactor : MonoBehaviour
 
     private void Update()
     {
-        
+        Debug.Log("done  =  " + done);
         int numFound = Physics2D.OverlapCircleNonAlloc(interactionPoint.position,interactionPointRadius,_collider,interactableMask);
         
         if (numFound >0)
         {
             if (!done)
             {
+                Debug.Log("Sono entrato sium");
                 interactionPanel.SetActive(true);
             }
             

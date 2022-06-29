@@ -10,14 +10,9 @@ public class followDog : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (GameObject.Find("SalamiDog"))
-        {
-            this.transform.position =(new Vector2(dogToFollow.position.x ,transform.position.y));
-        }
-        else{
-            Destroy(gameObject);
-        }
        
+        this.transform.position =(new Vector2(dogToFollow.position.x ,transform.position.y));
+  
         
         
     }
