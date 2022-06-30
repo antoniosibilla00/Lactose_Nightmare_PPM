@@ -1,0 +1,1800 @@
+fileFormatVersion: 2
+guid: b10cb9e8c54fd4240a9e9517acb4a508
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: 8301265297109937833
+    second: carretto_1
+  - first:
+      213: -1418575333278603626
+    second: carretto_2
+  - first:
+      213: -5182046500279570325
+    second: carretto_3
+  - first:
+      213: -371073320250097565
+    second: carretto2
+  - first:
+      213: 8984365063719996795
+    second: legno2_1
+  - first:
+      213: 9164226425218212159
+    second: cartello_2
+  - first:
+      213: -4604406189440386280
+    second: accettaConTronco
+  - first:
+      213: 6729184664073598290
+    second: borraccia_2
+  - first:
+      213: 1853055285977455872
+    second: borraccia_1
+  - first:
+      213: 3955720042394535335
+    second: pentola_5
+  - first:
+      213: 3378828879220793844
+    second: pentola_6
+  - first:
+      213: 5356007169173771531
+    second: pentola_4
+  - first:
+      213: 1349896435115823950
+    second: pentola_3
+  - first:
+      213: -4490489569721276300
+    second: pentola_1
+  - first:
+      213: 57884733342178352
+    second: pentola_2
+  - first:
+      213: -4004453323907072573
+    second: borraccia2_1
+  - first:
+      213: -1245102218554126052
+    second: borraccia2_2
+  - first:
+      213: 8490389072255917515
+    second: borraccia2_3
+  - first:
+      213: 5705393825567494024
+    second: borraccia3_1
+  - first:
+      213: -3553440202210623650
+    second: borraccia3_2
+  - first:
+      213: 2052851171969888230
+    second: borraccia4
+  - first:
+      213: 5150180841144181828
+    second: stendiPanni_7
+  - first:
+      213: -5555493137010589875
+    second: stendiPanni_1
+  - first:
+      213: 6159734550677631947
+    second: stendiPanni_4
+  - first:
+      213: -5437313564559074883
+    second: stendiPanni_5
+  - first:
+      213: 5351805501941582435
+    second: stendiPanni_8
+  - first:
+      213: 6058475655414294316
+    second: stendiPanni_9
+  - first:
+      213: -4898018586113688429
+    second: stendiPanni_6
+  - first:
+      213: 375692813655522821
+    second: stendiPanni_2
+  - first:
+      213: 6566406824090109907
+    second: stendiPanni_3
+  - first:
+      213: -5926342214480664484
+    second: cestino_1
+  - first:
+      213: -639036880949334330
+    second: cestino_2
+  - first:
+      213: -2855170199463474395
+    second: cestino_3
+  - first:
+      213: -9141684308748076674
+    second: panchinaVillaggio_1
+  - first:
+      213: 7410822212877169757
+    second: panchinaVillaggio_2
+  - first:
+      213: 1144117685983911526
+    second: panchinaVillaggio_3
+  - first:
+      213: 6667241390265413322
+    second: panchinaVillaggio_4
+  - first:
+      213: -432956089255675410
+    second: panchinaVillaggio_5
+  - first:
+      213: -112636295005147371
+    second: panchinaVillaggio_6
+  - first:
+      213: 3177803495021385162
+    second: pietra
+  - first:
+      213: 7960752606003692030
+    second: pietra2_1
+  - first:
+      213: 3972349370474170620
+    second: pietra2_2
+  - first:
+      213: 4353546311840566874
+    second: pietra3_1
+  - first:
+      213: -6472130770678018581
+    second: pietra3_2
+  - first:
+      213: -9053552462323304018
+    second: pietra3_3
+  - first:
+      213: 8407457697842137153
+    second: legno_4
+  - first:
+      213: 272799598705023495
+    second: legno_1
+  - first:
+      213: -8641321587264006429
+    second: legno_2
+  - first:
+      213: 7588441056645677987
+    second: legno_3
+  - first:
+      213: -6819334049710541365
+    second: legno_5
+  - first:
+      213: -3247814605402077530
+    second: legno_6
+  - first:
+      213: 3016935234578924282
+    second: legno_7
+  - first:
+      213: -7701358023014966965
+    second: legno2_2
+  - first:
+      213: 3867845490601664239
+    second: legno2_3
+  - first:
+      213: -4622361480446830937
+    second: fieno_7
+  - first:
+      213: -6583360269702014313
+    second: fieno_8
+  - first:
+      213: 7778436084265097807
+    second: fieno_9
+  - first:
+      213: 5105373963220948488
+    second: fieno_10
+  - first:
+      213: 7152516782111386903
+    second: fieno_3
+  - first:
+      213: -2561957173654567838
+    second: fieno_4
+  - first:
+      213: -4458505213432710313
+    second: fieno_5
+  - first:
+      213: 6861622919004318419
+    second: fieno_6
+  - first:
+      213: 3994263273061354001
+    second: fieno_1
+  - first:
+      213: -3125164019142022795
+    second: fieno_2
+  - first:
+      213: -932153818831766095
+    second: pozzo_3
+  - first:
+      213: 5113223557192783683
+    second: pozzo_4
+  - first:
+      213: -4023372255431465806
+    second: pozzo_1
+  - first:
+      213: -328421716373052569
+    second: pozzo_2
+  - first:
+      213: 1113254522059136703
+    second: cartello_1
+  - first:
+      213: 6101240943997039836
+    second: botte
+  externalObjects: {}
+  serializedVersion: 11
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 0
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 64
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 8192
+    resizeAlgorithm: 0
+    textureFormat: 4
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 8192
+    resizeAlgorithm: 0
+    textureFormat: 4
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: WebGL
+    maxTextureSize: 8192
+    resizeAlgorithm: 0
+    textureFormat: 4
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: carretto_1
+      rect:
+        serializedVersion: 2
+        x: 10
+        y: 121
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9aee3844ec4043370800000000000000
+      internalID: 8301265297109937833
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: carretto_2
+      rect:
+        serializedVersion: 2
+        x: 42
+        y: 121
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6962cc41045305ce0800000000000000
+      internalID: -1418575333278603626
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: carretto_3
+      rect:
+        serializedVersion: 2
+        x: 74
+        y: 121
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b60b745e92ca518b0800000000000000
+      internalID: -5182046500279570325
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: carretto2
+      rect:
+        serializedVersion: 2
+        x: 125
+        y: 123
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3604ed008cea9daf0800000000000000
+      internalID: -371073320250097565
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: legno2_1
+      rect:
+        serializedVersion: 2
+        x: 210
+        y: 77
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b7dc57b9c60eeac70800000000000000
+      internalID: 8984365063719996795
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: cartello_2
+      rect:
+        serializedVersion: 2
+        x: 148
+        y: 12
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f31216c216fdd2f70800000000000000
+      internalID: 9164226425218212159
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: accettaConTronco
+      rect:
+        serializedVersion: 2
+        x: 209
+        y: 12
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 81bbbc447fcd910c0800000000000000
+      internalID: -4604406189440386280
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: borraccia_2
+      rect:
+        serializedVersion: 2
+        x: 26
+        y: 174
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 255fc1a9ccdd26d50800000000000000
+      internalID: 6729184664073598290
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: borraccia_1
+      rect:
+        serializedVersion: 2
+        x: 26
+        y: 190
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 00d98d5f6ff57b910800000000000000
+      internalID: 1853055285977455872
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pentola_5
+      rect:
+        serializedVersion: 2
+        x: 53
+        y: 175
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7a5c1d59b6a85e630800000000000000
+      internalID: 3955720042394535335
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pentola_6
+      rect:
+        serializedVersion: 2
+        x: 61
+        y: 175
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4f169ceb6f204ee20800000000000000
+      internalID: 3378828879220793844
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pentola_4
+      rect:
+        serializedVersion: 2
+        x: 61
+        y: 183
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b055c0d942c545a40800000000000000
+      internalID: 5356007169173771531
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pentola_3
+      rect:
+        serializedVersion: 2
+        x: 53
+        y: 183
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e4315aad7abcbb210800000000000000
+      internalID: 1349896435115823950
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pentola_1
+      rect:
+        serializedVersion: 2
+        x: 53
+        y: 191
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 478aa2927839ea1c0800000000000000
+      internalID: -4490489569721276300
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pentola_2
+      rect:
+        serializedVersion: 2
+        x: 61
+        y: 191
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 03c57c8bbd5adc000800000000000000
+      internalID: 57884733342178352
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: borraccia2_1
+      rect:
+        serializedVersion: 2
+        x: 86
+        y: 191
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3cdf2ec1be25d68c0800000000000000
+      internalID: -4004453323907072573
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: borraccia2_2
+      rect:
+        serializedVersion: 2
+        x: 86
+        y: 183
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c11d70a012288bee0800000000000000
+      internalID: -1245102218554126052
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: borraccia2_3
+      rect:
+        serializedVersion: 2
+        x: 86
+        y: 175
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bcd1ca090ebe3d570800000000000000
+      internalID: 8490389072255917515
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: borraccia3_1
+      rect:
+        serializedVersion: 2
+        x: 110
+        y: 183
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 88f48a4b471ad2f40800000000000000
+      internalID: 5705393825567494024
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: borraccia3_2
+      rect:
+        serializedVersion: 2
+        x: 110
+        y: 175
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e5fb4a886f4afaec0800000000000000
+      internalID: -3553440202210623650
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: borraccia4
+      rect:
+        serializedVersion: 2
+        x: 129
+        y: 175
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6ef6202b3413d7c10800000000000000
+      internalID: 2052851171969888230
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: stendiPanni_7
+      rect:
+        serializedVersion: 2
+        x: 153
+        y: 172
+        width: 16
+        height: 16
+      alignment: 9
+      pivot: {x: 0.5, y: 0.6875}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 444eb6d203e197740800000000000000
+      internalID: 5150180841144181828
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: stendiPanni_1
+      rect:
+        serializedVersion: 2
+        x: 153
+        y: 204
+        width: 16
+        height: 16
+      alignment: 9
+      pivot: {x: 0.5, y: 0.6875}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d4ffc581d6ce6e2b0800000000000000
+      internalID: -5555493137010589875
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: stendiPanni_4
+      rect:
+        serializedVersion: 2
+        x: 153
+        y: 188
+        width: 16
+        height: 16
+      alignment: 9
+      pivot: {x: 0.5, y: 0.6875}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bc337db20f5cb7550800000000000000
+      internalID: 6159734550677631947
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: stendiPanni_5
+      rect:
+        serializedVersion: 2
+        x: 169
+        y: 188
+        width: 16
+        height: 16
+      alignment: 9
+      pivot: {x: 0.5, y: 0.6875}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: db91b040f18ca84b0800000000000000
+      internalID: -5437313564559074883
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: stendiPanni_8
+      rect:
+        serializedVersion: 2
+        x: 169
+        y: 172
+        width: 16
+        height: 16
+      alignment: 9
+      pivot: {x: 0.5, y: 0.6875}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 36a853abfbe654a40800000000000000
+      internalID: 5351805501941582435
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: stendiPanni_9
+      rect:
+        serializedVersion: 2
+        x: 185
+        y: 172
+        width: 16
+        height: 16
+      alignment: 9
+      pivot: {x: 0.5, y: 0.6875}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c2722596287041450800000000000000
+      internalID: 6058475655414294316
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: stendiPanni_6
+      rect:
+        serializedVersion: 2
+        x: 185
+        y: 188
+        width: 16
+        height: 16
+      alignment: 9
+      pivot: {x: 0.5, y: 0.6875}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 39cbe67fb0eb60cb0800000000000000
+      internalID: -4898018586113688429
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: stendiPanni_2
+      rect:
+        serializedVersion: 2
+        x: 169
+        y: 204
+        width: 16
+        height: 16
+      alignment: 9
+      pivot: {x: 0.5, y: 0.6875}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 50eba9e9f9ab63500800000000000000
+      internalID: 375692813655522821
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: stendiPanni_3
+      rect:
+        serializedVersion: 2
+        x: 185
+        y: 204
+        width: 16
+        height: 16
+      alignment: 9
+      pivot: {x: 0.5, y: 0.6875}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3d787985730902b50800000000000000
+      internalID: 6566406824090109907
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: cestino_1
+      rect:
+        serializedVersion: 2
+        x: 213
+        y: 175
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c586a70b72761cda0800000000000000
+      internalID: -5926342214480664484
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: cestino_2
+      rect:
+        serializedVersion: 2
+        x: 221
+        y: 175
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6ce24a0b75fa127f0800000000000000
+      internalID: -639036880949334330
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: cestino_3
+      rect:
+        serializedVersion: 2
+        x: 229
+        y: 175
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 52bc2b7b4d56068d0800000000000000
+      internalID: -2855170199463474395
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: panchinaVillaggio_1
+      rect:
+        serializedVersion: 2
+        x: 182
+        y: 139
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e79fe405e86322180800000000000000
+      internalID: -9141684308748076674
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: panchinaVillaggio_2
+      rect:
+        serializedVersion: 2
+        x: 198
+        y: 139
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d543e14d98788d660800000000000000
+      internalID: 7410822212877169757
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: panchinaVillaggio_3
+      rect:
+        serializedVersion: 2
+        x: 214
+        y: 139
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 66e105e39f8b0ef00800000000000000
+      internalID: 1144117685983911526
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: panchinaVillaggio_4
+      rect:
+        serializedVersion: 2
+        x: 182
+        y: 123
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ace2d8a48bcc68c50800000000000000
+      internalID: 6667241390265413322
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: panchinaVillaggio_5
+      rect:
+        serializedVersion: 2
+        x: 198
+        y: 123
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ee9b2901bb4ddf9f0800000000000000
+      internalID: -432956089255675410
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: panchinaVillaggio_6
+      rect:
+        serializedVersion: 2
+        x: 214
+        y: 123
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 51fe66fe2e5df6ef0800000000000000
+      internalID: -112636295005147371
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pietra
+      rect:
+        serializedVersion: 2
+        x: 20
+        y: 77
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ac59eb62173d91c20800000000000000
+      internalID: 3177803495021385162
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pietra2_1
+      rect:
+        serializedVersion: 2
+        x: 46
+        y: 77
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ef18d9931564a7e60800000000000000
+      internalID: 7960752606003692030
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pietra2_2
+      rect:
+        serializedVersion: 2
+        x: 62
+        y: 77
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cf80cdeb4be902730800000000000000
+      internalID: 3972349370474170620
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pietra3_1
+      rect:
+        serializedVersion: 2
+        x: 85
+        y: 77
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a5e0876fd47ea6c30800000000000000
+      internalID: 4353546311840566874
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pietra3_2
+      rect:
+        serializedVersion: 2
+        x: 101
+        y: 77
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bed8cd9da5f5e26a0800000000000000
+      internalID: -6472130770678018581
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pietra3_3
+      rect:
+        serializedVersion: 2
+        x: 117
+        y: 77
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ea93bd7d0025b5280800000000000000
+      internalID: -9053552462323304018
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: legno_4
+      rect:
+        serializedVersion: 2
+        x: 143
+        y: 77
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 14801084b3a4da470800000000000000
+      internalID: 8407457697842137153
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: legno_1
+      rect:
+        serializedVersion: 2
+        x: 143
+        y: 93
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 70a9ea72acd29c300800000000000000
+      internalID: 272799598705023495
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: legno_2
+      rect:
+        serializedVersion: 2
+        x: 159
+        y: 93
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3e6d631dccbd31880800000000000000
+      internalID: -8641321587264006429
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: legno_3
+      rect:
+        serializedVersion: 2
+        x: 175
+        y: 93
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3a30b5c8fee8f4960800000000000000
+      internalID: 7588441056645677987
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: legno_5
+      rect:
+        serializedVersion: 2
+        x: 159
+        y: 77
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bc5f64aefcbdc51a0800000000000000
+      internalID: -6819334049710541365
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: legno_6
+      rect:
+        serializedVersion: 2
+        x: 175
+        y: 77
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6a60fa4f2d17de2d0800000000000000
+      internalID: -3247814605402077530
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: legno_7
+      rect:
+        serializedVersion: 2
+        x: 191
+        y: 77
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: af2cf678c9e4ed920800000000000000
+      internalID: 3016935234578924282
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: legno2_2
+      rect:
+        serializedVersion: 2
+        x: 226
+        y: 77
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b49961e7ea74f1590800000000000000
+      internalID: -7701358023014966965
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: legno2_3
+      rect:
+        serializedVersion: 2
+        x: 242
+        y: 77
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fee98612bf85da530800000000000000
+      internalID: 3867845490601664239
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fieno_7
+      rect:
+        serializedVersion: 2
+        x: 18
+        y: 12
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7a6948e49b21adfb0800000000000000
+      internalID: -4622361480446830937
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fieno_8
+      rect:
+        serializedVersion: 2
+        x: 34
+        y: 12
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 79addfff6b433a4a0800000000000000
+      internalID: -6583360269702014313
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fieno_9
+      rect:
+        serializedVersion: 2
+        x: 50
+        y: 12
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f4a93be186e82fb60800000000000000
+      internalID: 7778436084265097807
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fieno_10
+      rect:
+        serializedVersion: 2
+        x: 66
+        y: 12
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8061053f19ee9d640800000000000000
+      internalID: 5105373963220948488
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fieno_3
+      rect:
+        serializedVersion: 2
+        x: 18
+        y: 28
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 71de4cf1e18d24360800000000000000
+      internalID: 7152516782111386903
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fieno_4
+      rect:
+        serializedVersion: 2
+        x: 34
+        y: 28
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2644e8e3689127cd0800000000000000
+      internalID: -2561957173654567838
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fieno_5
+      rect:
+        serializedVersion: 2
+        x: 50
+        y: 28
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 75bbd1c61253022c0800000000000000
+      internalID: -4458505213432710313
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fieno_6
+      rect:
+        serializedVersion: 2
+        x: 66
+        y: 28
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3da6eedb0b1693f50800000000000000
+      internalID: 6861622919004318419
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fieno_1
+      rect:
+        serializedVersion: 2
+        x: 34
+        y: 44
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 11a063ac8497e6730800000000000000
+      internalID: 3994263273061354001
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fieno_2
+      rect:
+        serializedVersion: 2
+        x: 50
+        y: 44
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5792536e1ef21a4d0800000000000000
+      internalID: -3125164019142022795
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pozzo_3
+      rect:
+        serializedVersion: 2
+        x: 81
+        y: 12
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1bd32806a035013f0800000000000000
+      internalID: -932153818831766095
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pozzo_4
+      rect:
+        serializedVersion: 2
+        x: 113
+        y: 12
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 34792a7fbb1d5f640800000000000000
+      internalID: 5113223557192783683
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pozzo_1
+      rect:
+        serializedVersion: 2
+        x: 81
+        y: 44
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2b468db104c1a28c0800000000000000
+      internalID: -4023372255431465806
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pozzo_2
+      rect:
+        serializedVersion: 2
+        x: 113
+        y: 44
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7636f036036317bf0800000000000000
+      internalID: -328421716373052569
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: cartello_1
+      rect:
+        serializedVersion: 2
+        x: 148
+        y: 44
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fbe9eebe613137f00800000000000000
+      internalID: 1113254522059136703
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: botte
+      rect:
+        serializedVersion: 2
+        x: 177
+        y: 12
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cd433041056fba450800000000000000
+      internalID: 6101240943997039836
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+  spritePackingTag: 
+  pSDRemoveMatte: 0
+  pSDShowRemoveMatteOption: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
