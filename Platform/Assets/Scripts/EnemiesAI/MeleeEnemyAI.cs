@@ -16,7 +16,7 @@ public class MeleeEnemyAI
     : MonoBehaviour
 {
     [Header("Pathfinding")]
-    public Transform target;
+    private Transform target;
     public float activateDistance = 50f;
     public float pathUpdateSeconds = 0.5f;
 
@@ -36,6 +36,7 @@ public class MeleeEnemyAI
     private int currentWaypoint;
 
     #region AI variables
+    private GameObject Alexander;
     [SerializeField]private float followDistance;
     RaycastHit2D isGrounded;
     Seeker seeker;
@@ -44,10 +45,10 @@ public class MeleeEnemyAI
     [SerializeField] private Transform range;
     [SerializeField] private float rangeRadius;
     [SerializeField] private LayerMask player;
-    [SerializeField] private BoxCollider2D playerCollider;
-    [SerializeField] private CapsuleCollider2D playerCollider2;
-    private BoxCollider2D golemCollider;
-    [SerializeField] private Rigidbody2D playerBody;
+    private BoxCollider2D playerBoxCollider2D; 
+    private CapsuleCollider2D playerCapsuleCollider2D;
+    private BoxCollider2D meleeEnemyCollider;
+    private Rigidbody2D playerBody;
     [SerializeField]private float timer;
     #endregion
 
@@ -80,17 +81,22 @@ public class MeleeEnemyAI
     public void Awake()
     {
         dead = false;
+        Alexander = GameObject.Find("Alexander");
+        rb = Alexander.GetComponent<Rigidbody2D>();
+        playerBoxCollider2D = Alexander.GetComponent<BoxCollider2D>();
+        playerCapsuleCollider2D = Alexander.GetComponent<CapsuleCollider2D>();
+        target = Alexander.GetComponent<Transform>();
     }
 
     public void Start()
     {
-        golemCollider = GetComponentInChildren<BoxCollider2D>();
+        meleeEnemyCollider = GetComponentInChildren<BoxCollider2D>();
         punchHitBox = GetComponentInChildren<CircleCollider2D>();
         seeker = GetComponent<Seeker>();
         rb = GetComponent<Rigidbody2D>();
         anim = GetComponent<Animator>(); 
-        Physics2D.IgnoreCollision(playerCollider,golemCollider);
-        Physics2D.IgnoreCollision(playerCollider2,golemCollider);
+        Physics2D.IgnoreCollision(playerBoxCollider2D,meleeEnemyCollider);
+        Physics2D.IgnoreCollision(playerCapsuleCollider2D,meleeEnemyCollider);
         healthSystem = GetComponentInChildren<EnemiesHealthSystem>();
         attack = false;
   
@@ -163,7 +169,7 @@ public class MeleeEnemyAI
                                         
                     Collider2D enterInRange = Physics2D.OverlapCircle(range.position, rangeRadius, player);
                     
-                    if (enterInRange!=null && cooldown == false)
+                    if (enterInRange!=null && cooldown == false && healthSystem.GetCurrentHealth()>0)
                     {
                         actualTimer = timer;
                         
@@ -211,9 +217,7 @@ public class MeleeEnemyAI
                     state = State.normal;
                 }
                 break;
-            case State.death :
-                break;
-            
+         
             case State.idle:
                
                 if (TargetInDistance())
@@ -355,6 +359,16 @@ public class MeleeEnemyAI
     {
     
         dead = true;
+    }
+
+    public void SetSpeed(float temp)
+    {
+        speed = temp;
+    }
+    
+    public float GetSpeed()
+    {
+        return speed ;
     }
     
 }

@@ -7,7 +7,7 @@ using UnityEngine.Serialization;
 public class ChocolateWitchAI : MonoBehaviour
 {
     [Header("Pathfinding")]
-    public Transform target;
+    private Transform target;
     public float activateDistance = 50f;
     public float pathUpdateSeconds = 0.5f;
 
@@ -32,12 +32,13 @@ public class ChocolateWitchAI : MonoBehaviour
     [SerializeField] private Transform range;
     [SerializeField] private float rangeRadius;
     [SerializeField]private float followDistance;
+    [SerializeField]private float cooldownTimer;
     [FormerlySerializedAs("player")] [SerializeField] private LayerMask playerLayerMask;
-    [FormerlySerializedAs("player2")] [SerializeField] private BoxCollider2D playerCollider; 
-    [SerializeField] private CapsuleCollider2D playerCollider2; 
+    private BoxCollider2D playerCollider; 
+    private CapsuleCollider2D playerCollider2; 
     private Collider2D chocolateWitchCollider;
-    public EnemiesHealthSystem healthSystem;
-    [SerializeField] private Rigidbody2D playerBody;
+    public EnemiesHealthSystem healthSystem; 
+    private Rigidbody2D playerBody;
     private Vector2 currentVelocity = new Vector2(2,0);
     private bool attack ;
     private bool takeHit;
@@ -45,12 +46,12 @@ public class ChocolateWitchAI : MonoBehaviour
     private bool walk;
     private Vector2 force;
     private bool cooldown;
-    private float timer;
     private float actualTimer;
     private bool facingRight;
     private bool shoot;
     public GameObject bullet;
     public GameObject bulletParent;
+    private GameObject Alexander;
 
 
     public enum State
@@ -68,8 +69,14 @@ public class ChocolateWitchAI : MonoBehaviour
 
     public void Awake()
     {
-        dead = false;
-        timer = 2f; 
+        Alexander = GameObject.Find("Alexander");
+        rb = Alexander.GetComponent<Rigidbody2D>();
+        playerCollider = Alexander.GetComponent<BoxCollider2D>();
+        playerCollider2 = Alexander.GetComponent<CapsuleCollider2D>();
+        target = Alexander.GetComponent<Transform>();
+        
+        dead = false; 
+         
     }
 
     public void Start()
@@ -151,7 +158,7 @@ public class ChocolateWitchAI : MonoBehaviour
                     
                         if (enterInRange!=null && cooldown == false)
                         {
-                            actualTimer = timer;
+                            actualTimer = cooldownTimer;
                         
                         
                             state = State.attacking;
@@ -189,7 +196,7 @@ public class ChocolateWitchAI : MonoBehaviour
                 actualTimer -= Time.deltaTime;
                 if (actualTimer <= 0 && attack == false)
                 {
-                    actualTimer = timer;
+                    actualTimer = cooldownTimer;
                     cooldown = false;
                     state = State.normal;
                 }
@@ -340,5 +347,25 @@ public class ChocolateWitchAI : MonoBehaviour
     {
         shoot = false;
     }
+
+    public void SetCooldown(float temp)
+    {
+        cooldownTimer = temp;
+    }
+    
+    public float GetCooldown()
+    {
+        return cooldownTimer;
+    }
+    public void SetSpeed(float temp)
+    {
+        speed = temp;
+    }
+    
+    public float GetSpeed()
+    {
+        return speed ;
+    }
+    
     
 }

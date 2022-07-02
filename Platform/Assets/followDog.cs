@@ -11,7 +11,7 @@ public class followDog : MonoBehaviour
     void Update()
     {
        
-        this.transform.position =(new Vector2(dogToFollow.position.x ,transform.position.y));
+        this.transform.position =(new Vector2(dogToFollow.position.x ,dogToFollow.position.y+0.85f));
   
         
         
