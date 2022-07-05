@@ -46,6 +46,13 @@ public class EnemiesHealthSystem : MonoBehaviour
 
 
     }
+
+
+
+    public int GetMaxHealth()
+    {
+        return maxHealth;
+    }
     private IEnumerator BecomeTemporarilyRed()
     {
         Debug.Log("siumCOlorato");

@@ -14,21 +14,34 @@ public class FlyingEnemy : MonoBehaviour
     public Animator anim;
     private Rigidbody2D body;
     private BoxCollider2D collisionBat;
+    private GameObject Alexander;
+    
     private bool attacking = false;
 
     private CircleCollider2D toHit;
-    public BoxCollider2D playerCollider;
-    public CapsuleCollider2D playerCollider2;
+    private BoxCollider2D playerBoxCollider2D;
+    private CapsuleCollider2D playerCapsuleCollider2D;
     private EnemiesHealthSystem healthSystem;
-    private bool todo;
-    public int life = 100;
-    public enum State     {normal,death }
-    public State state;
-
-    private HealthSystem takeDamage;
     
-   
+    private bool todo;
+    [SerializeField]private float timer;
+    private bool cooldown;
+    private float actualTimer;
+    private bool isNotPlaying;
+    private bool dead;
+    private bool attack;
+    private bool canDie ;
+    public enum State     {normal,death,attacking }
+    public State state;
+    
 
+
+    public void Awake()
+    {
+        Alexander = GameObject.Find("Alexander");
+        playerBoxCollider2D = Alexander.GetComponent<BoxCollider2D>();
+        playerCapsuleCollider2D = Alexander.GetComponent<CapsuleCollider2D>();
+    }
 
     private void Start()
     {
@@ -38,38 +51,58 @@ public class FlyingEnemy : MonoBehaviour
         anim= GetComponent<Animator>();
         collisionBat = gameObject.GetComponentInChildren<BoxCollider2D>();
         toHit = GetComponentInChildren<CircleCollider2D>();
-        Physics2D.IgnoreCollision(playerCollider, collisionBat ,true);
-        Physics2D.IgnoreCollision(playerCollider2, collisionBat ,true);
-
+        Physics2D.IgnoreCollision(playerBoxCollider2D, collisionBat ,true);
+        Physics2D.IgnoreCollision(playerCapsuleCollider2D, collisionBat ,true);
+        dead = false;
         healthSystem = this.GetComponentInChildren<EnemiesHealthSystem>();
-        anim.SetBool("die", false );
-        
-        
+        canDie = false;
+
+
 
     }
 
 
     private void Update()
     {
-  
+        anim.SetBool("cooldown",cooldown);
+        isNotPlaying = anim.GetCurrentAnimatorStateInfo(0).IsName("dead") == false;
+
+        if (canDie)
+        {
+            Destroy(gameObject);
+        }
+        if (healthSystem.GetCurrentHealth()<=0 && !dead && isNotPlaying)
+        {
+            anim.SetTrigger("die");
+            state = State.death;
+        }
+
         switch (state)
         {
             case State.normal:
                 
                 pathFinding();
                 Flip();
-                if (healthSystem.GetCurrentHealth()<=0)
-                {
-                    anim.SetTrigger("die");
-                    state = State.death;
-                }
-
+              
                 break;
             case State.death :
-
                 this.GetComponentInChildren<CapsuleCollider2D>().enabled= false;
-
+                if (dead)
+                {
+                    StartCoroutine(waitForDie());
+                }
+                
+                break;
             
+            case State.attacking:
+                
+                actualTimer -= Time.deltaTime;
+                
+                if (actualTimer<=0)
+                {
+                    cooldown = false;
+                    state = State.normal;
+                }
                 break;
         }
         
@@ -108,27 +141,22 @@ public class FlyingEnemy : MonoBehaviour
 
             float distanceFromPlayer = Vector2.Distance(player.position, transform.position);
 
-            if(distanceFromPlayer < lineOfSite && distanceFromPlayer > shootingRange){
+            if (cooldown) return;
+
+            if(distanceFromPlayer < lineOfSite && distanceFromPlayer > shootingRange ){
 
                 transform.position = Vector2.MoveTowards(this.transform.position, player.position, speed*Time.deltaTime);
 
-            }else if (distanceFromPlayer <= shootingRange )
+            }else if (distanceFromPlayer <= shootingRange)
             {
                 anim.SetTrigger("attack");
-                
-                
+                actualTimer = timer;
+                state = State.attacking;
                 
             }
-        
-    }
 
-  
-
-    public void ItsTimeToDestroy()
-    {
-        Destroy(gameObject);
-       
     }
+    
 
     public void ImAttacking()
     {
@@ -139,8 +167,20 @@ public class FlyingEnemy : MonoBehaviour
     }
     public void ImNotAttacking()
     {
-
+        cooldown = true;
         toHit.enabled = false;
+    }
+
+    public void BecameDead()
+    {
+        dead = true;
+    }
+    
+    public IEnumerator waitForDie()
+    {
+        
+        yield return new WaitForSeconds(5f);
+        canDie = true;
     }
 }
 

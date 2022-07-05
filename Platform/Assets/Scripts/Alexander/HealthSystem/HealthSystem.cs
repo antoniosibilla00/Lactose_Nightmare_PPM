@@ -8,27 +8,35 @@ public class HealthSystem : MonoBehaviour
     [SerializeField] HealthBar healthBar;
 
     [SerializeField] private HealthPotions healthPotions;
+
+    private SpriteRenderer _renderer;
     //vita del player
     [SerializeField] private int maxHealth = 100;
     private int currentHealth;
     private int healing;
     private int flasks;
+    private bool hasTakenDamage;
+    private float timerDamage;
+    private float actualTimerDamage;
 
     public bool isInvincible;
     // Start is called before the first frame update
     void Start()
     {
         healthBar.SetHealthBarMaxValue(maxHealth);
+        _renderer = GetComponent<SpriteRenderer>();
         currentHealth = maxHealth;
         healing = 20;
         flasks = 0;
         isInvincible = false;
+        hasTakenDamage = false;
 
     }
 
     // Update is called once per frame
     void Update()
     {
+        
         Debug.Log("currentHealth = " + currentHealth);
         Debug.Log(" health = "+ maxHealth);
         if (flasks <3 && currentHealth<100)
@@ -40,6 +48,8 @@ public class HealthSystem : MonoBehaviour
 
             }
         }
+
+
         
 
     }
@@ -53,16 +63,18 @@ public class HealthSystem : MonoBehaviour
     {
         if (!isInvincible)
         {
+            Debug.Log("!danno");
             if (currentHealth -damage<0 )
             {
                 currentHealth = -1;
             }
             else
             {
+                StartCoroutine(BecomeTemporarilyInvincible(3f));
                 currentHealth -= damage;
-          
+                
             }
-
+            
             healthBar.SetHealthBar(currentHealth);
             
         }
@@ -124,6 +136,18 @@ public class HealthSystem : MonoBehaviour
             }
             
         }
+    }
+    
+    public IEnumerator BecomeTemporarilyInvincible(float invincibilityDurationSeconds)
+    {
+        Debug.Log("Player turned invincible!");
+        _renderer.color = Color.red;
+        isInvincible = true;
+        
+        yield return new WaitForSeconds(invincibilityDurationSeconds);
+        _renderer.color = new Color(255, 255, 255, 255);
+        isInvincible = false;
+        Debug.Log("Player is no longer invincible!");
     }
     
     

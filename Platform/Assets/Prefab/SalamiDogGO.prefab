@@ -292,7 +292,7 @@ MonoBehaviour:
   activateDistance: 2
   pathUpdateSeconds: 0.5
   speed: 2
-  nextWaypointDistance: 3
+  nextWaypointDistance: 1.5
   jumpNodeHeightRequirement: 0.8
   jumpModifier: 0.3
   jumpCheckOffset: 0.1
@@ -306,6 +306,7 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 2048
   timer: 2
+  attackHitBox: {fileID: 751209132873225297}
   state: 0
 --- !u!1 &751209131757899503
 GameObject:

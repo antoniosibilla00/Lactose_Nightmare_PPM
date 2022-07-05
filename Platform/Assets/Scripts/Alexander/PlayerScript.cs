@@ -425,23 +425,13 @@ public class PlayerScript : MonoBehaviour
     }
     
     
-    private IEnumerator BecomeTemporarilyInvincible()
-    {
-        Debug.Log("Player turned invincible!");
-        _renderer.color = Color.red;
-        healthSystem.isInvincible = true;
-        
-        yield return new WaitForSeconds(invincibilityDurationSeconds);
-        _renderer.color = new Color(255, 255, 255, 255);
-        healthSystem.isInvincible = false;
-        Debug.Log("Player is no longer invincible!");
-    }
+
     
     void TriggersInvulnerability()
     {
         if (!healthSystem.isInvincible)
         {
-            StartCoroutine(BecomeTemporarilyInvincible());
+            StartCoroutine(healthSystem.BecomeTemporarilyInvincible(invincibilityDurationSeconds));
         }
     }
     

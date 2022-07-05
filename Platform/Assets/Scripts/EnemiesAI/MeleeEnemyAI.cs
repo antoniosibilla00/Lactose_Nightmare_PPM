@@ -61,8 +61,9 @@ public class MeleeEnemyAI
     private Vector2 force;
     private bool cooldown;
     private float actualTimer;
+    private bool isNotPlaying;
     private EnemiesHealthSystem healthSystem;
-    private CircleCollider2D punchHitBox;
+    [SerializeField] public Collider2D attackHitBox;
     #endregion
 
     
@@ -91,7 +92,6 @@ public class MeleeEnemyAI
     public void Start()
     {
         meleeEnemyCollider = GetComponentInChildren<BoxCollider2D>();
-        punchHitBox = GetComponentInChildren<CircleCollider2D>();
         seeker = GetComponent<Seeker>();
         rb = GetComponent<Rigidbody2D>();
         anim = GetComponent<Animator>(); 
@@ -105,6 +105,8 @@ public class MeleeEnemyAI
 
     private void Update()
     {
+        
+        Debug.Log("target"+target);
      
         Debug.Log("attack"+attack);
         Debug.Log("walk"+walk);
@@ -114,20 +116,18 @@ public class MeleeEnemyAI
         anim.SetBool("attack",attack);
         anim.SetBool("walk",walk);
      
+        isNotPlaying = anim.GetCurrentAnimatorStateInfo(0).IsName("dead") == false;
         
+        if (healthSystem.GetCurrentHealth() <= 0 &&!dead && isNotPlaying)
+        {
+            anim.SetTrigger("dead");
+            state = State.death;
+        }
+
         #region Manage Enemy states (In terms of Animation)
         switch (state)
-        { 
-            case State.normal:
-                
-                
-                if (healthSystem.GetCurrentHealth()<=0)
-                {
-                    anim.SetTrigger("dead");
-                    state = State.death;
-                }
-                
-                break;
+        {
+
             case State.death :
 
                 this.GetComponentInChildren<CapsuleCollider2D>().enabled= false;
@@ -160,53 +160,53 @@ public class MeleeEnemyAI
         { 
             case State.normal:
                 
-                punchHitBox.enabled = false;
+                    attackHitBox.enabled = false;
 
-                    if (anim.GetCurrentAnimatorStateInfo(0).IsName("attack") == false )
-                {
-                    
-                    takeHit = false;
-                                        
-                    Collider2D enterInRange = Physics2D.OverlapCircle(range.position, rangeRadius, player);
-                    
-                    if (enterInRange!=null && cooldown == false && healthSystem.GetCurrentHealth()>0)
+                    if (anim.GetCurrentAnimatorStateInfo(0).IsName("attack") == false ) 
                     {
-                        actualTimer = timer;
+                    
+                        takeHit = false;
+                                        
+                        Collider2D enterInRange = Physics2D.OverlapCircle(range.position, rangeRadius, player);
+                    
+                        if (enterInRange!=null && cooldown == false && healthSystem.GetCurrentHealth()>0)
+                        {
+                            actualTimer = timer;
                         
                         
-                        state = State.attacking;
+                            state = State.attacking;
 
-                        attack = true;
-                        if (target.position.x > transform.position.x)
-                        { 
-                            facingRight = false;
-                            transform.localScale = new Vector3(-1f * Mathf.Abs(transform.localScale.x), transform.localScale.y, transform.localScale.z);
-                        }else{
-                            facingRight = true;
-                            transform.localScale = new Vector3(Mathf.Abs(transform.localScale.x), transform.localScale.y, transform.localScale.z);
+                            attack = true;
+                            if (target.position.x > transform.position.x)
+                            { 
+                                facingRight = false;
+                                transform.localScale = new Vector3(-1f * Mathf.Abs(transform.localScale.x), transform.localScale.y, transform.localScale.z);
+                            }else{
+                                facingRight = true;
+                                transform.localScale = new Vector3(Mathf.Abs(transform.localScale.x), transform.localScale.y, transform.localScale.z);
 
-                        }
+                            }
                      
 
-                    }
+                        }
                     
-                    else if(BecameInactive())
-                    {
-                        state = State.idle;
-                        
-                    }
-                    
-                    else
-                    {
-                        if (TargetInDistance() && followEnabled)
+                        else if(BecameInactive())
                         {
-                            walk = true;
-                            PathFollow();
+                            state = State.idle;
+                        
+                        }
+                    
+                        else
+                        {
+                            if (TargetInDistance() && followEnabled)
+                            {
+                                walk = true;
+                                PathFollow();
+                            }
                         }
                     }
-                }
 
-                break;
+                    break;
             
             case State.attacking:
                 actualTimer -= Time.deltaTime;
@@ -338,7 +338,7 @@ public class MeleeEnemyAI
 
     void startAnim()
     {
-        punchHitBox.enabled = true;
+        attackHitBox.enabled = true;
     }
     void finishAnim()
     {
@@ -346,7 +346,8 @@ public class MeleeEnemyAI
         cooldown = true;
         walk = false;
         Debug.Log("finishAnim");
-
+        
+        attackHitBox.enabled = false;
     }
 
     private void OnDrawGizmos()
@@ -366,9 +367,12 @@ public class MeleeEnemyAI
         speed = temp;
     }
     
+    
     public float GetSpeed()
     {
         return speed ;
     }
+    
+    
     
 }
