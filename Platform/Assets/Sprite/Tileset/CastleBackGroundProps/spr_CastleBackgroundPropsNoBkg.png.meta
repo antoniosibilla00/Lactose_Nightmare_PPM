@@ -67,7 +67,7 @@ TextureImporter:
     second: colonna7_3
   - first:
       213: 8834408161576041995
-    second: spr_CastleBackgroundPropsNoBkg_21
+    second: ombraStendardo2_1
   - first:
       213: 925015008970692717
     second: tende_3
@@ -127,7 +127,7 @@ TextureImporter:
     second: teschioSospeso_7
   - first:
       213: -6148935155063716484
-    second: teschioSospeso2
+    second: teschioSospeso2_4
   - first:
       213: 9027791056298614874
     second: scala1_1
@@ -232,10 +232,10 @@ TextureImporter:
     second: stendardo_3
   - first:
       213: 1084647244363198849
-    second: ombraStendardo
+    second: ombraStendardo_1
   - first:
       213: 3688561958750026728
-    second: spr_CastleBackgroundPropsNoBkg_77
+    second: ombraStendardo2_2
   - first:
       213: 3196582230062862902
     second: ombraTroncoSospeso2
@@ -269,6 +269,12 @@ TextureImporter:
   - first:
       213: 4055006382142939177
     second: pentolaPiegata2_2
+  - first:
+      213: 8723673286743943842
+    second: ombraStendardo_2
+  - first:
+      213: -3571263558786064990
+    second: panchina_6
   externalObjects: {}
   serializedVersion: 11
   mipmaps:
@@ -457,12 +463,12 @@ TextureImporter:
       name: colonna2_3
       rect:
         serializedVersion: 2
-        x: 262
+        x: 264
         y: 320
         width: 32
         height: 32
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      alignment: 9
+      pivot: {x: 0.8125, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -756,7 +762,7 @@ TextureImporter:
         width: 32
         height: 32
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -772,12 +778,12 @@ TextureImporter:
       name: colonna6_4
       rect:
         serializedVersion: 2
-        x: 310
+        x: 307
         y: 192
         width: 32
         height: 32
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      alignment: 9
+      pivot: {x: 0.1875, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -806,27 +812,6 @@ TextureImporter:
       bones: []
       spriteID: dfadda5a005b24970800000000000000
       internalID: 8737745241436445437
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: spr_CastleBackgroundPropsNoBkg_21
-      rect:
-        serializedVersion: 2
-        x: 519
-        y: 194
-        width: 16
-        height: 16
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: b0e3d8f8a6f1a9a70800000000000000
-      internalID: 8834408161576041995
       vertices: []
       indices: 
       edges: []
@@ -1008,7 +993,7 @@ TextureImporter:
         width: 32
         height: 32
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -1171,7 +1156,7 @@ TextureImporter:
       name: troncoSospeso_5
       rect:
         serializedVersion: 2
-        x: 379
+        x: 369
         y: 117
         width: 16
         height: 16
@@ -1231,13 +1216,13 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: teschioSospeso2
+      name: teschioSospeso2_4
       rect:
         serializedVersion: 2
-        x: 520
+        x: 544
         y: 120
-        width: 36
-        height: 56
+        width: 32
+        height: 32
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -1297,7 +1282,7 @@ TextureImporter:
       name: panchina_1
       rect:
         serializedVersion: 2
-        x: 164
+        x: 155
         y: 144
         width: 16
         height: 16
@@ -1423,10 +1408,10 @@ TextureImporter:
       name: stendardo2
       rect:
         serializedVersion: 2
-        x: 482
+        x: 480
         y: 82
-        width: 28
-        height: 30
+        width: 32
+        height: 32
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -1449,7 +1434,7 @@ TextureImporter:
         width: 32
         height: 32
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -1511,8 +1496,8 @@ TextureImporter:
         y: 80
         width: 8
         height: 8
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      alignment: 4
+      pivot: {x: 0, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -1596,7 +1581,7 @@ TextureImporter:
         width: 32
         height: 32
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -1843,7 +1828,7 @@ TextureImporter:
       name: vasoConFiori2_5
       rect:
         serializedVersion: 2
-        x: 180
+        x: 178
         y: 32
         width: 8
         height: 8
@@ -1948,7 +1933,7 @@ TextureImporter:
       name: stendardo_3
       rect:
         serializedVersion: 2
-        x: 488
+        x: 489
         y: 34
         width: 16
         height: 16
@@ -1966,13 +1951,13 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: ombraStendardo
+      name: ombraStendardo_1
       rect:
         serializedVersion: 2
-        x: 537
-        y: 42
-        width: 17
-        height: 22
+        x: 538
+        y: 49
+        width: 16
+        height: 16
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -1987,14 +1972,14 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: spr_CastleBackgroundPropsNoBkg_77
+      name: ombraStendardo2_2
       rect:
         serializedVersion: 2
-        x: 570
-        y: 43
-        width: 13
-        height: 21
-      alignment: 0
+        x: 569
+        y: 32
+        width: 16
+        height: 16
+      alignment: 9
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
@@ -2743,7 +2728,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: spr_Castleporta2_2
+      name: porta2_2
       rect:
         serializedVersion: 2
         x: 377
@@ -2767,12 +2752,12 @@ TextureImporter:
       name: colonna2_4
       rect:
         serializedVersion: 2
-        x: 294
+        x: 296
         y: 320
         width: 32
         height: 32
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      alignment: 9
+      pivot: {x: 0.8125, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -2813,7 +2798,7 @@ TextureImporter:
         y: 384
         width: 32
         height: 32
-      alignment: 0
+      alignment: 9
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
@@ -3184,48 +3169,6 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: spr_CastleBackgroundPropsNoBkg_138
-      rect:
-        serializedVersion: 2
-        x: 702
-        y: 320
-        width: 16
-        height: 16
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: e0297a7c3f3256990800000000000000
-      internalID: -7393463683325128178
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: spr_CastleBackgroundPropsNoBkg_139
-      rect:
-        serializedVersion: 2
-        x: 702
-        y: 320
-        width: 16
-        height: 16
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 2feeef1aacdb33c10800000000000000
-      internalID: 2032176534873108210
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
       name: ringhiera2_10
       rect:
         serializedVersion: 2
@@ -3410,27 +3353,6 @@ TextureImporter:
       bones: []
       spriteID: 8dfce41f5b1714d40800000000000000
       internalID: 5566855640658137048
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: spr_CastleBackgroundPropsNoBkg_149
-      rect:
-        serializedVersion: 2
-        x: 702
-        y: 352
-        width: 16
-        height: 16
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 5ee76e6c9346aa200800000000000000
-      internalID: 192076133429575397
       vertices: []
       indices: 
       edges: []
@@ -3738,7 +3660,7 @@ TextureImporter:
         width: 32
         height: 32
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -3759,7 +3681,7 @@ TextureImporter:
         width: 32
         height: 32
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -3780,7 +3702,7 @@ TextureImporter:
         width: 32
         height: 32
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -3817,12 +3739,12 @@ TextureImporter:
       name: colonna6_3
       rect:
         serializedVersion: 2
-        x: 278
+        x: 275
         y: 192
         width: 32
         height: 32
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      alignment: 9
+      pivot: {x: 0.1875, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -4276,27 +4198,6 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: spr_CastleBackgroundPropsNoBkg_191
-      rect:
-        serializedVersion: 2
-        x: 649
-        y: 192
-        width: 16
-        height: 16
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 2d5fea7347c5609c0800000000000000
-      internalID: -3961377168005597742
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
       name: tende2_9
       rect:
         serializedVersion: 2
@@ -4717,27 +4618,6 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: spr_CastleBackgroundPropsNoBkg_212
-      rect:
-        serializedVersion: 2
-        x: 168
-        y: 160
-        width: 16
-        height: 16
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: a818ceeb25e918030800000000000000
-      internalID: 3495248864043893130
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
       name: panchina_3
       rect:
         serializedVersion: 2
@@ -4804,7 +4684,7 @@ TextureImporter:
       name: panchina_2
       rect:
         serializedVersion: 2
-        x: 180
+        x: 187
         y: 144
         width: 16
         height: 16
@@ -5435,11 +5315,11 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 234
-        y: 79
+        y: 80
         width: 8
         height: 8
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      alignment: 9
+      pivot: {x: 0.33262634, y: 0.5152159}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -5460,7 +5340,7 @@ TextureImporter:
         width: 8
         height: 8
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -5481,7 +5361,7 @@ TextureImporter:
         width: 8
         height: 8
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -5502,7 +5382,7 @@ TextureImporter:
         width: 8
         height: 8
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -5767,27 +5647,6 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: spr_CastleBackgroundPropsNoBkg_261
-      rect:
-        serializedVersion: 2
-        x: 178
-        y: 48
-        width: 8
-        height: 8
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 93ffee343bd5b10d0800000000000000
-      internalID: -3451061664929087687
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
       name: vasoConFiori2_2
       rect:
         serializedVersion: 2
@@ -5938,7 +5797,7 @@ TextureImporter:
       name: pentole2_4
       rect:
         serializedVersion: 2
-        x: 294
+        x: 291
         y: 64
         width: 8
         height: 8
@@ -6253,7 +6112,7 @@ TextureImporter:
       name: stendardo_1
       rect:
         serializedVersion: 2
-        x: 482
+        x: 473
         y: 50
         width: 16
         height: 16
@@ -6274,7 +6133,7 @@ TextureImporter:
       name: stendardo_2
       rect:
         serializedVersion: 2
-        x: 498
+        x: 489
         y: 50
         width: 16
         height: 16
@@ -6505,12 +6364,12 @@ TextureImporter:
       name: troncoSospeso_4
       rect:
         serializedVersion: 2
-        x: 363
+        x: 353
         y: 117
         width: 16
         height: 16
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      alignment: 9
+      pivot: {x: 0.50625, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -6526,7 +6385,7 @@ TextureImporter:
       name: troncoSospeso_6
       rect:
         serializedVersion: 2
-        x: 395
+        x: 385
         y: 117
         width: 16
         height: 16
@@ -6547,7 +6406,7 @@ TextureImporter:
       name: troncoSospeso_7
       rect:
         serializedVersion: 2
-        x: 411
+        x: 401
         y: 117
         width: 16
         height: 16
@@ -6568,7 +6427,7 @@ TextureImporter:
       name: troncoSospeso_8
       rect:
         serializedVersion: 2
-        x: 427
+        x: 417
         y: 117
         width: 16
         height: 16
@@ -6602,27 +6461,6 @@ TextureImporter:
       bones: []
       spriteID: c84d1dadfdf212380800000000000000
       internalID: -8997857942014143348
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: spr_CastleBackgroundPropsNoBkg_302
-      rect:
-        serializedVersion: 2
-        x: 368
-        y: 133
-        width: 16
-        height: 16
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 1fad58d0ba71548a0800000000000000
-      internalID: -6321620478510900495
       vertices: []
       indices: 
       edges: []
@@ -6799,12 +6637,12 @@ TextureImporter:
       name: oggettoSospeso_2
       rect:
         serializedVersion: 2
-        x: 439
+        x: 440
         y: 158
         width: 16
         height: 16
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      alignment: 9
+      pivot: {x: 0.4375, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -6820,12 +6658,12 @@ TextureImporter:
       name: oggettoSospeso_3
       rect:
         serializedVersion: 2
-        x: 455
+        x: 456
         y: 158
         width: 16
         height: 16
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      alignment: 9
+      pivot: {x: 0.4375, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -6841,12 +6679,12 @@ TextureImporter:
       name: oggettoSospeso_1
       rect:
         serializedVersion: 2
-        x: 449
+        x: 448
         y: 174
         width: 16
         height: 16
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      alignment: 5
+      pivot: {x: 1, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -7085,6 +6923,153 @@ TextureImporter:
       bones: []
       spriteID: 9206299f1d6464830800000000000000
       internalID: 4055006382142939177
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: teschioSospeso2_3
+      rect:
+        serializedVersion: 2
+        x: 512
+        y: 120
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 81cc7f33f6cc09810800000000000000
+      internalID: 1770139431541918744
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: teschioSospeso2_1
+      rect:
+        serializedVersion: 2
+        x: 512
+        y: 152
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5bb8852cd966a4c20800000000000000
+      internalID: 3191476113701899189
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: teschioSospeso2_2
+      rect:
+        serializedVersion: 2
+        x: 544
+        y: 152
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e018b62e9cf841c20800000000000000
+      internalID: 3176321734452936974
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: vasoConFiori2_6
+      rect:
+        serializedVersion: 2
+        x: 186
+        y: 32
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 750ef8a1afe16d980800000000000000
+      internalID: -8514583985961050025
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ombraStendardo_2
+      rect:
+        serializedVersion: 2
+        x: 538
+        y: 33
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2aaefe062a6b01970800000000000000
+      internalID: 8723673286743943842
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: panchina_6
+      rect:
+        serializedVersion: 2
+        x: 171
+        y: 144
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2ad5243f6b2507ec0800000000000000
+      internalID: -3571263558786064990
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ombraStendardo2_1
+      rect:
+        serializedVersion: 2
+        x: 569
+        y: 48
+        width: 16
+        height: 16
+      alignment: 9
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b0e3d8f8a6f1a9a70800000000000000
+      internalID: 8834408161576041995
       vertices: []
       indices: 
       edges: []

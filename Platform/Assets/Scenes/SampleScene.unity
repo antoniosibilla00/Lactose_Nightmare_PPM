@@ -37604,7 +37604,7 @@ MonoBehaviour:
     ModeOverride: 0
     LensShift: {x: 0, y: 0}
     GateFit: 2
-    m_SensorSize: {x: 1.7777778, y: 1}
+    m_SensorSize: {x: 1.3333334, y: 1}
   m_Transitions:
     m_BlendHint: 0
     m_InheritPosition: 0
@@ -50829,8 +50829,8 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 976602791}
-  m_LocalRotation: {x: -1.780299e-39, y: 8.9015e-40, z: 0, w: 1}
-  m_LocalPosition: {x: 247.99873, y: 15.184717, z: -13}
+  m_LocalRotation: {x: -1.787872e-39, y: 8.93936e-40, z: 0, w: 1}
+  m_LocalPosition: {x: 247.74904, y: 15.184717, z: -13}
   m_LocalScale: {x: 0.37139088, y: 0.40597954, z: 1}
   m_Children:
   - {fileID: 627277546}
@@ -98262,7 +98262,7 @@ Tilemap:
       - {fileID: 1790882133243449769, guid: 7821bb71e99e81e4eae2ae4140a34e5e, type: 3}
       - {fileID: 7926827821874708208, guid: 7821bb71e99e81e4eae2ae4140a34e5e, type: 3}
       - {fileID: 197002663652443948, guid: 7821bb71e99e81e4eae2ae4140a34e5e, type: 3}
-      m_AnimationSpeed: 7.0000005
+      m_AnimationSpeed: 7
       m_AnimationTimeOffset: 0
       m_IsLooping: 1
   - first: {x: 528, y: 22, z: 0}
