@@ -49,6 +49,7 @@ public class MeleeEnemyAI
     private CapsuleCollider2D playerCapsuleCollider2D;
     private BoxCollider2D meleeEnemyCollider;
     private Rigidbody2D playerBody;
+    public LayerMask enemiesLayer;
     [SerializeField]private float timer;
     #endregion
 
@@ -62,9 +63,15 @@ public class MeleeEnemyAI
     private bool cooldown;
     private float actualTimer;
     private bool isNotPlaying;
+    #endregion
+
+
+    public AudioSource AudioSource;
+    public AudioClip enemyDies;
+    public AudioClip soundAttack;
     private EnemiesHealthSystem healthSystem;
     [SerializeField] public Collider2D attackHitBox;
-    #endregion
+
 
     
     public enum State
@@ -87,6 +94,8 @@ public class MeleeEnemyAI
         playerBoxCollider2D = Alexander.GetComponent<BoxCollider2D>();
         playerCapsuleCollider2D = Alexander.GetComponent<CapsuleCollider2D>();
         target = Alexander.GetComponent<Transform>();
+        AudioSource = GetComponent<AudioSource>();
+
     }
 
     public void Start()
@@ -112,15 +121,18 @@ public class MeleeEnemyAI
         Debug.Log("walk"+walk);
         Debug.Log("cooldown"+cooldown);
         
-        anim.SetBool("cooldown",cooldown);
+        anim.SetBool("Cooldown",cooldown);
         anim.SetBool("attack",attack);
-        anim.SetBool("walk",walk);
+        anim.SetBool("Walk",walk);
      
         isNotPlaying = anim.GetCurrentAnimatorStateInfo(0).IsName("dead") == false;
         
         if (healthSystem.GetCurrentHealth() <= 0 &&!dead && isNotPlaying)
         {
             anim.SetTrigger("dead");
+            AudioSource.clip = enemyDies;
+            AudioSource.Play();
+            
             state = State.death;
         }
 
@@ -339,6 +351,10 @@ public class MeleeEnemyAI
     void startAnim()
     {
         attackHitBox.enabled = true;
+        /*
+        AudioSource.clip = soundAttack;
+        AudioSource.Play();
+        */
     }
     void finishAnim()
     {

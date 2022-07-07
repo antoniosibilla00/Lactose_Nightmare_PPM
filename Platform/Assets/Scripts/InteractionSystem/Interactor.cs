@@ -37,7 +37,7 @@ public class Interactor : MonoBehaviour
                 interactionPanel.SetActive(false);
                 done = true;
                 
-                if (dialoguePanel != null)
+                if (interactable.dialogue!= null)
                 {
                     dialoguePanel.SetActive(true);
                 }

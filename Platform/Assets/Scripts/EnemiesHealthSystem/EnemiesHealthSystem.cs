@@ -13,10 +13,13 @@ public class EnemiesHealthSystem : MonoBehaviour
     private float timer=5f;
     private float actualTimer;
     private bool done;
+    public AudioClip getDamaged;
+    public AudioSource AudioSource;
     private void Start()
     {
         _renderer = GetComponentInParent<SpriteRenderer>();
         currentHealth = maxHealth;
+        AudioSource = GetComponentInParent<AudioSource>();
     }
 
     public int GetCurrentHealth()
@@ -30,6 +33,7 @@ public class EnemiesHealthSystem : MonoBehaviour
 
     public void TakeDamage(int damage)
     {
+        AudioSource.clip= getDamaged;
         done = true;
         if (GetCurrentHealth() -damage<0 )
         {
@@ -38,9 +42,13 @@ public class EnemiesHealthSystem : MonoBehaviour
         else
         {
             SetCurrentHealth(GetCurrentHealth() - damage);
+          
+            AudioSource.Play();
       
         }
 
+        
+        
         StartCoroutine(BecomeTemporarilyRed());
 
 

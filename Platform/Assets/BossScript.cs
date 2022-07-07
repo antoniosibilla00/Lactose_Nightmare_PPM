@@ -8,6 +8,8 @@ using System.Collections.Generic;
 using System.Diagnostics.Tracing;
 using UnityEngine;
 using Pathfinding;
+using UnityEditor;
+using UnityEditor.Tilemaps;
 using UnityEngine.Rendering.Universal;
 using UnityEngine.Serialization;
 using UnityEngine.Tilemaps;
@@ -47,6 +49,7 @@ public class BossScript
     [SerializeField] private Transform rangeLeap;
     [SerializeField] private float rangeLeapRadius;
     [SerializeField] private LayerMask player;
+    [SerializeField] private LayerMask ground;
     private BoxCollider2D playerBoxCollider2D; 
     private CapsuleCollider2D playerCapsuleCollider2D;
     private BoxCollider2D meleeEnemyCollider;
@@ -74,7 +77,7 @@ public class BossScript
     private bool cooldown=false;
     private bool canLeap;
     private float actualTimer;
-    private EnemiesHealthSystem healthSystem;
+    private BossHealthSystem healthSystem;
     [SerializeField] public BoxCollider2D hammerCollider2D;
     [SerializeField] public CapsuleCollider2D swordCollider2D;
     #endregion
@@ -111,7 +114,7 @@ public class BossScript
         anim = GetComponent<Animator>(); 
         Physics2D.IgnoreCollision(playerBoxCollider2D,meleeEnemyCollider);
         Physics2D.IgnoreCollision(playerCapsuleCollider2D,meleeEnemyCollider);
-        healthSystem = GetComponentInChildren<EnemiesHealthSystem>();
+        healthSystem = GetComponentInChildren<BossHealthSystem>();
         attack = false;
         moveDir = 1;
         done = false;
@@ -197,6 +200,8 @@ public class BossScript
 
     private void FixedUpdate()
     {
+        Debug.Log("<<<<2"+dashIsNotColliding());
+        Debug.Log("<<<<1"+leapIsNotColliding());
         Debug.Log("<<<SonoEntratoFixed");
         if (actualCooldownLeap>=0)
         {
@@ -417,7 +422,8 @@ public class BossScript
 
     private bool TriggerDash()
     {
-        return Vector2.Distance(transform.position, target.transform.position) >= (followDistance*0.8);
+       
+        return (Vector2.Distance(transform.position, target.transform.position) >= (followDistance*0.5)) && dashIsNotColliding();
     }
     
     private bool BecameInactive()
@@ -449,8 +455,8 @@ public class BossScript
     {
         float rand = Random.value;
         
-        
-        if (rand<0.05f && canLeap)
+      
+        if (rand>=0.8f && canLeap && leapIsNotColliding())
         {
             canLeap = false;
             actualCooldownLeap = cooldownLeap;
@@ -459,6 +465,35 @@ public class BossScript
         }
         return false;
     }
+
+    
+    private bool leapIsNotColliding()
+    {
+        //point,size,direction,angle
+        Collider2D leap_ground = Physics2D.OverlapCapsule(rangeLeap.position,new Vector2(5.84576f,0.6838409f),CapsuleDirection2D.Horizontal,0,ground);
+        if (leap_ground != null)
+        {
+            return false;
+        }
+
+        return true;
+    }
+    
+    private bool dashIsNotColliding()
+    {
+        //point,size,direction,angle
+        Collider2D leap_ground = Physics2D.OverlapCapsule(rangeLeap.position,new Vector2(2.465975f,0.6838409f),CapsuleDirection2D.Horizontal,0,ground);
+        if (leap_ground != null)
+        {
+            return false;
+        }
+
+        return true;
+    }
+    
+    
+    
+    
 
     private void FlipWhenInRange()
     {
@@ -507,7 +542,6 @@ public class BossScript
         Gizmos.DrawWireSphere(range.position,rangeRadius);
         Gizmos.DrawWireSphere(rangeLeap.position,rangeLeapRadius);
 
-        
     }
     
     void changePosition(float offset)
@@ -528,7 +562,4 @@ public class BossScript
     {
         dead = true;
     }
-
-    
-    
 }

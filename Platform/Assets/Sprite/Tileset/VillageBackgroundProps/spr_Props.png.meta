@@ -212,6 +212,9 @@ TextureImporter:
   - first:
       213: 6101240943997039836
     second: botte
+  - first:
+      213: -5244492035139702667
+    second: CartelloInteragibile
   externalObjects: {}
   serializedVersion: 11
   mipmaps:
@@ -1778,6 +1781,27 @@ TextureImporter:
       bones: []
       spriteID: cd433041056fba450800000000000000
       internalID: 6101240943997039836
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CartelloInteragibile
+      rect:
+        serializedVersion: 2
+        x: 148
+        y: 12
+        width: 22
+        height: 50
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 570f122d742d737b0800000000000000
+      internalID: -5244492035139702667
       vertices: []
       indices: 
       edges: []

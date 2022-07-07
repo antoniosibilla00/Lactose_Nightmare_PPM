@@ -1,6 +1,8 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
+using System.ComponentModel;
+using System.ComponentModel.Design.Serialization;
 using UnityEngine;
 
 public class HealthSystem : MonoBehaviour
@@ -8,6 +10,14 @@ public class HealthSystem : MonoBehaviour
     [SerializeField] HealthBar healthBar;
 
     [SerializeField] private HealthPotions healthPotions;
+
+    public GameObject blood;
+    private bool finishToBlood;
+    private Transform alexanderPos;
+    private AudioSource AudioSource;
+    public AudioClip takeHurt;
+    public AudioClip healingSound;
+    public static HealthSystem Instance{get; private  set; }
 
     private SpriteRenderer _renderer;
     //vita del player
@@ -21,10 +31,20 @@ public class HealthSystem : MonoBehaviour
 
     public bool isInvincible;
     // Start is called before the first frame update
+
+    private void Awake()
+    {
+        Instance = this;
+        alexanderPos = GetComponentInParent<Transform>();
+        AudioSource = GetComponentInParent<AudioSource>();
+    }
+
     void Start()
     {
+        
         healthBar.SetHealthBarMaxValue(maxHealth);
         _renderer = GetComponent<SpriteRenderer>();
+        
         currentHealth = maxHealth;
         healing = 20;
         flasks = 0;
@@ -48,7 +68,7 @@ public class HealthSystem : MonoBehaviour
 
             }
         }
-
+        
 
         
 
@@ -70,13 +90,18 @@ public class HealthSystem : MonoBehaviour
             }
             else
             {
-                StartCoroutine(BecomeTemporarilyInvincible(3f));
+                StartCoroutine(BecomeTemporarilyInvincible(1.5f));
                 currentHealth -= damage;
-                
+                AudioSource.clip = takeHurt;
+                AudioSource.Play();
+               
             }
-            
+            CinemachineShake.Instance.ShakeCamera(0.5f,0.5f); 
+            GameObject newBlood= GameObject.Instantiate(blood,alexanderPos);
+            StartCoroutine(DestroyBlood(newBlood));
             healthBar.SetHealthBar(currentHealth);
             
+
         }
        
     }
@@ -103,13 +128,14 @@ public class HealthSystem : MonoBehaviour
             currentHealth += healing;
           
         }
-        
+
+        StartCoroutine(BecomeTemporarilyGreen());
+        AudioSource.clip = healingSound;
+        AudioSource.Play();
+
         healthBar.SetHealthBar(currentHealth);
         healthPotions.SetPotionsEmpty(flasks);
         
-
-
-
     }
     public void SetHealth(int health)
     {
@@ -141,12 +167,32 @@ public class HealthSystem : MonoBehaviour
     public IEnumerator BecomeTemporarilyInvincible(float invincibilityDurationSeconds)
     {
         Debug.Log("Player turned invincible!");
-        _renderer.color = Color.red;
         isInvincible = true;
+     
         
         yield return new WaitForSeconds(invincibilityDurationSeconds);
-        _renderer.color = new Color(255, 255, 255, 255);
+    
         isInvincible = false;
+        Debug.Log("Player is no longer invincible!");
+    }
+
+    
+    public IEnumerator DestroyBlood(GameObject blood)
+    {
+        yield return new WaitForSeconds(0.4f);
+        Destroy(blood);
+ 
+    }
+    
+     public IEnumerator BecomeTemporarilyGreen()
+    {
+        Debug.Log("Player turned invincible!");
+        _renderer.color = Color.green;
+     
+        
+        yield return new WaitForSeconds(1.2f);
+    
+        _renderer.color = new Color(255, 255, 255, 255);
         Debug.Log("Player is no longer invincible!");
     }
     

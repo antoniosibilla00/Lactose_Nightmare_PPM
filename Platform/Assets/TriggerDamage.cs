@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using System.ComponentModel.Design.Serialization;
 using UnityEngine;
 
 public class TriggerDamage : MonoBehaviour
@@ -12,7 +13,8 @@ public class TriggerDamage : MonoBehaviour
     {
         if (col.CompareTag("Player") )
         {
-            col.GetComponent<HealthSystem>().TakeDamage(10);
+          HealthSystem.Instance.TakeDamage(10);
+           
         }
     }
 }

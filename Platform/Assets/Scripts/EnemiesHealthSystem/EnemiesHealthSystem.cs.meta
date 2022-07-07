@@ -3,7 +3,9 @@ guid: ee44e58c1791ad6429b61be07adb7f57
 MonoImporter:
   externalObjects: {}
   serializedVersion: 2
-  defaultReferences: []
+  defaultReferences:
+  - getDamaged: {fileID: 8300000, guid: ac5ec2120ebad534a9c568f29c52bbab, type: 3}
+  - AudioSource: {instanceID: 0}
   executionOrder: 0
   icon: {instanceID: 0}
   userData: 

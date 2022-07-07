@@ -189,9 +189,9 @@ public class PlayerScript : MonoBehaviour
         {
             case State.normal:
                 xInput = Input.GetAxisRaw("Horizontal");
+
                 if (move)
                 {
-                   
                     run =   run = xInput != 0;
                     body.velocity = new Vector2(xInput * speed, body.velocity.y);
 
@@ -261,7 +261,8 @@ public class PlayerScript : MonoBehaviour
         //ForceMode2D.Impulse is useful if Jump() is called using GetKeyDown
         body.velocity = new Vector2(body.velocity.x, jumpForce);
         anim.SetTrigger("jump");
-        
+        sourceSium.clip = sium[3];
+        sourceSium.Play();
         hangTimeCounter = 0f;
         jumpBufferCounter = 0f;
 
@@ -287,7 +288,12 @@ public class PlayerScript : MonoBehaviour
     private void HandleAnimations()
     {
         anim.SetBool("run", run);
-        
+        /*
+        if (!run)
+        {
+            sourceSium.Stop();
+        }
+        */
         if (IsGrounded())
         {
             anim.SetBool("grounded", true);
@@ -309,6 +315,8 @@ public class PlayerScript : MonoBehaviour
         if (healthSystem.GetCurrentHealth() <= 0)
         {
             anim.SetTrigger("death");
+            sourceSium.clip= sium[0];
+            sourceSium.Play();
             state = State.death;
         }
     }
@@ -338,7 +346,11 @@ public class PlayerScript : MonoBehaviour
             anim.SetTrigger(""+combo);
             attack = true;
             state = State.attacking;
-
+            /*
+            sourceSium.clip = sium[3];
+            sourceSium.Play();
+            
+            */
         }
 
         if (Input.GetKeyDown(KeyCode.Z) && grounded)
@@ -354,12 +366,7 @@ public class PlayerScript : MonoBehaviour
         {
             SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
         }
-
-        if (Input.GetKeyDown((KeyCode.I)) && roll != true)
-        {
-            healthSystem.TakeDamage(10);
-          
-        }
+        
     }
 
     public void Attack()
@@ -368,13 +375,28 @@ public class PlayerScript : MonoBehaviour
         body.AddForce(new Vector2(moveDir *100,0));
         foreach (Collider2D enemy in hitEnemies)
         {
-            Debug.Log("vitaNemico"+enemy.GetComponent<EnemiesHealthSystem>().GetCurrentHealth() );
-            if (enemy.GetComponent<EnemiesHealthSystem>().GetCurrentHealth() > 0)
+
+            if (enemy.name.Equals("BossHitbox"))
             {
-                Debug.Log("collider:"+enemy.name);
-                enemy.GetComponent<EnemiesHealthSystem>().TakeDamage(10);
-                enemy.GetComponentInParent<Rigidbody2D>().AddForce(new Vector2(moveDir*15,0));
+                if (enemy.GetComponent<BossHealthSystem>().GetCurrentHealth() > 0)
+                {
+                    Debug.Log("collider:"+enemy.name);
+                    enemy.GetComponent<BossHealthSystem>().TakeDamage(10);
+                    enemy.GetComponentInParent<Rigidbody2D>().AddForce(new Vector2(moveDir*15,0));
+                }
+             
             }
+            else
+            {
+                
+                if (enemy.GetComponent<EnemiesHealthSystem>().GetCurrentHealth() > 0)
+                {
+                    Debug.Log("collider:"+enemy.name);
+                    enemy.GetComponent<EnemiesHealthSystem>().TakeDamage(10);
+                    enemy.GetComponentInParent<Rigidbody2D>().AddForce(new Vector2(moveDir*15,0));
+                }
+            }
+           
            
         }  
         
@@ -411,10 +433,16 @@ public class PlayerScript : MonoBehaviour
         if (combo < 3)
         {
            
-           /* sourceSium.clip = sium[combo];
-            sourceSium.Play();*/
+            sourceSium.clip = sium[1];
+            sourceSium.Play();
             combo++;
         }
+    }
+
+    public void FinalCombo()
+    {
+        sourceSium.clip = sium[1];
+        sourceSium.Play();
     }
 
 
@@ -425,13 +453,18 @@ public class PlayerScript : MonoBehaviour
     }
     
     
+    
+    
+    
+    
+    
 
     
     void TriggersInvulnerability()
     {
-        if (!healthSystem.isInvincible)
+        if (!HealthSystem.Instance.isInvincible)
         {
-            StartCoroutine(healthSystem.BecomeTemporarilyInvincible(invincibilityDurationSeconds));
+            StartCoroutine(HealthSystem.Instance.BecomeTemporarilyInvincible(invincibilityDurationSeconds));
         }
     }
     
@@ -512,6 +545,20 @@ public class PlayerScript : MonoBehaviour
    {
        move = true;
    }
+
+   public void walking()
+   {
+       /*
+       if (!sourceSium.isPlaying)
+       {
+           sourceSium.clip = sium[2];
+           sourceSium.Play();
+       }
+       */
+       Debug.Log("dovrebbe cammminare");
+      
+   }
+   
 
    public void CanNotMove()
    {
