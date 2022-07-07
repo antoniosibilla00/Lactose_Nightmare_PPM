@@ -23,6 +23,7 @@ public class DialogueManager : MonoBehaviour
     [SerializeField] private Button foodChose2;
     [SerializeField] private Button Continue;
     private int questionPosition;
+    private Temptet tempter;
     
 
     
@@ -30,6 +31,8 @@ public class DialogueManager : MonoBehaviour
     private void Start()
     {
         sentences = new Queue<string>();
+        
+        
         
         foodChose1.gameObject.SetActive(false);
         foodChose2.gameObject.SetActive(false);
@@ -59,7 +62,6 @@ public class DialogueManager : MonoBehaviour
             DisplayNextSentence();
         }
 
-        Debug.Log("questionPosition");
         
    
 
@@ -77,6 +79,12 @@ public class DialogueManager : MonoBehaviour
             }else if (speaker.Equals("Tentatore") && sentences.Count == questionPosition-1)
             {
                 done = true;
+                
+
+                
+                FindObjectOfType<Temptet>().SetTrueitSTimeToOpen();
+                FindObjectOfType<Temptet>().OpenFood();
+                
                 if (answer )
                 {
 
@@ -105,8 +113,9 @@ public class DialogueManager : MonoBehaviour
 
 
                 }
-            
-            }
+                
+
+            } 
         }
         
         
@@ -143,6 +152,17 @@ public class DialogueManager : MonoBehaviour
     {
         if (sentences.Count == 0)
         {
+            if (speaker.Equals("Tentatore"))
+            {
+                FindObjectOfType<Temptet>().CloseFood();
+                
+            }
+            else if(speaker.Equals("Re")){
+
+                Debug.Log(">>>>Sono entrato DialogMan");
+                FindObjectOfType<Temptet>().SetTrueTeleport();
+                
+            }
             EndDialogue();
             return;
         }

@@ -12,7 +12,7 @@ TagManager:
   - Default
   - TransparentFX
   - Ignore Raycast
-  - 
+  - Canvas
   - Water
   - UI
   - 
@@ -62,4 +62,7 @@ TagManager:
     locked: 0
   - name: ForeGround
     uniqueID: 3618272391
+    locked: 0
+  - name: Canvas
+    uniqueID: 2489122275
     locked: 0
