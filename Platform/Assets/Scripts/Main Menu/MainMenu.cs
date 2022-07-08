@@ -5,6 +5,9 @@ using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEngine.EventSystems;
 using UnityEngine.Audio;
+using UnityEngine;
+using System.IO;
+using System.Runtime.Serialization.Formatters.Binary;
 using TMPro;
 
 using UnityEngine.UI;
@@ -233,10 +236,23 @@ public class MainMenu : MonoBehaviour
         string path = Application.persistentDataPath +"/player.fun";
         Debug.Log("ieiee"+File.Exists(path));
         if (File.Exists(path))
-        { 
+        {
             File.Delete(path);
-
         }
+/*
+        BinaryFormatter _formatter = new BinaryFormatter();
+
+        string path = Application.persistentDataPath + "/player.fun";
+        FileStream stream = new FileStream(path, FileMode.Create);
+        PlayerData playerData = new PlayerData(100,1,-176.8697f,-31.30591f);
+
+
+        _formatter.Serialize(stream, playerData);
+        stream.Close();
+*/
+
+
+
     }
 
 

@@ -23,4 +23,20 @@ public class PlayerData
         position[1] = player.transform.position.y;
 
     }
+
+    public PlayerData(int health, int level, float positionX, float positionY)
+    {
+        
+        this.health = health;
+        this.level = level;
+        position = new float[2];
+        position[0] = positionX;
+        position[1] = positionY;
+
+        
+    }
+    
+    
+    
+    
 }

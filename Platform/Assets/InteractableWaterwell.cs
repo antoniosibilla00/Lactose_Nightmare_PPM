@@ -14,9 +14,7 @@ public class InteractableWaterwell : MonoBehaviour,Interactable
         gm = GameObject.FindGameObjectWithTag("GM").GetComponent<GameMaster>();
     }
     
-    
-    
-
+   
 
     public string interactionPrompt => _prompt;
     public Dialogue dialogue => null;

@@ -18,8 +18,9 @@ public class LevelLoader : MonoBehaviour
     public static LevelLoader instance;
 
     [SerializeField] public Text insightsText1;
+    [SerializeField] public GameObject player;
 
-    [SerializeField] private GameObject loaderCanvas;
+    [SerializeField] private Canvas loaderCanvas;
     [SerializeField] private Slider progressBar;
 
     private float target;
@@ -49,7 +50,7 @@ public class LevelLoader : MonoBehaviour
         var scene = SceneManager.LoadSceneAsync(sceneName);
         scene.allowSceneActivation = false ;
 
-        loaderCanvas.SetActive(true);
+        loaderCanvas.gameObject.SetActive(true);
           
         insightsText1.text =  insights[Random.Range(0, 4)]; 
         
@@ -66,7 +67,8 @@ public class LevelLoader : MonoBehaviour
 
         scene.allowSceneActivation = true ;
 
-        loaderCanvas.SetActive(false);
+        
+        loaderCanvas.gameObject.SetActive(false);
 
     }
 

@@ -9,7 +9,6 @@ using System.Diagnostics.Tracing;
 using UnityEngine;
 using Pathfinding;
 using UnityEditor;
-using UnityEditor.Tilemaps;
 using UnityEngine.Rendering.Universal;
 using UnityEngine.Serialization;
 using UnityEngine.Tilemaps;

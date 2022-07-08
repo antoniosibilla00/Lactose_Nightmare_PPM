@@ -111,7 +111,7 @@ public class PlayerScript : MonoBehaviour
         transform.position = gm.lastCheckPointPos;
         moveDir = 1;
         sourceSium = GetComponent<AudioSource>();
-        LoadPlayer();
+        //LoadPlayer();
         //Debug.Log("percorso:"+Application.persistentDataPath);
         move = true;
         instance = this;
