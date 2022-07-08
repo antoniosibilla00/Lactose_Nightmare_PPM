@@ -10,7 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 5472756606618722056}
   - component: {fileID: 5472756606618722059}
-  m_Layer: 14
+  m_Layer: 10
   m_Name: GroundCollider
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -117,7 +117,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ee44e58c1791ad6429b61be07adb7f57, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  maxHealth: 100
+  maxHealth: 30
   getDamaged: {fileID: 0}
   AudioSource: {fileID: 0}
 --- !u!1 &7777215311458333977
@@ -195,8 +195,8 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 0
-  m_SortingLayer: 0
+  m_SortingLayerID: 1249659199
+  m_SortingLayer: 4
   m_SortingOrder: 0
   m_Sprite: {fileID: -2713078269060002825, guid: 76a31b57724286a4f88b34f88769b3e3, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -243,10 +243,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 1
-  lineOfSite: 2.5
-  shootingRange: 0.4
+  lineOfSite: 4.78
+  shootingRange: 0.25
   anim: {fileID: 7777215311458333983}
-  timer: 0
+  timer: 1.2
   state: 0
 --- !u!95 &7777215311458333983
 Animator:
@@ -423,3 +423,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f17e6ab20ca114a488229e00f96629c2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  damage: 10

@@ -215,6 +215,9 @@ TextureImporter:
   - first:
       213: -5244492035139702667
     second: CartelloInteragibile
+  - first:
+      213: -1528142019617150435
+    second: PozzoInteragibile
   externalObjects: {}
   serializedVersion: 11
   mipmaps:
@@ -1794,7 +1797,7 @@ TextureImporter:
         width: 22
         height: 50
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -1802,6 +1805,27 @@ TextureImporter:
       bones: []
       spriteID: 570f122d742d737b0800000000000000
       internalID: -5244492035139702667
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PozzoInteragibile
+      rect:
+        serializedVersion: 2
+        x: 93
+        y: 12
+        width: 44
+        height: 48
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d1a2f5afde2facae0800000000000000
+      internalID: -1528142019617150435
       vertices: []
       indices: 
       edges: []

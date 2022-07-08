@@ -66,6 +66,9 @@ public class PlayerScript : MonoBehaviour
     [SerializeField] private float attackRange;
     public LayerMask enemyLayers;
     public static PlayerScript instance;
+    public LayerMask playerLayerMask;
+    public LayerMask SafezoneLayerMask;
+    
     public HealthSystem healthSystem;
     public int level;
     private int combo;
@@ -73,7 +76,6 @@ public class PlayerScript : MonoBehaviour
     public GameMaster gm;
     public AudioClip[] sium;
     public AudioSource sourceSium;
-
 
 
 
@@ -94,7 +96,7 @@ public class PlayerScript : MonoBehaviour
 
     private void Awake()
     {
-        instance = this;
+        Physics2D.IgnoreLayerCollision(11, 6);
     }
 
     private void Start()
@@ -110,8 +112,9 @@ public class PlayerScript : MonoBehaviour
         moveDir = 1;
         sourceSium = GetComponent<AudioSource>();
         LoadPlayer();
-        Debug.Log("percorso:"+Application.persistentDataPath);
+        //Debug.Log("percorso:"+Application.persistentDataPath);
         move = true;
+        instance = this;
 
 
     }

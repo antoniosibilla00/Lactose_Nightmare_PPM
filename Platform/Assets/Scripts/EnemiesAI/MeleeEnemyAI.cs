@@ -89,17 +89,19 @@ public class MeleeEnemyAI
     public void Awake()
     {
         dead = false;
-        Alexander = GameObject.Find("Alexander");
-        rb = Alexander.GetComponent<Rigidbody2D>();
-        playerBoxCollider2D = Alexander.GetComponent<BoxCollider2D>();
-        playerCapsuleCollider2D = Alexander.GetComponent<CapsuleCollider2D>();
-        target = Alexander.GetComponent<Transform>();
+        
+        
         AudioSource = GetComponent<AudioSource>();
 
     }
 
     public void Start()
     {
+        Alexander = GameObject.FindWithTag("Player");
+        rb = Alexander.GetComponent<Rigidbody2D>();
+        playerBoxCollider2D = Alexander.GetComponent<BoxCollider2D>();
+        playerCapsuleCollider2D = Alexander.GetComponent<CapsuleCollider2D>();
+        target = Alexander.GetComponent<Transform>();
         meleeEnemyCollider = GetComponentInChildren<BoxCollider2D>();
         seeker = GetComponent<Seeker>();
         rb = GetComponent<Rigidbody2D>();

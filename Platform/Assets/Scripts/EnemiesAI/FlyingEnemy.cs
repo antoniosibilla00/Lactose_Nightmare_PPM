@@ -38,7 +38,7 @@ public class FlyingEnemy : MonoBehaviour
 
     public void Awake()
     {
-        Alexander = GameObject.Find("Alexander");
+        Alexander = GameObject.FindGameObjectWithTag("Player");
         playerBoxCollider2D = Alexander.GetComponent<BoxCollider2D>();
         playerCapsuleCollider2D = Alexander.GetComponent<CapsuleCollider2D>();
     }
@@ -66,11 +66,7 @@ public class FlyingEnemy : MonoBehaviour
     {
         anim.SetBool("cooldown",cooldown);
         isNotPlaying = anim.GetCurrentAnimatorStateInfo(0).IsName("dead") == false;
-
-        if (canDie)
-        {
-            Destroy(gameObject);
-        }
+        
         if (healthSystem.GetCurrentHealth()<=0 && !dead && isNotPlaying)
         {
             anim.SetTrigger("die");
@@ -89,7 +85,7 @@ public class FlyingEnemy : MonoBehaviour
                 this.GetComponentInChildren<CapsuleCollider2D>().enabled= false;
                 if (dead)
                 {
-                    StartCoroutine(waitForDie());
+                    Destroy(gameObject,2f);
                 }
                 
                 break;
@@ -175,12 +171,16 @@ public class FlyingEnemy : MonoBehaviour
     {
         dead = true;
     }
-    
-    public IEnumerator waitForDie()
+
+    public float GetSpeed()
     {
-        
-        yield return new WaitForSeconds(5f);
-        canDie = true;
+        return speed;
     }
+    
+    public void SetSpeed(float newSpeed)
+    { 
+        speed=newSpeed;
+    }
+
 }
 

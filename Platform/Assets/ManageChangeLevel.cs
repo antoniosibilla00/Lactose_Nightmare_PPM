@@ -35,7 +35,7 @@ public class ManageChangeLevel : MonoBehaviour
          GameObject canvas =levelManager.transform.GetChild(0).gameObject;
          
          canvas.SetActive(true);
-
+         GameMaster.instance.lastCheckPointPos = new Vector3(-56.93f,18.266f,0f);
          changeSceneButton.ChangeScene("level2");
     }
 }
