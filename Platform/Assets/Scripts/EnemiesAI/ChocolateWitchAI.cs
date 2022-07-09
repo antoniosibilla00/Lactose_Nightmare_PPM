@@ -125,6 +125,8 @@ public class ChocolateWitchAI : MonoBehaviour
 
                 if (anim.GetComponent<Animator>().GetCurrentAnimatorStateInfo(0).normalizedTime >= 1)
                 {
+                
+                    Destroy(transform.parent.gameObject);
                     Destroy(gameObject);
                 } 
                 break;
