@@ -12,6 +12,7 @@ public class AudioSo : MonoBehaviour
     {
         AudioSource = GetComponent<AudioSource>();
         AudioSource.clip = mainOst;
+        AudioSource.volume=0.062F;
         AudioSource.Play();
     }
 
@@ -19,5 +20,14 @@ public class AudioSo : MonoBehaviour
     void Update()
     {
         
+        AudioSource = GetComponent<AudioSource>();
+        AudioSource.clip = mainOst;
+        AudioSource.volume=0.062F;
+
+        if (!AudioSource.isPlaying)
+        {
+            AudioSource.Play();
+        }
+       
     }
 }

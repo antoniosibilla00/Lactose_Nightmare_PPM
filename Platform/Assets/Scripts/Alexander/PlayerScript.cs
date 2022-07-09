@@ -148,12 +148,14 @@ public class PlayerScript : MonoBehaviour
             state =  State.talking;
         }
         
+        HandleAnimations();
+        
         switch (state)
         {
             case State.normal:
                 
                 HandleInput();
-                HandleAnimations();
+              
                 break;
 
             case State.rolling:
