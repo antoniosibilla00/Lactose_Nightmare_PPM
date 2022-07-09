@@ -15,7 +15,6 @@ public class bulletScript : MonoBehaviour
     void Start()
     {
         bulletRB = GetComponent<Rigidbody2D>();
-        Physics2D.IgnoreLayerCollision(LayerMask.NameToLayer("Bullet"),LayerMask.NameToLayer("Background"));
         target = GameObject.FindGameObjectWithTag("Player");
         Vector2 moveDir = (target.transform.position - transform.position).normalized * speed *(this.GetComponent<Transform>().localScale.x);
 

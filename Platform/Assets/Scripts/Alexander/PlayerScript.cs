@@ -97,33 +97,51 @@ public class PlayerScript : MonoBehaviour
     private void Awake()
     {
         Physics2D.IgnoreLayerCollision(11, 6);
+        switch ( (SceneManager.GetActiveScene().name))
+        {
+            case "Level2":
+                level=2;
+                break;
+            case "SampleScene":
+                level = 1;
+                break;
+            case "Level3":
+                level = 3;
+                break;
+        }
+        
+       
     }
 
     private void Start()
     {
+        gm = GameObject.FindGameObjectWithTag("GM").GetComponent<GameMaster>();
+        if (!LoadPLayer())
+        {
+            this.transform.position = gm.lastCheckPointPos;
+        }
         healthSystem = GetComponentInChildren<HealthSystem>();
         _renderer = GetComponent<SpriteRenderer>();
         anim = GetComponent<Animator>();
         body = GetComponent<Rigidbody2D>();
         boxCollider = GetComponentInChildren<BoxCollider2D>();
         state = State.normal;
-        gm = GameObject.FindGameObjectWithTag("GM").GetComponent<GameMaster>();
-        transform.position = gm.lastCheckPointPos;
-        moveDir = 1;
-        sourceSium = GetComponent<AudioSource>();
-        //LoadPlayer();
+       
+       moveDir = 1;
+        sourceSium = GetComponent<AudioSource>(); 
+       
         //Debug.Log("percorso:"+Application.persistentDataPath);
         move = true;
         instance = this;
 
 
     }
+    
 
 
     // metodo che gestisce gli input e le animazioni
     private void Update()
     {
-        Debug.Log("life:"+healthSystem.GetCurrentHealth());
         Debug.Log("state"+state);
         if (isTalking() && state != State.talking)
         {
@@ -196,15 +214,14 @@ public class PlayerScript : MonoBehaviour
                 if (move)
                 {
                     run =   run = xInput != 0;
-                    body.velocity = new Vector2(xInput * speed, body.velocity.y);
-
+                    speed = 2;
                 }
                 else
                 {
-                  
-                    body.velocity = new Vector2(0, 0);
+                    speed = 0;
+
                 }
-                
+                body.velocity = new Vector2(xInput * speed, body.velocity.y);
 
 
 
@@ -231,8 +248,7 @@ public class PlayerScript : MonoBehaviour
                     grounded = false;
                     hangTimeCounter -= Time.deltaTime;
                 }
-
-
+                
                 if (jump)
                 {
                     Jump();
@@ -242,8 +258,8 @@ public class PlayerScript : MonoBehaviour
                 break;
 
             case State.rolling:
-                
-                body.AddForce(new Vector2(9*moveDir,0));
+                body.velocity=Vector2.zero;
+                body.AddForce(new Vector2(moveDir*2,0),ForceMode2D.Impulse);
 
                 break;
             case State.attacking:
@@ -502,19 +518,7 @@ public class PlayerScript : MonoBehaviour
        SaveSystem.SavePlayer(this);
    }
 
-   public void LoadPlayer()
-   {
-      PlayerData player= SaveSystem.LoadPlayer(this);
-      if (player != null)
-      {
-          Vector2 position = new Vector2(player.position[0], player.position[1]);
-          this.GetComponent<Transform>().position = position;
 
-          //healthSystem.SetHealth(player.health);
-          this.level = player.level;
-
-      }
-   }
 
 
    bool isTalking()
@@ -566,6 +570,27 @@ public class PlayerScript : MonoBehaviour
    public void CanNotMove()
    {
        move = false;
+   }
+
+   public bool LoadPLayer()
+   {
+      
+       PlayerData player= SaveSystem.LoadPlayer();
+       
+       if (player != null)
+       {
+           Vector2 position = new Vector2(player.position[0], player.position[1]);
+
+       
+           this.transform.position = position;
+           
+           //healthSystem.SetHealth(player.health);
+           
+           return true;
+       }
+       
+        return false;
+       
    }
 
 }

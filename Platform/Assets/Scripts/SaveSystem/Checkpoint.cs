@@ -11,7 +11,7 @@ public class Checkpoint : MonoBehaviour,Interactable
     [SerializeField] private Dialogue _dialogue;
     
     private void Start()
-    {
+    { 
         gm = GameObject.FindGameObjectWithTag("GM").GetComponent<GameMaster>();
     }
     

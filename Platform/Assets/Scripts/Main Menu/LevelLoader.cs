@@ -71,6 +71,36 @@ public class LevelLoader : MonoBehaviour
         loaderCanvas.gameObject.SetActive(false);
 
     }
+    
+    
+    public async void LoadScene(int  sceneName)
+    {
+        target = 0;
+        progressBar.value = 0;
+        var scene = SceneManager.LoadSceneAsync(sceneName);
+        scene.allowSceneActivation = false ;
+
+        loaderCanvas.gameObject.SetActive(true);
+          
+        insightsText1.text =  insights[Random.Range(0, 4)]; 
+        
+        do{
+
+            await Task.Delay(2000);
+            target = scene.progress;
+            Debug.Log("target"+target);
+            
+
+        }while(scene.progress < 0.9f);
+
+        await Task.Delay(3500);
+
+        scene.allowSceneActivation = true ;
+
+        
+        loaderCanvas.gameObject.SetActive(false);
+
+    }
 
     void Update()
     {

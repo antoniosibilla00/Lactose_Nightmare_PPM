@@ -7,19 +7,20 @@ using UnityEngine;
 
 public class ManageChangeLevel : MonoBehaviour
 {
-    
-    public  GameObject levelManager;
+    private bool done;
+    public  GameObject canvas;
     public GameObject level1;
     // Start is called before the first frame update
     void Start()
     {
-        
+        done = false;
+
     }
 
     // Update is called once per frame
     void Update()
     {
-        
+        Debug.Log("doneCaricamento"+done);
         
         
         
@@ -28,27 +29,26 @@ public class ManageChangeLevel : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D col)
     {
-        
-        
-       // GameObject levelmanagerClone = GameObject.Instantiate(levelManager);
-        
-        
+        // GameObject levelmanagerClone = GameObject.Instantiate(levelManager);
        
+       
+        if (!done)
+        {
+            level1.SetActive(false);
+            done=true;
+            PlayerScript.instance.transform.position=new Vector3(-56.93f, 18.266f, 0f);
+            PlayerScript.instance.level = 2;
+            SaveSystem.SavePlayer(PlayerScript.instance);
+            LevelLoader.instance.LoadScene(2);
+            //GameMaster.instance.lastCheckPointPos = new Vector3(-56.93f, 18.266f, 0f);
+            
+           
+        }
+       
+      
 
-        GameObject canvas = levelManager.transform.GetChild(0).gameObject;
+    
         
-        canvas.SetActive(true);
-        
-        level1.SetActive(false);
-        
-        GameMaster.instance.lastCheckPointPos = new Vector3(-56.93f,18.266f,0f);
-        
-        
-
-        levelManager.GetComponentInChildren<LevelLoader>().LoadScene("Level2");
-
-
-
 
     }
 }

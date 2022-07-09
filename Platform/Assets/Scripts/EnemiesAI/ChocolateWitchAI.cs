@@ -69,7 +69,7 @@ public class ChocolateWitchAI : MonoBehaviour
 
     public void Awake()
     {
-        Alexander = GameObject.Find("Alexander");
+        Alexander = GameObject.FindGameObjectWithTag("Player");
         rb = Alexander.GetComponent<Rigidbody2D>();
         playerCollider = Alexander.GetComponent<BoxCollider2D>();
         playerCollider2 = Alexander.GetComponent<CapsuleCollider2D>();

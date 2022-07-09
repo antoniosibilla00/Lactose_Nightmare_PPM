@@ -18,7 +18,7 @@ public static class SaveSystem
     }
 
 
-    public static PlayerData LoadPlayer(PlayerScript player)
+    public static PlayerData LoadPlayer()
     {
 
         string path = Application.persistentDataPath + "/player.fun";

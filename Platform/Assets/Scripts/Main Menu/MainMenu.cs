@@ -224,9 +224,9 @@ public class MainMenu : MonoBehaviour
     {
       
        if (Input.GetMouseButtonUp(0))
-         {
+        {
              EventSystem.current.SetSelectedGameObject(null);
-         }
+        }
 
 
     }
@@ -239,22 +239,10 @@ public class MainMenu : MonoBehaviour
         {
             File.Delete(path);
         }
-/*
-        BinaryFormatter _formatter = new BinaryFormatter();
-
-        string path = Application.persistentDataPath + "/player.fun";
-        FileStream stream = new FileStream(path, FileMode.Create);
-        PlayerData playerData = new PlayerData(100,1,-176.8697f,-31.30591f);
-
-
-        _formatter.Serialize(stream, playerData);
-        stream.Close();
-*/
-
-
-
     }
-
+    
+    
+  
 
 
 }
