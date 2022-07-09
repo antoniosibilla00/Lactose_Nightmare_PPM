@@ -55,6 +55,7 @@ public class PlayerScript : MonoBehaviour
     private bool run;
     private bool attack;
     private bool roll;
+    private bool fall;
     private bool move;
     [SerializeField]
     private float invincibilityDurationSeconds;
@@ -115,6 +116,8 @@ public class PlayerScript : MonoBehaviour
 
     private void Start()
     {
+        
+        fall = false;
         gm = GameObject.FindGameObjectWithTag("GM").GetComponent<GameMaster>();
         if (!LoadPLayer())
         {
@@ -141,11 +144,20 @@ public class PlayerScript : MonoBehaviour
 
     // metodo che gestisce gli input e le animazioni
     private void Update()
-    {
-        Debug.Log("state"+state);
+    {   Debug.Log("player.attack"+attack);
+        Debug.Log("player.move"+move);
+        Debug.Log("player.caduta: " + body.velocity.y);
+        Debug.Log("player.state"+state);
+        Debug.Log("player.combo"+combo);
         if (isTalking() && state != State.talking)
         {
             state =  State.talking;
+        }
+        if (!anim.GetCurrentAnimatorStateInfo(0).IsName("attack_1")&& !anim.GetCurrentAnimatorStateInfo(0).IsName("attack_2") && !anim.GetCurrentAnimatorStateInfo(0).IsName("attack_3"))
+        {
+            combo = 0;
+            attack = false;
+            move = true;
         }
         
         HandleAnimations();
@@ -169,19 +181,11 @@ public class PlayerScript : MonoBehaviour
                 
               
                 break;
-
-
-            case State.attacking:
-                anim.SetBool("run",false);
                 
-                if (!attack)
-                {
-
-                    state =  State.normal;
-                    
-                }
                 
-                break;
+
+
+                
             
             case State.death:
                 if (this.GetComponent<Animator>().GetCurrentAnimatorStateInfo(0).normalizedTime >= 1)
@@ -190,8 +194,8 @@ public class PlayerScript : MonoBehaviour
                 }
                 break;
             case  State.talking:
-           
-                anim.SetBool("run",false);
+
+                run = false;
                 if (!dialoguePanel.activeSelf)
                 {
                     state = State.normal;
@@ -223,6 +227,19 @@ public class PlayerScript : MonoBehaviour
                     speed = 0;
 
                 }
+
+                
+                if (body.velocity.y < (-0.55f))
+                {
+                    Debug.Log("ciao"+body.velocity.y);
+                    fall = true;
+                }
+                else
+                {
+                    fall = false;
+                }
+                
+                
                 body.velocity = new Vector2(xInput * speed, body.velocity.y);
 
 
@@ -261,11 +278,8 @@ public class PlayerScript : MonoBehaviour
 
             case State.rolling:
                 body.velocity=Vector2.zero;
-                body.AddForce(new Vector2(moveDir*2,0),ForceMode2D.Impulse);
+                body.AddForce(new Vector2(moveDir*3,-3),ForceMode2D.Impulse);
 
-                break;
-            case State.attacking:
-                body.velocity = Vector2.zero;
                 break;
             
             case State.death:
@@ -309,12 +323,13 @@ public class PlayerScript : MonoBehaviour
     private void HandleAnimations()
     {
         anim.SetBool("run", run);
+        anim.SetBool("grounded",grounded);
         /*
         if (!run)
         {
             sourceSium.Stop();
         }
-        */
+        
         if (IsGrounded())
         {
             anim.SetBool("grounded", true);
@@ -332,7 +347,13 @@ public class PlayerScript : MonoBehaviour
             }
 
         }
+        */
 
+        if (fall)
+        {
+            Debug.Log("stoCadendo");
+            anim.SetTrigger("fall");
+        }
         if (healthSystem.GetCurrentHealth() <= 0)
         {
             anim.SetTrigger("death");
@@ -363,10 +384,11 @@ public class PlayerScript : MonoBehaviour
 
         if (Input.GetKeyDown(KeyCode.X) && IsGrounded() && !attack)
         {
-            body.velocity =(Vector2.zero);
+           
             anim.SetTrigger(""+combo);
             attack = true;
-            state = State.attacking;
+            move = false;
+            Debug.Log("player.sonoDentroAttackInput");
             /*
             sourceSium.clip = sium[3];
             sourceSium.Play();
@@ -374,7 +396,7 @@ public class PlayerScript : MonoBehaviour
             */
         }
 
-        if (Input.GetKeyDown(KeyCode.Z) && grounded)
+        if (Input.GetKeyDown(KeyCode.Z) && grounded && move)
         {
             anim.SetTrigger("roll");
             roll = true;
@@ -421,9 +443,6 @@ public class PlayerScript : MonoBehaviour
            
         }  
         
-
-
-
     }
 
     public void OnDrawGizmosSelected()
@@ -450,7 +469,6 @@ public class PlayerScript : MonoBehaviour
     public void StartCombo()
     {
         attack = false ;
-        body.velocity = Vector2.zero;
         if (combo < 3)
         {
            
@@ -466,21 +484,12 @@ public class PlayerScript : MonoBehaviour
         sourceSium.Play();
     }
 
-
     public void FinishAnim()
     {
         attack = false;
         combo = 0;
     }
-    
-    
-    
-    
-    
-    
-    
 
-    
     void TriggersInvulnerability()
     {
         if (!HealthSystem.Instance.isInvincible)
@@ -501,18 +510,6 @@ public class PlayerScript : MonoBehaviour
        Debug.Log("qui");
        roll = false;
    }
-
-   
-  
-   /*private void OnTriggerEnter2D(Collider2D col)
-   {
-       if (col.gameObject.name.Equals("Nemico") )
-       {
-           healthSystem.TakeDamage(10);
-       }
-      
-   }
-   */
    
 
    public void SavePlayer()
@@ -550,10 +547,14 @@ public class PlayerScript : MonoBehaviour
       
    }
 
+   
+   
+   /*
    public void CanMove()
    {
        move = true;
    }
+   */
 
    public void walking()
    {
@@ -568,11 +569,13 @@ public class PlayerScript : MonoBehaviour
       
    }
    
-
+/*
    public void CanNotMove()
    {
        move = false;
    }
+   
+   */
 
    public bool LoadPLayer()
    {
@@ -593,6 +596,16 @@ public class PlayerScript : MonoBehaviour
        
         return false;
        
+   }
+
+
+   private IEnumerator SetFinishAttackVariables()
+   {
+
+       yield return new WaitForSeconds(10f);
+
+       move = true;
+
    }
 
 }
