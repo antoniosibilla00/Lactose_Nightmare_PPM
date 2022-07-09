@@ -44,6 +44,7 @@ SpriteAtlas:
     variantMultiplier: 1
     packables:
     - {fileID: 2800000, guid: 0b4bc921a28c29a4bb4a68864a773362, type: 3}
+    - {fileID: 2800000, guid: 89df5763e466f4c4caa240f9e7b25e4b, type: 3}
     bindAsDefault: 1
     isAtlasV2: 0
     cachedData: {fileID: 0}
@@ -108,6 +109,53 @@ SpriteAtlas:
   - {fileID: -4632103058533103961, guid: 0b4bc921a28c29a4bb4a68864a773362, type: 3}
   - {fileID: -8176231169792119313, guid: 0b4bc921a28c29a4bb4a68864a773362, type: 3}
   - {fileID: -6849686693474966332, guid: 0b4bc921a28c29a4bb4a68864a773362, type: 3}
+  - {fileID: 1535986194154111613, guid: 89df5763e466f4c4caa240f9e7b25e4b, type: 3}
+  - {fileID: 2518993932503510275, guid: 89df5763e466f4c4caa240f9e7b25e4b, type: 3}
+  - {fileID: 6637364177558746242, guid: 89df5763e466f4c4caa240f9e7b25e4b, type: 3}
+  - {fileID: -5372185271980085325, guid: 89df5763e466f4c4caa240f9e7b25e4b, type: 3}
+  - {fileID: -4417011445424366432, guid: 89df5763e466f4c4caa240f9e7b25e4b, type: 3}
+  - {fileID: -2069744872390729142, guid: 89df5763e466f4c4caa240f9e7b25e4b, type: 3}
+  - {fileID: -6930013037121850225, guid: 89df5763e466f4c4caa240f9e7b25e4b, type: 3}
+  - {fileID: 3840345125203232791, guid: 89df5763e466f4c4caa240f9e7b25e4b, type: 3}
+  - {fileID: 8620977228684576457, guid: 89df5763e466f4c4caa240f9e7b25e4b, type: 3}
+  - {fileID: -3157907687689507139, guid: 89df5763e466f4c4caa240f9e7b25e4b, type: 3}
+  - {fileID: -2104384853465414962, guid: 89df5763e466f4c4caa240f9e7b25e4b, type: 3}
+  - {fileID: 5477875919257988936, guid: 89df5763e466f4c4caa240f9e7b25e4b, type: 3}
+  - {fileID: 2033933936303396486, guid: 89df5763e466f4c4caa240f9e7b25e4b, type: 3}
+  - {fileID: 1334066794165494034, guid: 89df5763e466f4c4caa240f9e7b25e4b, type: 3}
+  - {fileID: -3131063296097751624, guid: 89df5763e466f4c4caa240f9e7b25e4b, type: 3}
+  - {fileID: -7210874859325483977, guid: 89df5763e466f4c4caa240f9e7b25e4b, type: 3}
+  - {fileID: 9210104501026551956, guid: 89df5763e466f4c4caa240f9e7b25e4b, type: 3}
+  - {fileID: 3775828228202996634, guid: 89df5763e466f4c4caa240f9e7b25e4b, type: 3}
+  - {fileID: -7184046308702219123, guid: 89df5763e466f4c4caa240f9e7b25e4b, type: 3}
+  - {fileID: -7534394111641759561, guid: 89df5763e466f4c4caa240f9e7b25e4b, type: 3}
+  - {fileID: -5842902602758986385, guid: 89df5763e466f4c4caa240f9e7b25e4b, type: 3}
+  - {fileID: 7800095303495155433, guid: 89df5763e466f4c4caa240f9e7b25e4b, type: 3}
+  - {fileID: 2382456574371201831, guid: 89df5763e466f4c4caa240f9e7b25e4b, type: 3}
+  - {fileID: 4812553982883076828, guid: 89df5763e466f4c4caa240f9e7b25e4b, type: 3}
+  - {fileID: 2028972311851518278, guid: 89df5763e466f4c4caa240f9e7b25e4b, type: 3}
+  - {fileID: 8285671690481296461, guid: 89df5763e466f4c4caa240f9e7b25e4b, type: 3}
+  - {fileID: -1956880750698599150, guid: 89df5763e466f4c4caa240f9e7b25e4b, type: 3}
+  - {fileID: -5829726049980634056, guid: 89df5763e466f4c4caa240f9e7b25e4b, type: 3}
+  - {fileID: 1270675465658349767, guid: 89df5763e466f4c4caa240f9e7b25e4b, type: 3}
+  - {fileID: -7178416205531619671, guid: 89df5763e466f4c4caa240f9e7b25e4b, type: 3}
+  - {fileID: -8576564277837420532, guid: 89df5763e466f4c4caa240f9e7b25e4b, type: 3}
+  - {fileID: 3579288955562826087, guid: 89df5763e466f4c4caa240f9e7b25e4b, type: 3}
+  - {fileID: 6214804119339410724, guid: 89df5763e466f4c4caa240f9e7b25e4b, type: 3}
+  - {fileID: -4789670695627652361, guid: 89df5763e466f4c4caa240f9e7b25e4b, type: 3}
+  - {fileID: 6452572549059133368, guid: 89df5763e466f4c4caa240f9e7b25e4b, type: 3}
+  - {fileID: 3041325897411895645, guid: 89df5763e466f4c4caa240f9e7b25e4b, type: 3}
+  - {fileID: 4981872511798708122, guid: 89df5763e466f4c4caa240f9e7b25e4b, type: 3}
+  - {fileID: 5791100836294813026, guid: 89df5763e466f4c4caa240f9e7b25e4b, type: 3}
+  - {fileID: -3962282978572442880, guid: 89df5763e466f4c4caa240f9e7b25e4b, type: 3}
+  - {fileID: 7180082893834707247, guid: 89df5763e466f4c4caa240f9e7b25e4b, type: 3}
+  - {fileID: -3660184986865294689, guid: 89df5763e466f4c4caa240f9e7b25e4b, type: 3}
+  - {fileID: -7592050460229394798, guid: 89df5763e466f4c4caa240f9e7b25e4b, type: 3}
+  - {fileID: -2613467175879522879, guid: 89df5763e466f4c4caa240f9e7b25e4b, type: 3}
+  - {fileID: 8413591192369307821, guid: 89df5763e466f4c4caa240f9e7b25e4b, type: 3}
+  - {fileID: 90426221176776157, guid: 89df5763e466f4c4caa240f9e7b25e4b, type: 3}
+  - {fileID: 2719713375877316617, guid: 89df5763e466f4c4caa240f9e7b25e4b, type: 3}
+  - {fileID: 5883459016764864188, guid: 89df5763e466f4c4caa240f9e7b25e4b, type: 3}
   m_PackedSpriteNamesToIndex:
   - blocchidelVillaggio_9
   - blocchidelVillaggio_8
@@ -168,6 +216,53 @@ SpriteAtlas:
   - blocchidelVillaggio_48
   - rightLowGrass_2
   - rightLowGrass_1
+  - spr_CastleTileSet_stripNoBkg_31
+  - spr_CastleTileSet_stripNoBkg_30
+  - spr_CastleTileSet_stripNoBkg_33
+  - spr_CastleTileSet_stripNoBkg_32
+  - spr_CastleTileSet_stripNoBkg_35
+  - spr_CastleTileSet_stripNoBkg_34
+  - spr_CastleTileSet_stripNoBkg_37
+  - spr_CastleTileSet_stripNoBkg_36
+  - spr_CastleTileSet_stripNoBkg_39
+  - spr_CastleTileSet_stripNoBkg_38
+  - spr_CastleTileSet_stripNoBkg_19
+  - spr_CastleTileSet_stripNoBkg_18
+  - spr_CastleTileSet_stripNoBkg_13
+  - spr_CastleTileSet_stripNoBkg_12
+  - spr_CastleTileSet_stripNoBkg_28
+  - spr_CastleTileSet_stripNoBkg_11
+  - spr_CastleTileSet_stripNoBkg_29
+  - spr_CastleTileSet_stripNoBkg_10
+  - spr_CastleTileSet_stripNoBkg_26
+  - spr_CastleTileSet_stripNoBkg_17
+  - spr_CastleTileSet_stripNoBkg_27
+  - spr_CastleTileSet_stripNoBkg_16
+  - spr_CastleTileSet_stripNoBkg_24
+  - spr_CastleTileSet_stripNoBkg_15
+  - spr_CastleTileSet_stripNoBkg_25
+  - spr_CastleTileSet_stripNoBkg_14
+  - spr_CastleTileSet_stripNoBkg_22
+  - spr_CastleTileSet_stripNoBkg_23
+  - spr_CastleTileSet_stripNoBkg_20
+  - spr_CastleTileSet_stripNoBkg_21
+  - spr_CastleTileSet_stripNoBkg_44
+  - spr_CastleTileSet_stripNoBkg_45
+  - spr_CastleTileSet_stripNoBkg_46
+  - spr_CastleTileSet_stripNoBkg_40
+  - spr_CastleTileSet_stripNoBkg_41
+  - spr_CastleTileSet_stripNoBkg_42
+  - spr_CastleTileSet_stripNoBkg_43
+  - spr_CastleTileSet_stripNoBkg_8
+  - spr_CastleTileSet_stripNoBkg_9
+  - spr_CastleTileSet_stripNoBkg_0
+  - spr_CastleTileSet_stripNoBkg_1
+  - spr_CastleTileSet_stripNoBkg_2
+  - spr_CastleTileSet_stripNoBkg_3
+  - spr_CastleTileSet_stripNoBkg_4
+  - spr_CastleTileSet_stripNoBkg_5
+  - spr_CastleTileSet_stripNoBkg_6
+  - spr_CastleTileSet_stripNoBkg_7
   m_RenderDataMap: {}
   m_Tag: New Sprite Atlas
   m_IsVariant: 0
