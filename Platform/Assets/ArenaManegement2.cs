@@ -46,6 +46,7 @@ public class ArenaManegement2 : MonoBehaviour
             {
                 done = true;
                 SpawnEnemies();
+                MusicManager.istance.PlayArenaOst();
             }
             else if (round <5)
             {
@@ -61,7 +62,15 @@ public class ArenaManegement2 : MonoBehaviour
                 
                 DeleteStone();
                 DeleteSpikes();
-                AudioSource.clip = victorySound;
+                AudioSource.clip=victorySound;
+                AudioSource.Play();
+                if (!AudioSource.isPlaying)
+                {
+                    MusicManager.istance.PlayMainOst();
+                }
+                
+               
+
                 if (!musicPlayed)
                 {
                     AudioSource.Play();
@@ -99,8 +108,7 @@ public class ArenaManegement2 : MonoBehaviour
         switch (round)
         {
             case 0:
-                AudioSource.clip = roundSound;
-                AudioSource.Play();
+                PlayRoundSound();
                 EnableSafeZones();
                 myNewGameObject= Instantiate(bigBubbleGolem, Enemy1Pos.transform.position, bigBubbleGolem.transform.rotation);
                 myNewGameObject.transform.parent = Enemy1Pos.transform;
@@ -110,9 +118,8 @@ public class ArenaManegement2 : MonoBehaviour
                 
                 break;
             case 1:
-               
-                AudioSource.clip = roundSound;
-                AudioSource.Play();
+
+                PlayRoundSound();
                 myNewGameObject= Instantiate(batBurger, Enemy1Pos.transform.position, batBurger.transform.rotation);
                 myNewGameObject.transform.parent = Enemy1Pos.transform;
                 
@@ -122,12 +129,10 @@ public class ArenaManegement2 : MonoBehaviour
                 break;
             
             case 2 :
-               
-                AudioSource.clip = roundSound;
-                AudioSource.Play();
+
+                PlayRoundSound();
                 myNewGameObject= Instantiate(batBurger, Enemy1Pos.transform.position, batBurger.transform.rotation);
                 myNewGameObject.transform.parent = Enemy1Pos.transform;
-                
                 myNewGameObject= Instantiate(batBurger, Enemy2Pos.transform.position, batBurger.transform.rotation);
                 myNewGameObject.transform.parent = Enemy2Pos.transform;
                 
@@ -138,8 +143,7 @@ public class ArenaManegement2 : MonoBehaviour
                 break;
             
             case 3 :
-                AudioSource.clip = roundSound;
-                AudioSource.Play();
+                PlayRoundSound();
                 changeEnemy1Pos(5f);
                 myNewGameObject= Instantiate(batBurger, Enemy1Pos.transform.position, batBurger.transform.rotation);
                 myNewGameObject.transform.parent = Enemy1Pos.transform;
@@ -151,8 +155,7 @@ public class ArenaManegement2 : MonoBehaviour
                 break;
             
             case 4 :
-                AudioSource.clip = roundSound;
-                AudioSource.Play();
+                PlayRoundSound();
                 myNewGameObject= Instantiate(batBurger, Enemy1Pos.transform.position, batBurger.transform.rotation);
                 myNewGameObject.transform.parent = Enemy1Pos.transform;
                 myNewGameObject.GetComponentInChildren<TriggerDamage>().SetDamage(20);
@@ -199,4 +202,12 @@ public class ArenaManegement2 : MonoBehaviour
         
         Enemy1Pos.transform.position= new Vector2(Enemy1Pos.transform.position.x + offset,Enemy1Pos.transform.position.y );  
     }
+    
+    void PlayRoundSound()
+    {
+        AudioSource.clip = roundSound;
+        AudioSource.Play();
+    }
 }
+
+

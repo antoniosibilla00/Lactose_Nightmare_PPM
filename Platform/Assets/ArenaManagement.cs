@@ -1,6 +1,7 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
+using Cinemachine;
 using JetBrains.Annotations;
 using UnityEngine;
 using UnityEngine.Tilemaps;
@@ -10,30 +11,42 @@ public class ArenaManagement : MonoBehaviour
     private bool triggered;
 
     private int round;
+    public AudioClip roundSound;
+    public AudioClip victorySound;
+    private AudioSource AudioSource;
 
     public GameObject chocolateWitch;
     public GameObject SalamiDog;
     public GameObject Enemy1Pos;
     public GameObject Enemy2Pos;
-    public Grid grid;
     public Tilemap tilemap;
+
+    private bool done;
     //private const String CHOCOLATE_WITCH = "ChocolateWitch";
     //private const String SALAMI_DOG ="SalamiDogGO" ;
     // Start is called before the first frame update
     void Start()
     {
         round = 0;
-        SpawnEnemies();
+        done = false;
+        AudioSource = GetComponent<AudioSource>();
     }
 
     // Update is called once per frame
     void Update()
     {
-        
-        Debug.Log("round"+round);
         if (triggered)
         {
-            if (round <5)
+           
+     
+            if (round == 0 && !done)
+            { 
+                done = true;
+                SpawnEnemies();
+                MusicManager.istance.PlayArenaOst();
+            }
+            
+            else if (round <5)
             {
                 if (AreKilled())
                 {
@@ -44,6 +57,9 @@ public class ArenaManagement : MonoBehaviour
             }
             else
             {
+                AudioSource.clip=victorySound;
+                AudioSource.Play();
+                MusicManager.istance.PlayMainOst();
                 
                 DeleteStone();
                 Destroy(this.gameObject);
@@ -69,14 +85,15 @@ public class ArenaManagement : MonoBehaviour
         
         switch (round)
         {
-            case 0: 
+            case 0:
+                PlayRoundSound();
                 myNewGameObject= Instantiate(chocolateWitch, Enemy1Pos.transform.position, chocolateWitch.transform.rotation);
                 myNewGameObject.transform.parent = Enemy1Pos.transform;
                 
                 
                 break;
             case 1:
-                
+                PlayRoundSound();
                 myNewGameObject= Instantiate(chocolateWitch, Enemy1Pos.transform.position, chocolateWitch.transform.rotation);
                 myNewGameObject.transform.parent = Enemy1Pos.transform;
                 
@@ -86,6 +103,7 @@ public class ArenaManagement : MonoBehaviour
                 
                 break;
             case 2 :
+                PlayRoundSound();
                 myNewGameObject= Instantiate(chocolateWitch, Enemy1Pos.transform.position, chocolateWitch.transform.rotation);
                 myNewGameObject.transform.parent = Enemy1Pos.transform;
 
@@ -97,18 +115,17 @@ public class ArenaManagement : MonoBehaviour
                 myNewGameObject2.GetComponent<ChocolateWitchAI>().SetCooldown( myNewGameObject.GetComponent<ChocolateWitchAI>().GetCooldown()-0.5f);
                 break;
             case 3 :
+                PlayRoundSound();
                 myNewGameObject= Instantiate(SalamiDog, Enemy1Pos.transform.position, SalamiDog.transform.rotation);
                 myNewGameObject.transform.parent = Enemy1Pos.transform;
                 myNewGameObject.GetComponentInChildren<MeleeEnemyAI>().SetSpeed( myNewGameObject.GetComponentInChildren<MeleeEnemyAI>().GetSpeed()+0.25f);
-                
-                
                 
                 myNewGameObject2= Instantiate(SalamiDog, Enemy2Pos.transform.position, SalamiDog.transform.rotation);
                 myNewGameObject2.transform.parent = Enemy2Pos.transform;
                 myNewGameObject.GetComponentInChildren<MeleeEnemyAI>().SetSpeed( myNewGameObject.GetComponentInChildren<MeleeEnemyAI>().GetSpeed()+0.25f);
                 break;
             case 4 :
-                
+                PlayRoundSound();
                 myNewGameObject= Instantiate(chocolateWitch, Enemy1Pos.transform.position, chocolateWitch.transform.rotation);
                 myNewGameObject.transform.parent = Enemy1Pos.transform;
                 myNewGameObject.GetComponent<ChocolateWitchAI>().SetCooldown( myNewGameObject.GetComponent<ChocolateWitchAI>().GetCooldown()-0.5f);
@@ -131,5 +148,11 @@ public class ArenaManagement : MonoBehaviour
         tilemap.SetTile(new Vector3Int(532,16,0), null);
         tilemap.SetTile(new Vector3Int(533,16,0), null);
         tilemap.SetTile(new Vector3Int(532,17,0), null);
+    }
+
+    void PlayRoundSound()
+    {
+        AudioSource.clip = roundSound;
+        AudioSource.Play();
     }
 }
