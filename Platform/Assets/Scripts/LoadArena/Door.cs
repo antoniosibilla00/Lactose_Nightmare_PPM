@@ -3,11 +3,9 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class Door : MonoBehaviour,Interactable
-{   
-    [SerializeField] public Canvas loadArena;
-
+{
     [SerializeField] private string _prompt;
-
+    public GameObject level2;
     private string _interactionPrompt;
 
     // Start is called before the first frame update
@@ -30,6 +28,10 @@ public class Door : MonoBehaviour,Interactable
     public void Interact(Interactor interactor)
     {
        
-        loadArena.gameObject.SetActive(true);
+        level2.SetActive(false);
+        PlayerScript.instance.transform.position=new Vector3(-179.23f, -0.445f, 0f);
+        PlayerScript.instance.level = 3;
+        SaveSystem.SavePlayer(PlayerScript.instance);
+        LevelLoader.instance.LoadScene(3);
     }
 }

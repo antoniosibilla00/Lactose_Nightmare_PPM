@@ -6,13 +6,14 @@ using UnityEngine.SceneManagement;
 
 public class ObstaclesManagement : MonoBehaviour
 {
-    // Start is called before the first frame update
+    private bool done=false;// Start is called before the first frame update
 
     private void OnTriggerEnter2D(Collider2D col)
     {
-        if (col.CompareTag("Player"))
+        if (col.CompareTag("Player") &&!done)
         {
-            SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
+            done = true;
+            HealthSystem.Instance.TakeDamage(100);
         }
     }
 }

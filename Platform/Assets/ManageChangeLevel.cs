@@ -8,7 +8,6 @@ using UnityEngine;
 public class ManageChangeLevel : MonoBehaviour
 {
     private bool done;
-    public  GameObject canvas;
     public GameObject level1;
     // Start is called before the first frame update
     void Start()

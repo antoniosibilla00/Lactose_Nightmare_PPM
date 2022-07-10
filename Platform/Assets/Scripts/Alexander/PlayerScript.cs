@@ -57,6 +57,7 @@ public class PlayerScript : MonoBehaviour
     private bool roll;
     private bool fall;
     private bool move;
+    private bool dead;
     [SerializeField]
     private float invincibilityDurationSeconds;
 
@@ -116,7 +117,7 @@ public class PlayerScript : MonoBehaviour
 
     private void Start()
     {
-        
+        dead = false;
         fall = false;
         gm = GameObject.FindGameObjectWithTag("GM").GetComponent<GameMaster>();
         if (!LoadPLayer())
@@ -181,14 +182,9 @@ public class PlayerScript : MonoBehaviour
                 
               
                 break;
-                
-                
-
-
-                
             
             case State.death:
-                if (this.GetComponent<Animator>().GetCurrentAnimatorStateInfo(0).normalizedTime >= 1)
+                if (dead)
                 {
                     SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
                 }
@@ -229,7 +225,7 @@ public class PlayerScript : MonoBehaviour
                 }
 
                 
-                if (body.velocity.y < (-0.55f))
+                if (body.velocity.y < (-1.0f))
                 {
                     Debug.Log("ciao"+body.velocity.y);
                     fall = true;
@@ -278,7 +274,7 @@ public class PlayerScript : MonoBehaviour
 
             case State.rolling:
                 body.velocity=Vector2.zero;
-                body.AddForce(new Vector2(moveDir*3,-3),ForceMode2D.Impulse);
+                body.AddForce(new Vector2(moveDir*2,0),ForceMode2D.Impulse);
 
                 break;
             
@@ -354,7 +350,7 @@ public class PlayerScript : MonoBehaviour
             Debug.Log("stoCadendo");
             anim.SetTrigger("fall");
         }
-        if (healthSystem.GetCurrentHealth() <= 0)
+        if (healthSystem.GetCurrentHealth() <= 0 && !anim.GetCurrentAnimatorStateInfo(0).IsName("death"))
         {
             anim.SetTrigger("death");
             sourceSium.clip= sium[0];
@@ -599,13 +595,9 @@ public class PlayerScript : MonoBehaviour
    }
 
 
-   private IEnumerator SetFinishAttackVariables()
+   public void isDead()
    {
-
-       yield return new WaitForSeconds(10f);
-
-       move = true;
-
+       dead = true;
    }
 
 }
