@@ -1,12 +1,18 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.EventSystems;
 using UnityEngine.UI;
 
 public class goNextText : MonoBehaviour
 {
     
-    string[] sentences = {"Sium1", "Sium2", "Sium3", "Sium4"};
+    string[] sentences = {"Non molto tempo fa, in una città provinciale, viveva il giovane Alexander.",
+        "Nel suo gruppo di amici è sempre stato conosciuto per adorare il cibo contenente lattosio."+"\n"+"Ne ha sempre mangiato in grande quantità.",
+        "Un giorno tuttavia, di ritorno da una festa, si sentì improvvisamente male."+"\n"+"Una fitta lancinante allo stomaco cominciò a tormentarlo, tanto che nessuna medicina gli fece effetto."+"\n"+"La madre, molto preoccupata, lo portò dal medico di famiglia, il dottor Antoine.", 
+        "Fu con somma tristezza che ricevette un tragico referto medico: col tempo il suo organismo era diventato intollerante al lattosio!"+"\n"+"Tornando a casa, cominciò a pensare a tutti i cibi che non avrebbe più potuto mangiare e varcata la porta d'ingresso si gettò sul divano."+"\n"+"L'unica cosa che riuscì a non fargli pensare all'accaduto fu l'annuncio di un nuovo videogioco in cui si deve salvare un regno in pericolo: The King's Nightmare.",
+        "Pensando alle avventure che avrebbe vissuto nel nuovo videogame riuscì ad addormentarsi, tuttavia il sonno non fu piacevole..."
+    };
 
     [SerializeField] public Text sentenceShow;
     public bool change;
@@ -32,7 +38,8 @@ public class goNextText : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-
+        
+        
 
 
         
@@ -69,6 +76,7 @@ public class goNextText : MonoBehaviour
             change = true;
             buttonSkip.gameObject.SetActive(false);
             buttonLoad.gameObject.SetActive(true);
+            
             Debug.Log(">>>>>finito");
             
             

@@ -44,7 +44,7 @@ public class Timer : MonoBehaviour
             
             timer += Time.deltaTime;
         
-            if (timer >= gameTime+0.3)
+            if (timer >= gameTime+0.5)
             {
             
                 stopTimer = true;
@@ -58,7 +58,6 @@ public class Timer : MonoBehaviour
 
             if (!stopTimer)
             {
-            
                 timerSlider.value = timer;
             }
         

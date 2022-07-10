@@ -84,7 +84,8 @@ public class FlyingEnemy : MonoBehaviour
             case State.death :
                 this.GetComponentInChildren<CapsuleCollider2D>().enabled= false;
                 if (dead)
-                {
+                {   
+                    Destroy(transform.parent.gameObject);
                     Destroy(gameObject,2f);
                 }
                 

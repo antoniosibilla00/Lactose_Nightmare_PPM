@@ -9,6 +9,9 @@ public class Temptet : MonoBehaviour,Interactable
     [SerializeField] private int Question;
     [SerializeField] private String _prompt;
     [SerializeField] private Dialogue _dialogue;
+    [SerializeField] private String food1;
+    [SerializeField] private String food2;
+    
     private Vector3 destinationPosition;
     [SerializeField] private GameObject destination;
     [SerializeField] private Transform player;
@@ -20,8 +23,9 @@ public class Temptet : MonoBehaviour,Interactable
     private bool itSTimeToOpen;
     private bool teleport = false;
     private bool foodBool = false;    
-    public Animator anim;
+    public Animator anim;   
     
+
     public string interactionPrompt => _prompt;
     public Dialogue dialogue => _dialogue;
     
@@ -46,7 +50,7 @@ public class Temptet : MonoBehaviour,Interactable
     void Update()
     {
         
-        if (dialogue.name == "tentatore")
+        if (dialogue.name == "Tentatore")
         {
             food.SetActive(foodBool);
             
@@ -126,7 +130,19 @@ public class Temptet : MonoBehaviour,Interactable
 
     }
 
- 
+    public string GetFood1()
+    {
 
+        return food1;
+
+    }
+
+    public string GetFood2()
+    {
+
+        return food2;
+
+    }
+    
 
 }

@@ -4,6 +4,8 @@ using System.Collections.Generic;
 using System.Threading;
 using UnityEngine;
 using UnityEngine.UI;
+using Random = UnityEngine.Random;
+
 
 public class DialogueManager : MonoBehaviour
 {
@@ -33,7 +35,7 @@ public class DialogueManager : MonoBehaviour
         sentences = new Queue<string>();
         
         
-        
+        RandomPosition(foodChose1, foodChose2);
         foodChose1.gameObject.SetActive(false);
         foodChose2.gameObject.SetActive(false);
         
@@ -71,10 +73,13 @@ public class DialogueManager : MonoBehaviour
             {
                 foodChose1.gameObject.SetActive(true);
                 foodChose2.gameObject.SetActive(true);
+
+                
+                
                 Continue.gameObject.SetActive(false);
 
-                foodChose1.gameObject.GetComponentInChildren<Text>().text = "Pizza";
-                foodChose2.gameObject.GetComponentInChildren<Text>().text = "Pasta";
+                foodChose1.gameObject.GetComponentInChildren<Text>().text =  FindObjectOfType<Temptet>().GetFood1(); 
+                foodChose2.gameObject.GetComponentInChildren<Text>().text =  FindObjectOfType<Temptet>().GetFood2(); ;
                 
             }else if (speaker.Equals("Tentatore") && sentences.Count == questionPosition-1)
             {
@@ -123,6 +128,8 @@ public class DialogueManager : MonoBehaviour
 
     public void StartDialogue(Dialogue dialogue)
     {
+        
+        
         
         if (dialogue.questionPosition != 0)
         {
@@ -200,7 +207,27 @@ public class DialogueManager : MonoBehaviour
 
     }
 
-    
+    public void RandomPosition(Button food1, Button food2)
+    {
+        Vector3 temp;
+
+        int randomNum = Random.Range(0, 1);
+
+        if (randomNum == 1)
+        {
+
+            temp = food1.transform.position;
+
+            food1.transform.position = food2.transform.position;
+
+            food2.transform.position = temp;
+
+        }
+        
+        
+
+
+    }
         
     
 }
