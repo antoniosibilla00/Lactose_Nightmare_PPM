@@ -5105,6 +5105,18 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 4735126486801289330, guid: eb512a2dcac84074a82cd419e6c537e6, type: 3}
+      propertyPath: m_UiScaleMode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4735126486801289330, guid: eb512a2dcac84074a82cd419e6c537e6, type: 3}
+      propertyPath: m_ReferenceResolution.x
+      value: 1920
+      objectReference: {fileID: 0}
+    - target: {fileID: 4735126486801289330, guid: eb512a2dcac84074a82cd419e6c537e6, type: 3}
+      propertyPath: m_ReferenceResolution.y
+      value: 1080
+      objectReference: {fileID: 0}
     - target: {fileID: 7275126674026985060, guid: eb512a2dcac84074a82cd419e6c537e6, type: 3}
       propertyPath: m_Name
       value: LevelManager
