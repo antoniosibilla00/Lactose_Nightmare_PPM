@@ -74,7 +74,7 @@ public class PlayerScript : MonoBehaviour
     public HealthSystem healthSystem;
     public int level;
     private int combo;
-    
+    private float fallingThreeshold;
     public GameMaster gm;
     public AudioClip[] sium;
     public AudioSource sourceSium;
