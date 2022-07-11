@@ -107,12 +107,12 @@ public class ArenaManagement : MonoBehaviour
                 myNewGameObject= Instantiate(chocolateWitch, Enemy1Pos.transform.position, chocolateWitch.transform.rotation);
                 myNewGameObject.transform.parent = Enemy1Pos.transform;
 
-                myNewGameObject.GetComponent<ChocolateWitchAI>().SetCooldown( myNewGameObject.GetComponent<ChocolateWitchAI>().GetCooldown()-0.5f);
+                myNewGameObject.GetComponentInChildren<ChocolateWitchAI>().SetCooldown( myNewGameObject.GetComponent<ChocolateWitchAI>().GetCooldown()-0.5f);
                 
                 myNewGameObject2= Instantiate(chocolateWitch, Enemy2Pos.transform.position, chocolateWitch.transform.rotation);
                 myNewGameObject2.transform.parent = Enemy2Pos.transform;
                 
-                myNewGameObject2.GetComponent<ChocolateWitchAI>().SetCooldown( myNewGameObject.GetComponent<ChocolateWitchAI>().GetCooldown()-0.5f);
+                myNewGameObject2.GetComponentInChildren<ChocolateWitchAI>().SetCooldown( myNewGameObject.GetComponent<ChocolateWitchAI>().GetCooldown()-0.5f);
                 break;
             case 3 :
                 PlayRoundSound();
@@ -128,8 +128,8 @@ public class ArenaManagement : MonoBehaviour
                 PlayRoundSound();
                 myNewGameObject= Instantiate(chocolateWitch, Enemy1Pos.transform.position, chocolateWitch.transform.rotation);
                 myNewGameObject.transform.parent = Enemy1Pos.transform;
-                myNewGameObject.GetComponent<ChocolateWitchAI>().SetCooldown( myNewGameObject.GetComponent<ChocolateWitchAI>().GetCooldown()-0.5f);
-                myNewGameObject.GetComponent<ChocolateWitchAI>().SetSpeed( myNewGameObject.GetComponent<ChocolateWitchAI>().GetSpeed()+0.25f);
+                myNewGameObject.GetComponentInChildren<ChocolateWitchAI>().SetCooldown( myNewGameObject.GetComponent<ChocolateWitchAI>().GetCooldown()-0.5f);
+                myNewGameObject.GetComponentInChildren<ChocolateWitchAI>().SetSpeed( myNewGameObject.GetComponent<ChocolateWitchAI>().GetSpeed()+0.25f);
                 break;
         }
         

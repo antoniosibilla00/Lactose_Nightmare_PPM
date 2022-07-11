@@ -35,5 +35,6 @@ public class LoadBossArena : MonoBehaviour,Interactable
     {
 
         loadArena.gameObject.SetActive(true);
+        MusicManager.istance.PlayArenaOst();
     }
 }

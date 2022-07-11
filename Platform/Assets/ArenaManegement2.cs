@@ -147,19 +147,19 @@ public class ArenaManegement2 : MonoBehaviour
                 changeEnemy1Pos(5f);
                 myNewGameObject= Instantiate(batBurger, Enemy1Pos.transform.position, batBurger.transform.rotation);
                 myNewGameObject.transform.parent = Enemy1Pos.transform;
-                myNewGameObject.GetComponentInChildren<TriggerDamage>().SetDamage(20);
+                myNewGameObject.transform.GetChild(0).GetComponentInChildren<TriggerDamage>().SetDamage(20);
                     
                 myNewGameObject= Instantiate(bigBubbleGolem, Enemy2Pos.transform.position, bigBubbleGolem.transform.rotation);
                 myNewGameObject.transform.parent = Enemy2Pos.transform;
-                myNewGameObject.GetComponentInChildren<TriggerDamage>().SetDamage(20);
+                myNewGameObject.transform.GetChild(0).GetComponentInChildren<TriggerDamage>().SetDamage(20);
                 break;
             
             case 4 :
                 PlayRoundSound();
                 myNewGameObject= Instantiate(batBurger, Enemy1Pos.transform.position, batBurger.transform.rotation);
                 myNewGameObject.transform.parent = Enemy1Pos.transform;
-                myNewGameObject.GetComponentInChildren<TriggerDamage>().SetDamage(20);
-                myNewGameObject.GetComponent<FlyingEnemy>().SetSpeed( myNewGameObject.GetComponent<FlyingEnemy>().GetSpeed()+0.25f);
+                myNewGameObject.transform.GetChild(0).GetComponentInChildren<TriggerDamage>().SetDamage(20);
+                myNewGameObject.GetComponentInChildren<FlyingEnemy>().SetSpeed( myNewGameObject.GetComponentInChildren<FlyingEnemy>().GetSpeed()+0.25f);
                 break;
         }
         
