@@ -16,6 +16,7 @@ public class Timer : MonoBehaviour
     public float gameTime;
     private float timer;
     [SerializeField] public Canvas loadArena;
+    [SerializeField] public Canvas canvasBoss;
     [SerializeField] private GameObject destination;
     [SerializeField] public GameObject ground;
     [SerializeField] public GameObject player;
@@ -51,6 +52,7 @@ public class Timer : MonoBehaviour
                 player.SetActive(true);
                 ground.SetActive(true);
                 loadArena.gameObject.SetActive(false);
+                canvasBoss.gameObject.SetActive(false);
                 player.transform.position = destination.transform.position;
 
 

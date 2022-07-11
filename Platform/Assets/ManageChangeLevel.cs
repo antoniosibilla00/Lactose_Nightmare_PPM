@@ -35,7 +35,7 @@ public class ManageChangeLevel : MonoBehaviour
         {
             level1.SetActive(false);
             done=true;
-            PlayerScript.instance.transform.position=new Vector3(-55.209f, 18.266f, 0f);
+            PlayerScript.instance.transform.position=new Vector3(-55.16f, 18.79f, 0f);
             PlayerScript.instance.level = 2;
             SaveSystem.SavePlayer(PlayerScript.instance);
             LevelLoader.instance.LoadScene(2);

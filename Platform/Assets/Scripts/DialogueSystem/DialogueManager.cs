@@ -3,6 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using System.Threading;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 using Random = UnityEngine.Random;
 
@@ -169,6 +170,9 @@ public class DialogueManager : MonoBehaviour
                 Debug.Log(">>>>Sono entrato DialogMan");
                 FindObjectOfType<Temptet>().SetTrueTeleport();
                 
+            }else if (speaker.Equals("Re4"))
+            {
+                SceneManager.LoadScene("Outro");
             }
             EndDialogue();
             return;

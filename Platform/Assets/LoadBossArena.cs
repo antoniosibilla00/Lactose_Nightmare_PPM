@@ -9,6 +9,7 @@ using UnityEngine;
 public class LoadBossArena : MonoBehaviour,Interactable
 {
     [SerializeField] public Canvas loadArena;
+    
 
     [SerializeField] private string _prompt;
 
@@ -33,7 +34,7 @@ public class LoadBossArena : MonoBehaviour,Interactable
 
     public void Interact(Interactor interactor)
     {
-
+        
         loadArena.gameObject.SetActive(true);
         MusicManager.istance.PlayArenaOst();
     }

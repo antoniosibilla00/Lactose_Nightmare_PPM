@@ -58,6 +58,8 @@ public class BossScript
     private float cooldownLeap;
     private float actualCooldownLeap;
     private float positionUpdate;
+    public GameObject king;
+    
     
     [SerializeField]private float timer;
     #endregion
@@ -168,6 +170,8 @@ public class BossScript
             case State.death :
 
                 this.GetComponentInChildren<CapsuleCollider2D>().enabled= false;
+                
+                king.SetActive(true);
                
                 if (dead)
                 {
