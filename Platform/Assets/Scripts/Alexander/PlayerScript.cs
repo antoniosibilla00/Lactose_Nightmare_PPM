@@ -74,7 +74,7 @@ public class PlayerScript : MonoBehaviour
     public HealthSystem healthSystem;
     public int level;
     private int combo;
-    private float fallingThreeshold;
+    [SerializeField]private float fallingThreeshold;
     public GameMaster gm;
     public AudioClip[] sium;
     public AudioSource sourceSium;
@@ -225,7 +225,7 @@ public class PlayerScript : MonoBehaviour
                 }
 
                 
-                if (body.velocity.y < (-1.0f))
+                if (body.velocity.y < fallingThreeshold)
                 {
                     Debug.Log("ciao"+body.velocity.y);
                     fall = true;
@@ -274,7 +274,7 @@ public class PlayerScript : MonoBehaviour
 
             case State.rolling:
                 body.velocity=Vector2.zero;
-                body.AddForce(new Vector2(moveDir*2,0),ForceMode2D.Impulse);
+                body.AddForce(new Vector2(moveDir*3,-2.7f),ForceMode2D.Impulse);
 
                 break;
             
