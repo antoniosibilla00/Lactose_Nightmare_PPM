@@ -149,11 +149,9 @@ MonoBehaviour:
   gm: {fileID: 0}
   _prompt: '[E] Per riposare'
   _dialogue:
-    name: Fire
+    name: Sistema
     sentences:
-    - 'The fire is burning '
-    - The light is shining
-    - SIUMMMMMM
+    - Salvataggio effettuato
     questionPosition: 0
 --- !u!95 &1536167920820791473
 Animator:
