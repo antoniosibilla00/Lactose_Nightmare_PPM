@@ -190,7 +190,7 @@ public class PlayerScript : MonoBehaviour
                 }
                 break;
             case  State.talking:
-
+                fall = false ;
                 run = false;
                 if (!dialoguePanel.activeSelf)
                 {

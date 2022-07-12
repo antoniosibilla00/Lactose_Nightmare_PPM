@@ -6,6 +6,11 @@ using UnityEngine.Serialization;
 
 public class ChocolateWitchAI : MonoBehaviour
 {
+    
+    [SerializeField] private AudioClip enemyDies;
+    private AudioSource _audioSource;
+    
+    
     [Header("Pathfinding")]
     private Transform target;
     public float activateDistance = 50f;
@@ -49,6 +54,7 @@ public class ChocolateWitchAI : MonoBehaviour
     private float actualTimer;
     private bool facingRight;
     private bool shoot;
+    private bool isNotPlaying;
     public GameObject bullet;
     public GameObject bulletParent;
     private GameObject Alexander;
@@ -91,6 +97,8 @@ public class ChocolateWitchAI : MonoBehaviour
         
         attack = false;
         shoot = false;
+
+        _audioSource = GetComponent<AudioSource>();
         
         InvokeRepeating("UpdatePath", 0f, pathUpdateSeconds);
     }
@@ -103,6 +111,17 @@ public class ChocolateWitchAI : MonoBehaviour
         anim.SetBool("cooldown",cooldown);
         anim.SetBool("walk",walk);
         
+        
+        isNotPlaying = anim.GetCurrentAnimatorStateInfo(0).IsName("dead") == false;
+        
+        if (healthSystem.GetCurrentHealth() <= 0 &&!dead && isNotPlaying)
+        {
+            anim.SetTrigger("dead"); 
+            _audioSource.clip = enemyDies;
+            _audioSource.Play();
+            state = State.death;
+        }
+        
         if (shoot && !GameObject.Find("Bullet(Clone)"))
         {
             Instantiate(bullet, bulletParent.transform.position, Quaternion.identity);
@@ -110,17 +129,10 @@ public class ChocolateWitchAI : MonoBehaviour
         
         switch (state)
         {
-            case State.normal:
-                if (healthSystem.GetCurrentHealth()<=0)
-                {
-                    anim.SetTrigger("dead");
-                    state = State.death;
-                }
-                
-                
-                break;
+        
             case State.death :
 
+                
                 this.GetComponentInChildren<CapsuleCollider2D>().enabled= false;
 
                 if (anim.GetComponent<Animator>().GetCurrentAnimatorStateInfo(0).normalizedTime >= 1)

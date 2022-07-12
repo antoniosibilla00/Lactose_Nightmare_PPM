@@ -45,8 +45,8 @@ CapsuleCollider2D:
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0, y: -0.15896511}
-  m_Size: {x: 0.5, y: 0.6820698}
+  m_Offset: {x: -0.019899994, y: -0.15896511}
+  m_Size: {x: 0.29617584, y: 0.6820698}
   m_Direction: 0
 --- !u!114 &4308809664420192626
 MonoBehaviour:
@@ -269,6 +269,7 @@ MonoBehaviour:
   ground:
     serializedVersion: 2
     m_Bits: 256
+  king: {fileID: 0}
   timer: 3
   hammerCollider2D: {fileID: 4308809665247005557}
   swordCollider2D: {fileID: 4308809664649213265}
@@ -301,7 +302,7 @@ AudioSource:
   m_GameObject: {fileID: 4308809664570935856}
   m_Enabled: 1
   serializedVersion: 4
-  OutputAudioMixerGroup: {fileID: 0}
+  OutputAudioMixerGroup: {fileID: -2045957655842973581, guid: b64937088bbc0534487796c57e8d93e8, type: 2}
   m_audioClip: {fileID: 0}
   m_PlayOnAwake: 1
   m_Volume: 1
@@ -413,13 +414,13 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 4308809664649213266}
-  m_LocalRotation: {x: -0, y: 1, z: -0, w: 0}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalRotation: {x: 0.2214114, y: 0.97518057, z: 0, w: 0}
+  m_LocalPosition: {x: 0.018024892, y: -0.366, z: 0}
   m_LocalScale: {x: -1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 4308809664570935866}
   m_RootOrder: 6
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 180, z: 25.584}
 --- !u!70 &4308809664649213265
 CapsuleCollider2D:
   m_ObjectHideFlags: 0
@@ -433,8 +434,8 @@ CapsuleCollider2D:
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
-  m_Size: {x: 0.5, y: 1}
+  m_Offset: {x: -0.20121747, y: 0.44857943}
+  m_Size: {x: 0.5975782, y: 0.10284401}
   m_Direction: 1
 --- !u!114 &8532406929004546642
 MonoBehaviour:
@@ -578,8 +579,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -200.6, y: 0.00024414062}
-  m_SizeDelta: {x: 400, y: 50}
+  m_AnchoredPosition: {x: -921.74115, y: -6}
+  m_SizeDelta: {x: 1731.1133, y: 138.0262}
   m_Pivot: {x: 0, y: 0.5}
 --- !u!222 &4308809664733481497
 CanvasRenderer:
@@ -609,7 +610,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: 6adc82cbc14f72b41b19df83e4570cac, type: 3}
+  m_Sprite: {fileID: -4143134656484195203, guid: c41ae621ec8c95743bcd588fed24437a, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -746,8 +747,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 719, y: -975}
-  m_SizeDelta: {x: 400, y: 50}
+  m_AnchoredPosition: {x: 280.11554, y: -980.3612}
+  m_SizeDelta: {x: 1420.363, y: 60.7224}
   m_Pivot: {x: 0, y: 0.5}
 --- !u!114 &4308809665054819503
 MonoBehaviour:
@@ -849,7 +850,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: -0.3, y: 0}
+  m_AnchoredPosition: {x: -0.2999897, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0, y: 0.5}
 --- !u!222 &4308809665076187407
@@ -916,7 +917,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 4308809665247005558}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: -0.721, y: 0.16, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 4308809664570935866}
@@ -935,7 +936,7 @@ BoxCollider2D:
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0.38560486, y: 0.43852615}
+  m_Offset: {x: 0.3868671, y: 0.45556653}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0, y: 0}
@@ -946,7 +947,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 0.22879028, y: 0.12294769}
+  m_Size: {x: 0.2085942, y: 0.22771454}
   m_EdgeRadius: 0
 --- !u!114 &4308809665247005556
 MonoBehaviour:

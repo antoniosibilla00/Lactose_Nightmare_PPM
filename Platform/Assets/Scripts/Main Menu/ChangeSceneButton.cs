@@ -6,12 +6,16 @@ using UnityEngine.SceneManagement;
 
 public class ChangeSceneButton : MonoBehaviour
 {
+   
     // Start is called before the first frame update
-    
 
     public void ChangeScene(string sceneName)
     {
+
+        
         LevelLoader.instance.LoadScene( sceneName);
+    
+        
     }
     
     public void LoadPlayer()

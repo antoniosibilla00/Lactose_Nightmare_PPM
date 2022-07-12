@@ -185,6 +185,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 05261580ce606f443b775eba9857b2e0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  enemyDies: {fileID: 8300000, guid: ac5ec2120ebad534a9c568f29c52bbab, type: 3}
   speed: 1
   lineOfSite: 4.78
   shootingRange: 0.25
@@ -219,7 +220,7 @@ AudioSource:
   m_GameObject: {fileID: 1908236146687106623}
   m_Enabled: 1
   serializedVersion: 4
-  OutputAudioMixerGroup: {fileID: 0}
+  OutputAudioMixerGroup: {fileID: -2045957655842973581, guid: b64937088bbc0534487796c57e8d93e8, type: 2}
   m_audioClip: {fileID: 0}
   m_PlayOnAwake: 1
   m_Volume: 1

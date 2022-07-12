@@ -5,6 +5,9 @@ TextureImporter:
   - first:
       213: -5035587454609966441
     second: BarSword_0
+  - first:
+      213: 1652471564511181060
+    second: BarSword_1
   externalObjects: {}
   serializedVersion: 11
   mipmaps:
@@ -97,9 +100,30 @@ TextureImporter:
       name: BarSword_0
       rect:
         serializedVersion: 2
-        x: 17
+        x: 28
         y: 36
-        width: 67
+        width: 56
+        height: 15
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 79a3f84c3effd1ab0800000000000000
+      internalID: -5035587454609966441
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BarSword_1
+      rect:
+        serializedVersion: 2
+        x: 16
+        y: 36
+        width: 12
         height: 15
       alignment: 0
       pivot: {x: 0, y: 0}
@@ -108,8 +132,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 79a3f84c3effd1ab0800000000000000
-      internalID: -5035587454609966441
+      spriteID: 4097f1cf122cee610800000000000000
+      internalID: 1652471564511181060
       vertices: []
       indices: 
       edges: []

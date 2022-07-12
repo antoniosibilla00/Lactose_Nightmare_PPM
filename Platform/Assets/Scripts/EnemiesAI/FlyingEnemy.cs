@@ -7,6 +7,10 @@ using UnityEngine;
 public class FlyingEnemy : MonoBehaviour
 {
 
+    [SerializeField] private AudioClip enemyDies;
+    private AudioSource _audioSource;
+    
+    
     public float speed;
     public float lineOfSite;
     public float shootingRange;
@@ -56,7 +60,7 @@ public class FlyingEnemy : MonoBehaviour
         dead = false;
         healthSystem = this.GetComponentInChildren<EnemiesHealthSystem>();
         canDie = false;
-
+        _audioSource = GetComponent<AudioSource>();
 
 
     }
@@ -70,6 +74,8 @@ public class FlyingEnemy : MonoBehaviour
         if (healthSystem.GetCurrentHealth()<=0 && !dead && isNotPlaying)
         {
             anim.SetTrigger("die");
+            _audioSource.clip = enemyDies;
+            _audioSource.Play();
             state = State.death;
         }
 

@@ -174,7 +174,7 @@ MonoBehaviour:
     m_Bits: 0
   timer: 3
   AudioSource: {fileID: 0}
-  enemyDies: {fileID: 0}
+  enemyDies: {fileID: 8300000, guid: ac5ec2120ebad534a9c568f29c52bbab, type: 3}
   soundAttack: {fileID: 0}
   attackHitBox: {fileID: 733408594745907020}
   state: 0
@@ -236,7 +236,7 @@ AudioSource:
   m_GameObject: {fileID: 733408594268706492}
   m_Enabled: 1
   serializedVersion: 4
-  OutputAudioMixerGroup: {fileID: 0}
+  OutputAudioMixerGroup: {fileID: -2045957655842973581, guid: b64937088bbc0534487796c57e8d93e8, type: 2}
   m_audioClip: {fileID: 0}
   m_PlayOnAwake: 1
   m_Volume: 1
