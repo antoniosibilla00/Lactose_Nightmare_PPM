@@ -112,20 +112,22 @@ public class PlayerScript : MonoBehaviour
                 break;
         }
         
+        
+       
+        
+        if (!LoadPLayer())
+        {
+            this.transform.position  = new Vector3(-192.2285f, -31.30591f, 0f);
+        }
        
     }
 
     private void Start()
     {
+        gm = GameObject.FindGameObjectWithTag("GM").GetComponent<GameMaster>();
         dead = false;
         fall = false;
-        gm = GameObject.FindGameObjectWithTag("GM").GetComponent<GameMaster>();
-        
-        if (!LoadPLayer())
-        {
-            gm.lastCheckPointPos = new Vector3(-192.2285f, -31.30591f, 0f);
-            this.transform.position = gm.lastCheckPointPos;
-        }
+      
         healthSystem = GetComponentInChildren<HealthSystem>();
         _renderer = GetComponent<SpriteRenderer>();
         anim = GetComponent<Animator>();

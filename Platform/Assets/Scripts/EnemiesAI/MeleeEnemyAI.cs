@@ -132,6 +132,7 @@ public class MeleeEnemyAI
         if (healthSystem.GetCurrentHealth() <= 0 &&!dead && isNotPlaying)
         {
             anim.SetTrigger("dead");
+            this.GetComponentInChildren<CapsuleCollider2D>().enabled= false;
             if (!AudioSource.isPlaying)
             {
                 AudioSource.clip = enemyDies;
@@ -148,7 +149,7 @@ public class MeleeEnemyAI
 
             case State.death :
 
-                this.GetComponentInChildren<CapsuleCollider2D>().enabled= false;
+               
                
                 if (dead)
                 {

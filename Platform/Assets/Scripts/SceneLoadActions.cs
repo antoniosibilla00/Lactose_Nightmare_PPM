@@ -30,14 +30,21 @@ public class SceneLoadActions : MonoBehaviour
     }
 
 
+    private void Awake()
+    {
+        Debug.Log("scene.setParallax"+GameObject.FindGameObjectWithTag("Player").transform.position.y);
+      
+
+    }
+
+
     private void Start()
     {
-         Debug.Log("scene.setParallax"+GameObject.FindGameObjectWithTag("Player").transform.position.y);
-            if (GameObject.FindGameObjectWithTag("Player").transform.position.y < 17.485f)
-            {
-                Debug.Log("scene.setParallax");
-                SetParallax();
-            }
+        if (GameObject.FindGameObjectWithTag("Player").transform.position.y < 14.485f)
+        {
+            Debug.Log("scene.setParallax");
+            SetParallax();
+        }
     }
 
 
