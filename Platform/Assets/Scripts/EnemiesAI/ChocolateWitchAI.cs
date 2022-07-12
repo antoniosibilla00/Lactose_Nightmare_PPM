@@ -122,7 +122,7 @@ public class ChocolateWitchAI : MonoBehaviour
             state = State.death;
         }
         
-        if (shoot && !GameObject.Find("Bullet(Clone)"))
+        if (shoot && !GameObject.FindGameObjectWithTag("Bullet"))
         {
             Instantiate(bullet, bulletParent.transform.position, Quaternion.identity);
         }

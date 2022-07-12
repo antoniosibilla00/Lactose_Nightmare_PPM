@@ -168,10 +168,12 @@ public class HealthSystem : MonoBehaviour
     {
         Debug.Log("Player turned invincible!");
         isInvincible = true;
+        Physics2D.IgnoreLayerCollision(11,12,true);
      
         
         yield return new WaitForSeconds(invincibilityDurationSeconds);
-    
+        
+        Physics2D.IgnoreLayerCollision(11,12,false);
         isInvincible = false;
         Debug.Log("Player is no longer invincible!");
     }

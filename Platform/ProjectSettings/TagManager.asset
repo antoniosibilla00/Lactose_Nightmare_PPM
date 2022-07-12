@@ -9,6 +9,7 @@ TagManager:
   - Enemies
   - Boss
   - LastKing
+  - Bullet
   layers:
   - Default
   - TransparentFX

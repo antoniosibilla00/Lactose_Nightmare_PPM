@@ -120,6 +120,7 @@ public class PlayerScript : MonoBehaviour
         dead = false;
         fall = false;
         gm = GameObject.FindGameObjectWithTag("GM").GetComponent<GameMaster>();
+        
         if (!LoadPLayer())
         {
             this.transform.position = gm.lastCheckPointPos;

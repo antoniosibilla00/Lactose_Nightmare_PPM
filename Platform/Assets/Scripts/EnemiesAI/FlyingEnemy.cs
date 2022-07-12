@@ -57,6 +57,7 @@ public class FlyingEnemy : MonoBehaviour
         toHit = GetComponentInChildren<CircleCollider2D>();
         Physics2D.IgnoreCollision(playerBoxCollider2D, collisionBat ,true);
         Physics2D.IgnoreCollision(playerCapsuleCollider2D, collisionBat ,true);
+      
         dead = false;
         healthSystem = this.GetComponentInChildren<EnemiesHealthSystem>();
         canDie = false;
@@ -188,6 +189,8 @@ public class FlyingEnemy : MonoBehaviour
     { 
         speed=newSpeed;
     }
+    
+    
 
 }
 
