@@ -100,7 +100,7 @@ public class BossScript
     public void Awake()
     {
         dead = false;
-        Alexander = GameObject.Find("Alexander");
+        Alexander = GameObject.FindGameObjectWithTag("Player");
         rb = Alexander.GetComponent<Rigidbody2D>();
         playerBoxCollider2D = Alexander.GetComponent<BoxCollider2D>();
         playerCapsuleCollider2D = Alexander.GetComponent<CapsuleCollider2D>();
@@ -108,6 +108,25 @@ public class BossScript
     }
 
     public void Start()
+    {
+        meleeEnemyCollider = GetComponentInChildren<BoxCollider2D>();
+        seeker = GetComponent<Seeker>();
+        rb = GetComponent<Rigidbody2D>();
+        anim = GetComponent<Animator>(); 
+        Physics2D.IgnoreCollision(playerBoxCollider2D,meleeEnemyCollider);
+        Physics2D.IgnoreCollision(playerCapsuleCollider2D,meleeEnemyCollider);
+        healthSystem = GetComponentInChildren<BossHealthSystem>();
+        attack = false;
+        moveDir = 1;
+        done = false;
+        beastMode = false;
+        cooldownLeap = 20f;
+        cooldown = false;
+  
+        InvokeRepeating("UpdatePath", 0f, pathUpdateSeconds);
+    }
+
+    private void OnEnable()
     {
         meleeEnemyCollider = GetComponentInChildren<BoxCollider2D>();
         seeker = GetComponent<Seeker>();

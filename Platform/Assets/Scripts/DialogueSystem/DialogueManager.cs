@@ -16,7 +16,7 @@ public class DialogueManager : MonoBehaviour
     // Start is called before the first frame update
     private Queue<string>sentences;
     
-    [SerializeField]private  Text nameText;
+    [SerializeField] private  Text nameText;
     [SerializeField] private Text dialogueText;
     [SerializeField] private GameObject dialoguePanel;
     private string speaker = "";
@@ -70,17 +70,24 @@ public class DialogueManager : MonoBehaviour
 
         if (sentences != null && !done)
         {
+            Debug.Log("<<<dialogsentences.Count = "+sentences.Count);
             if (speaker.Equals("Tentatore") && sentences.Count == questionPosition )
             {
+                
+                
+                
+                foodChose1.gameObject.GetComponentInChildren<Text>().text =  FindObjectOfType<Temptet>().GetFood1(); 
+                foodChose2.gameObject.GetComponentInChildren<Text>().text =  FindObjectOfType<Temptet>().GetFood2(); 
                 foodChose1.gameObject.SetActive(true);
                 foodChose2.gameObject.SetActive(true);
 
+                Debug.Log("*dialogGetFood1 = " + foodChose1.gameObject.GetComponentInChildren<Text>().text);
+                Debug.Log("*dialogGetFood2 = " + foodChose2.gameObject.GetComponentInChildren<Text>().text);
                 
                 
                 Continue.gameObject.SetActive(false);
 
-                foodChose1.gameObject.GetComponentInChildren<Text>().text =  FindObjectOfType<Temptet>().GetFood1(); 
-                foodChose2.gameObject.GetComponentInChildren<Text>().text =  FindObjectOfType<Temptet>().GetFood2(); ;
+                
                 
             }else if (speaker.Equals("Tentatore") && sentences.Count == questionPosition-1)
             {
@@ -94,7 +101,7 @@ public class DialogueManager : MonoBehaviour
                 if (answer )
                 {
 
-                    string sentence = "Bravo!";
+                    string sentence = "Per questa volta l'hai scampata, la mia sete non è stata sfamata ma non son un bugiardo,"+"\n"+" tieni questo buf ma spero che alla prossima mangerai del lardo";
                     FindObjectOfType<PlayerScript>().Buff();
                     foodChose1.gameObject.SetActive(false);
                     foodChose2.gameObject.SetActive(false);
@@ -106,7 +113,7 @@ public class DialogueManager : MonoBehaviour
                 }
                 else 
                 {
-                    string sentence = "Sbagliato!";
+                    string sentence = "La tua anima si avvicina, sento la sua rinascita vicina"+"2n"+"ti sembrerò un po lesto , tieni questo debuff, spero ci vedremo presto";
                     FindObjectOfType<PlayerScript>().Debuff();
                     foodChose1.gameObject.SetActive(false);
                     foodChose2.gameObject.SetActive(false);
@@ -115,8 +122,6 @@ public class DialogueManager : MonoBehaviour
                     dialogueText.text = sentence;
                     waitTime = timer;
                     
-                    
-
 
                 }
                 
@@ -129,12 +134,11 @@ public class DialogueManager : MonoBehaviour
 
     public void StartDialogue(Dialogue dialogue)
     {
-        
-        
-        
+
         if (dialogue.questionPosition != 0)
         {
             questionPosition = dialogue.questionPosition;
+            Debug.Log("<<<dialogo.qp = "+dialogue.questionPosition);
         }
         
         dialoguePanel.SetActive(true); 
@@ -170,7 +174,7 @@ public class DialogueManager : MonoBehaviour
                 Debug.Log(">>>>Sono entrato DialogMan");
                 FindObjectOfType<Temptet>().SetTrueTeleport();
                 
-            }else if (speaker.Equals("Re4"))
+            }else if (speaker.Equals("Re."))
             {
                 SceneManager.LoadScene("Outro");
             }

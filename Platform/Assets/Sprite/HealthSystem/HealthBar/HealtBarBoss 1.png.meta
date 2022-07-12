@@ -97,9 +97,9 @@ TextureImporter:
       name: HealtBarBoss 1_0
       rect:
         serializedVersion: 2
-        x: 39
+        x: 48
         y: 222
-        width: 158
+        width: 149
         height: 18
       alignment: 0
       pivot: {x: 0.5, y: 0.5}

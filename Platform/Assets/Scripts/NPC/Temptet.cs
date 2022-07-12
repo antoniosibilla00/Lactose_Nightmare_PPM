@@ -21,7 +21,7 @@ public class Temptet : MonoBehaviour,Interactable
     
     private bool openFood = true;
     private bool itSTimeToOpen;
-    private bool teleport = false;
+    public bool teleport;
     private bool foodBool = false;    
     public Animator anim;   
     
@@ -63,7 +63,8 @@ public class Temptet : MonoBehaviour,Interactable
         }
         else if(dialogue.name == "Re")
         {
-            anim.SetBool("teleport", teleport);
+            Debug.Log(">>>>Teleport = " +GetTrueTeleport());
+            anim.SetBool("teleport",GetTrueTeleport());
         }
 
 
@@ -86,6 +87,7 @@ public class Temptet : MonoBehaviour,Interactable
     {
        
         openFood = true;
+        
 
     }
     
@@ -112,8 +114,9 @@ public class Temptet : MonoBehaviour,Interactable
 
     public void SetTrueTeleport()
     {
-        
+        Debug.Log((">>>>TeleportTruePRe + ") + teleport);
         teleport = true;
+        Debug.Log((">>>>TeleportTruePost + ") + teleport);
     }
 
     public void SetActiveFood()
@@ -121,6 +124,12 @@ public class Temptet : MonoBehaviour,Interactable
 
         foodBool = true;
 
+    }
+    public bool GetTrueTeleport()
+    {
+        
+        return teleport ;
+        
     }
     
     public void SetInvisibleFood()
@@ -132,14 +141,14 @@ public class Temptet : MonoBehaviour,Interactable
 
     public string GetFood1()
     {
-
+        Debug.Log("*TemptetGetFood1 = " + food1);
         return food1;
 
     }
 
     public string GetFood2()
     {
-
+        Debug.Log("*TemptetGetFood2 = " + food2);
         return food2;
 
     }
