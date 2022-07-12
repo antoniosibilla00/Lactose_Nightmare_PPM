@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -7,6 +8,7 @@ public class SceneLoadActions : MonoBehaviour
 {
     [SerializeField] private Transform player; //drag player reference onto here
     [SerializeField] private Vector3 _targetPosition; //here you store the position you want to teleport your player to
+    public GameObject[] cavesParallax;
 
     private void OnEnable()
     {
@@ -23,14 +25,28 @@ public class SceneLoadActions : MonoBehaviour
     //scenes and do actions according to the scene loaded.
     private void SceneLoaded(Scene scene, LoadSceneMode mode)
     {
-
-        if (scene.name.Equals("Level2"))
-        {
-            
-            player.position = _targetPosition;
-            
-
-        }
+      
+      
     }
 
+
+    private void Start()
+    {
+         Debug.Log("scene.setParallax"+GameObject.FindGameObjectWithTag("Player").transform.position.y);
+            if (GameObject.FindGameObjectWithTag("Player").transform.position.y < 17.485f)
+            {
+                Debug.Log("scene.setParallax");
+                SetParallax();
+            }
+    }
+
+
+    private void SetParallax()
+    {
+        foreach (var caveParallax in cavesParallax)
+        {
+            caveParallax.SetActive(true);
+        }
+
+    }
 }
