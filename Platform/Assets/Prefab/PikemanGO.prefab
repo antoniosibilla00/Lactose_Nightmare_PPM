@@ -193,7 +193,7 @@ GameObject:
   - component: {fileID: 1087762252423041520}
   - component: {fileID: 1087762252423041523}
   - component: {fileID: 1087762252423041521}
-  - component: {fileID: 8315299046556797696}
+  - component: {fileID: 5873555993569462452}
   m_Layer: 0
   m_Name: Pikeman
   m_TagString: Untagged
@@ -375,7 +375,7 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
---- !u!82 &8315299046556797696
+--- !u!82 &5873555993569462452
 AudioSource:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}

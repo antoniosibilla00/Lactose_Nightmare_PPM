@@ -7,13 +7,13 @@ AnimatorOverrideController:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_Name: PikemanOverrideDog
-  m_Controller: {fileID: 9100000, guid: 13b15f6a11581cc4987289a6b844c9a2, type: 2}
+  m_Controller: {fileID: 9100000, guid: ffd60db2f34bff340b70b70c96d5197b, type: 2}
   m_Clips:
-  - m_OriginalClip: {fileID: 7400000, guid: 1640abbdd0aaff944ac43952a5240fa8, type: 2}
+  - m_OriginalClip: {fileID: 7400000, guid: 4e1c5df764b1d184db0f5a257e44ee3c, type: 2}
     m_OverrideClip: {fileID: 7400000, guid: 9cfee8f97d635064dbbdee1776099ca5, type: 2}
-  - m_OriginalClip: {fileID: 7400000, guid: a6c15ec5cc353f6479394fb549e892c2, type: 2}
+  - m_OriginalClip: {fileID: 7400000, guid: cebe3761b493b024e804812bff473ecc, type: 2}
     m_OverrideClip: {fileID: 7400000, guid: 8c49a5cea65021e46907a46a97315a0e, type: 2}
-  - m_OriginalClip: {fileID: 7400000, guid: 1478d4f37fea6e4409bf8aa45a003086, type: 2}
+  - m_OriginalClip: {fileID: 7400000, guid: 4650b7808837e064eb37e77aae1e63e6, type: 2}
     m_OverrideClip: {fileID: 7400000, guid: 5ab26dd58e5c8c54c870fca76e2f7ae9, type: 2}
-  - m_OriginalClip: {fileID: 7400000, guid: 132dcb947c207174a8d6f89759c2f1f5, type: 2}
+  - m_OriginalClip: {fileID: 7400000, guid: 66791a4ca1884e44e8a89bfa09f5b724, type: 2}
     m_OverrideClip: {fileID: 7400000, guid: bb2c6e44a6ba35c4792e860818112eb9, type: 2}

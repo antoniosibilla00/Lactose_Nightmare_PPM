@@ -27,7 +27,10 @@ public class DialogueManager : MonoBehaviour
     [SerializeField] private Button Continue;
     private int questionPosition;
     private Temptet tempter;
-    
+
+    private AudioSource _audioSource;
+    [SerializeField]private AudioClip buff;
+    [SerializeField]private AudioClip debuff;
 
     
     //[SerializeField] private GameObject DialogueBox;
@@ -39,7 +42,8 @@ public class DialogueManager : MonoBehaviour
         RandomPosition(foodChose1, foodChose2);
         foodChose1.gameObject.SetActive(false);
         foodChose2.gameObject.SetActive(false);
-        
+
+        _audioSource = GetComponent<AudioSource>();
 
 
     }
@@ -76,8 +80,10 @@ public class DialogueManager : MonoBehaviour
                 
                 
                 
-                foodChose1.gameObject.GetComponentInChildren<Text>().text =  FindObjectOfType<Temptet>().GetFood1(); 
-                foodChose2.gameObject.GetComponentInChildren<Text>().text =  FindObjectOfType<Temptet>().GetFood2(); 
+                //foodChose1.gameObject.GetComponentInChildren<Text>().text =  FindObjectOfType<Temptet>().GetFood1(); 
+                //foodChose2.gameObject.GetComponentInChildren<Text>().text =  FindObjectOfType<Temptet>().GetFood2(); 
+                
+                
                 foodChose1.gameObject.SetActive(true);
                 foodChose2.gameObject.SetActive(true);
 
@@ -92,11 +98,9 @@ public class DialogueManager : MonoBehaviour
             }else if (speaker.Equals("Tentatore") && sentences.Count == questionPosition-1)
             {
                 done = true;
-                
 
-                
-                FindObjectOfType<Temptet>().SetTrueitSTimeToOpen();
-                FindObjectOfType<Temptet>().OpenFood();
+                GameObject.FindGameObjectWithTag("Tempter").GetComponent<Temptet>().SetTrueitSTimeToOpen();
+                GameObject.FindGameObjectWithTag("Tempter").GetComponent<Temptet>().OpenFood();
                 
                 if (answer )
                 {
@@ -165,14 +169,14 @@ public class DialogueManager : MonoBehaviour
         if (sentences.Count == 0)
         {
             if (speaker.Equals("Tentatore"))
-            {
-                FindObjectOfType<Temptet>().CloseFood();
+            { GameObject.FindGameObjectWithTag("Tempter").GetComponent<Temptet>().CloseFood();;
                 
             }
             else if(speaker.Equals("Re")){
 
                 Debug.Log(">>>>Sono entrato DialogMan");
-                FindObjectOfType<Temptet>().SetTrueTeleport();
+                GameObject.FindGameObjectWithTag("King").GetComponent<Temptet>().SetTrueTeleport();
+               
                 
             }else if (speaker.Equals("Re."))
             {
@@ -199,16 +203,18 @@ public class DialogueManager : MonoBehaviour
 
     public void  CorrectAnswer()
     {
-
+       
         answer = true;
-        
+        _audioSource.clip = buff;
+        _audioSource.Play();
         DisplayNextSentence();
 
     }
 
     public void  WrongAnswer()
-    { 
-
+    {
+        _audioSource.clip = debuff;
+        _audioSource.Play();
         answer = false;
         DisplayNextSentence();
 

@@ -132,8 +132,12 @@ public class MeleeEnemyAI
         if (healthSystem.GetCurrentHealth() <= 0 &&!dead && isNotPlaying)
         {
             anim.SetTrigger("dead");
-            AudioSource.clip = enemyDies;
-            AudioSource.Play();
+            if (!AudioSource.isPlaying)
+            {
+                AudioSource.clip = enemyDies;
+                AudioSource.Play();
+            }
+            
             
             state = State.death;
         }

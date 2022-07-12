@@ -10,6 +10,8 @@ TagManager:
   - Boss
   - LastKing
   - Bullet
+  - Tempter
+  - King
   layers:
   - Default
   - TransparentFX
