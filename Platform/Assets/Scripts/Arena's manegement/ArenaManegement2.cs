@@ -62,8 +62,8 @@ public class ArenaManegement2 : MonoBehaviour
                 
                 DeleteStone();
                 DeleteSpikes();
-                AudioSource.clip=victorySound;
-                AudioSource.Play();
+                //AudioSource.clip=victorySound;
+                //AudioSource.Play();
                 if (!AudioSource.isPlaying)
                 {
                     MusicManager.istance.PlayMainOst();
