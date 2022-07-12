@@ -248,6 +248,7 @@ public class MainMenu : MonoBehaviour
         Debug.Log("ieiee"+File.Exists(path));
         if (File.Exists(path))
         {
+           
             File.Delete(path);
         }
     }

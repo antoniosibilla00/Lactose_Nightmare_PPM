@@ -269,7 +269,7 @@ MonoBehaviour:
   ground:
     serializedVersion: 2
     m_Bits: 256
-  king: {fileID: 0}
+  king: {fileID: 2226065115610908641, guid: b26c76db4b83141478fc5f555a48b7c7, type: 3}
   timer: 3
   hammerCollider2D: {fileID: 4308809665247005557}
   swordCollider2D: {fileID: 4308809664649213265}

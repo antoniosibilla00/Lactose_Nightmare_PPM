@@ -171,7 +171,9 @@ public class BossScript
 
                 this.GetComponentInChildren<CapsuleCollider2D>().enabled= false;
                 
-                king.SetActive(true);
+                GameObject.Instantiate(king, new Vector3(180.77f, -2.48f, 0f),king.transform.rotation);
+                
+                //king.SetActive(true);
                
                 if (dead)
                 {
