@@ -5662,6 +5662,7 @@ MonoBehaviour:
   musicSlider: {fileID: 552638518}
   effectSlider: {fileID: 796922134}
   generalSlider: {fileID: 596351607}
+  buttonCarica: {fileID: 385037154}
   resolutionDropdown: {fileID: 1088167740}
 --- !u!1 &1576249064
 GameObject:

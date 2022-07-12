@@ -27,6 +27,8 @@ public class MainMenu : MonoBehaviour
 
   public Slider musicSlider, effectSlider, generalSlider;
 
+  public GameObject buttonCarica;
+
   
 
   public Dropdown resolutionDropdown;
@@ -70,6 +72,15 @@ public class MainMenu : MonoBehaviour
     musicSlider.onValueChanged.AddListener(SetVolumeMusic);
     effectSlider.onValueChanged.AddListener(SetVolumeEffect);
     generalSlider.onValueChanged.AddListener(SetVolumeGeneral);
+
+    if (SaveSystem.LoadPlayer() == null)
+    {
+        buttonCarica.GetComponent<Button>().interactable = false;
+    }
+    else
+    {
+        buttonCarica.GetComponent<Button>().interactable = true;
+    }
 
   }
   public void SetResolution(int resolutionIndex){
