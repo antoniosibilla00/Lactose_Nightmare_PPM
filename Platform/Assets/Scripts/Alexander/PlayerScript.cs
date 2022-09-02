@@ -405,10 +405,10 @@ public class PlayerScript : MonoBehaviour
             
         }
 
-        if (Input.GetKeyDown(KeyCode.C))
+        /*if (Input.GetKeyDown(KeyCode.C))
         {
             SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
-        }
+        }*/
         
     }
 

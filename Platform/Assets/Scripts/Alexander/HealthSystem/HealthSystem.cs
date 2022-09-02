@@ -96,7 +96,7 @@ public class HealthSystem : MonoBehaviour
                 AudioSource.Play();
                
             }
-            CinemachineShake.Instance.ShakeCamera(0.5f,0.5f); 
+            //CinemachineShake.Instance.ShakeCamera(0.5f,0.5f); 
             GameObject newBlood= GameObject.Instantiate(blood,alexanderPos);
             StartCoroutine(DestroyBlood(newBlood));
             healthBar.SetHealthBar(currentHealth);

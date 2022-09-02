@@ -34,7 +34,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: 91.05762}
+  m_AnchoredPosition: {x: 8, y: 4.2154}
   m_SizeDelta: {x: 298.4496, y: 70.9257}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &638659311141870266
@@ -349,6 +349,7 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 256
   king: {fileID: 2226065115610908641, guid: b26c76db4b83141478fc5f555a48b7c7, type: 3}
+  done2: 0
   timer: 3
   hammerCollider2D: {fileID: 4308809665247005557}
   swordCollider2D: {fileID: 4308809664649213265}

@@ -8,10 +8,10 @@ public class goNextText : MonoBehaviour
 {
     
     string[] sentences = {"Non molto tempo fa, in una città provinciale, viveva il giovane Alexander.",
-        "Nel suo gruppo di amici è sempre stato conosciuto per adorare il cibo contenente lattosio."+"\n"+"Ne ha sempre mangiato in grande quantità.",
+        "Nel suo gruppo di amici è sempre stato conosciuto per adorare il cibo contenente lattosio."+"\n"+"Ne ha sempre mangiato in grande quantita'.",
         "Un giorno tuttavia, di ritorno da una festa, si sentì improvvisamente male."+"\n"+"Una fitta lancinante allo stomaco cominciò a tormentarlo, tanto che nessuna medicina gli fece effetto."+"\n"+"La madre, molto preoccupata, lo portò dal medico di famiglia, il dottor Antoine.", 
-        "Fu con somma tristezza che ricevette un tragico referto medico: col tempo il suo organismo era diventato intollerante al lattosio!"+"\n"+"Tornando a casa, cominciò a pensare a tutti i cibi che non avrebbe più potuto mangiare e varcata la porta d'ingresso si gettò sul divano."+"\n"+"L'unica cosa che riuscì a non fargli pensare all'accaduto fu l'annuncio di un nuovo videogioco in cui si deve salvare un regno in pericolo: The King's Nightmare.",
-        "Pensando alle avventure che avrebbe vissuto nel nuovo videogame riuscì ad addormentarsi, tuttavia il sonno non fu piacevole..."
+        "Fu con somma tristezza che ricevette un tragico referto medico: col tempo il suo organismo era diventato intollerante al lattosio!"+"\n"+"\n"+"Tornando a casa, comincio' a pensare a tutti i cibi che non avrebbe più potuto mangiare e varcata la porta d'ingresso si gettò sul divano."+"\n"+"\n"+"L'unica cosa che riuscì a non fargli pensare all'accaduto fu l'annuncio di un nuovo videogioco in cui si deve salvare un regno in pericolo: The King's Nightmare.",
+        "Pensando alle avventure che avrebbe vissuto nel nuovo videogame riuscì ad addormentarsi, tuttavia il sonno non fu piacevole....."
     };
 
     [SerializeField] public Text sentenceShow;

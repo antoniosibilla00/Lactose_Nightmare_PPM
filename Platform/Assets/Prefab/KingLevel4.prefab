@@ -20,7 +20,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &2226065115610908642
 Transform:
   m_ObjectHideFlags: 0
@@ -29,7 +29,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2226065115610908641}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 180.77, y: -2.48, z: 0}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -144,9 +144,9 @@ MonoBehaviour:
     name: Re.
     sentences:
     - Alexander!
-    - "Ci\xF2 che hai compiuto ha dell'incredibile!"
-    - "Sei veramente riuscito a salvare il mio regno. Ci\xF2 deve obbligatoriamente
-      richiedere un'onorosa ricompensa..."
+    - Cio' che hai compiuto ha dell'incredibile!
+    - Sei veramente riuscito a salvare il mio regno. Cio' deve obbligatoriamente
+      richiedere un'onorosa ricompensa...
     - "Al nostro ultimo incontro ti ho chiamato \"Sir\", ma in realt\xE0 non lo sei
       mai stato ahah...\r\n"
     - In ginocchio Alexander!
@@ -154,7 +154,7 @@ MonoBehaviour:
       su entrambe le spalle*'
     - "Da oggi in poi tutti gli abitanti del mio regno, dal volgo alla nobilt\xE0,
       ti conosceranno come Sir Alexander, il Flagello del Lattosio!"
-    - "Alzati e ricorda: tu hai compiuto ci\xF2 che per molti \xE8 stato impossibile!"
+    - "Alzati e ricorda: tu hai compiuto ci\xF2 che per molti e' stato impossibile!"
     - "Qualsiasi avversit\xE0 tu affronterai in futuro non scordarti mai di ci\xF2
       che sei capace di fare, anche se ti sembra impossibile!"
     - "Qualsiasi avversit\xE0 tu affronterai in futuro non scordarti mai di ci\xF2

@@ -59,6 +59,7 @@ public class BossScript
     private float actualCooldownLeap;
     private float positionUpdate;
     public GameObject king;
+    public bool done2;
     
     
     [SerializeField]private float timer;
@@ -171,7 +172,11 @@ public class BossScript
 
                 this.GetComponentInChildren<CapsuleCollider2D>().enabled= false;
                 
-                GameObject.Instantiate(king, new Vector3(180.77f, -2.48f, 0f),king.transform.rotation);
+                if(!done2){
+                    GameObject.Instantiate(king, new Vector3(180.77f, -2.48f, 0f),king.transform.rotation);
+                    done2 = true;
+                }
+                
                 
                 //king.SetActive(true);
                
