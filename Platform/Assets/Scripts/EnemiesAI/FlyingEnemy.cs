@@ -86,6 +86,7 @@ public class FlyingEnemy : MonoBehaviour
                 
                 pathFinding();
                 Flip();
+                
               
                 break;
             case State.death :

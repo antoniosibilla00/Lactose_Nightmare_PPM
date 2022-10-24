@@ -23,6 +23,8 @@ public class InteractableHouse : MonoBehaviour,Interactable
 
     public string interactionPrompt => _interactionPrompt;
     public Dialogue dialogue => _dialogue;
+    public Vector3 position => GetComponent<Transform>().position;
+
     public void Interact(Interactor interactor)
     {
         FindObjectOfType<DialogueManager>().StartDialogue(dialogue);

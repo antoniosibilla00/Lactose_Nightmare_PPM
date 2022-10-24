@@ -124,6 +124,7 @@ public class ChocolateWitchAI : MonoBehaviour
         
         if (shoot && !GameObject.FindGameObjectWithTag("Bullet"))
         {
+            bullet.gameObject.GetComponent<bulletScript>().witchTransform = gameObject.transform;
             Instantiate(bullet, bulletParent.transform.position, Quaternion.identity);
         }
         
@@ -285,7 +286,7 @@ public class ChocolateWitchAI : MonoBehaviour
         
 
         // Movement
-        rb.AddForce(Vector2.right * direction, ForceMode2D.Impulse);
+        rb.AddForce(force, ForceMode2D.Impulse);
 
         if (rb.velocity.x> speed)
         {
@@ -303,18 +304,21 @@ public class ChocolateWitchAI : MonoBehaviour
            
             currentWaypoint++;
         }
-        
 
+        Debug.Log("witch.velocity"+rb.velocity.x);
         // Direction Graphics Handling
         if (directionLookEnabled)
         {
             if (rb.velocity.x > 0.05f && facingRight)
             {
                 transform.localScale = new Vector3(-1f * Mathf.Abs(transform.localScale.x), transform.localScale.y, transform.localScale.z);
+                facingRight = false;
+               
             }
             else if (rb.velocity.x < -0.05f && !facingRight)
             {
                 transform.localScale = new Vector3(Mathf.Abs(transform.localScale.x), transform.localScale.y, transform.localScale.z);
+                facingRight = true;
             }
         }
     }

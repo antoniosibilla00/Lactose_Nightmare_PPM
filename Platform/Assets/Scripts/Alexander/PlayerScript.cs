@@ -14,7 +14,7 @@ public class PlayerScript : MonoBehaviour
     //layer contenente tutti gli oggetti che rappresentano il ground
     [SerializeField] private LayerMask groundLayer;
 
-    [SerializeField] private GameObject dialoguePanel;
+   
 
 
 
@@ -28,7 +28,7 @@ public class PlayerScript : MonoBehaviour
     private bool facingRight = true;
 
     //gestisce le  animazioni
-    public Animator anim;
+    private Animator anim;
 
     //gestisce gli input provenienti dall'asse x
     private float xInput;
@@ -103,11 +103,11 @@ public class PlayerScript : MonoBehaviour
         {
             case "Level2":
                 level=2;
-                break;
+                break; 
             case "SampleScene":
                 level = 1;
                 break;
-            case "Level3":
+            case "Castle":
                 level = 3;
                 break;
         }
@@ -124,7 +124,20 @@ public class PlayerScript : MonoBehaviour
 
     private void Start()
     {
-        gm = GameObject.FindGameObjectWithTag("GM").GetComponent<GameMaster>();
+        try
+        {
+            gm = GameObject.FindGameObjectWithTag("GM").GetComponent<GameMaster>();
+
+            if (gm!=null)
+            {
+                throw new NullReferenceException();
+            }
+        }
+        catch (NullReferenceException e)
+        {
+            Console.WriteLine(e);
+        }
+       
         dead = false;
         fall = false;
       
@@ -151,10 +164,9 @@ public class PlayerScript : MonoBehaviour
     private void Update()
     {   Debug.Log("player.attack"+attack);
         Debug.Log("player.move"+move);
-        Debug.Log("player.caduta: " + body.velocity.y);
         Debug.Log("player.state"+state);
         Debug.Log("player.combo"+combo);
-        if (isTalking() && state != State.talking)
+        if (!isNotTalking() && state != State.talking)
         {
             state =  State.talking;
         }
@@ -196,7 +208,7 @@ public class PlayerScript : MonoBehaviour
             case  State.talking:
                 fall = false ;
                 run = false;
-                if (!dialoguePanel.activeSelf)
+                if (isNotTalking())
                 {
                     state = State.normal;
                 }
@@ -520,9 +532,9 @@ public class PlayerScript : MonoBehaviour
 
 
 
-   bool isTalking()
+   bool isNotTalking()
    {
-       return (dialoguePanel.activeSelf);
+       return (FindObjectOfType < DialogueManager>()==null);
    }
 
    public void Debuff()

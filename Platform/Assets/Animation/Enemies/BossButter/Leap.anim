@@ -10900,7 +10900,7 @@ AnimationClip:
     floatParameter: 0
     intParameter: 0
     messageOptions: 0
-  - time: 2.5
+  - time: 1.9
     functionName: finishAnim
     data: 
     objectReferenceParameter: {fileID: 0}

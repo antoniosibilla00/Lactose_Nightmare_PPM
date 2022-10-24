@@ -17,27 +17,23 @@ public class MeleeEnemyAI
 {
     [Header("Pathfinding")]
     private Transform target;
-    public float activateDistance = 50f;
     public float pathUpdateSeconds = 0.5f;
 
     [Header("Physics")]
-    public float speed = 200f;
+    public float speed ;
     public float nextWaypointDistance = 3f;
-    public float jumpNodeHeightRequirement = 0.8f;
-    public float jumpModifier = 0.3f;
-    public float jumpCheckOffset = 0.1f;
-
+    
     [Header("Custom Behavior")]
     public bool followEnabled = true;
-    public bool jumpEnabled = true;
     public bool directionLookEnabled = true;
+    public bool canwalk = true;
 
     private Path path;
     private int currentWaypoint;
 
     #region AI variables
     private GameObject Alexander;
-    [SerializeField]private float followDistance;
+    [SerializeField]private float activateDistance;
     RaycastHit2D isGrounded;
     Seeker seeker;
     Rigidbody2D rb;
@@ -59,7 +55,7 @@ public class MeleeEnemyAI
     private bool dead;
     private bool walk;
     bool facingRight;
-    private Vector2 force;
+    [SerializeField]public Vector2 force;
     private bool cooldown;
     private float actualTimer;
     private bool isNotPlaying;
@@ -110,7 +106,7 @@ public class MeleeEnemyAI
         Physics2D.IgnoreCollision(playerCapsuleCollider2D,meleeEnemyCollider);
         healthSystem = GetComponentInChildren<EnemiesHealthSystem>();
         attack = false;
-  
+
         InvokeRepeating("UpdatePath", 0f, pathUpdateSeconds);
     }
 
@@ -125,12 +121,17 @@ public class MeleeEnemyAI
         
         anim.SetBool("Cooldown",cooldown);
         anim.SetBool("attack",attack);
-        anim.SetBool("Walk",walk);
+        if (canwalk)
+        {
+            anim.SetBool("Walk",walk);
+        }
+      
      
         isNotPlaying = anim.GetCurrentAnimatorStateInfo(0).IsName("dead") == false;
         
         if (healthSystem.GetCurrentHealth() <= 0 &&!dead && isNotPlaying)
         {
+            
             anim.SetTrigger("dead");
             this.GetComponentInChildren<CapsuleCollider2D>().enabled= false;
             if (!AudioSource.isPlaying)
@@ -172,6 +173,8 @@ public class MeleeEnemyAI
 
     private void FixedUpdate()
     {
+        
+     
        
         #region Manage Enemy states (Physics)
         
@@ -255,7 +258,8 @@ public class MeleeEnemyAI
     {
         if (!attack)
         {
-            if (followEnabled && TargetInDistance() && seeker.IsDone())
+
+            if (followEnabled && TargetInDistance()&& seeker.IsDone())
             {
             
                 seeker.StartPath(rb.position, target.position, OnPathComplete);
@@ -277,27 +281,15 @@ public class MeleeEnemyAI
            
             return;
         }
-
-        // See if colliding with anything
-        Vector3 startOffset = transform.position - new Vector3(0f, GetComponentInChildren<BoxCollider2D>().bounds.extents.y + jumpCheckOffset);
-        isGrounded = Physics2D.Raycast(startOffset, -Vector3.up, 0.05f);
+        
         
         // Direction Calculation
         Vector2 direction = ((Vector2)path.vectorPath[currentWaypoint] - rb.position).normalized; 
         force = direction * speed * Time.deltaTime;
-
-        // Jump
-        if (jumpEnabled && isGrounded)
-        {
-            if (direction.y > jumpNodeHeightRequirement)
-            {
-                rb.AddForce(Vector2.up * speed * jumpModifier);
-            }
-        }
         
-
         // Movement
-        rb.AddForce(Vector2.right * direction, ForceMode2D.Impulse);
+      
+            rb.AddForce(force, ForceMode2D.Impulse);
 
         if (rb.velocity.x> speed)
         {
@@ -312,7 +304,6 @@ public class MeleeEnemyAI
         float distance = Vector2.Distance(rb.position, path.vectorPath[currentWaypoint]);
         if (distance < nextWaypointDistance)
         {
-           
             currentWaypoint++;
         }
         
@@ -324,6 +315,7 @@ public class MeleeEnemyAI
             {
                 transform.localScale = new Vector3(-1f * Mathf.Abs(transform.localScale.x), transform.localScale.y, transform.localScale.z);
                 facingRight = false;
+               
             }
             else if (rb.velocity.x < -0.05f && !facingRight)
             {
@@ -340,7 +332,7 @@ public class MeleeEnemyAI
     
     private bool BecameInactive()
     {
-        return Vector2.Distance(transform.position, target.transform.position) > followDistance;
+        return Vector2.Distance(transform.position, target.transform.position) > activateDistance;
     }
     
 

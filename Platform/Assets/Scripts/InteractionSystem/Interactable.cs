@@ -15,6 +15,11 @@ public interface Interactable
     {
         get;
     }
+    
+    public Vector3 position 
+    {
+        get;
+    }
 
     public void Interact(Interactor interactor);
     

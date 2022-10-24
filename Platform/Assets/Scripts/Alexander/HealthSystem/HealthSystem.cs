@@ -59,7 +59,7 @@ public class HealthSystem : MonoBehaviour
         
         Debug.Log("currentHealth = " + currentHealth);
         Debug.Log(" health = "+ maxHealth);
-        if (flasks <3 && currentHealth<100)
+        if (flasks <3 && currentHealth<100 && currentHealth>0)
         {
             if (Input.GetKeyDown(KeyCode.Q))
             {

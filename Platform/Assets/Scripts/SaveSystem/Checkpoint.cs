@@ -21,6 +21,7 @@ public class Checkpoint : MonoBehaviour,Interactable
 
     public string interactionPrompt => _prompt;
     public Dialogue dialogue => _dialogue;
+    public Vector3 position => GetComponent<Transform>().position;
 
     public void Interact(Interactor interactor)
     {

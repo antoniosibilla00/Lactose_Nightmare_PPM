@@ -5,53 +5,66 @@ using Cinemachine;
 using JetBrains.Annotations;
 using UnityEngine;
 using UnityEngine.Tilemaps;
+using UnityEngine.UI;
 
-public class ArenaManagement : MonoBehaviour
+public abstract class ArenaManagement : MonoBehaviour
 {
     private bool triggered;
 
     private int round;
     public AudioClip roundSound;
     public AudioClip victorySound;
-    private AudioSource AudioSource;
-
-    public GameObject chocolateWitch;
-    public GameObject SalamiDog;
-    public GameObject Enemy1Pos;
-    public GameObject Enemy2Pos;
+    protected AudioSource AudioSource;
+    public GameObject alexanderUI;
+    public GameObject Enemy1Prefab;
+    public GameObject arenaUi;
+    public GameObject Enemy2Prefab;
+    protected GameObject Enemy1Pos;
+    protected GameObject Enemy2Pos;
     public Tilemap tilemap;
-
+    protected Text[] temp; 
+    public static int enemiesCounter;
+    protected GameObject myNewGameObject;
+    protected GameObject myNewGameObject2;
     private bool done;
     //private const String CHOCOLATE_WITCH = "ChocolateWitch";
     //private const String SALAMI_DOG ="SalamiDogGO" ;
     // Start is called before the first frame update
     void Start()
     {
+
         round = 0;
         done = false;
         AudioSource = GetComponent<AudioSource>();
+        Enemy1Pos = gameObject.transform.GetChild(0).gameObject;
+        Enemy2Pos = gameObject.transform.GetChild(1).gameObject;
     }
 
     // Update is called once per frame
     void Update()
     {
+        Debug.Log("arenaManagement.enemiesCounter "+enemiesCounter);
         if (triggered)
         {
            
-     
+            
             if (round == 0 && !done)
             { 
                 done = true;
-                SpawnEnemies();
+                SpawnEnemies(round);
                 MusicManager.istance.PlayArenaOst();
             }
             
             else if (round <5)
             {
+                if (!temp[1].text.Equals("Nemici rimasti: " + enemiesCounter))
+                {
+                    temp[1].text = ("Nemici rimasti: " + enemiesCounter);
+                }
                 if (AreKilled())
                 {
                     round++;
-                    SpawnEnemies();
+                    SpawnEnemies(round);
                     
                 }
             }
@@ -61,7 +74,8 @@ public class ArenaManagement : MonoBehaviour
                 AudioSource.Play();
                 MusicManager.istance.PlayMainOst();
                 
-                DeleteStone();
+                DeleteElements();
+                Destroy(arenaUi.gameObject);
                 Destroy(this.gameObject);
             }
             
@@ -71,88 +85,53 @@ public class ArenaManagement : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D col)
     {
+
         if (col.CompareTag("Player"))
         {
+        
+            if (triggered != true)
+            {
+                arenaUi= Instantiate(arenaUi, new Vector3(1101,938,0), arenaUi.transform.rotation);
+                arenaUi.transform.parent = alexanderUI.transform; 
+                temp = arenaUi.GetComponentsInChildren<Text>();
+                
+            }
             triggered = true;
+          
         }
+      
     }
 
 
-    private void SpawnEnemies()
-    {
-        GameObject myNewGameObject;
-        GameObject myNewGameObject2;
-        
-        switch (round)
-        {
-            case 0:
-                PlayRoundSound();
-                myNewGameObject= Instantiate(chocolateWitch, Enemy1Pos.transform.position, chocolateWitch.transform.rotation);
-                myNewGameObject.transform.parent = Enemy1Pos.transform;
-                
-                
-                break;
-            case 1:
-                PlayRoundSound();
-                myNewGameObject= Instantiate(chocolateWitch, Enemy1Pos.transform.position, chocolateWitch.transform.rotation);
-                myNewGameObject.transform.parent = Enemy1Pos.transform;
-                
-                myNewGameObject2 = Instantiate(SalamiDog, Enemy2Pos.transform.position, SalamiDog.transform.rotation);
-                myNewGameObject2.transform.parent = Enemy2Pos.transform;
-                
-                
-                break;
-            case 2 :
-                PlayRoundSound();
-                myNewGameObject= Instantiate(chocolateWitch, Enemy1Pos.transform.position, chocolateWitch.transform.rotation);
-                myNewGameObject.transform.parent = Enemy1Pos.transform;
-
-                myNewGameObject.GetComponentInChildren<ChocolateWitchAI>().SetCooldown( myNewGameObject.GetComponentInChildren<ChocolateWitchAI>().GetCooldown()-0.5f);
-                
-                myNewGameObject2= Instantiate(chocolateWitch, Enemy2Pos.transform.position, chocolateWitch.transform.rotation);
-                myNewGameObject2.transform.parent = Enemy2Pos.transform;
-                
-                myNewGameObject2.GetComponentInChildren<ChocolateWitchAI>().SetCooldown( myNewGameObject.GetComponentInChildren<ChocolateWitchAI>().GetCooldown()-0.5f);
-                break;
-            case 3 :
-                PlayRoundSound();
-                myNewGameObject= Instantiate(SalamiDog, Enemy1Pos.transform.position, SalamiDog.transform.rotation);
-                myNewGameObject.transform.parent = Enemy1Pos.transform;
-                myNewGameObject.GetComponentInChildren<MeleeEnemyAI>().SetSpeed( myNewGameObject.GetComponentInChildren<MeleeEnemyAI>().GetSpeed()+0.25f);
-                
-                myNewGameObject2= Instantiate(SalamiDog, Enemy2Pos.transform.position, SalamiDog.transform.rotation);
-                myNewGameObject2.transform.parent = Enemy2Pos.transform;
-                myNewGameObject.GetComponentInChildren<MeleeEnemyAI>().SetSpeed( myNewGameObject.GetComponentInChildren<MeleeEnemyAI>().GetSpeed()+0.25f);
-                break;
-            case 4 :
-                PlayRoundSound();
-                myNewGameObject= Instantiate(chocolateWitch, Enemy1Pos.transform.position, chocolateWitch.transform.rotation);
-                myNewGameObject.transform.parent = Enemy1Pos.transform;
-                myNewGameObject.GetComponentInChildren<ChocolateWitchAI>().SetCooldown( myNewGameObject.GetComponentInChildren<ChocolateWitchAI>().GetCooldown()-0.5f);
-                myNewGameObject.GetComponentInChildren<ChocolateWitchAI>().SetSpeed( myNewGameObject.GetComponentInChildren<ChocolateWitchAI>().GetSpeed()+0.25f);
-                break;
-        }
-        
-    }
-
+    public abstract void SpawnEnemies(int round);
+    
     private bool AreKilled()
     {
    
-       return (Enemy1Pos.GetComponentInChildren<Transform>().childCount <= 0 && Enemy2Pos.GetComponentInChildren<Transform>().childCount <= 0);
+       return myNewGameObject==null && myNewGameObject2==null; /*(Enemy1Pos.GetComponentInChildren<Transform>().childCount <= 0 && Enemy2Pos.GetComponentInChildren<Transform>().childCount <= 0)*/
 
     }
+
+
     
-    void DeleteStone()
+    
+    
+    
+    /*
+    private bool EnemiesUpdater()
     {
-      
-        tilemap.SetTile(new Vector3Int(532,16,0), null);
-        tilemap.SetTile(new Vector3Int(533,16,0), null);
-        tilemap.SetTile(new Vector3Int(532,17,0), null);
-    }
+   
+        return (Enemy1Pos.GetComponentInChildren<Transform>().childCount <= 0 && Enemy2Pos.GetComponentInChildren<Transform>().childCount <= 0);
 
-    void PlayRoundSound()
+    }
+    */
+    protected abstract void DeleteElements();
+    
+
+     protected void PlayRoundSound()
     {
         AudioSource.clip = roundSound;
         AudioSource.Play();
     }
+    
 }

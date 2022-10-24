@@ -5,9 +5,8 @@ using UnityEngine.UI;
 
 public class Outro : MonoBehaviour
 {
-    string[] sentences = {"Al risveglio Alexander si sentì più forte e capace.",
-        "Comprese che il lattosio per lui ha sempre rappresentato un pericolo e che la vita senza i prodotti che lo contengono non sara' poi un grosso problema...",
-        "Dopotutto lui in cuor suo e' Sir Alexander, il Flagello del Lattosio!", 
+    string[] sentences = {"Al risveglio Alexander si sentì più forte e capace di affrontare una vita priva di prodotti che contengono lattosio.",
+        "Dopotutto lui in cuor suo è Sir Alexander, L'eroe di Lactoseville !...",
         "Forte di questa consapevolezza visse felice e contento.",
         "FINE"
     };

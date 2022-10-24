@@ -16,21 +16,12 @@ public class LoadBossArena : MonoBehaviour,Interactable
     private string _interactionPrompt;
 
     // Start is called before the first frame update
-    void Start()
-    {
-
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-
-    }
 
     public string interactionPrompt =>_prompt;
 
 
     public Dialogue dialogue => null;
+    public Vector3 position => GetComponent<Transform>().position;
 
     public void Interact(Interactor interactor)
     {

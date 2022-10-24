@@ -24,6 +24,7 @@ public class Door : MonoBehaviour,Interactable
     
 
     public Dialogue dialogue => null;
+    public Vector3 position => GetComponent<Transform>().position;
 
     public void Interact(Interactor interactor)
     {
