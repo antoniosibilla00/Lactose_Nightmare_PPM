@@ -33,7 +33,7 @@ public class DialogueManager : MonoBehaviour
 
     #region QuestionManagement
     
-    private int questionPosition;
+    private const int  QuestionPosition=1;
     [SerializeField] private GameObject foodChose1;
     [SerializeField] private GameObject foodChose2;
     private GameObject tmpFoodChose1;
@@ -76,12 +76,6 @@ public class DialogueManager : MonoBehaviour
         
         speaker = nameText.text;
         
-        if (speaker.Equals("Tentatore"))
-        {
-           
-            questionPosition = dialogue.questionPosition; 
-        }
-
         for (int i = 1; i < dialogue.sentences.Length; i++)
         {
             sentences.Enqueue(dialogue.sentences[i]);
@@ -120,7 +114,7 @@ public class DialogueManager : MonoBehaviour
             
         }
         
-        if (questionPosition == sentences.Count && speaker.Equals("Tentatore"))
+        if (QuestionPosition == sentences.Count && speaker.Equals("Tentatore"))
         {
             
             Tempter.instance.Anim.SetBool("openFood",true);
@@ -216,7 +210,7 @@ public class DialogueManager : MonoBehaviour
     {
         Vector3 temp;
 
-        int randomNum = Random.Range(0, 1);
+        float randomNum = Random.Range(0f, 1f);
         
         Debug.Log("randomNum: "+randomNum);
 

@@ -14,11 +14,7 @@ public class Arena2 : ArenaManagement
     private bool done;
 
     private bool musicPlayed;
-    //private const String CHOCOLATE_WITCH = "ChocolateWitch";
-    //private const String SALAMI_DOG ="SalamiDogGO" ;
-    // Start is called before the first frame update
-
-
+    
     public override void SpawnEnemies(int round)
     {
         switch (round)
@@ -100,7 +96,7 @@ public class Arena2 : ArenaManagement
                 myNewGameObject.transform.parent = Enemy1Pos.transform;
                 
                 myNewGameObject.transform.GetChild(0).GetComponentInChildren<TriggerDamage>().SetDamage(20);
-                myNewGameObject.GetComponentInChildren<FlyingEnemy>().SetSpeed( myNewGameObject.GetComponentInChildren<FlyingEnemy>().GetSpeed()+0.25f);
+                myNewGameObject.GetComponentInChildren<MeleeEnemyAI>().SetSpeed( myNewGameObject.GetComponentInChildren<MeleeEnemyAI>().GetSpeed()+0.25f);
                 myNewGameObject.AddComponent<OnEnemyKill>();
                 break;
         }
