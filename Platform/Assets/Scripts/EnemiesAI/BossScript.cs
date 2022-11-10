@@ -175,6 +175,7 @@ public class BossScript
                 if(!done2){
                     GameObject.Instantiate(king, new Vector3(180.77f, -2.48f, 0f),king.transform.rotation);
                     done2 = true;
+                    King.LastOne = true;
                 }
                 
                 

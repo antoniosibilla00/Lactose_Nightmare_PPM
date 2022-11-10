@@ -78,7 +78,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Boss Butter
+  m_Text: Siero Boss
 --- !u!1 &4308809664420192620
 GameObject:
   m_ObjectHideFlags: 0
@@ -140,7 +140,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   healthBar: {fileID: 4308809665054819496}
-  maxHealth: 300
+  maxHealth: 100
 --- !u!1 &4308809664460010627
 GameObject:
   m_ObjectHideFlags: 0
@@ -329,8 +329,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   activateDistance: 5
   pathUpdateSeconds: 0.5
-  speed: 3
-  nextWaypointDistance: 3
+  speed: 2.5
+  nextWaypointDistance: 0.5
   jumpNodeHeightRequirement: 0.8
   jumpModifier: 0.3
   jumpCheckOffset: 0.1
@@ -348,9 +348,9 @@ MonoBehaviour:
   ground:
     serializedVersion: 2
     m_Bits: 256
-  king: {fileID: 2226065115610908641, guid: b26c76db4b83141478fc5f555a48b7c7, type: 3}
+  king: {fileID: 2226065115610908641, guid: 2bb14460a02905c41b1b44d17b246fbe, type: 3}
   done2: 0
-  timer: 3
+  timer: 4.5
   hammerCollider2D: {fileID: 4308809665247005557}
   swordCollider2D: {fileID: 4308809664649213265}
   state: 0

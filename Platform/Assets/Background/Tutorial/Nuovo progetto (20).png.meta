@@ -100,9 +100,9 @@ TextureImporter:
       name: Nuovo progetto (20)_0
       rect:
         serializedVersion: 2
-        x: 176
+        x: 185
         y: 613
-        width: 384
+        width: 375
         height: 62
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
@@ -121,9 +121,9 @@ TextureImporter:
       name: Nuovo progetto (20)_1
       rect:
         serializedVersion: 2
-        x: 158
+        x: 172
         y: 455
-        width: 541
+        width: 540
         height: 57
       alignment: 0
       pivot: {x: 0.5, y: 0.5}

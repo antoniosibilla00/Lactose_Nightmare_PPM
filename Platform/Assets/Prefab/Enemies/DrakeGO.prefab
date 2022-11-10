@@ -168,7 +168,7 @@ MonoBehaviour:
   enemiesLayer:
     serializedVersion: 2
     m_Bits: 0
-  timer: 2
+  timer: 2.3
   force: {x: 0, y: 0}
   AudioSource: {fileID: 0}
   enemyDies: {fileID: 8300000, guid: ac5ec2120ebad534a9c568f29c52bbab, type: 3}
@@ -648,7 +648,7 @@ SpriteRenderer:
   m_SortingLayerID: -676694905
   m_SortingLayer: 7
   m_SortingOrder: 0
-  m_Sprite: {fileID: 186914786693987578, guid: 209a35701041c494d992112e500b5bf8, type: 3}
+  m_Sprite: {fileID: 2553175798230950512, guid: d186061408625984cac4c863eb870538, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0

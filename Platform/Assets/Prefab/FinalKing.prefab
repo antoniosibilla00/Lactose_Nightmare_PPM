@@ -12,10 +12,10 @@ GameObject:
   - component: {fileID: 2226065115610908671}
   - component: {fileID: 2226065115610908670}
   - component: {fileID: 2226065115610908669}
-  - component: {fileID: 2226065115610908668}
   - component: {fileID: 2226065115610908643}
+  - component: {fileID: 5794498272838830836}
   m_Layer: 7
-  m_Name: KingLevel4
+  m_Name: FinalKing
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -126,48 +126,6 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
---- !u!114 &2226065115610908668
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2226065115610908641}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 547d7941d5fd0124885e631b776b493f, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  Question: 5
-  _prompt: '[E] per interagire'
-  _dialogue:
-    name: Re.
-    sentences:
-    - Alexander!
-    - Cio' che hai compiuto ha dell'incredibile!
-    - Sei veramente riuscito a salvare il mio regno. Cio' deve obbligatoriamente
-      richiedere un'onorosa ricompensa...
-    - "Al nostro ultimo incontro ti ho chiamato \"Sir\", ma in realt\xE0 non lo sei
-      mai stato ahah...\r\n"
-    - In ginocchio Alexander!
-    - '*Il Re impugna con sicurezza una spada che in seguito ti appoggia lentamente
-      su entrambe le spalle*'
-    - "Da oggi in poi tutti gli abitanti del mio regno, dal volgo alla nobilt\xE0,
-      ti conosceranno come Sir Alexander, il Flagello del Lattosio!"
-    - "Alzati e ricorda: tu hai compiuto ci\xF2 che per molti e' stato impossibile!"
-    - "Qualsiasi avversit\xE0 tu affronterai in futuro non scordarti mai di ci\xF2
-      che sei capace di fare, anche se ti sembra impossibile!"
-    - "Qualsiasi avversit\xE0 tu affronterai in futuro non scordarti mai di ci\xF2
-      che sei capace di fare, anche se ti sembra impossibile!"
-    - Sei libero di andare Sir Alexander, addio!
-    questionPosition: 0
-  food1: 
-  food2: 
-  destination: {fileID: 0}
-  player: {fileID: 0}
-  food: {fileID: 0}
-  teleport: 0
-  anim: {fileID: 0}
 --- !u!61 &2226065115610908643
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -194,3 +152,41 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 0.25, y: 0.625}
   m_EdgeRadius: 0
+--- !u!114 &5794498272838830836
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2226065115610908641}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 96a91614b93b51d4c882289a9a0f8e83, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _prompt: '[E] Per interagire'
+  _dialogue:
+    name: Re
+    sentences:
+    - ' Alexander!'
+    - "Ci\xF2 che hai compiuto ha dell'incredibile!"
+    - "Credo di aver sbagliato a prendere quella decisione in maniera cos\xEC drastica,
+      avrei potuto anche solamente limitarne il consumo e aiutare chi era intollerante
+      ma..."
+    - Grazie per aver salvato il mio regno, ora avrai la tua ricompensa
+    - "Al nostro ultimo incontro ti ho chiamato \"Sir\", ma in realt\xE0 non lo sei
+      ancora..."
+    - Dal momento che sei stato l'unico in grado di fronteggiare l'armata del SIERO
+      BOSS direi che ti sei guadagnato l'onore di diventare Cavaliere del Regno di
+      LACTOSEVILLE..
+    - In ginocchio Alexander!
+    - '*Il Re impugna con sicurezza una spada che in seguito appoggia lentamente
+      su entrambe le spalle*'
+    - "Da oggi in poi tutti gli abitanti del mio regno, dal volgo alla nobilt\xE0,
+      ti conosceranno come Sir Alexander, il Liberatore del LACTOSEVILLE!"
+    - "Alzati e ricorda: tu hai compiuto ci\xF2 che per molti \xE8 stato impossibile! "
+    - "Qualsiasi avversit\xE0 tu affronterai in futuro non dimenticarti mai di ci\xF2
+      di cui sei capace!"
+    - Sei libero di andare Sir Alexander, addio!
+    questionPosition: 0
+  anim: {fileID: 0}
