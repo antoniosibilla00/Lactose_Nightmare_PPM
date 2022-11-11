@@ -91,8 +91,8 @@ public abstract class ArenaManagement : MonoBehaviour
         
             if (triggered != true)
             {
-                arenaUi= Instantiate(arenaUi, new Vector3(1101,938,0), arenaUi.transform.rotation);
-                arenaUi.transform.parent = alexanderUI.transform; 
+                arenaUi= Instantiate(arenaUi, new Vector3(-601f,-123f,0), arenaUi.transform.rotation);
+                arenaUi.transform.SetParent(alexanderUI.transform , false); 
                 temp = arenaUi.GetComponentsInChildren<Text>();
                 
             }

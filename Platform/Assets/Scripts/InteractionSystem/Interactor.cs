@@ -63,9 +63,11 @@ public class Interactor : MonoBehaviour
                 if (interactable.dialogue!= null && !spawnedDialogue)
                 {
                     spawnedDialogue = true;
-                    tmpDialoguePanel = Instantiate(dialoguePanel,new Vector3(959,96.83691f,0),dialoguePanel.transform.rotation) ;
-                    tmpDialoguePanel.transform.SetParent( AlexanderUi.transform);
-                   
+                    tmpDialoguePanel = Instantiate(dialoguePanel,new Vector3(959,96.83691f,0),dialoguePanel.transform.rotation);
+                    tmpDialoguePanel.transform.SetParent( AlexanderUi.transform , false);
+                    
+                    
+
                 }
                 
                 

@@ -54,6 +54,7 @@ public class DialogueManager : MonoBehaviour
         canSkip = true;
         _audioSource = GetComponent<AudioSource>();
         
+        
     }
 
     private void Update()
@@ -120,8 +121,8 @@ public class DialogueManager : MonoBehaviour
             Tempter.instance.Anim.SetBool("openFood",true);
             canSkip = false;
             
-            var pos1 = new Vector3(1374.74f, 70.87698f, 0);
-            var pos2 = new Vector3(580.3571f, 70.87698f, 0);
+            var pos1 = new Vector3(158f, 43f, 0);
+            var pos2 = new Vector3(1250f, 43f, 0);
             
              tmpFoodChose1 = Instantiate(foodChose1, pos1, Quaternion.identity);
              tmpFoodChose2 = Instantiate(foodChose2,pos2, Quaternion.identity);
@@ -135,8 +136,8 @@ public class DialogueManager : MonoBehaviour
              
              var foodPos = gameObject.transform.GetChild(0).transform;
              
-             tmpFoodChose1.transform.SetParent(foodPos);
-             tmpFoodChose2.transform.SetParent(foodPos);
+             tmpFoodChose1.transform.SetParent(foodPos, false);
+             tmpFoodChose2.transform.SetParent(foodPos, false);
              
              Continue.gameObject.SetActive(false);
              Tempter.instance.done = true;
