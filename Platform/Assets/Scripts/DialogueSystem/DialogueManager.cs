@@ -172,10 +172,10 @@ public class DialogueManager : MonoBehaviour
        
         
         
-        const string sentence = "Per questa volta l'hai scampata, la mia sete non è stata sfamata ma non son un bugiardo," +
+        const string affermativeSentence = "Per questa volta l'hai scampata, la mia sete non è stata sfamata ma non son un bugiardo," +
                                 "\n" + " tieni questo buf ma spero che alla prossima mangerai del lardo";
         
-        dialogueText.text=sentence;
+        dialogueText.text=affermativeSentence;
         
         canSkip = true;
         PlayerScript.instance.Buff();
@@ -183,7 +183,7 @@ public class DialogueManager : MonoBehaviour
         Destroy(tmpFoodChose2);
         
         Continue.gameObject.SetActive(true);
-        dialogueText.text = sentence;
+        dialogueText.text = affermativeSentence;
 
     }
 
@@ -193,7 +193,7 @@ public class DialogueManager : MonoBehaviour
         _audioSource.Play();
         canSkip = true;
 
-        const string sentence = "La tua anima si avvicina, sento la sua rinascita vicina" + "2n" +
+        const string negativeSentence = "La tua anima si avvicina, sento la sua rinascita vicina" + "\n" +
                                 "ti sembrerò un po lesto , tieni questo debuff, spero ci vedremo presto";
                 
         PlayerScript.instance.Debuff();
@@ -202,7 +202,7 @@ public class DialogueManager : MonoBehaviour
         Destroy(tmpFoodChose2);
         
         Continue.gameObject.SetActive(true);
-        dialogueText.text = sentence;
+        dialogueText.text = negativeSentence;
 
 
     }
@@ -226,9 +226,6 @@ public class DialogueManager : MonoBehaviour
 
         }
         
-        
-
-
     }
         
     

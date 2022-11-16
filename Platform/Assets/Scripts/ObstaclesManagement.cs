@@ -14,7 +14,7 @@ public class ObstaclesManagement : MonoBehaviour
         {
             done = true;
             HealthSystem.Instance.isInvincible = false;
-            HealthSystem.Instance.TakeDamage(100);
+            HealthSystem.Instance.TakeDamage(1000);
         }
     }
 }

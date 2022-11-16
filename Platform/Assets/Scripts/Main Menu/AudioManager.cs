@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -23,6 +24,11 @@ void Awake(){
 
 }
 
-
-
+private void Start()
+{
+    /*
+    var audioSource = GetComponent<AudioSource>();
+    audioSource.Play();
+    */
+}
 }

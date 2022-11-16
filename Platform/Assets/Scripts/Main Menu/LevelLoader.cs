@@ -72,6 +72,27 @@ public class LevelLoader : MonoBehaviour
 
     }
     
+    public async void Loading(Vector3 newPosition)
+    {
+        target = 0;
+        progressBar.value = 0;
+
+        loaderCanvas.gameObject.SetActive(true);
+          
+        insightsText1.text =  insights[Random.Range(0, 4)];
+        do
+        {
+            await Task.Delay(2000);
+            Debug.Log("target"+target);
+            target++;
+            loaderCanvas.gameObject.SetActive(false);
+        } while (progressBar.value<progressBar.maxValue);
+     
+
+    }
+    
+    
+    
     
     public async void LoadScene(int  sceneName)
     {

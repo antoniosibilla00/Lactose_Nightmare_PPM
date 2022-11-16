@@ -34,6 +34,7 @@ public abstract class ArenaManagement : MonoBehaviour
     {
 
         round = 0;
+        triggered = false;
         done = false;
         AudioSource = GetComponent<AudioSource>();
         Enemy1Pos = gameObject.transform.GetChild(0).gameObject;
@@ -43,43 +44,49 @@ public abstract class ArenaManagement : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        Debug.Log("arenaManagement.enemiesCounter "+enemiesCounter);
+        Debug.Log("arenaManagement.enemiesCounter " + enemiesCounter);
         if (triggered)
         {
-           
-            
+            Debug.Log("arena.isTriggered"); 
+
             if (round == 0 && !done)
-            { 
+            {
                 done = true;
                 SpawnEnemies(round);
                 MusicManager.istance.PlayArenaOst();
             }
-            
-            else if (round <5)
+
+            else if (round < 5)
             {
                 if (!temp[1].text.Equals("Nemici rimasti: " + enemiesCounter))
                 {
                     temp[1].text = ("Nemici rimasti: " + enemiesCounter);
                 }
+
                 if (AreKilled())
                 {
                     round++;
                     SpawnEnemies(round);
-                    
+
                 }
             }
             else
             {
-                AudioSource.clip=victorySound;
+                AudioSource.clip = victorySound;
                 AudioSource.Play();
                 MusicManager.istance.PlayMainOst();
-                
+
                 DeleteElements();
                 Destroy(arenaUi.gameObject);
                 Destroy(this.gameObject);
             }
-            
-        }  
+
+        }
+        else
+        {
+            Debug.Log("arena.isNotTriggered");
+
+        }
     }
 
 

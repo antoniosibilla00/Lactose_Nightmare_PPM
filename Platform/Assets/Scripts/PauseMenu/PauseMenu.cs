@@ -46,7 +46,9 @@ public class PauseMenu : MonoBehaviour
     public void LoadMenu()
     {
         Time.timeScale = 1f;
-        MusicManager.istance.StopPlay();
+        
+        MusicManager.istance.PlayMenuOst();
+        
         SceneManager.LoadScene(0);
     }
 

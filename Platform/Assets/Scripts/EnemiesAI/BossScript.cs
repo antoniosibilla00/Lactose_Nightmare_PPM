@@ -184,6 +184,7 @@ public class BossScript
                 if (dead)
                 {
                     Destroy(gameObject);
+                    MusicManager.istance.PlayMainOst();
                 } 
                 break;
             case State.idle:

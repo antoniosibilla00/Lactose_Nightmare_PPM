@@ -9,7 +9,7 @@ using UnityEngine;
 using System.IO;
 using System.Runtime.Serialization.Formatters.Binary;
 using TMPro;
-
+using UnityEditor;
 using UnityEngine.UI;
 
 public class MainMenu : MonoBehaviour
@@ -244,6 +244,7 @@ public class MainMenu : MonoBehaviour
 
     public void DestroySaves()
     {
+        MusicManager.istance.PlayMainOst();
         string path = Application.persistentDataPath +"/player.fun";
         Debug.Log("ieiee"+File.Exists(path));
         if (File.Exists(path))

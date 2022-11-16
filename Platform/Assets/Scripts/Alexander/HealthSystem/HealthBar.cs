@@ -11,7 +11,7 @@ public class HealthBar : MonoBehaviour
     public RectTransform fillBar;
     private float realDimension; //Dimensione in percentuale
     
-
+    
     public void SetHealthBar(int currentHealth)
     {
         slider.value = currentHealth;

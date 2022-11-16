@@ -27,8 +27,8 @@ public class InteractableWaterwell : MonoBehaviour,Interactable
        
         gm.lastCheckPointPos = transform.position;
         
-        interactor.GetComponent<PlayerScript>().SavePlayer();
         interactor.transform.position = new Vector3(16.38f, 13.58f, 0f);
+        interactor.GetComponent<PlayerScript>().SavePlayer();
         
         foreach (var caveParallax in cavesParallax)
         {

@@ -384,6 +384,11 @@ public class ChocolateWitchAI : MonoBehaviour
     {
         return speed ;
     }
-    
-    
+
+    public void TimeToDie()
+    {
+        dead = true;
+    }
+
+
 }

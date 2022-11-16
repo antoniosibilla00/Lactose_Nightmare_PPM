@@ -20,7 +20,9 @@ public class ChangeSceneButton : MonoBehaviour
     
     public void LoadPlayer()
     {
-        PlayerData player= SaveSystem.LoadPlayer();
+        PlayerData player= SaveSystem.LoadPlayer(); 
+      
+        
         if (player != null)
         {
             LevelLoader.instance.LoadScene( player.level);

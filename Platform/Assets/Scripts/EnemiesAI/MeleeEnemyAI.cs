@@ -59,6 +59,7 @@ public class MeleeEnemyAI
     private bool cooldown;
     private float actualTimer;
     private bool isNotPlaying;
+    private bool done;
     #endregion
 
 
@@ -134,8 +135,9 @@ public class MeleeEnemyAI
             
             anim.SetTrigger("dead");
             this.GetComponentInChildren<CapsuleCollider2D>().enabled= false;
-            if (!AudioSource.isPlaying)
+            if (!done)
             {
+                done = true;
                 AudioSource.clip = enemyDies;
                 AudioSource.Play();
             }
@@ -149,9 +151,7 @@ public class MeleeEnemyAI
         {
 
             case State.death :
-
-               
-               
+                
                 if (dead)
                 {
                     Destroy(transform.parent.gameObject);

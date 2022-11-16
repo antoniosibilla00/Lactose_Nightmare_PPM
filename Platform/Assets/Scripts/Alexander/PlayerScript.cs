@@ -203,6 +203,7 @@ public class PlayerScript : MonoBehaviour
                 if (dead)
                 {
                     SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
+                    MusicManager.istance.PlayMainOst();
                 }
                 break;
             case  State.talking:
@@ -366,7 +367,7 @@ public class PlayerScript : MonoBehaviour
             Debug.Log("stoCadendo");
             anim.SetTrigger("fall");
         }
-        if (healthSystem.GetCurrentHealth() <= 0 && !anim.GetCurrentAnimatorStateInfo(0).IsName("death"))
+        if (HealthSystem.Instance.GetCurrentHealth() <= 0 && !anim.GetCurrentAnimatorStateInfo(0).IsName("death"))
         {
             anim.SetTrigger("death");
             sourceSium.clip= sium[0];
@@ -540,14 +541,14 @@ public class PlayerScript : MonoBehaviour
    public void Debuff()
    {        
        
-       healthSystem.SetHealth(50); 
+       HealthSystem.Instance.SetHealth(50); 
        
    }
    
    public void Buff()
    {        
        
-       healthSystem.SetHealth(200); 
+       HealthSystem.Instance.SetHealth(200); 
        
    }
 

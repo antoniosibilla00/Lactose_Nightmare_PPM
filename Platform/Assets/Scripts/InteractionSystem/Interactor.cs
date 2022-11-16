@@ -74,7 +74,7 @@ public class Interactor : MonoBehaviour
                 interactable.Interact(this);
             }
             
-            if ( !interactable.interactionPrompt.Equals("") && tmpTextAboveEnemies!=null)
+            if ( !interactable.interactionPrompt.Equals(null) && tmpTextAboveEnemies!=null)
             {
                 tmpTextAboveEnemies.GetComponent<TextMeshPro>().text = interactable.interactionPrompt;
             }

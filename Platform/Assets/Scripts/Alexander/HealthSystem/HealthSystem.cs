@@ -24,7 +24,7 @@ public class HealthSystem : MonoBehaviour
     [SerializeField] private int maxHealth = 100;
     private int currentHealth;
     private int healing;
-    private int flasks;
+    private int usedFlasks;
     private bool hasTakenDamage;
     private float timerDamage;
     private float actualTimerDamage;
@@ -41,13 +41,13 @@ public class HealthSystem : MonoBehaviour
 
     void Start()
     {
-        
+        maxHealth = 100;
         healthBar.SetHealthBarMaxValue(maxHealth);
         _renderer = GetComponent<SpriteRenderer>();
         
         currentHealth = maxHealth;
         healing = 20;
-        flasks = 0;
+        usedFlasks = 0;
         isInvincible = false;
         hasTakenDamage = false;
 
@@ -59,12 +59,12 @@ public class HealthSystem : MonoBehaviour
         
         Debug.Log("currentHealth = " + currentHealth);
         Debug.Log(" health = "+ maxHealth);
-        if (flasks <3 && currentHealth<100 && currentHealth>0)
+        if (usedFlasks <3 && currentHealth<maxHealth && currentHealth>0)
         {
             if (Input.GetKeyDown(KeyCode.Q))
             {
                 Healing();
-                flasks++;
+                usedFlasks++;
 
             }
         }
@@ -108,20 +108,21 @@ public class HealthSystem : MonoBehaviour
 
     public void RestoreHealthAndPotions()
     {
+        currentHealth = maxHealth;
         healthBar.SetHealthBar(maxHealth);
         healthPotions.SetPotionsFill(0);
         healthPotions.SetPotionsFill(1);
         healthPotions.SetPotionsFill(2);
-        flasks = 0;
+        usedFlasks = 0;
     }
 
     public void Healing()
     {
         Debug.Log("cura");
     
-        if (currentHealth + healing > 100)
+        if (currentHealth + healing > maxHealth)
         {
-            currentHealth = 100;
+            currentHealth = maxHealth;
         }
         else
         {
@@ -132,9 +133,9 @@ public class HealthSystem : MonoBehaviour
         StartCoroutine(BecomeTemporarilyGreen());
         AudioSource.clip = healingSound;
         AudioSource.Play();
-
+        Debug.Log("healthSystem.currentHealth "+currentHealth);
         healthBar.SetHealthBar(currentHealth);
-        healthPotions.SetPotionsEmpty(flasks);
+        healthPotions.SetPotionsEmpty(usedFlasks);
         
     }
     public void SetHealth(int health)

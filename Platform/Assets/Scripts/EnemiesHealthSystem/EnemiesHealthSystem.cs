@@ -71,6 +71,11 @@ public class EnemiesHealthSystem : MonoBehaviour
 
     }
 
+    public void RestoreHealth()
+    {
+        SetCurrentHealth(maxHealth);
+    }
+
  
     
 }
