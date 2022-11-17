@@ -136,7 +136,14 @@ public class PlayerScript : MonoBehaviour
         catch (NullReferenceException e)
         {
             Console.WriteLine(e);
+        } 
+        
+        
+        if (MusicManager.istance != null)
+        {
+            MusicManager.istance.PlayMainOst();
         }
+        
        
         dead = false;
         fall = false;

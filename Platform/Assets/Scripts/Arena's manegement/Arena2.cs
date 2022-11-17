@@ -35,7 +35,7 @@ public class Arena2 : ArenaManagement
                 
                 break;
             case 1:
-                temp[0].text = "Round: 1 di 4";
+                temp[0].text = "Round 1 di 4";
                 enemiesCounter = 2;
                 PlayRoundSound();
                 
@@ -50,7 +50,7 @@ public class Arena2 : ArenaManagement
                 break;
             
             case 2 :
-                temp[0].text = "Round: 2 di 4";
+                temp[0].text = "Round 2 di 4";
                 enemiesCounter = 3;
                 PlayRoundSound();
                 
@@ -70,7 +70,7 @@ public class Arena2 : ArenaManagement
                 break;
             
             case 3 :
-                temp[0].text = "Round:3 di 4";
+                temp[0].text = "Round 3 di 4";
                 enemiesCounter = 2;
                 PlayRoundSound();
                 
@@ -88,7 +88,7 @@ public class Arena2 : ArenaManagement
                 break;
             
             case 4 :
-                temp[0].text = "Round: 4 di 4";
+                temp[0].text = "Round 4 di 4";
                 enemiesCounter = 1;
                 PlayRoundSound();
                 

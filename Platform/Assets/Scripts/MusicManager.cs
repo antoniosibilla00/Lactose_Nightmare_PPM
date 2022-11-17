@@ -1,8 +1,10 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
+using System.Diagnostics;
 using System.Runtime.CompilerServices;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class MusicManager : MonoBehaviour
 {
@@ -34,10 +36,9 @@ public class MusicManager : MonoBehaviour
        
       // arenaOst= (AudioClip)Resources.Load("AudioLevel1/arenaOst.mp3");
        //mainOst= (AudioClip)Resources.Load("AudioLevel1/mainOst.mp3");
-       
        AudioSource = GetComponent<AudioSource>();
-       PlayMenuOst();
-    }
+
+   }
 
 
    public void PlayArenaOst()
@@ -79,9 +80,6 @@ public class MusicManager : MonoBehaviour
    }
 
     // Update is called once per frame
-    void Update()
-    {
-        
 
-    }
+
 }

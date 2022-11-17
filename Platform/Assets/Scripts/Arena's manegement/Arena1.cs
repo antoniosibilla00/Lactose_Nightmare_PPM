@@ -13,7 +13,7 @@ public class Arena1 : ArenaManagement
         switch (round)
      {
          case 0:
-             temp[0].text = "Round: 0";
+             temp[0].text = "Round: 0 di 4";
              PlayRoundSound();
              enemiesCounter = 1;
              myNewGameObject= Instantiate(Enemy1Prefab, Enemy1Pos.transform.position, Enemy1Prefab.transform.rotation);
@@ -26,7 +26,7 @@ public class Arena1 : ArenaManagement
            
              PlayRoundSound();
              
-             temp[0].text = "Round: 1";
+             temp[0].text = "Round 1 di 4";
              enemiesCounter = 2;
              
              myNewGameObject= Instantiate(Enemy1Prefab, Enemy1Pos.transform.position, Enemy1Prefab.transform.rotation);
@@ -42,7 +42,7 @@ public class Arena1 : ArenaManagement
              
              PlayRoundSound();
              
-             temp[0].text = "Round: 2";
+             temp[0].text = "Round 2 di 4";
              enemiesCounter = 2;
              
              myNewGameObject= Instantiate(Enemy1Prefab, Enemy1Pos.transform.position, Enemy1Prefab.transform.rotation);
@@ -59,7 +59,7 @@ public class Arena1 : ArenaManagement
          case 3 :
              PlayRoundSound();
              
-             temp[0].text = "Round: 3";
+             temp[0].text = "Round 3 di 4";
              enemiesCounter = 2;
              
              myNewGameObject= Instantiate(Enemy2Prefab, Enemy1Pos.transform.position, Enemy2Prefab.transform.rotation);
@@ -78,7 +78,7 @@ public class Arena1 : ArenaManagement
          case 4 :
              PlayRoundSound();
              
-             temp[0].text = "Round: 4";
+             temp[0].text = "Round 4 di 4";
              enemiesCounter = 1;
 
              myNewGameObject= Instantiate(Enemy1Prefab, Enemy1Pos.transform.position, Enemy1Prefab.transform.rotation);

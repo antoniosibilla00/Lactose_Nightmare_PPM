@@ -36,6 +36,7 @@ public class Interactor : MonoBehaviour
             if (!done)
             {
                 interactable = _collider[0].GetComponent<Interactable>();
+                if (interactable == null) return;
                 if (!spawnedInteractionText )
                 {
                     tmpTextAboveEnemies=Instantiate(textAboveInteractable, interactable.position, Quaternion.identity);
@@ -47,31 +48,29 @@ public class Interactor : MonoBehaviour
                     spawnedInteractionText = false;
 
                 }
-            }
-
-            if (interactable == null) return;
-            
                 
-            //Debug.Log("tmpTextAboveEnemies.GetComponent<TextMeshPro>().text: "+tmpTextAboveEnemies.GetComponent<TextMeshPro>().text +"interactable.interactionPrompt: "+interactable.interactionPrompt);
+                
+                //Debug.Log("tmpTextAboveEnemies.GetComponent<TextMeshPro>().text: "+tmpTextAboveEnemies.GetComponent<TextMeshPro>().text +"interactable.interactionPrompt: "+interactable.interactionPrompt);
             
-            if (  Input.GetKeyDown(KeyCode.E) && PlayerScript.instance.state!=PlayerScript.State.death)
-            {
-                Destroy(tmpTextAboveEnemies);
-                done = true;
-                spawnedInteractionText = false;
-
-                if (interactable.dialogue!= null && !spawnedDialogue)
+                if (  Input.GetKeyDown(KeyCode.E) && PlayerScript.instance.state!=PlayerScript.State.death && !done)
                 {
-                    spawnedDialogue = true;
-                    tmpDialoguePanel = Instantiate(dialoguePanel,new Vector3(959,96.83691f,0),dialoguePanel.transform.rotation);
-                    tmpDialoguePanel.transform.SetParent( AlexanderUi.transform , false);
+                    Destroy(tmpTextAboveEnemies);
+                    done = true;
+                    spawnedInteractionText = false;
+
+                    if (interactable.dialogue!= null && !spawnedDialogue)
+                    {
+                        spawnedDialogue = true;
+                        tmpDialoguePanel = Instantiate(dialoguePanel,new Vector3(959,96.83691f,0),dialoguePanel.transform.rotation);
+                        tmpDialoguePanel.transform.SetParent( AlexanderUi.transform , false);
                     
                     
 
+                    }
+                
+                
+                    interactable.Interact(this);
                 }
-                
-                
-                interactable.Interact(this);
             }
             
             if ( !interactable.interactionPrompt.Equals(null) && tmpTextAboveEnemies!=null)
