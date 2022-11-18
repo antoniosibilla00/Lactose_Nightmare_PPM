@@ -27,16 +27,16 @@ RectTransform:
   m_GameObject: {fileID: 3779101168062738806}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 0.008, y: 0.008, z: 0.008}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 192.17, y: 11.812}
-  m_SizeDelta: {x: 20, y: 5}
-  m_Pivot: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: 0, y: -1.1408162}
+  m_SizeDelta: {x: 197.0885, y: 40.9518}
+  m_Pivot: {x: 0.5, y: -2.982191}
 --- !u!23 &3779101168062738792
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -56,7 +56,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 7168568218557642341, guid: 59afcbeea3b64c24a9bb6cfd47916b54, type: 2}
+  - {fileID: 6324656287244893595, guid: 64057796832a22147871232953a6c6a1, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -98,10 +98,10 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 
+  m_text: Prova
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 64057796832a22147871232953a6c6a1, type: 2}
-  m_sharedMaterial: {fileID: 7168568218557642341, guid: 59afcbeea3b64c24a9bb6cfd47916b54, type: 2}
+  m_sharedMaterial: {fileID: 6324656287244893595, guid: 64057796832a22147871232953a6c6a1, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -125,8 +125,8 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 2.13
-  m_fontSizeBase: 2.13
+  m_fontSize: 256
+  m_fontSizeBase: 256
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
@@ -161,10 +161,10 @@ MonoBehaviour:
   m_VertexBufferAutoSizeReduction: 0
   m_useMaxVisibleDescender: 1
   m_pageToDisplay: 1
-  m_margin: {x: 8.866074, y: 1.5199804, z: 8.9813385, w: 3.0923538}
+  m_margin: {x: 8.866074, y: 1.5199804, z: 8.9813385, w: -131.2997}
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
-  m_hasFontAssetChanged: 1
+  m_hasFontAssetChanged: 0
   m_renderer: {fileID: 3779101168062738792}
   m_maskType: 0
   _SortingLayer: 0
