@@ -44,7 +44,6 @@ public class ChocolateWitchAI : MonoBehaviour
     private Collider2D chocolateWitchCollider;
     public EnemiesHealthSystem healthSystem; 
     private Rigidbody2D playerBody;
-    private Vector2 currentVelocity = new Vector2(2,0);
     private bool attack ;
     private bool takeHit;
     private bool dead;
@@ -105,6 +104,7 @@ public class ChocolateWitchAI : MonoBehaviour
 
     private void Update()
     {
+    
         
         anim.SetBool("attack",attack);
         

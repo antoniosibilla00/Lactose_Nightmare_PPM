@@ -1,16 +1,7 @@
-using System;
-using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
 
-using System.Collections;
-using System.Collections.Generic;
-using System.Diagnostics.Tracing;
 using UnityEngine;
 using Pathfinding;
-using UnityEngine.Serialization;
-using UnityEngine.Tilemaps;
-using UnityEngine.Timeline;
+
 
 public class MeleeEnemyAI
     : MonoBehaviour
@@ -65,7 +56,7 @@ public class MeleeEnemyAI
 
     public AudioSource AudioSource;
     public AudioClip enemyDies;
-    public AudioClip soundAttack;
+    //public AudioClip soundAttack;
     private EnemiesHealthSystem healthSystem;
     [SerializeField] public Collider2D attackHitBox;
 

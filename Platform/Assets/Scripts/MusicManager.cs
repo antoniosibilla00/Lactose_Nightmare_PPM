@@ -5,6 +5,7 @@ using System.Diagnostics;
 using System.Runtime.CompilerServices;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using Debug = UnityEngine.Debug;
 
 public class MusicManager : MonoBehaviour
 {
@@ -17,7 +18,8 @@ public class MusicManager : MonoBehaviour
     public static AudioClip playedClip;
    private void Awake()
    {
-       
+       AudioSource = GetComponent<AudioSource>();
+
        DontDestroyOnLoad(this);
         
        if (istance == null)
@@ -31,14 +33,6 @@ public class MusicManager : MonoBehaviour
 
    }
 
-   void Start()
-   { 
-       
-      // arenaOst= (AudioClip)Resources.Load("AudioLevel1/arenaOst.mp3");
-       //mainOst= (AudioClip)Resources.Load("AudioLevel1/mainOst.mp3");
-       AudioSource = GetComponent<AudioSource>();
-
-   }
 
 
    public void PlayArenaOst()
@@ -74,9 +68,10 @@ public class MusicManager : MonoBehaviour
        
    }
 
-   public bool IsPlayingArenaOst()
+   public bool IsPlayingMenuOst()
    {
-       return playedClip.Equals(arenaOst);
+       Debug.Log("playedClip "+playedClip.name);
+       return playedClip.name.Equals(menuOst.name);
    }
 
     // Update is called once per frame

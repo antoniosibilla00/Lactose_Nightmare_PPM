@@ -113,8 +113,6 @@ public class PlayerScript : MonoBehaviour
         }
         
         
-       
-        
         if (!LoadPLayer())
         {
             this.transform.position  = new Vector3(-192.2285f, -31.30591f, 0f);
@@ -139,10 +137,8 @@ public class PlayerScript : MonoBehaviour
         } 
         
         
-        if (MusicManager.istance != null)
-        {
-            MusicManager.istance.PlayMainOst();
-        }
+        
+        
         
        
         dead = false;
@@ -161,15 +157,18 @@ public class PlayerScript : MonoBehaviour
         //Debug.Log("percorso:"+Application.persistentDataPath);
         move = true;
         instance = this;
-
-
+        
+        MusicManager.istance.PlayMainOst();
+        
     }
     
 
 
     // metodo che gestisce gli input e le animazioni
     private void Update()
-    {   Debug.Log("player.attack"+attack);
+    {
+   
+        Debug.Log("player.attack"+attack);
         Debug.Log("player.move"+move);
         Debug.Log("player.state"+state);
         Debug.Log("player.combo"+combo);

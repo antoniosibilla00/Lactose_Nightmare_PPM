@@ -1,18 +1,6 @@
-using System;
-using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
 
-using System.Collections;
-using System.Collections.Generic;
-using System.Diagnostics.Tracing;
 using UnityEngine;
 using Pathfinding;
-using UnityEditor;
-using UnityEngine.Rendering.Universal;
-using UnityEngine.Serialization;
-using UnityEngine.Tilemaps;
-using UnityEngine.Timeline;
 using Random = UnityEngine.Random;
 
 public class BossScript
@@ -91,7 +79,6 @@ public class BossScript
         attacking,
         death,
         idle,
-        beast
     }
     
     public State state;
@@ -288,7 +275,6 @@ public class BossScript
                     }
                     else if (TargetInDistance() && followEnabled)
                     {
-                        Debug.Log("<<<EccoLaPunta"+(TargetInDistance() && followEnabled));
                         if (TriggerDash() && beastMode)
                         {
                             dash = true;

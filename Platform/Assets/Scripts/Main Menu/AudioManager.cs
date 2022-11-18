@@ -8,9 +8,6 @@ using UnityEngine.UI;
 public class AudioManager : MonoBehaviour {
     
     [SerializeField] private AudioMixer audioMixer;
-    [SerializeField] private Slider musicSlider;
-    [SerializeField] private Slider effectSlider;
-    [SerializeField] private Slider generalSlider;
     public static AudioManager instance;
 
     private void Awake(){
@@ -18,9 +15,6 @@ public class AudioManager : MonoBehaviour {
             DontDestroyOnLoad(gameObject);
             instance = this;
             
-            musicSlider.onValueChanged.AddListener(AdjustMusicVolume);
-            effectSlider.onValueChanged.AddListener(AdjustEffectVolume);
-            generalSlider.onValueChanged.AddListener(AdjustGeneralVolume);
           
         }
         else
@@ -28,20 +22,17 @@ public class AudioManager : MonoBehaviour {
     }
 
     public void Start(){
+        
         float music = PlayerPrefs.GetFloat("MusicVolume",0f);
         float effects = PlayerPrefs.GetFloat("EffectVolume", 0f);
         float general = PlayerPrefs.GetFloat("GeneralVolume", 0f);
-
-        musicSlider.value = music;
-        effectSlider.value = effects;
-        generalSlider.value = general;
         
+        AdjustMusicVolume(music);
+        AdjustEffectVolume(effects);
+        AdjustGeneralVolume(general);
+      
         MusicManager.istance.PlayMenuOst();
-
-
-
-        //Set the music volume to the saved volume
-
+        
     }
     
     public void AdjustMusicVolume(float volume){
@@ -50,7 +41,7 @@ public class AudioManager : MonoBehaviour {
         audioMixer.SetFloat("MusicVolume",Mathf.Log10(volume) * 20);
         PlayerPrefs.SetFloat("MusicVolume",volume);
 
-        //Save changes
+        //Save changesS
         PlayerPrefs.Save();
     }
 

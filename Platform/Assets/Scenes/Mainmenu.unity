@@ -2575,6 +2575,7 @@ GameObject:
   - component: {fileID: 515522855}
   - component: {fileID: 515522854}
   - component: {fileID: 515522856}
+  - component: {fileID: 515522857}
   m_Layer: 0
   m_Name: MusicManager
   m_TagString: Untagged
@@ -2707,6 +2708,19 @@ MonoBehaviour:
   arenaOst: {fileID: 8300000, guid: 874e4933179976245a246dba5a47df0f, type: 3}
   mainOst: {fileID: 8300000, guid: afb57c8004161214583243ded775c27d, type: 3}
   menuOst: {fileID: 8300000, guid: 254760136ebedb340b82927cf4336f9f, type: 3}
+--- !u!114 &515522857
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 515522853}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 63317d172038ebd4091b6b2e0e15b415, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  audioMixer: {fileID: 24100000, guid: b64937088bbc0534487796c57e8d93e8, type: 2}
 --- !u!1 &528741970
 GameObject:
   m_ObjectHideFlags: 0
@@ -9884,7 +9898,6 @@ GameObject:
   m_Component:
   - component: {fileID: 2145934548}
   - component: {fileID: 2145934549}
-  - component: {fileID: 2145934550}
   m_Layer: 5
   m_Name: 'AudioMenu '
   m_TagString: Untagged
@@ -9923,26 +9936,9 @@ MonoBehaviour:
   m_GameObject: {fileID: 2145934547}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 0714f6dcb8fe1f242a11fcac2d17a4df, type: 3}
+  m_Script: {fileID: 11500000, guid: 7c1edebc960acba4db8cfe06b6aad9ce, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  musicSlider: {fileID: 552638518}
-  effectSlider: {fileID: 796922134}
-  generalSlider: {fileID: 596351607}
-  audioMixer: {fileID: 24100000, guid: b64937088bbc0534487796c57e8d93e8, type: 2}
---- !u!114 &2145934550
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2145934547}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 63317d172038ebd4091b6b2e0e15b415, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  audioMixer: {fileID: 24100000, guid: b64937088bbc0534487796c57e8d93e8, type: 2}
   musicSlider: {fileID: 552638518}
   effectSlider: {fileID: 796922134}
   generalSlider: {fileID: 596351607}
