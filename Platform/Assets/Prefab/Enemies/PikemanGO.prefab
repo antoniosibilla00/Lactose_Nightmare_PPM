@@ -350,7 +350,6 @@ MonoBehaviour:
   force: {x: 0, y: 0}
   AudioSource: {fileID: 0}
   enemyDies: {fileID: 8300000, guid: ac5ec2120ebad534a9c568f29c52bbab, type: 3}
-  soundAttack: {fileID: 0}
   attackHitBox: {fileID: 1087762250849633808}
   state: 0
 --- !u!95 &1087762252423041521
@@ -560,7 +559,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ee44e58c1791ad6429b61be07adb7f57, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  maxHealth: 100
+  maxHealth: 60
   getDamaged: {fileID: 0}
   AudioSource: {fileID: 0}
 --- !u!1 &5032108186587734018

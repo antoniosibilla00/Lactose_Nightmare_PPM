@@ -225,7 +225,7 @@ Rigidbody2D:
   m_Mass: 1
   m_LinearDrag: 4.5
   m_AngularDrag: 0.05
-  m_GravityScale: 1
+  m_GravityScale: 1.2
   m_Material: {fileID: 0}
   m_Interpolate: 0
   m_SleepingMode: 1
@@ -309,7 +309,6 @@ MonoBehaviour:
   force: {x: 0, y: 0}
   AudioSource: {fileID: 0}
   enemyDies: {fileID: 8300000, guid: ac5ec2120ebad534a9c568f29c52bbab, type: 3}
-  soundAttack: {fileID: 0}
   attackHitBox: {fileID: 751209132873225297}
   state: 0
 --- !u!82 &6821764096335453942

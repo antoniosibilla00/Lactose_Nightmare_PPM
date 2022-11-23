@@ -421,7 +421,7 @@ public class BossScript
     private bool TriggerDash()
     {
        
-        return (Vector2.Distance(transform.position, target.transform.position) >= (followDistance*0.5)) && dashIsNotColliding();
+        return /*(Vector2.Distance(transform.position, target.transform.position) >= (followDistance*0.5)) && dashIsNotColliding(); */false;
     }
     
     private bool BecameInactive()
@@ -451,6 +451,7 @@ public class BossScript
     
     private bool TriggerLeap()
     {
+        /*
         float rand = Random.value;
         
       
@@ -460,21 +461,23 @@ public class BossScript
             actualCooldownLeap = cooldownLeap;
             return true;
             
-        }
+        }*/
         return false;
     }
 
     
     private bool leapIsNotColliding()
     {
+        /*
         //point,size,direction,angle
         Collider2D leap_ground = Physics2D.OverlapCapsule(rangeLeap.position,new Vector2(5.84576f,0.6838409f),CapsuleDirection2D.Horizontal,0,ground);
         if (leap_ground != null)
-        {
+        {*/
             return false;
-        }
-
+       /* }
+            
         return true;
+        */
     }
     
     private bool dashIsNotColliding()

@@ -51,17 +51,13 @@ public class Arena2 : ArenaManagement
             
             case 2 :
                 temp[0].text = "Round 2 di 4";
-                enemiesCounter = 3;
+                enemiesCounter = 2;
                 PlayRoundSound();
                 
                 myNewGameObject= Instantiate(Enemy2Prefab, Enemy1Pos.transform.position, Enemy2Prefab.transform.rotation);
                 myNewGameObject.transform.parent = Enemy1Pos.transform;
                 myNewGameObject.AddComponent<OnEnemyKill>();
                 
-                myNewGameObject2= Instantiate(Enemy2Prefab, Enemy2Pos.transform.position, Enemy2Prefab.transform.rotation);
-                myNewGameObject2.transform.parent = Enemy2Pos.transform;
-                myNewGameObject2.AddComponent<OnEnemyKill>();
-               changeEnemy1Pos( 0-5f);
                 
                 myNewGameObject= Instantiate(Enemy1Prefab, Enemy1Pos.transform.position, Enemy1Prefab.transform.rotation);
                 myNewGameObject.transform.parent = Enemy1Pos.transform; ; 
@@ -73,9 +69,7 @@ public class Arena2 : ArenaManagement
                 temp[0].text = "Round 3 di 4";
                 enemiesCounter = 2;
                 PlayRoundSound();
-                
-                changeEnemy1Pos(5f);
-                
+
                 myNewGameObject= Instantiate(Enemy2Prefab, Enemy1Pos.transform.position, Enemy2Prefab.transform.rotation);
                 myNewGameObject.transform.parent = Enemy1Pos.transform;
                 myNewGameObject.transform.GetChild(0).GetComponentInChildren<TriggerDamage>().SetDamage(20);
@@ -95,7 +89,7 @@ public class Arena2 : ArenaManagement
                 myNewGameObject= Instantiate(Enemy2Prefab, Enemy1Pos.transform.position, Enemy2Prefab.transform.rotation);
                 myNewGameObject.transform.parent = Enemy1Pos.transform;
                 
-                myNewGameObject.transform.GetChild(0).GetComponentInChildren<TriggerDamage>().SetDamage(20);
+                myNewGameObject.transform.GetChild(0).GetComponentInChildren<TriggerDamage>().SetDamage(40);
                 myNewGameObject.GetComponentInChildren<MeleeEnemyAI>().SetSpeed( myNewGameObject.GetComponentInChildren<MeleeEnemyAI>().GetSpeed()+0.25f);
                 myNewGameObject.AddComponent<OnEnemyKill>();
                 break;

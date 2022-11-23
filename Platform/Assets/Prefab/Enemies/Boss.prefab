@@ -329,7 +329,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   activateDistance: 5
   pathUpdateSeconds: 0.5
-  speed: 2.5
+  speed: 3
   nextWaypointDistance: 0.5
   jumpNodeHeightRequirement: 0.8
   jumpModifier: 0.3
@@ -350,7 +350,7 @@ MonoBehaviour:
     m_Bits: 256
   king: {fileID: 2226065115610908641, guid: 2bb14460a02905c41b1b44d17b246fbe, type: 3}
   done2: 0
-  timer: 3.5
+  timer: 3
   hammerCollider2D: {fileID: 4308809665247005557}
   swordCollider2D: {fileID: 4308809664649213265}
   state: 0
