@@ -100,6 +100,7 @@ public class DialogueManager : MonoBehaviour
                         if (King.LastOne)
                         {
                             SceneManager.LoadScene("Outro");
+                            King.LastOne = false;
                         }
                         //King.LastOne = true;
                     }

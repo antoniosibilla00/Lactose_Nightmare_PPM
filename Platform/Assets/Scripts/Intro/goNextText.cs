@@ -74,8 +74,10 @@ public class goNextText : MonoBehaviour
         {
             actualSentence += 1;
             change = true;
+            
             buttonSkip.gameObject.SetActive(false);
             buttonLoad.gameObject.SetActive(true);
+            EventSystem.current.SetSelectedGameObject(buttonLoad.gameObject);
             
             Debug.Log(">>>>>finito");
             

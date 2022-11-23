@@ -140,7 +140,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   healthBar: {fileID: 4308809665054819496}
-  maxHealth: 100
+  maxHealth: 300
 --- !u!1 &4308809664460010627
 GameObject:
   m_ObjectHideFlags: 0
@@ -279,7 +279,7 @@ Rigidbody2D:
   m_UseFullKinematicContacts: 0
   m_UseAutoMass: 0
   m_Mass: 1
-  m_LinearDrag: 0
+  m_LinearDrag: 0.5
   m_AngularDrag: 0.05
   m_GravityScale: 1
   m_Material: {fileID: 0}
@@ -350,7 +350,7 @@ MonoBehaviour:
     m_Bits: 256
   king: {fileID: 2226065115610908641, guid: 2bb14460a02905c41b1b44d17b246fbe, type: 3}
   done2: 0
-  timer: 4.5
+  timer: 3.5
   hammerCollider2D: {fileID: 4308809665247005557}
   swordCollider2D: {fileID: 4308809664649213265}
   state: 0

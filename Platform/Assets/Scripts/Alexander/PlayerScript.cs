@@ -68,8 +68,7 @@ public class PlayerScript : MonoBehaviour
     [SerializeField] private float attackRange;
     public LayerMask enemyLayers;
     public static PlayerScript instance;
-    public LayerMask playerLayerMask;
-    public LayerMask SafezoneLayerMask;
+   
     
     public HealthSystem healthSystem;
     public int level;
@@ -85,7 +84,6 @@ public class PlayerScript : MonoBehaviour
     {
         normal,
         rolling,
-        attacking,
         death,
         talking
     }
@@ -301,10 +299,6 @@ public class PlayerScript : MonoBehaviour
 
                 break;
             
-            case State.death:
-
-                break;
-
 
         }
 

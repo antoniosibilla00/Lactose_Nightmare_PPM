@@ -9,9 +9,21 @@ using UnityEngine.UI;
 public class MainMenu : MonoBehaviour
 {
   
-  public GameObject OptionMenu, ResoluctionMenu, AudioMenu, ExitMenu, CreditMenu;
+  public GameObject OptionMenu, ResoluctionMenu, AudioMenu, ExitMenu, CreditMenu, CommandMenu;
 
-  public GameObject fistrInOptionMenu, fistrInResoluctionMenu, fistrInAudioMenu, OptionInMainMenu, ResoluctionInOptionMenu, AudioInOptionMenu, ExitInMainMenu, fistrInExitMenu, fistrInCreditMenu, CreditInMainMenu;
+  public GameObject fistrInOptionMenu,
+      fistrInResoluctionMenu,
+      fistrInAudioMenu,
+      OptionInMainMenu,
+      ResoluctionInOptionMenu,
+      AudioInOptionMenu,
+      ExitInMainMenu,
+      fistrInExitMenu,
+      fistrInCreditMenu,
+      CreditInMainMenu,
+      firstInCommandMenu,
+     
+      commandInOptionMenu;
 
   public GameObject buttonCarica;
 
@@ -64,6 +76,25 @@ public class MainMenu : MonoBehaviour
       EventSystem.current.SetSelectedGameObject(fistrInResoluctionMenu);
       
   }
+  
+  public void CloseCommandMenu(){
+
+      CommandMenu.SetActive(false);
+
+      EventSystem.current.SetSelectedGameObject(null);
+      EventSystem.current.SetSelectedGameObject(commandInOptionMenu);
+      
+  }
+
+  public void OpenCommandMenu(){
+
+      CommandMenu.SetActive(true);
+
+      EventSystem.current.SetSelectedGameObject(null);
+      EventSystem.current.SetSelectedGameObject(firstInCommandMenu);
+      
+  }
+
 
     public void CloseResoluctionMenu(){
 

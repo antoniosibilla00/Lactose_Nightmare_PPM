@@ -46,7 +46,7 @@ public class HealthSystem : MonoBehaviour
         _renderer = GetComponent<SpriteRenderer>();
         
         currentHealth = maxHealth;
-        healing = 20;
+        healing = 30;
         usedFlasks = 0;
         isInvincible = false;
         hasTakenDamage = false;
