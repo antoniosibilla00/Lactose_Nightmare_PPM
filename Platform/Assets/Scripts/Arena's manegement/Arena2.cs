@@ -58,10 +58,9 @@ public class Arena2 : ArenaManagement
                 myNewGameObject.transform.parent = Enemy1Pos.transform;
                 myNewGameObject.AddComponent<OnEnemyKill>();
                 
-                
-                myNewGameObject= Instantiate(Enemy1Prefab, Enemy1Pos.transform.position, Enemy1Prefab.transform.rotation);
-                myNewGameObject.transform.parent = Enemy1Pos.transform; ; 
-                myNewGameObject.AddComponent<OnEnemyKill>();
+                myNewGameObject2= Instantiate(Enemy1Prefab, Enemy1Pos.transform.position, Enemy1Prefab.transform.rotation);
+                myNewGameObject2.transform.parent = Enemy1Pos.transform; ; 
+                myNewGameObject2.AddComponent<OnEnemyKill>();
 
                 break;
             

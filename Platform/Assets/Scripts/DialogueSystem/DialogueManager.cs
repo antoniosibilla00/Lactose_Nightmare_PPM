@@ -69,7 +69,7 @@ public class DialogueManager : MonoBehaviour
 
     public void StartDialogue(Dialogue dialogue)
     {
-   
+        Time.timeScale = 0;
         sentences = new Queue<string>();
         sentences.Clear();
 
@@ -141,6 +141,7 @@ public class DialogueManager : MonoBehaviour
              tmpFoodChose2.transform.SetParent(foodPos, false);
              
              Continue.gameObject.SetActive(false);
+             
              Tempter.instance.done = true;
              
              RandomPosition(tmpFoodChose1.GetComponent<Button>(), tmpFoodChose2.GetComponent<Button>());
@@ -162,6 +163,7 @@ public class DialogueManager : MonoBehaviour
     {
         Destroy(this.gameObject);
         Interactor.spawnedDialogue = false;
+        Time.timeScale = 1;
     }
 
     public void  CorrectAnswer()
@@ -197,7 +199,7 @@ public class DialogueManager : MonoBehaviour
         const string negativeSentence = "La tua anima si avvicina, sento la sua rinascita vicina" + "\n" +
                                 "ti sembrerò un po lesto , tieni questo debuff, spero ci vedremo presto";
                 
-        PlayerScript.instance.Debuff();
+        //PlayerScript.instance.Debuff();
         
         Destroy(tmpFoodChose1);
         Destroy(tmpFoodChose2);

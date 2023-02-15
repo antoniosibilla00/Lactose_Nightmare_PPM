@@ -21,7 +21,7 @@ public class Checkpoint : MonoBehaviour,Interactable
 
     public void Interact(Interactor interactor)
     {
-       
+        
        HealthSystem.Instance.RestoreHealthAndPotions();
        PlayerScript.instance.SavePlayer();
        RestoreAllEnemies();

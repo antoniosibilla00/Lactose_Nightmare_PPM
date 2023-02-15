@@ -3,7 +3,15 @@ guid: 6246b9e60448d9f439882d04c4d7890a
 MonoImporter:
   externalObjects: {}
   serializedVersion: 2
-  defaultReferences: []
+  defaultReferences:
+  - roundSound: {instanceID: 0}
+  - victorySound: {instanceID: 0}
+  - alexanderUI: {instanceID: 0}
+  - Enemy1Prefab: {instanceID: 0}
+  - arenaUi: {instanceID: 0}
+  - arenaUiTimedWord: {instanceID: 0}
+  - Enemy2Prefab: {instanceID: 0}
+  - tilemap: {instanceID: 0}
   executionOrder: 0
   icon: {instanceID: 0}
   userData: 

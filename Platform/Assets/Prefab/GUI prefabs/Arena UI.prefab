@@ -78,9 +78,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: 'Nemici rimasti:
-
-'
+  m_Text: 
 --- !u!1 &3357862340977525440
 GameObject:
   m_ObjectHideFlags: 0
@@ -159,7 +157,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: 'Round:'
+  m_Text: 
 --- !u!1 &3357862341703674080
 GameObject:
   m_ObjectHideFlags: 0
