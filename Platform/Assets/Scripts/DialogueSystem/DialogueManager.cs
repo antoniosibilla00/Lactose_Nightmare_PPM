@@ -4,6 +4,7 @@ using System.Collections.Generic;
 using System.Diagnostics;
 using System.Numerics;
 using System.Threading;
+using System.IO;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
@@ -18,6 +19,10 @@ public class DialogueManager : MonoBehaviour
     
     private bool done = false ;
     private AudioSource _audioSource;
+    
+    private ArrayList  elementToSave = new ArrayList();
+    
+    private int indexElementToSave = 0 ;
     
     #region DialogueManagement
     
@@ -161,6 +166,12 @@ public class DialogueManager : MonoBehaviour
 
     public void EndDialogue()
     {
+        if (elementToSave.Count > 1)
+        {
+            Debug.Log("77" + elementToSave[1]);
+            SaveDataInTxtFile();
+        }
+        
         Destroy(this.gameObject);
         Interactor.spawnedDialogue = false;
         Time.timeScale = 1;
@@ -179,6 +190,12 @@ public class DialogueManager : MonoBehaviour
                                 "\n" + " tieni questo buf ma spero che alla prossima mangerai del lardo";
         
         dialogueText.text=affermativeSentence;
+
+
+        elementToSave.Insert(0, tmpFoodChose1.GetComponentInChildren<Text>().text);
+        elementToSave.Insert(1,"Risposta corretta");
+        
+        
         
         canSkip = true;
         PlayerScript.instance.Buff();
@@ -203,6 +220,11 @@ public class DialogueManager : MonoBehaviour
         
         Destroy(tmpFoodChose1);
         Destroy(tmpFoodChose2);
+        
+        elementToSave.Insert(0,tmpFoodChose2.GetComponentInChildren<Text>().text); 
+        elementToSave.Insert(1,"Risposta errata");
+       
+        
         
         Continue.gameObject.SetActive(true);
         dialogueText.text = negativeSentence;
@@ -231,5 +253,36 @@ public class DialogueManager : MonoBehaviour
         
     }
         
+    private void SaveDataInTxtFile()
+    {
+        Debug.Log("77 Sono entrato SaveDataInTxtFile()");
+        
+        StreamWriter writer = new StreamWriter( "Assets/TxtFile/Esito.txt", true);
+
+        for (int i = 0; i < elementToSave.Count ; i++)
+        {
+            
+            if (i < elementToSave.Count-1)
+            {
+                Debug.Log("77Elemento " + i + elementToSave[i]);
+                writer.Write(elementToSave[i] + "\n");
+            }else 
+            {
+                Debug.Log("77lemento " + i + elementToSave[i]);
+                writer.Write(elementToSave[i] + "\n");
+                writer.Write( "--" +"\n");
+                
+            }
+
+            
+            
+            
+        }
+        
+        writer.Close();
+        
+    }
+    
+    
     
 }
