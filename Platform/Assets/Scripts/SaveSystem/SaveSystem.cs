@@ -14,6 +14,13 @@ public static class SaveSystem
         PlayerData data = new PlayerData(player);
 
         _formatter.Serialize(stream, data);
+
+        for (int i = 0; i < player.indexSrollsCollected.Count; i++)
+        {
+            Debug.Log("//// SaveLista " + player.indexSrollsCollected[i]);
+        }
+        
+        
         stream.Close();
     }
 

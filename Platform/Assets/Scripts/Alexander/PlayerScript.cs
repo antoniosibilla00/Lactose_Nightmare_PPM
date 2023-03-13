@@ -1,5 +1,6 @@
 using System;
 using System.Collections;
+using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
@@ -78,7 +79,9 @@ public class PlayerScript : MonoBehaviour
     public AudioClip[] sium;
     public AudioSource sourceSium;
 
+    public List<int> indexSrollsCollected;
 
+    
 
     public enum State
     {
@@ -110,6 +113,7 @@ public class PlayerScript : MonoBehaviour
                 break;
         }
         
+        indexSrollsCollected = new List<int>();
         
         if (!LoadPLayer())
         {
@@ -132,10 +136,10 @@ public class PlayerScript : MonoBehaviour
         catch (NullReferenceException e)
         {
             Console.WriteLine(e);
-        } 
-        
-        
-        
+        }
+
+
+
         
         
        
@@ -599,7 +603,17 @@ public class PlayerScript : MonoBehaviour
        {
            Vector2 position = new Vector2(player.position[0], player.position[1]);
 
-       
+           Debug.Log("//// Load player  ");
+           
+           indexSrollsCollected = player.collectedScrolls;
+
+           for (int i = 0; i < player.collectedScrolls.Count; i++)
+           {
+               Debug.Log("//// Load player indexSrollsCollected " + indexSrollsCollected[i]);
+               Debug.Log("//// Load player player.collectedScrolls " + player.collectedScrolls[i]);
+           }
+           
+           
            this.transform.position = position;
            
            //healthSystem.SetHealth(player.health);
